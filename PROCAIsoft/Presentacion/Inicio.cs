@@ -19,12 +19,7 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Login log = new Login();
-            //this.Visible = false;
-            //if(log.ShowDialog() == DialogResult.OK)
-            //{
-
-            //}
+            MessageBox.Show("Hola mundo cruel");
             this.Visible = true;
         }
 
