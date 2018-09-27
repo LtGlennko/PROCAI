@@ -27,7 +27,7 @@ namespace Presentacion
         {
             //InicioExterno ie = new InicioExterno();
             this.Visible = false;
-            MessageBox.Show("Hola mundo");
+            MessageBox.Show("1111");
             //if (ie.ShowDialog() == DialogResult.OK)
             //{
 
