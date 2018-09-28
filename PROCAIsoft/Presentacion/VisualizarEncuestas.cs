@@ -50,7 +50,7 @@ namespace Presentacion
 
         private void frmRegYeditEncuestas_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
