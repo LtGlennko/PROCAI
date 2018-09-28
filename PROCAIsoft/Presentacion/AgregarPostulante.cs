@@ -23,7 +23,7 @@ namespace Modelo
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            char sexo='X';
+            char sexo = 'X';
             if (txtSexo.Text.Equals("M")) sexo = 'M';
             else if (txtSexo.Text.Equals("F")) sexo = 'F';
 
@@ -32,7 +32,7 @@ namespace Modelo
             List<Colegio> lc = new List<Colegio>();
             lc.Add(c);
 
-            p = new Postulante(Convert.ToDateTime("01/01/2018"), 1, 213, null, 5, 3343241, 12, null);
+            p = new Postulante(Convert.ToDateTime("01/01/2018"), 1, 213, null, "5to", 3343241, 12, null);
             postulantes.Add(p);
             DialogResult = DialogResult.OK;
             this.Close();

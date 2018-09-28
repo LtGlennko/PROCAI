@@ -21,14 +21,14 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormStock FS = new FormStock();
-            FS.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
-            if (FS.ShowDialog() == DialogResult.OK)
-            {
+            //FormStock FS = new FormStock();
+            //FS.StartPosition = FormStartPosition.CenterScreen;
+            //this.Visible = false;
+            //if (FS.ShowDialog() == DialogResult.OK)
+            //{
 
-            }
-            this.Visible = true;
+            //}
+            //this.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,14 +42,14 @@ namespace Presentacion
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //GestCol GS = new Gest();
-            //GS.SetDesktopLocation(100, 100);
+            GestCol GS = new GestCol();
+            GS.SetDesktopLocation(100, 100);
             this.Visible = false;
-            //if (GS.ShowDialog() == DialogResult.OK)
-            //{
+            if (GS.ShowDialog() == DialogResult.OK)
+            {
 
-            //}
-            //this.Visible = true;
+            }
+            this.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)

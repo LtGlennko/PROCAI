@@ -6,13 +6,29 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Actividad
+    
+    public class Actividad
     {
-        private int IdActividad;
-        private string descripcion;
-        private DateTime fechaProgramada;
-        private TipoActividad tipo;
-        //private List<DetalleMerchandizing> listaDeMateriales;
-        private char estadoActividad;
+        private static int i;
+        private int idActividad;
+        private string nombre;
+        private string desc;
+
+        public Actividad()
+        {
+            i++;
+            idActividad = i;
+        }
+        public Actividad( string nombre, string desc)
+        {
+            i++;
+            IdActividad =i;
+            this.nombre = nombre;
+            this.desc = desc;
+        }
+
+        public int IdActividad { get => idActividad; set => idActividad = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Desc { get => desc; set => desc = value; }
     }
 }

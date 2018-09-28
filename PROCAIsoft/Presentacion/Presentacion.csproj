@@ -46,17 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarColegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarColegio.designer.cs">
+      <DependentUpon>AgregarColegio.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarPostulante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgregarPostulante.designer.cs">
       <DependentUpon>AgregarPostulante.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarStock.designer.cs">
+      <DependentUpon>agregarStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarPostulante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarPostulante.designer.cs">
       <DependentUpon>EditarPostulante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editarStockcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editarStockcs.designer.cs">
+      <DependentUpon>editarStockcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionColegios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionColegios.designer.cs">
+      <DependentUpon>GestionColegios.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneraRepEncuestas.cs">
       <SubType>Form</SubType>
@@ -144,11 +168,23 @@
     <Compile Include="VisualizarPostulantes.designer.cs">
       <DependentUpon>VisualizarPostulantes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarColegio.resx">
+      <DependentUpon>AgregarColegio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarPostulante.resx">
       <DependentUpon>AgregarPostulante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="agregarStock.resx">
+      <DependentUpon>agregarStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarPostulante.resx">
       <DependentUpon>EditarPostulante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editarStockcs.resx">
+      <DependentUpon>editarStockcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionColegios.resx">
+      <DependentUpon>GestionColegios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneraRepEncuestas.resx">
       <DependentUpon>GeneraRepEncuestas.cs</DependentUpon>

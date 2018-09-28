@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,16 +24,14 @@ namespace Presentacion
             Colegio c1 = new Colegio();
             List<Colegio> lc1 = new List<Colegio>();
             lc1.Add(c1);
-            p1 = new Postulante(1, 78412569, "Sandro", "Cera", "Lara", "correo_@gmail.com", 745896523,
-                'M', 0, Convert.ToDateTime("01/01/2018"), null, 0, lc1, "5°",7452563, 0, null);
+            p1 = new Postulante(Convert.ToDateTime("01/01/2018"), 1, 21, null, "5to", 3434245, 231, null);
 
             Postulante p2 = null;
             Colegio c2 = new Colegio();
             List<Colegio> lc2 = new List<Colegio>();
             lc2.Add(c2);
 
-            p2 = new Postulante(2, 78412369, "Martha", "Marquez", "Lore", "martha_@gmail.com", 745896123,
-                'F', 0, Convert.ToDateTime("01/01/2018"), null, 0, lc2, "4°", 7345620, 0, null);
+            p2 = new Postulante(Convert.ToDateTime("02/03/2018"), 4, 22, null, "5to", 322432, 12, null);
 
             postulantes.Add(p1);
             postulantes.Add(p2);

@@ -21,5 +21,10 @@ namespace Presentacion
         {
             Dispose();
         }
+
+        private void InformacionParaExterno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
