@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86F12806-8C7D-445C-8B6A-D172E2BFBA70}</ProjectGuid>
+    <ProjectGuid>{703C04E8-233B-4BEF-ACAD-B020A16E73B7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Presentacion</RootNamespace>
     <AssemblyName>Presentacion</AssemblyName>
@@ -46,8 +46,143 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarPostulante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPostulante.designer.cs">
+      <DependentUpon>AgregarPostulante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPostulante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPostulante.designer.cs">
+      <DependentUpon>EditarPostulante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneraRepEncuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneraRepEncuestas.designer.cs">
+      <DependentUpon>GeneraRepEncuestas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarReporte.designer.cs">
+      <DependentUpon>GenerarReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformacionParaExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformacionParaExterno.designer.cs">
+      <DependentUpon>InformacionParaExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarPermisos.designer.cs">
+      <DependentUpon>GestionarPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdministrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioAdministrativo.designer.cs">
+      <DependentUpon>InicioAdministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioEjecutivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioEjecutivo.designer.cs">
+      <DependentUpon>InicioEjecutivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioExterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioExterno.designer.cs">
+      <DependentUpon>InicioExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioJefe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioJefe.designer.cs">
+      <DependentUpon>InicioJefe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OlvidoContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OlvidoContraseña.designer.cs">
+      <DependentUpon>OlvidoContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitarColegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolicitarColegio.designer.cs">
+      <DependentUpon>SolicitarColegio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPostulantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarPostulantes.designer.cs">
+      <DependentUpon>VisualizarPostulantes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarPostulante.resx">
+      <DependentUpon>AgregarPostulante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPostulante.resx">
+      <DependentUpon>EditarPostulante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneraRepEncuestas.resx">
+      <DependentUpon>GeneraRepEncuestas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarReporte.resx">
+      <DependentUpon>GenerarReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformacionParaExterno.resx">
+      <DependentUpon>InformacionParaExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarPermisos.resx">
+      <DependentUpon>GestionarPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioAdministrativo.resx">
+      <DependentUpon>InicioAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioEjecutivo.resx">
+      <DependentUpon>InicioEjecutivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioExterno.resx">
+      <DependentUpon>InicioExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioJefe.resx">
+      <DependentUpon>InicioJefe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OlvidoContraseña.resx">
+      <DependentUpon>OlvidoContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -57,6 +192,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolicitarColegio.resx">
+      <DependentUpon>SolicitarColegio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPostulantes.resx">
+      <DependentUpon>VisualizarPostulantes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -69,6 +213,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{5696eeed-de48-4930-812e-a585ae2c674f}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
