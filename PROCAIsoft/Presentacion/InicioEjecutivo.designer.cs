@@ -155,6 +155,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "InicioEjecutivo";
             this.Text = "InicioEjecutivo";
+            this.Load += new System.EventHandler(this.InicioEjecutivo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

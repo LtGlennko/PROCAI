@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class editarStockcs : Form
+    public partial class EditarStocks : Form
     {
         private BindingList<Producto> productos;
-        public editarStockcs()
+        public EditarStocks()
         {
             InitializeComponent();
         }
 
         
-        public editarStockcs(int cod,string nomb,int stock, BindingList<Producto> p)
+        public EditarStocks(int cod,string nomb,int stock, BindingList<Producto> p)
         {
             InitializeComponent();
             txtCod.Text = cod.ToString();

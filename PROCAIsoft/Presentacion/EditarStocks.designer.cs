@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class editarStockcs
+    partial class EditarStocks
     {
         /// <summary>
         /// Required designer variable.

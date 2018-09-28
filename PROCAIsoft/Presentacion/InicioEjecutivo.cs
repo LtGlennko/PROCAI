@@ -116,5 +116,10 @@ namespace Presentacion
             }
             this.Visible = true;
         }
+
+        private void InicioEjecutivo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

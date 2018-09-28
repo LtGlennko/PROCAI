@@ -64,17 +64,41 @@
     <Compile Include="agregarStock.designer.cs">
       <DependentUpon>agregarStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalleEncuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleEncuesta.designer.cs">
+      <DependentUpon>DetalleEncuesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarPostulante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarPostulante.designer.cs">
       <DependentUpon>EditarPostulante.cs</DependentUpon>
     </Compile>
-    <Compile Include="editarStockcs.cs">
+    <Compile Include="EditarStocks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editarStockcs.designer.cs">
-      <DependentUpon>editarStockcs.cs</DependentUpon>
+    <Compile Include="EditarStocks.designer.cs">
+      <DependentUpon>EditarStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionOrientadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionOrientadores.designer.cs">
+      <DependentUpon>GestionOrientadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionProcesosAdmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionProcesosAdmision.designer.cs">
+      <DependentUpon>GestionProcesosAdmision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCalendario.designer.cs">
+      <DependentUpon>GestionCalendario.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionColegios.cs">
       <SubType>Form</SubType>
@@ -93,6 +117,18 @@
     </Compile>
     <Compile Include="GenerarReporte.designer.cs">
       <DependentUpon>GenerarReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoSolicitud.designer.cs">
+      <DependentUpon>InfoSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioGuia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioGuia.designer.cs">
+      <DependentUpon>InicioGuia.cs</DependentUpon>
     </Compile>
     <Compile Include="InformacionParaExterno.cs">
       <SubType>Form</SubType>
@@ -162,6 +198,30 @@
     <Compile Include="SolicitarColegio.designer.cs">
       <DependentUpon>SolicitarColegio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Solicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solicitudes.designer.cs">
+      <DependentUpon>Solicitudes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaNuevoOrientador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaNuevoOrientador.designer.cs">
+      <DependentUpon>VentanaNuevoOrientador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaNuevoProcesoAdmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaNuevoProcesoAdmision.designer.cs">
+      <DependentUpon>VentanaNuevoProcesoAdmision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarEncuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarEncuestas.designer.cs">
+      <DependentUpon>VisualizarEncuestas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisualizarPostulantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,11 +237,23 @@
     <EmbeddedResource Include="agregarStock.resx">
       <DependentUpon>agregarStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetalleEncuesta.resx">
+      <DependentUpon>DetalleEncuesta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarPostulante.resx">
       <DependentUpon>EditarPostulante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editarStockcs.resx">
-      <DependentUpon>editarStockcs.cs</DependentUpon>
+    <EmbeddedResource Include="EditarStocks.resx">
+      <DependentUpon>EditarStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionOrientadores.resx">
+      <DependentUpon>GestionOrientadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionProcesosAdmision.resx">
+      <DependentUpon>GestionProcesosAdmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCalendario.resx">
+      <DependentUpon>GestionCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionColegios.resx">
       <DependentUpon>GestionColegios.cs</DependentUpon>
@@ -191,6 +263,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarReporte.resx">
       <DependentUpon>GenerarReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoSolicitud.resx">
+      <DependentUpon>InfoSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioGuia.resx">
+      <DependentUpon>InicioGuia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionParaExterno.resx">
       <DependentUpon>InformacionParaExterno.cs</DependentUpon>
@@ -233,6 +311,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SolicitarColegio.resx">
       <DependentUpon>SolicitarColegio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solicitudes.resx">
+      <DependentUpon>Solicitudes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaNuevoOrientador.resx">
+      <DependentUpon>VentanaNuevoOrientador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaNuevoProcesoAdmision.resx">
+      <DependentUpon>VentanaNuevoProcesoAdmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarEncuestas.resx">
+      <DependentUpon>VisualizarEncuestas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisualizarPostulantes.resx">
       <DependentUpon>VisualizarPostulantes.cs</DependentUpon>
