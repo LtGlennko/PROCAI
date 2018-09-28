@@ -14,42 +14,14 @@ namespace Presentacion
     public partial class InicioEjecutivo : Form
     {
         public InicioEjecutivo(Usuario u)
-        {            
+        {
             InitializeComponent();
             lblNombreUsu.Text += u.NombreUsuario;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //FormStock FS = new FormStock();
-            //FS.StartPosition = FormStartPosition.CenterScreen;
-            //this.Visible = false;
-            //if (FS.ShowDialog() == DialogResult.OK)
-            //{
-
-            //}
-            //this.Visible = true;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Dispose();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            GestCol GS = new GestCol();
-            GS.SetDesktopLocation(100, 100);
-            this.Visible = false;
-            if (GS.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -62,11 +34,6 @@ namespace Presentacion
 
             }
             this.Visible = true;
-        }
-
-        private void button2_Click_2(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCalendario_Click(object sender, EventArgs e)
@@ -120,6 +87,30 @@ namespace Presentacion
         private void InicioEjecutivo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGestionarColegios_Click(object sender, EventArgs e)
+        {
+            GestCol GS = new GestCol();
+            GS.SetDesktopLocation(100, 100);
+            this.Visible = false;
+            if (GS.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
+        }
+
+        private void btnGestionarStock_Click(object sender, EventArgs e)
+        {
+            frmGestStock FS = new frmGestStock();
+            FS.StartPosition = FormStartPosition.CenterScreen;
+            this.Visible = false;
+            if (FS.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
         }
     }
 }

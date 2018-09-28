@@ -98,7 +98,7 @@
             this.txtCod.Size = new System.Drawing.Size(124, 20);
             this.txtCod.TabIndex = 7;
             // 
-            // editarStockcs
+            // EditarStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,8 +110,8 @@
             this.Controls.Add(this.txtN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "editarStockcs";
-            this.Text = "editarStockcs";
+            this.Name = "EditarStocks";
+            this.Text = "editarStocks";
             this.Load += new System.EventHandler(this.editarStockcs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

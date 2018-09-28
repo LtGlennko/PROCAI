@@ -76,36 +76,42 @@ namespace Presentacion
             {
                 InicioAdministrativo IA = new InicioAdministrativo(usuIn);
                 IA.StartPosition = FormStartPosition.CenterScreen;
+                this.Visible = false;
                 if (IA.ShowDialog() == DialogResult.OK)
                 {
 
                 }
+                this.Visible = true;
             }
 
             if (usuIn is Ejecutivo)
             {
                 InicioEjecutivo IG = new InicioEjecutivo(usuIn);
                 IG.StartPosition = FormStartPosition.CenterScreen;
+                this.Visible = false;
                 if (IG.ShowDialog() == DialogResult.OK)
                 {
 
                 }
+                this.Visible = true;
             }
 
             if (usuIn is Guia)
             {
                 InicioGuia IE = new InicioGuia(usuIn);
                 IE.StartPosition = FormStartPosition.CenterScreen;
+                this.Visible = false;
                 if (IE.ShowDialog() == DialogResult.OK)
                 {
 
                 }
+                this.Visible = true;
             }
             if (usuIn.NivelPermiso == 5) //El jefe tiene un nivel de permiso 5
             {
                 InicioJefe IJ = new InicioJefe(usuarios, usuIn);
-                //Close();
                 IJ.StartPosition = FormStartPosition.CenterScreen;
+                this.Visible = false;
                 if (IJ.ShowDialog() == DialogResult.OK)
                 {
 
@@ -141,16 +147,6 @@ namespace Presentacion
                 if (usu.NombreUsuario.Equals(nombre) && usu.CuentaUsuario.Contrasena.Equals(contra)) return usu;
             }
             return null;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

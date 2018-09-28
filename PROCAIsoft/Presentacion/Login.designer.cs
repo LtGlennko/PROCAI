@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -38,12 +39,16 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblUsuInval = new System.Windows.Forms.Label();
             this.lblConInval = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(54, 70);
+            this.lblUsuario.Location = new System.Drawing.Point(109, 92);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 0;
@@ -53,7 +58,7 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(50, 98);
+            this.lblContraseña.Location = new System.Drawing.Point(109, 145);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(61, 13);
             this.lblContraseña.TabIndex = 1;
@@ -61,24 +66,25 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(117, 67);
+            this.txtUsuario.Location = new System.Drawing.Point(176, 89);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.Text = "Administrativo1";
+            this.txtUsuario.Text = "Ejecutivo2";
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(117, 95);
+            this.txtContraseña.Location = new System.Drawing.Point(176, 142);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.Text = "1234";
             // 
             // llblOlvido
             // 
             this.llblOlvido.AutoSize = true;
-            this.llblOlvido.Location = new System.Drawing.Point(108, 130);
+            this.llblOlvido.Location = new System.Drawing.Point(128, 226);
             this.llblOlvido.Name = "llblOlvido";
             this.llblOlvido.Size = new System.Drawing.Size(119, 13);
             this.llblOlvido.TabIndex = 4;
@@ -88,9 +94,9 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(129, 153);
+            this.btnIniciar.Location = new System.Drawing.Point(134, 193);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.Size = new System.Drawing.Size(106, 23);
             this.btnIniciar.TabIndex = 5;
             this.btnIniciar.Text = "Iniciar Sesion";
             this.btnIniciar.UseVisualStyleBackColor = true;
@@ -99,15 +105,16 @@
             // lb
             // 
             this.lb.AutoSize = true;
-            this.lb.Location = new System.Drawing.Point(154, 31);
+            this.lb.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.Location = new System.Drawing.Point(87, 30);
             this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(32, 13);
+            this.lb.Size = new System.Drawing.Size(187, 28);
             this.lb.TabIndex = 6;
-            this.lb.Text = "OCAI";
+            this.lb.Text = "PROCAIsoft v0.1";
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(12, 153);
+            this.btnSalir.Location = new System.Drawing.Point(12, 221);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 23);
             this.btnSalir.TabIndex = 7;
@@ -118,7 +125,8 @@
             // lblUsuInval
             // 
             this.lblUsuInval.AutoSize = true;
-            this.lblUsuInval.Location = new System.Drawing.Point(223, 70);
+            this.lblUsuInval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuInval.Location = new System.Drawing.Point(182, 114);
             this.lblUsuInval.Name = "lblUsuInval";
             this.lblUsuInval.Size = new System.Drawing.Size(0, 13);
             this.lblUsuInval.TabIndex = 8;
@@ -126,16 +134,39 @@
             // lblConInval
             // 
             this.lblConInval.AutoSize = true;
-            this.lblConInval.Location = new System.Drawing.Point(223, 98);
+            this.lblConInval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConInval.Location = new System.Drawing.Point(182, 167);
             this.lblConInval.Name = "lblConInval";
             this.lblConInval.Size = new System.Drawing.Size(0, 13);
             this.lblConInval.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(85, 89);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(85, 143);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 188);
+            this.ClientSize = new System.Drawing.Size(374, 256);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblConInval);
             this.Controls.Add(this.lblUsuInval);
             this.Controls.Add(this.btnSalir);
@@ -149,6 +180,8 @@
             this.Name = "Login";
             this.Text = "SISTEMA OCAI";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +199,8 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblUsuInval;
         private System.Windows.Forms.Label lblConInval;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
