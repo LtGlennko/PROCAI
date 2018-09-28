@@ -67,7 +67,7 @@ namespace Presentacion
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola");
+
         }
 
         private void VentanaNuevoProcesoAdmision_Paint(object sender, PaintEventArgs e)
