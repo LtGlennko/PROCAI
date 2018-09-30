@@ -30,8 +30,6 @@ namespace Modelo
             this.Observacion = observacion;
         }
 
-
-
         public int IdSolicitud { get => idSolicitud; set => idSolicitud = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Telefono { get => telefono; set => telefono = value; }

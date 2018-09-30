@@ -8,38 +8,24 @@ namespace Modelo
 {
     public class Cargo
     {
+        protected static int i = 0;
         private int IdCargo;
         private string nombreCargo;
-        private List<TrabajadorOCAI> Trabajadores;
+        private List<TrabajadorOCAI> listaTrabajadores;
 
-        public Cargo()
+        public Cargo(string nombreCargo)
         {
-            this.Trabajadores = new List<TrabajadorOCAI>();
-        }
-
-        public Cargo(int IdCargo, string nombreCargo)
-        {
-            this.IdCargo = IdCargo;
-            this.nombreCargo = nombreCargo;
-            this.Trabajadores = new List<TrabajadorOCAI>();
-        }
-
-        public int getIdCargo() { return this.IdCargo; }
-        public string getNombreCargo() { return this.nombreCargo; }
-
-        public void setIdCargo(int IdCargo)
-        {
-            this.IdCargo = IdCargo;
-        }
-
-        public void setNombreCargo(string nombreCargo)
-        {
+            IdCargo = ++i;
             this.nombreCargo = nombreCargo;
         }
 
-        public void addTrabajadorOCAI(TrabajadorOCAI Trab)
+        public int IdCargo1 { get => IdCargo; set => IdCargo = value; }
+        public string NombreCargo { get => nombreCargo; set => nombreCargo = value; }
+        public List<TrabajadorOCAI> ListaTrabajadores { get => listaTrabajadores; set => listaTrabajadores = value; }
+        public void addTrabajador(TrabajadorOCAI tra)
         {
-            this.Trabajadores.Add(Trab);
+            this.listaTrabajadores.Add(tra);
+            tra.Cargo = this;
         }
     }
 }

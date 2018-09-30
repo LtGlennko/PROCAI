@@ -14,7 +14,7 @@ namespace Modelo
         private int nivelPermiso;
         private Cuenta cuentaUsuario;
 
-        public Usuario(int dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
+        public Usuario(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
         {
             IdUsuario = ++i;
             this.fechaCreacion = DateTime.Today;
@@ -25,10 +25,10 @@ namespace Modelo
         public DateTime FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
         public int NivelPermiso { get => nivelPermiso; set => nivelPermiso = value; }
         public Cuenta CuentaUsuario { get => cuentaUsuario; set => cuentaUsuario = value; }
-        public void setCuenta(Cuenta cuen)
+        public void setCuenta(Cuenta cue)
         {
-            this.cuentaUsuario = cuen;
-            cuen.Usuario = this;
+            this.cuentaUsuario = cue;
+            cue.Usuario = this;
         }
     }
 }

@@ -29,5 +29,15 @@ namespace Modelo
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public List<Actividad> ListaActividades { get => listaActividades; set => listaActividades = value; }
         public List<Pregunta> Preguntas { get => preguntas; set => preguntas = value; }
+        public void addActividad(Actividad act)
+        {
+            this.listaActividades.Add(act);
+            act.TipoActividad = this;
+        }
+        public void addPregunta(Pregunta pre)
+        {
+            this.preguntas.Add(pre);
+            pre.TipoActividad = this;
+        }
     }
 }

@@ -39,7 +39,7 @@ namespace Modelo
         public void setGuiaEvaluado(Guia gui)
         {
             this.guiaEvaluado = gui;
-            gui.EncuestasDondeFueEvaluado.Add(this);
+            gui.GruposDondeFueEvaluado.Add(this);
         }
     }
 }

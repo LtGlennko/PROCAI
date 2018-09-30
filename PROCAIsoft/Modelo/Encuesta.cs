@@ -11,24 +11,32 @@ namespace Modelo
         private static int i = 0;
         private int IdEncuesta;
         private GrupoEncuestas grupoPerteneciente;
-        private List<CalificacionPXE> calificacionesPorPregunta;
+        private List<CalificacionPXE> calificacionesPorEncuesta;
         private Guia digitador;
 
-        public Encuesta(GrupoEncuestas grupoPerteneciente, Guia digitador)
+        public Encuesta()
         {
-            this.IdEncuesta = ++i;
-            this.grupoPerteneciente = grupoPerteneciente;
-            this.digitador = digitador;
-            calificacionesPorPregunta = new List<CalificacionPXE>();
+            IdEncuesta = ++i;
+            this.calificacionesPorEncuesta = new List<CalificacionPXE>();
         }
-
         public int IdEncuesta1 { get => IdEncuesta; set => IdEncuesta = value; }
         public GrupoEncuestas GrupoPerteneciente { get => grupoPerteneciente; set => grupoPerteneciente = value; }
-        public List<CalificacionPXE> CalificacionesPorPregunta { get => calificacionesPorPregunta; set => calificacionesPorPregunta = value; }
+        public List<CalificacionPXE> CalificacionesPorEncuesta { get => calificacionesPorEncuesta; set => calificacionesPorEncuesta = value; }
         public Guia Digitador { get => digitador; set => digitador = value; }
-        public void AddcCalificacionPorPregunta(CalificacionPXE pxe)
+        public void setGrupo(GrupoEncuestas gru)
         {
-            calificacionesPorPregunta.Add(pxe);
+            this.grupoPerteneciente = gru;
+            gru.ListaDeEncuestas.Add(this);
+        }
+        public void setDigitador(Guia gui)
+        {
+            this.digitador = gui;
+            gui.EncuestasDigitadas.Add(this);
+        }
+        public void addCalificacionPorEncuesta(CalificacionPXE cal)
+        {
+            this.calificacionesPorEncuesta.Add(cal);
+            cal.Encuesta = this;
         }
     }
 }

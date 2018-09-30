@@ -15,13 +15,12 @@ namespace Modelo
         private string contrasena;
         private Usuario usuario;
 
-        public Cuenta(DateTime ultimaConexion, string nombreDeUsuario, string contrasena)
+        public Cuenta(string nombreDeUsuario, string contrasena)
         {
             IdCuenta = ++i;
-            this.ultimaConexion = ultimaConexion;
+            this.ultimaConexion = DateTime.Now;
             this.nombreDeUsuario = nombreDeUsuario;
             this.contrasena = contrasena;
-            usuario.CuentaUsuario = this;
         }
 
         public int IdCuenta1 { get => IdCuenta; set => IdCuenta = value; }

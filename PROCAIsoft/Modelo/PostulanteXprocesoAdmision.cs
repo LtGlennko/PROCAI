@@ -45,3 +45,4 @@ namespace Modelo
             pro.PostulacionesDeProceso.Add(this);
         }
     }
+}

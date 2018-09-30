@@ -10,7 +10,7 @@ namespace Modelo
     {
         protected static int i = 0;
         private int IdPersona;
-        private int DNI;
+        private string DNI;
         private string nombres;
         private string apellidoPaterno;
         private string apellidoMaterno;        
@@ -18,7 +18,7 @@ namespace Modelo
         private TipoSexo sexo;
         private string correoElectronico;
 
-        public Persona(int dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico)
+        public Persona(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico)
         {
             IdPersona = ++i;
             DNI = dNI;
@@ -31,7 +31,7 @@ namespace Modelo
         }
 
         public int IdPersona1 { get => IdPersona; set => IdPersona = value; }
-        public int DNI1 { get => DNI; set => DNI = value; }
+        public string DNI1 { get => DNI; set => DNI = value; }
         public string Nombres { get => nombres; set => nombres = value; }
         public string ApellidoPaterno { get => apellidoPaterno; set => apellidoPaterno = value; }
         public string ApellidoMaterno { get => apellidoMaterno; set => apellidoMaterno = value; }
