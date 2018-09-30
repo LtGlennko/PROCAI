@@ -1,38 +1,44 @@
+
 using System;
+using System.Collections.Generic;
+
 namespace Modelo
 {
     public class ProcesoAdmision
     {
-        private static int ID=0;
+        protected static int i = 0;
         private int IdProceso;
-        private string NombreProceso;
-        private string descripcion;
-        private DateTime fechaCreacion;
-        private int estaVigente; //1 = existe, 0 = ya no existe
-        private int cantidadVacantes;
-        //Constructador
-        public ProcesoAdmision()
+        private TipoProcesoAdmision tipoProceso;
+        private string nombreProceso;
+        private DateTime fechaRealizacion;
+        private int cantVacantes;
+        private List<PostulanteXprocesoAdmision> postulacionesDeProceso;
+
+        public ProcesoAdmision(TipoProcesoAdmision tipoProceso, string nombreProceso, string descripcion, DateTime fechaRealizacion, int cantVacantes)
         {
-            ID++;
-            this.IdProceso = ID;
+            IdProceso = ++i;
+            this.tipoProceso = tipoProceso;
+            this.nombreProceso = nombreProceso;
+            this.fechaRealizacion = fechaRealizacion;
+            this.cantVacantes = cantVacantes;
+            this.postulacionesDeProceso = new List<PostulanteXprocesoAdmision>();
         }
 
-        public ProcesoAdmision(int idProceso, string nombreProceso, string descripcion, DateTime fechaCreacion, int estaVigente, int cantidadVacantes)
-        {
-            IdProceso = idProceso;
-            NombreProceso = nombreProceso;
-            this.descripcion = descripcion;
-            this.fechaCreacion = fechaCreacion;
-            this.estaVigente = estaVigente;
-            this.cantidadVacantes = cantidadVacantes;
-        }
-
-        public static int ID1 { get => ID; set => ID = value; }
         public int IdProceso1 { get => IdProceso; set => IdProceso = value; }
-        public string NombreProceso1 { get => NombreProceso; set => NombreProceso = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
-        public DateTime FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
-        public int EstaVigente { get => estaVigente; set => estaVigente = value; }
-        public int CantidadVacantes { get => cantidadVacantes; set => cantidadVacantes = value; }
+        public string NombreProceso { get => nombreProceso; set => nombreProceso = value; }
+        public DateTime FechaRealizacion { get => fechaRealizacion; set => fechaRealizacion = value; }
+        public int CantVacantes { get => cantVacantes; set => cantVacantes = value; }
+        public List<PostulanteXprocesoAdmision> PostulacionesDeProceso { get => postulacionesDeProceso; set => postulacionesDeProceso = value; }
+        public TipoProcesoAdmision TipoProceso { get => tipoProceso; set => tipoProceso = value; }
+        public void setTipoProceso(TipoProcesoAdmision tip)
+        {
+            this.tipoProceso = tip;
+            tip.ProcesosCreados.Add(this);
+        }
+        public void addPostulacionDeProceso(PostulanteXprocesoAdmision pxp)
+        {
+            this.postulacionesDeProceso.Add(pxp);
+            pxp.ProcesoDeAdmision = this;
+        }
     }
 }

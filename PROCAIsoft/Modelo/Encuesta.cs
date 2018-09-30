@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Encuesta
+    public class Encuesta
     {
         private static int i = 0;
         private int IdEncuesta;

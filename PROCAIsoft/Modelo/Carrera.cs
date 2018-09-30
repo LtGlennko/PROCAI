@@ -8,59 +8,26 @@ namespace Modelo
 {
     public class Carrera
     {
+        protected static int i = 0;
         private int IdCarrera;
         private string nombreCarrera;
-        private List<PostulanteXprocesoAdmision> listaDeProcesos;
+        private List<PostulanteXprocesoAdmision> postulacionesDeCarrera;
 
-        public Carrera()
+        public Carrera(string nombreCarrera)
         {
-            this.listaDeProcesos = null;
-        }
-
-        public Carrera(int idCarrera, string nombreCarrera, List<PostulanteXprocesoAdmision> listaDeProcesos)
-        {
-            this.IdCarrera = idCarrera;
+            IdCarrera = ++i;
             this.nombreCarrera = nombreCarrera;
-            this.listaDeProcesos = listaDeProcesos;
+            this.postulacionesDeCarrera = new List<PostulanteXprocesoAdmision>();
         }
 
-        ~Carrera()
+        public int IdCarrera1 { get => IdCarrera; set => IdCarrera = value; }
+        public string NombreCarrera { get => nombreCarrera; set => nombreCarrera = value; }
+        public List<PostulanteXprocesoAdmision> PostulacionesDeCarrera { get => postulacionesDeCarrera; set => postulacionesDeCarrera = value; }
+
+        public void addPostulacionDeCarrera(PostulanteXprocesoAdmision pxp)
         {
-            System.Console.WriteLine("destructor");
+            this.postulacionesDeCarrera.Add(pxp);
+            pxp.Carrera = this;
         }
-
-        public void setIdCarrera(int idCarrera)
-        {
-            this.IdCarrera = idCarrera;
-        }
-
-        public int getIdCarrera()
-        {
-            return IdCarrera;
-        }
-
-        public void setNombreCarrera(string nombreCarrera)
-        {
-            this.nombreCarrera = nombreCarrera;
-        }
-
-        public string getNombreCarrera()
-        {
-            return nombreCarrera;
-        }
-
-
-
-        public List<PostulanteXprocesoAdmision> getListaDeProcesos()
-        {
-            return listaDeProcesos;
-        }
-
-        public void setListaDeProcesos(List<PostulanteXprocesoAdmision> listaDeProcesos)
-        {
-            this.listaDeProcesos = listaDeProcesos;
-        }
-
-
     }
 }

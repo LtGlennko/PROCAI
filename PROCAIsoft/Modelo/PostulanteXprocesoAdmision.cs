@@ -8,40 +8,40 @@ namespace Modelo
 {
     public class PostulanteXprocesoAdmision
     {
+        protected static int i = 0;
         private int IdPostulanteXprocesoAdmision;
-        private DateTime date;
         private int estadoAdmision;
+        private string codVaucher;
+        private Escolar postulante;
+        private Carrera carrera;
+        private ProcesoAdmision procesoDeAdmision;
 
-        public PostulanteXprocesoAdmision(int id, int yy, int mm, int dd, int estado)
+        public PostulanteXprocesoAdmision(int idPostulanteXprocesoAdmision, int estadoAdmision, string codVaucher)
         {
-            IdPostulanteXprocesoAdmision = id;
-            date = new DateTime(yy, mm, dd);
-            estadoAdmision = estado;
+            IdPostulanteXprocesoAdmision = ++i;
+            this.estadoAdmision = estadoAdmision;
+            this.codVaucher = codVaucher;
         }
 
-        public int Idpostulante
+        public int IdPostulanteXprocesoAdmision1 { get => IdPostulanteXprocesoAdmision; set => IdPostulanteXprocesoAdmision = value; }
+        public int EstadoAdmision { get => estadoAdmision; set => estadoAdmision = value; }
+        public string CodVaucher { get => codVaucher; set => codVaucher = value; }
+        public Escolar Postulante { get => postulante; set => postulante = value; }
+        public Carrera Carrera { get => carrera; set => carrera = value; }
+        public ProcesoAdmision ProcesoDeAdmision { get => procesoDeAdmision; set => procesoDeAdmision = value; }
+        public void setPostulante(Escolar esc)
         {
-            set
-            {
-                IdPostulanteXprocesoAdmision = value;
-            }
-            get
-            {
-                return IdPostulanteXprocesoAdmision;
-            }
+            this.postulante = esc;
+            esc.PostulacionesRealizadas.Add(this);
         }
-
-        public int estadoadmision
+        public void setCarrera(Carrera car)
         {
-            set
-            {
-                estadoAdmision = value;
-            }
-            get
-            {
-                return estadoAdmision;
-            }
+            this.carrera = car;
+            car.PostulacionesDeCarrera.Add(this);
         }
-
+        public void setProcesoDeAdmision(ProcesoAdmision pro)
+        {
+            this.procesoDeAdmision = pro;
+            pro.PostulacionesDeProceso.Add(this);
+        }
     }
-}

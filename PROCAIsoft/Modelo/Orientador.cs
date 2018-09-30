@@ -6,41 +6,25 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class Orientador /*: UsuarioLogueable*/
+    public class Orientador : Usuario
     {
+        protected static int i = 0;
         private int IdOrientador;
+        private Colegio colegio;
 
-        public Orientador()
+        public Orientador(int dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, Cuenta cuentaUsuario, Colegio colegio) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
         {
-
-        }
-        public Orientador(int IDp, int DNI, string nombre, string ap, string am, string correo, int telefono, char sexo, //de persona
-                                int IdUsusario, string fechaCreacion/*,CuentaUsuario cuenta*/,// de ususario logueable
-                                int IdOrientador)//orientador
-                                                 /*:base(IDp, DNI, nombre, ap, am, correo, 
-                                                 telefono, sexo, IdUsusario, fechaCreacion, cuenta)*/
-        {
-            this.IdOrientador = IdOrientador;
+            IdOrientador = ++i;
+            this.colegio = colegio;
+            this.NivelPermiso = 1;
         }
 
-        /**
-         * @return the IdOrientador
-         */
-        public int getIdOrientador()
+        public int IdOrientador1 { get => IdOrientador; set => IdOrientador = value; }
+        public Colegio Colegio { get => colegio; set => colegio = value; }
+        public void setColegio(Colegio cole)
         {
-            return IdOrientador;
-        }
-
-        /**
-         * @param IdOrientador the IdOrientador to set
-         */
-        public void setIdOrientador(int IdOrientador)
-        {
-            this.IdOrientador = IdOrientador;
-        }
-        ~Orientador()
-        {
-            System.Console.WriteLine("destructor");
+            this.colegio = cole;
+            cole.Orientadores.Add(this);
         }
     }
 }

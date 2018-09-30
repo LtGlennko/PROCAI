@@ -6,26 +6,29 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class Usuario
+    public class Usuario : Persona
     {
-        private static int i=0;
+        protected static int i=0;
         private int IdUsuario;
         private DateTime fechaCreacion;
         private int nivelPermiso;
-        private CuentaUsuario cuentaUsuario;
+        private Cuenta cuentaUsuario;
 
-        public Usuario(DateTime fechaCreacion, int nivelPermiso)
+        public Usuario(int dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
         {
             IdUsuario = ++i;
-            this.fechaCreacion = fechaCreacion;
-            this.nivelPermiso = nivelPermiso;
+            this.fechaCreacion = DateTime.Today;
+            this.nivelPermiso = 1;
         }
 
-        protected static int I { get => i; set => i = value; }
         public int IdUsuario1 { get => IdUsuario; set => IdUsuario = value; }
         public DateTime FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
         public int NivelPermiso { get => nivelPermiso; set => nivelPermiso = value; }
-        public string NombreUsuario { get => CuentaUsuario.NombreDeUsuario; }
-        public CuentaUsuario CuentaUsuario { get => cuentaUsuario; set => cuentaUsuario = value; }
+        public Cuenta CuentaUsuario { get => cuentaUsuario; set => cuentaUsuario = value; }
+        public void setCuenta(Cuenta cuen)
+        {
+            this.cuentaUsuario = cuen;
+            cuen.Usuario = this;
+        }
     }
 }

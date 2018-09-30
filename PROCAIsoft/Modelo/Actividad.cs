@@ -10,25 +10,44 @@ namespace Modelo
     public class Actividad
     {
         private static int i;
-        private int idActividad;
-        private string nombre;
-        private string desc;
+        private int IdTipoActividad;
+        private TipoActividad tipoActividad;
+        private DateTime fechaProgramada;
+        private int estadoActividad;
+        private int cantEstudiantes;
+        private Merchandising materialRepartido;
+        private List<GrupoEncuestas> gruposDeEncuestas;
 
-        public Actividad()
+        public Actividad(DateTime fechaProgramada, int estadoActividad, int cantEstudiantes)
         {
-            i++;
-            idActividad = i;
-        }
-        public Actividad( string nombre, string desc)
-        {
-            i++;
-            IdActividad =i;
-            this.nombre = nombre;
-            this.desc = desc;
+            IdTipoActividad = ++i;
+            this.fechaProgramada = fechaProgramada;
+            this.estadoActividad = estadoActividad;
+            this.cantEstudiantes = cantEstudiantes;
+            this.gruposDeEncuestas = new List<GrupoEncuestas>();
         }
 
-        public int IdActividad { get => idActividad; set => idActividad = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Desc { get => desc; set => desc = value; }
+        public int IdTipoActividad1 { get => IdTipoActividad; set => IdTipoActividad = value; }
+        public DateTime FechaProgramada { get => fechaProgramada; set => fechaProgramada = value; }
+        public int EstadoActividad { get => estadoActividad; set => estadoActividad = value; }
+        public int CantEstudiantes { get => cantEstudiantes; set => cantEstudiantes = value; }
+        public List<GrupoEncuestas> GruposDeEncuestas { get => gruposDeEncuestas; set => gruposDeEncuestas = value; }
+        internal TipoActividad TipoActividad { get => tipoActividad; set => tipoActividad = value; }
+        internal Merchandising MaterialRepartido { get => materialRepartido; set => materialRepartido = value; }
+        public void setTipoActividad(TipoActividad tip)
+        {
+            this.tipoActividad = tip;
+            tip.ListaActividades.Add(this);
+        }
+        public void setMaterialRepartido(Merchandising mer)
+        {
+            this.materialRepartido = mer;
+            mer.Actividades.Add(this);
+        }
+        public void addGrupoEncuestas(GrupoEncuestas gru)
+        {
+            this.gruposDeEncuestas.Add(gru);
+            gru.Actividad = this;
+        }
     }
 }

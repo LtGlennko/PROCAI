@@ -24,11 +24,11 @@ namespace Presentacion
             Usuario u3 = new Guia(Convert.ToDateTime("23-09-2018"), 3, Convert.ToDateTime("16-07-2018"), 1, 'C', "Vigente");
             Usuario u4 = new Usuario(Convert.ToDateTime("17-04-2018"), 5); //Este es un jefe por ser nivel 5
             Usuario u5 = new Usuario(Convert.ToDateTime("30-08-2018"), 4);
-            CuentaUsuario c1 = new CuentaUsuario(Convert.ToDateTime("10-09-2018"), "Administrativo1", "1234", u1);
-            CuentaUsuario c2 = new CuentaUsuario(Convert.ToDateTime("10-09-2018"), "Ejecutivo2", "1234", u2);
-            CuentaUsuario c3 = new CuentaUsuario(Convert.ToDateTime("10-09-2018"), "Guia3", "1234", u3);
-            CuentaUsuario c4 = new CuentaUsuario(Convert.ToDateTime("10-09-2018"), "Jefe4", "1234", u4);
-            CuentaUsuario c5 = new CuentaUsuario(Convert.ToDateTime("10-09-2018"), "LMAO", "1234", u5);
+            Cuenta c1 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Administrativo1", "1234", u1);
+            Cuenta c2 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Ejecutivo2", "1234", u2);
+            Cuenta c3 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Guia3", "1234", u3);
+            Cuenta c4 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Jefe4", "1234", u4);
+            Cuenta c5 = new Cuenta(Convert.ToDateTime("10-09-2018"), "LMAO", "1234", u5);
             usuarios.Add(u1);
             usuarios.Add(u2);
             usuarios.Add(u3);

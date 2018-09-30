@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class CuentaUsuario
+    public class Cuenta
     {
         protected static int i = 0;
         private int IdCuenta;
@@ -15,13 +15,12 @@ namespace Modelo
         private string contrasena;
         private Usuario usuario;
 
-        public CuentaUsuario(DateTime ultimaConexion, string nombreDeUsuario, string contrasena, Usuario usuario)
+        public Cuenta(DateTime ultimaConexion, string nombreDeUsuario, string contrasena)
         {
             IdCuenta = ++i;
             this.ultimaConexion = ultimaConexion;
             this.nombreDeUsuario = nombreDeUsuario;
             this.contrasena = contrasena;
-            this.usuario = usuario;
             usuario.CuentaUsuario = this;
         }
 
@@ -30,5 +29,10 @@ namespace Modelo
         public string NombreDeUsuario { get => nombreDeUsuario; set => nombreDeUsuario = value; }
         public string Contrasena { get => contrasena; set => contrasena = value; }
         public Usuario Usuario { get => usuario; set => usuario = value; }
+        public void setUsuario(Usuario usu)
+        {
+            this.usuario = usu;
+            usu.CuentaUsuario = this;
+        }
     }
 }
