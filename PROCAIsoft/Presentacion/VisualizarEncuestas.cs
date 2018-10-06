@@ -21,6 +21,7 @@ namespace Presentacion
             {
                 btnModificar.Enabled = false;
             }
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -29,10 +30,7 @@ namespace Presentacion
             MessageBox.Show("Encuesta registrada con éxito");
         }
 
-        private void btnRetresar_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -51,6 +49,11 @@ namespace Presentacion
         private void frmRegYeditEncuestas_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
