@@ -59,7 +59,7 @@
             // 
             // txtTelAp
             // 
-            this.txtTelAp.Location = new System.Drawing.Point(579, 159);
+            this.txtTelAp.Location = new System.Drawing.Point(559, 207);
             this.txtTelAp.Name = "txtTelAp";
             this.txtTelAp.Size = new System.Drawing.Size(100, 20);
             this.txtTelAp.TabIndex = 1;
