@@ -13,7 +13,6 @@ namespace Presentacion
 {
     public partial class frmGestStock : Form
     {
-        private BindingList<Producto> productos;
         public frmGestStock()
         {
             InitializeComponent();
@@ -31,9 +30,6 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            agregarStock agregar1 = new agregarStock(productos);
-            agregar1.Show();//esto espera a que se llene el form de agregar
-            dgvStock.DataSource = productos;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -43,9 +39,6 @@ namespace Presentacion
             int stock = (int)dgvStock.CurrentRow.Cells[2].Value;
             //dgvStock.CurrentRow.SetValues(cod,nombre,stock);//esta funcion puede simplificar la edicion
             dgvStock.Rows.RemoveAt(dgvStock.CurrentRow.Index);
-            EditarStocks editar = new EditarStocks(cod, nombre, stock, productos);
-            editar.Show();
-            dgvStock.DataSource = productos;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

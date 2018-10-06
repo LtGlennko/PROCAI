@@ -20,7 +20,7 @@ namespace Presentacion
         public InicioGuia(Usuario u)
         {            
             InitializeComponent();
-            lblNombreUsu.Text += u.NombreUsuario;
+            //lblNombreUsu.Text += u.NombreUsuario;
         }
 
         private void button1_Click(object sender, EventArgs e)

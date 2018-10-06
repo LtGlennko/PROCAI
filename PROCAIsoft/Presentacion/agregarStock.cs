@@ -13,17 +13,10 @@ namespace Presentacion
 {
     public partial class agregarStock : Form
     {
-        private BindingList<Producto> productos;
         public agregarStock()
         {
             InitializeComponent();
         }
-        public agregarStock(BindingList<Producto> p)
-        {
-            InitializeComponent();
-            productos = p;
-        }
-        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -31,10 +24,7 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Producto p = new Producto();
-            p.Nombre=txtN.Text;
-            p.Stock = Int32.Parse(txtC.Text);
-            productos.Add(p);
+           
             txtN.Text = String.Empty;
             txtC.Text = String.Empty;
             MessageBox.Show("Producto registrado");

@@ -30,14 +30,14 @@ namespace Presentacion
             VentanaNuevoProcesoAdmision VNPA = new VentanaNuevoProcesoAdmision();
             VNPA.Show();
             int i = 0;
-            foreach (ProcesoAdmision pa in VNPA.ProcesosAdmision) {
-                dgvPA.Rows.Add();
-                dgvPA[i, 0].Value = tostring(i);
-                dgvPA[i, 1].Value = pa.Descripcion;
-                dgvPA[i, 2].Value = tostring(pa.CantidadVacantes);
-                dgvPA[i, 3].Value = pa.Descripcion;
+            //foreach (ProcesoAdmision pa in VNPA.ProcesosAdmision) {
+            //    dgvPA.Rows.Add();
+            //    dgvPA[i, 0].Value = tostring(i);
+            //    dgvPA[i, 1].Value = pa.Descripcion;
+            //    dgvPA[i, 2].Value = tostring(pa.CantidadVacantes);
+            //    dgvPA[i, 3].Value = pa.Descripcion;
 
-            }
+            //}
 
         }
 

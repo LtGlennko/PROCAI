@@ -13,20 +13,18 @@ namespace Presentacion
 {
     public partial class EditarStocks : Form
     {
-        private BindingList<Producto> productos;
         public EditarStocks()
         {
             InitializeComponent();
         }
 
         
-        public EditarStocks(int cod,string nomb,int stock, BindingList<Producto> p)
+        public EditarStocks(int cod,string nomb,int stock)
         {
             InitializeComponent();
             txtCod.Text = cod.ToString();
             txtC.Text = stock.ToString();
             txtN.Text = nomb;
-            productos = p;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,10 +42,6 @@ namespace Presentacion
             string nomb = txtN.Text;
             int cant = Int32.Parse(txtC.Text);
             int cod = Int32.Parse(txtCod.Text);
-            Producto p = new Producto(cod, nomb, cant);
-            productos.Add(p);
-            List<Producto> sortedlist = productos.OrderBy(x => x.Codigo).ToList();
-            productos = new BindingList<Producto>(sortedlist);
             MessageBox.Show("Datos del producto modificado");
             Dispose(true);
         }

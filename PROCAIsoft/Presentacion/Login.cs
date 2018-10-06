@@ -13,27 +13,10 @@ namespace Presentacion
 {
     public partial class Login : Form
     {
-        private BindingList<Usuario> usuarios;
         private static int numIntentos = 3;
         public Login()
         {
             InitializeComponent();
-            usuarios = new BindingList<Usuario>();
-            Usuario u1 = new Administrativo(Convert.ToDateTime("05-07-2018"), 2, Convert.ToDateTime("10-08-2018"), 1, 4533436, 987676543, "rSanchez67@yahoo.com");
-            Usuario u2 = new Ejecutivo(Convert.ToDateTime("06-07-2018"), 1, Convert.ToDateTime("29-06-2018"), 1, 3217717, 938482121, "valefc@gmail.com");
-            Usuario u3 = new Guia(Convert.ToDateTime("23-09-2018"), 3, Convert.ToDateTime("16-07-2018"), 1, 'C', "Vigente");
-            Usuario u4 = new Usuario(Convert.ToDateTime("17-04-2018"), 5); //Este es un jefe por ser nivel 5
-            Usuario u5 = new Usuario(Convert.ToDateTime("30-08-2018"), 4);
-            Cuenta c1 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Administrativo1", "1234", u1);
-            Cuenta c2 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Ejecutivo2", "1234", u2);
-            Cuenta c3 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Guia3", "1234", u3);
-            Cuenta c4 = new Cuenta(Convert.ToDateTime("10-09-2018"), "Jefe4", "1234", u4);
-            Cuenta c5 = new Cuenta(Convert.ToDateTime("10-09-2018"), "LMAO", "1234", u5);
-            usuarios.Add(u1);
-            usuarios.Add(u2);
-            usuarios.Add(u3);
-            usuarios.Add(u4);
-            usuarios.Add(u5);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -72,7 +55,7 @@ namespace Presentacion
                 return;
             }
 
-            if (usuIn is Administrativo)
+            if (usuIn is Usuario)
             {
                 InicioAdministrativo IA = new InicioAdministrativo(usuIn);
                 IA.StartPosition = FormStartPosition.CenterScreen;
@@ -84,7 +67,7 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (usuIn is Ejecutivo)
+            if (usuIn is Usuario)
             {
                 InicioEjecutivo IG = new InicioEjecutivo(usuIn);
                 IG.StartPosition = FormStartPosition.CenterScreen;
@@ -109,7 +92,7 @@ namespace Presentacion
             }
             if (usuIn.NivelPermiso == 5) //El jefe tiene un nivel de permiso 5
             {
-                InicioJefe IJ = new InicioJefe(usuarios, usuIn);
+                InicioJefe IJ = new InicioJefe(usuIn);
                 IJ.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IJ.ShowDialog() == DialogResult.OK)
@@ -142,10 +125,7 @@ namespace Presentacion
         
         public Usuario buscarUsuario(string nombre, string contra)
         {
-            foreach(Usuario usu in usuarios)
-            {
-                if (usu.NombreUsuario.Equals(nombre) && usu.CuentaUsuario.Contrasena.Equals(contra)) return usu;
-            }
+            //BUSCAR USUARIO
             return null;
         }
     }

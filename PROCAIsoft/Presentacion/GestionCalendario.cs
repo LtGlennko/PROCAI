@@ -35,10 +35,7 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Actividad a1=new Actividad("Visita V","Visitara las instalaciones del pabellón V");
-            actividades.Add(a1);
-            Actividad a2 = new Actividad("Conoce a Guanira", "Conoceras al mejor profesor de Ing. Informática");
-            actividades.Add(a2);
+            
         }
 
         private void dtp_ValueChanged(object sender, EventArgs e)

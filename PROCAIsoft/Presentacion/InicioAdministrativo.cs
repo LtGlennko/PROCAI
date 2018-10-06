@@ -16,7 +16,7 @@ namespace Presentacion
         public InicioAdministrativo(Usuario u)
         {            
             InitializeComponent();
-            lblNombreUsu.Text += u.NombreUsuario;
+            //lblNombreUsu.Text += u.NombreUsuario;
         }
 
         private void btnGestionarPostul_Click(object sender, EventArgs e)

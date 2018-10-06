@@ -80,7 +80,7 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Orientador O = new Orientador();
+            //Orientador O = new Orientador();
             // = this.textBox_nombre.Text;
             //string mes = txt_mes.Text;
             //string dirigido = txt_dirigido.Text;

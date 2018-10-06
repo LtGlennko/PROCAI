@@ -33,36 +33,36 @@ namespace Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             
-            ProcesoAdmision PA = new ProcesoAdmision();
-            PA.Descripcion= this.textBox_nombre.Text;
-            string mes=txt_mes.Text;
-            string dirigido= txt_dirigido.Text;
-            //comprobacion del numero de vacantes para que no se caiga
+            //ProcesoAdmision PA = new ProcesoAdmision();
+            //PA.Descripcion= this.textBox_nombre.Text;
+            //string mes=txt_mes.Text;
+            //string dirigido= txt_dirigido.Text;
+            ////comprobacion del numero de vacantes para que no se caiga
 
-            try{
-                PA.CantidadVacantes = Int32.Parse(this.textBox_Vacantes.Text);
-            }
-            catch (Exception) {
-                MessageBox.Show("Wrong number bitch!", "System", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            //try{
+            //    PA.CantidadVacantes = Int32.Parse(this.textBox_Vacantes.Text);
+            //}
+            //catch (Exception) {
+            //    MessageBox.Show("Wrong number bitch!", "System", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 
-            }
-            PA.EstaVigente = 1;
-            PA.FechaCreacion = DateTime.Today;
+            //}
+            //PA.EstaVigente = 1;
+            //PA.FechaCreacion = DateTime.Today;
 
             
 
             
-            if (PA.Descripcion.Equals("") || PA.CantidadVacantes<0  ) {
-                MessageBox.Show("Datos inconsistentes", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else {
-                this.Close();
-                MessageBox.Show("Registrado","System",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                this.ProcesosAdmision.Add(PA);//agrego el proceso a la lista
+            //if (PA.Descripcion.Equals("") || PA.CantidadVacantes<0  ) {
+            //    MessageBox.Show("Datos inconsistentes", "System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else {
+            //    this.Close();
+            //    MessageBox.Show("Registrado","System",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            //    this.ProcesosAdmision.Add(PA);//agrego el proceso a la lista
 
-            }
-            this.textBox_nombre.Text = "";
-            this.textBox_Vacantes.Text = "";
+            //}
+            //this.textBox_nombre.Text = "";
+            //this.textBox_Vacantes.Text = "";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
