@@ -14,7 +14,7 @@ namespace LogicaNegocio
         private UsuarioDA usuarioDA;
         public UsuarioBL()
         {
-            UsuarioDA usuarioDA = new UsuarioDA();
+            usuarioDA = new UsuarioDA();
         }
 
         public BindingList<Usuario> listarUsuarios()

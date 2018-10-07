@@ -11,7 +11,7 @@ namespace AccesoDatos
 {
     class ColegioDA
     {
-        private SqlConnection con;
+        private MySqlConnection con;
         MySqlCommand comando;
         String sql;
         public bool DBManagerRegistrarColegio(Colegio colegio)
