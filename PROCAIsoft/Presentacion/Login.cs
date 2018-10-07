@@ -108,7 +108,7 @@ namespace Presentacion
 
         }
 
-        private void llblOlvido_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lblOlvido_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             OlvidoContraseña p = new OlvidoContraseña();
             p.StartPosition = FormStartPosition.CenterScreen;

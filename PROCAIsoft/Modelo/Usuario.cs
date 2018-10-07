@@ -14,11 +14,12 @@ namespace Modelo
         private int nivelPermiso;
         private Cuenta cuentaUsuario;
 
-        public Usuario(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
+
+        public Usuario(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaCreacion, int nivelPermiso) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
         {
             IdUsuario = ++i;
-            this.fechaCreacion = DateTime.Today;
-            this.nivelPermiso = 1;
+            this.fechaCreacion = fechaCreacion;
+            this.nivelPermiso = nivelPermiso;
         }
 
         public int IdUsuario1 { get => IdUsuario; set => IdUsuario = value; }

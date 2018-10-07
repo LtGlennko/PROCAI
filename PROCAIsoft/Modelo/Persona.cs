@@ -17,7 +17,7 @@ namespace Modelo
         private int celular;
         private TipoSexo sexo;
         private string correoElectronico;
-
+        
         public Persona(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico)
         {
             IdPersona = ++i;

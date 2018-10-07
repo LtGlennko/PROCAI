@@ -33,7 +33,7 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.llblOlvido = new System.Windows.Forms.LinkLabel();
+            this.lblOlvido = new System.Windows.Forms.LinkLabel();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lb = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -81,16 +81,16 @@
             this.txtContraseña.TabIndex = 3;
             this.txtContraseña.Text = "1234";
             // 
-            // llblOlvido
+            // lblOlvido
             // 
-            this.llblOlvido.AutoSize = true;
-            this.llblOlvido.Location = new System.Drawing.Point(128, 226);
-            this.llblOlvido.Name = "llblOlvido";
-            this.llblOlvido.Size = new System.Drawing.Size(119, 13);
-            this.llblOlvido.TabIndex = 4;
-            this.llblOlvido.TabStop = true;
-            this.llblOlvido.Text = "¿Olvido su contraseña?";
-            this.llblOlvido.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblOlvido_LinkClicked);
+            this.lblOlvido.AutoSize = true;
+            this.lblOlvido.Location = new System.Drawing.Point(128, 226);
+            this.lblOlvido.Name = "lblOlvido";
+            this.lblOlvido.Size = new System.Drawing.Size(119, 13);
+            this.lblOlvido.TabIndex = 4;
+            this.lblOlvido.TabStop = true;
+            this.lblOlvido.Text = "¿Olvido su contraseña?";
+            this.lblOlvido.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblOlvido_LinkClicked);
             // 
             // btnIniciar
             // 
@@ -172,7 +172,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lb);
             this.Controls.Add(this.btnIniciar);
-            this.Controls.Add(this.llblOlvido);
+            this.Controls.Add(this.lblOlvido);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblContraseña);
@@ -193,7 +193,7 @@
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.LinkLabel llblOlvido;
+        private System.Windows.Forms.LinkLabel lblOlvido;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.Button btnSalir;
