@@ -5,22 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Modelo;
-
+using MySql.Data.MySqlClient;
 
 namespace AccesoDatos
 {
     class ColegioDA
     {
         private SqlConnection con;
+        MySqlCommand comando;
+        String sql;
         public bool DBManagerRegistrarColegio(Colegio colegio)
         {
             try
             {
-                con = new SqlConnection(DBManager.cadena);
+                con = new MySqlConnection(DBManager.cadena);
 
                 con.Open();
-                SqlCommand comando = new SqlCommand();
-                String sql = "INSERT INTO COLEGIO(RUC,nombre,pais,departamento,provincia,direccion,tipo,telefonoContacto) " +
+                comando = new MySqlCommand();
+                sql = "INSERT INTO COLEGIO(RUC,nombre,pais,departamento,provincia,direccion,tipo,telefonoContacto) " +
                              "VALUES('" + colegio.RUC1 + "','" + colegio.Nombre + "','" +
                                             colegio.Pais + "','" + colegio.Departamento + "','" +
                                             colegio.Provincia + "','" + colegio.Direccion + "','" +
@@ -35,5 +37,8 @@ namespace AccesoDatos
                 return false;
             }
         }
+
+
+        
     }
 }
