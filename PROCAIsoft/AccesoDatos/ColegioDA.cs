@@ -9,29 +9,31 @@ using MySql.Data.MySqlClient;
 
 namespace AccesoDatos
 {
-    class ColegioDA
+    public class ColegioDA
     {
         private MySqlConnection con;
         MySqlCommand comando;
         String sql;
-        public bool DBManagerRegistrarColegio(Colegio colegio)
+        public bool registrarColegio(Colegio colegio)
         {
             try
             {
                 con = new MySqlConnection(DBManager.cadena);
-
                 con.Open();
                 comando = new MySqlCommand();
+                string tipoStr = "No definido";
+                if (colegio.Tipo == TipoColegio.Estatal) tipoStr = "Estatal";
+                else if (colegio.Tipo == TipoColegio.Particular) tipoStr = "Particular";
                 sql = "INSERT INTO COLEGIO(RUC,nombre,pais,departamento,provincia,direccion,tipo,telefonoContacto) " +
                              "VALUES('" + colegio.RUC1 + "','" + colegio.Nombre + "','" +
                                             colegio.Pais + "','" + colegio.Departamento + "','" +
                                             colegio.Provincia + "','" + colegio.Direccion + "','" +
-                                            colegio.Tipo + "'," + colegio.TelefonoContacto + ")";
+                                            tipoStr + "'," + colegio.TelefonoContacto + ")";
                 comando.CommandText = sql;
                 comando.Connection = con;
                 comando.ExecuteNonQuery();
                 con.Close();
-                return true;//succes
+                return true;
             }
             catch {
                 return false;

@@ -11,13 +11,16 @@ namespace AccesoDatos
 {
     public class UsuarioDA
     {
+        private MySqlConnection con;
+        MySqlCommand comando;
+        String sql;
         public BindingList<Usuario> listarUsuarios()
         {
             BindingList<Usuario> usuarios = new BindingList<Usuario>();
-            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con = new MySqlConnection(DBManager.cadena);
             con.Open();
-            MySqlCommand comando = new MySqlCommand();
-            string sql = "SELECT P.IdPersona, P.DNI, P.Nombres, P.ApellidoPaterno," +
+            comando = new MySqlCommand();
+            sql = "SELECT P.IdPersona, P.DNI, P.Nombres, P.ApellidoPaterno," +
                 " P.ApellidoMaterno, P.celular, P.sexo, P.correoElectronico, U.IdUsuario, " +
                 "U.fechaCreacion, U.nivelPermiso, C.IdCuenta, C.ultimaConexion, " +
                 "C.nombreDeUsuario, C.contrasena FROM Usuario U " +

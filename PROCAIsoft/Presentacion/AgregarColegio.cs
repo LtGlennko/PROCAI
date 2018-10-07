@@ -1,4 +1,5 @@
 ﻿using Modelo;
+using LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,12 @@ namespace Presentacion
     public partial class AgregarColegio : Form
     {
         private BindingList<Colegio> colegios;
+        private ColegioBL colegioBL;
         public AgregarColegio()
         {
             colegios = new BindingList<Colegio>();
             InitializeComponent();
+            colegioBL = new ColegioBL();
         }
         public AgregarColegio(BindingList<Colegio> col)
         {
@@ -26,6 +29,31 @@ namespace Presentacion
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            string nom = txtN.Text;
+            string pai = txtP.Text;
+            string dep = txtD.Text;
+            string pro = txtPro.Text;
+            string dis = txtDis.Text;
+            string dir = txtDir.Text;
+            string tipStr = txtTipo.Text;
+            TipoColegio tip;
+            if (tipStr == "Estatal") tip = TipoColegio.Estatal;
+            else tip = TipoColegio.Particular;
+            string ruc = txtRuc.Text;
+            int tel;
+            try
+            {
+                tel = Int32.Parse(txtTelf.Text);
+            }catch (Exception)
+            {
+                MessageBox.Show("El telefono debe ser un numero de 7 digitos");
+                return;
+            }
+            string nro = txtTelf.Text;
+            Colegio col = new Colegio(ruc, nom, pai, dep, pro, dis, dir, tip, tel);
+            bool registrado = colegioBL.registrarColegio(col);
+            if(registrado) MessageBox.Show("Escuela registrada con exito");
+            else MessageBox.Show("Error al registrar");
         }
 
         private void AgregarColegio_Load(object sender, EventArgs e)
