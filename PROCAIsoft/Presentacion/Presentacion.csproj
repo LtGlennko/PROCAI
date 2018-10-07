@@ -365,7 +365,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
-      <Project>{e3631112-2472-46cb-8857-f0428b77b073}</Project>
+      <Project>{55948bf7-0011-49c9-9b7e-28da0c1e964f}</Project>
       <Name>LogicaNegocio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
