@@ -149,7 +149,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(205, 81);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(135, 20);
             this.txtNumero.TabIndex = 6;
@@ -157,7 +157,7 @@
             // dateEncuentra
             // 
             this.dateEncuentra.Location = new System.Drawing.Point(177, 124);
-            this.dateEncuentra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateEncuentra.Margin = new System.Windows.Forms.Padding(2);
             this.dateEncuentra.Name = "dateEncuentra";
             this.dateEncuentra.Size = new System.Drawing.Size(163, 20);
             this.dateEncuentra.TabIndex = 12;
@@ -167,7 +167,7 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(469, 114);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(85, 27);
             this.btnRegistrar.TabIndex = 18;
@@ -230,7 +230,7 @@
             // 
             this.btnModificar.BackColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(469, 172);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(85, 27);
             this.btnModificar.TabIndex = 20;
@@ -264,7 +264,7 @@
             // 
             this.rdBtnP1_1.AutoSize = true;
             this.rdBtnP1_1.Location = new System.Drawing.Point(73, 194);
-            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_1.Name = "rdBtnP1_1";
             this.rdBtnP1_1.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP1_1.TabIndex = 23;
@@ -276,7 +276,7 @@
             // 
             this.rdBtnP1_2.AutoSize = true;
             this.rdBtnP1_2.Location = new System.Drawing.Point(134, 194);
-            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_2.Name = "rdBtnP1_2";
             this.rdBtnP1_2.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP1_2.TabIndex = 24;
@@ -288,7 +288,7 @@
             // 
             this.rdBtnP1_3.AutoSize = true;
             this.rdBtnP1_3.Location = new System.Drawing.Point(193, 194);
-            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_3.Name = "rdBtnP1_3";
             this.rdBtnP1_3.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP1_3.TabIndex = 25;
@@ -300,7 +300,7 @@
             // 
             this.rdBtnP1_4.AutoSize = true;
             this.rdBtnP1_4.Location = new System.Drawing.Point(257, 194);
-            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_4.Name = "rdBtnP1_4";
             this.rdBtnP1_4.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP1_4.TabIndex = 26;
@@ -312,7 +312,7 @@
             // 
             this.rdBtnP1_5.AutoSize = true;
             this.rdBtnP1_5.Location = new System.Drawing.Point(317, 194);
-            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_5.Name = "rdBtnP1_5";
             this.rdBtnP1_5.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP1_5.TabIndex = 27;
@@ -324,7 +324,7 @@
             // 
             this.rdBtnP2_1.AutoSize = true;
             this.rdBtnP2_1.Location = new System.Drawing.Point(73, 255);
-            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_1.Name = "rdBtnP2_1";
             this.rdBtnP2_1.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP2_1.TabIndex = 28;
@@ -336,7 +336,7 @@
             // 
             this.rdBtnP2_2.AutoSize = true;
             this.rdBtnP2_2.Location = new System.Drawing.Point(134, 255);
-            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_2.Name = "rdBtnP2_2";
             this.rdBtnP2_2.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP2_2.TabIndex = 29;
@@ -348,7 +348,7 @@
             // 
             this.rdBtnP2_4.AutoSize = true;
             this.rdBtnP2_4.Location = new System.Drawing.Point(257, 255);
-            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_4.Name = "rdBtnP2_4";
             this.rdBtnP2_4.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP2_4.TabIndex = 30;
@@ -360,7 +360,7 @@
             // 
             this.rdBtnP2_5.AutoSize = true;
             this.rdBtnP2_5.Location = new System.Drawing.Point(317, 255);
-            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_5.Name = "rdBtnP2_5";
             this.rdBtnP2_5.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP2_5.TabIndex = 31;
@@ -372,7 +372,7 @@
             // 
             this.rdBtnP2_3.AutoSize = true;
             this.rdBtnP2_3.Location = new System.Drawing.Point(193, 255);
-            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_3.Name = "rdBtnP2_3";
             this.rdBtnP2_3.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP2_3.TabIndex = 32;
@@ -384,7 +384,7 @@
             // 
             this.rdBtnP3_1.AutoSize = true;
             this.rdBtnP3_1.Location = new System.Drawing.Point(73, 313);
-            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_1.Name = "rdBtnP3_1";
             this.rdBtnP3_1.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP3_1.TabIndex = 33;
@@ -396,7 +396,7 @@
             // 
             this.rdBtnP3_3.AutoSize = true;
             this.rdBtnP3_3.Location = new System.Drawing.Point(193, 313);
-            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_3.Name = "rdBtnP3_3";
             this.rdBtnP3_3.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP3_3.TabIndex = 34;
@@ -408,7 +408,7 @@
             // 
             this.rdBtnP3_2.AutoSize = true;
             this.rdBtnP3_2.Location = new System.Drawing.Point(134, 313);
-            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_2.Name = "rdBtnP3_2";
             this.rdBtnP3_2.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP3_2.TabIndex = 35;
@@ -420,7 +420,7 @@
             // 
             this.rdBtnP3_4.AutoSize = true;
             this.rdBtnP3_4.Location = new System.Drawing.Point(257, 313);
-            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_4.Name = "rdBtnP3_4";
             this.rdBtnP3_4.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP3_4.TabIndex = 36;
@@ -432,7 +432,7 @@
             // 
             this.rdBtnP3_5.AutoSize = true;
             this.rdBtnP3_5.Location = new System.Drawing.Point(317, 313);
-            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_5.Name = "rdBtnP3_5";
             this.rdBtnP3_5.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP3_5.TabIndex = 37;
@@ -444,7 +444,7 @@
             // 
             this.rdBtnP4_1.AutoSize = true;
             this.rdBtnP4_1.Location = new System.Drawing.Point(73, 376);
-            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_1.Name = "rdBtnP4_1";
             this.rdBtnP4_1.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP4_1.TabIndex = 38;
@@ -456,7 +456,7 @@
             // 
             this.rdBtnP4_2.AutoSize = true;
             this.rdBtnP4_2.Location = new System.Drawing.Point(134, 376);
-            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_2.Name = "rdBtnP4_2";
             this.rdBtnP4_2.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP4_2.TabIndex = 39;
@@ -468,7 +468,7 @@
             // 
             this.rdBtnP4_3.AutoSize = true;
             this.rdBtnP4_3.Location = new System.Drawing.Point(193, 376);
-            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_3.Name = "rdBtnP4_3";
             this.rdBtnP4_3.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP4_3.TabIndex = 40;
@@ -480,7 +480,7 @@
             // 
             this.rdBtnP4_4.AutoSize = true;
             this.rdBtnP4_4.Location = new System.Drawing.Point(257, 376);
-            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_4.Name = "rdBtnP4_4";
             this.rdBtnP4_4.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP4_4.TabIndex = 41;
@@ -492,7 +492,7 @@
             // 
             this.rdBtnP4_5.AutoSize = true;
             this.rdBtnP4_5.Location = new System.Drawing.Point(317, 376);
-            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_5.Name = "rdBtnP4_5";
             this.rdBtnP4_5.Size = new System.Drawing.Size(31, 17);
             this.rdBtnP4_5.TabIndex = 42;
@@ -504,7 +504,7 @@
             // 
             this.btnBusca.BackColor = System.Drawing.Color.White;
             this.btnBusca.Location = new System.Drawing.Point(357, 81);
-            this.btnBusca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBusca.Margin = new System.Windows.Forms.Padding(2);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(25, 23);
             this.btnBusca.TabIndex = 43;
@@ -513,8 +513,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
             this.pictureBox1.Location = new System.Drawing.Point(15, 634);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -575,7 +576,7 @@
             this.Controls.Add(this.labelPregunta1);
             this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelNumeroGrupo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegYeditEncuestas";
             this.Text = "Encuestas Registradas";
             this.Load += new System.EventHandler(this.frmRegYeditEncuestas_Load);
