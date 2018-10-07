@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos
 {
-    class UsuarioDA
+    public class UsuarioDA
     {
         public BindingList<Usuario> listarUsuarios()
         {

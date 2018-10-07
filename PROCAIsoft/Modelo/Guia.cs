@@ -15,7 +15,7 @@ namespace Modelo
         private List<GrupoEncuestas> gruposDondeFueEvaluado;
         private List<Encuesta> encuestasDigitadas;
 
-        public Guia(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaIngreso, int estadoTrabajador, int telefonoOfi, int celularOfi, string correOfi, TipoGuia tipoGuia, string licencia) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico, fechaIngreso, estadoTrabajador, telefonoOfi, celularOfi, correOfi)
+        public Guia(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaCreacion, int nivelPermiso,  DateTime fechaIngreso, int estadoTrabajador, int telefonoOfi, int celularOfi, string correOfi, TipoGuia tipoGuia, string licencia) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico, fechaCreacion, nivelPermiso, fechaIngreso, estadoTrabajador, telefonoOfi, celularOfi, correOfi)
         {
             IdGuia = ++i;
             this.tipoGuia = tipoGuia;

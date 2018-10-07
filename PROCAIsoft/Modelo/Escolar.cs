@@ -12,13 +12,12 @@ namespace Modelo
         private Colegio colegio;
         private List<PostulanteXprocesoAdmision> postulacionesRealizadas;
 
-        public Escolar(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, TipoGrado grado, int telefonoApoderado, Colegio colegio) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
+        public Escolar(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaCreacion, int nivelPermiso, TipoGrado grado, int telefonoApoderado) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico, fechaCreacion, nivelPermiso)
         {
             IdEscolar = ++i;
             this.grado = grado;
             this.telefonoApoderado = telefonoApoderado;
             this.esPostulante = false;
-            this.colegio = colegio;
             this.NivelPermiso = 1;
             postulacionesRealizadas = new List<PostulanteXprocesoAdmision>();
         }

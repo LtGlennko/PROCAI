@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using LogicaNegocio;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,11 @@ namespace Presentacion
 {
     public partial class Gestionar_permisos : Form
     {
-        public Gestionar_permisos(BindingList<Usuario> usuarios)
+        BindingList<Usuario> usuarios;
+        public Gestionar_permisos()
         {
+            UsuarioBL usuarioBL = new UsuarioBL();
+            usuarios = usuarioBL.listarUsuarios();
             List<Usuario> sortedUsu = usuarios.OrderBy(x => x.FechaCreacion).ToList();
             sortedUsu.Reverse();
             InitializeComponent();

@@ -21,7 +21,7 @@ namespace Presentacion
 
         private void btnGestionarPermisos_Click(object sender, EventArgs e)
         {
-            Gestionar_permisos f = new Gestionar_permisos(usuarios);
+            Gestionar_permisos f = new Gestionar_permisos();
             f.StartPosition = FormStartPosition.CenterScreen;
             this.Visible = false;
             if (f.ShowDialog() == DialogResult.OK)

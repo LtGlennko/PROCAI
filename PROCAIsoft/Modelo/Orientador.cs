@@ -12,11 +12,10 @@ namespace Modelo
         private int IdOrientador;
         private Colegio colegio;
 
-        public Orientador(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, Cuenta cuentaUsuario, Colegio colegio) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
+        public Orientador(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaCreacion, int nivelPermiso) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico, fechaCreacion, nivelPermiso)
         {
             IdOrientador = ++i;
-            this.colegio = colegio;
-            this.NivelPermiso = 1;
+
         }
 
         public int IdOrientador1 { get => IdOrientador; set => IdOrientador = value; }
