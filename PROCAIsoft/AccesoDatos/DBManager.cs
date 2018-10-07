@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Modelo;
 namespace AccesoDatos
 {
     public class DBManager
@@ -14,5 +14,7 @@ namespace AccesoDatos
              "database = inf282g3;" +
              "port = 3306;" +
              "SslMode = none;";
+        
     }
+    
 }

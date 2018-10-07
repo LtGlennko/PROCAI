@@ -1,0 +1,9 @@
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csprojAssemblyReference.cache
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.pdb
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.pdb
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csproj.CopyComplete
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.pdb

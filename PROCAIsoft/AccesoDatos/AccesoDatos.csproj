@@ -41,8 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColegioDA.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{5696eeed-de48-4930-812e-a585ae2c674f}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
