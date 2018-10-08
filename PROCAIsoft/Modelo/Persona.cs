@@ -38,5 +38,6 @@ namespace Modelo
         public int Celular { get => celular; set => celular = value; }
         public TipoSexo Sexo { get => sexo; set => sexo = value; }
         public string CorreoElectronico { get => correoElectronico; set => correoElectronico = value; }
+        public string NombresYapellidos { get => nombres + " " + apellidoPaterno + " " + apellidoMaterno; }
     }
 }

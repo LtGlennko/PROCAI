@@ -59,11 +59,18 @@ namespace AccesoDatos
                 string contrasena = lector.GetString("contrasena");
                 //Creacion de la cuenta
                 Cuenta cue = new Cuenta(ultimaConexion, nombreUsuario, contrasena);
-                //Asigamos cuenta al usuario                
+                //Asigamos cuenta al usuario
+                usu.setCuenta(cue);
+                //Agregamos el usuario a la lista
                 usuarios.Add(usu);
             }
             con.Close();
             return usuarios;
         }
+
+        //Usuario buscarUsuario(string username, string password, char tipo)
+        //{
+
+        //}
     }
 }

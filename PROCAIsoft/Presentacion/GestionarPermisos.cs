@@ -22,12 +22,8 @@ namespace Presentacion
             List<Usuario> sortedUsu = usuarios.OrderBy(x => x.FechaCreacion).ToList();
             sortedUsu.Reverse();
             InitializeComponent();
+            dvgUsuarios.AutoGenerateColumns = false;
             dvgUsuarios.DataSource = sortedUsu;
-        }
-
-        private void Gestionar_permisos_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)

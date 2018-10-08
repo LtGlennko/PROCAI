@@ -26,6 +26,7 @@ namespace Modelo
         public DateTime FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }
         public int NivelPermiso { get => nivelPermiso; set => nivelPermiso = value; }
         public Cuenta CuentaUsuario { get => cuentaUsuario; set => cuentaUsuario = value; }
+        public string NombreCuenta { get => cuentaUsuario.NombreDeUsuario; }
         public void setCuenta(Cuenta cue)
         {
             this.cuentaUsuario = cue;

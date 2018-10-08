@@ -58,8 +58,8 @@ namespace Presentacion
 
         private void btnBusca_Click(object sender, EventArgs e)
         {
-            BuscarGrupo bg = new BuscarGrupo();
-            bg.Visible = true;
+            //BuscarGrupo bg = new BuscarGrupo();
+            //bg.Visible = true;
         }
     }
 }

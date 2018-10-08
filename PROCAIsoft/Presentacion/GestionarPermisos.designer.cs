@@ -36,6 +36,10 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombresYapellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NivelPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,9 +64,14 @@
             // dvgUsuarios
             // 
             this.dvgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FechaCreacion,
+            this.NombresYapellidos,
+            this.NombreCuenta,
+            this.NivelPermiso});
             this.dvgUsuarios.Location = new System.Drawing.Point(34, 53);
             this.dvgUsuarios.Name = "dvgUsuarios";
-            this.dvgUsuarios.Size = new System.Drawing.Size(473, 274);
+            this.dvgUsuarios.Size = new System.Drawing.Size(495, 274);
             this.dvgUsuarios.TabIndex = 2;
             this.dvgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgUsuarios_CellContentClick);
             // 
@@ -112,11 +121,41 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // FechaCreacion
+            // 
+            this.FechaCreacion.DataPropertyName = "FechaCreacion";
+            this.FechaCreacion.HeaderText = "Fecha de creacion";
+            this.FechaCreacion.Name = "FechaCreacion";
+            this.FechaCreacion.ReadOnly = true;
+            // 
+            // NombresYapellidos
+            // 
+            this.NombresYapellidos.DataPropertyName = "NombresYapellidos";
+            this.NombresYapellidos.HeaderText = "Datos";
+            this.NombresYapellidos.Name = "NombresYapellidos";
+            this.NombresYapellidos.ReadOnly = true;
+            this.NombresYapellidos.Width = 150;
+            // 
+            // NombreCuenta
+            // 
+            this.NombreCuenta.DataPropertyName = "NombreCuenta";
+            this.NombreCuenta.HeaderText = "Username";
+            this.NombreCuenta.Name = "NombreCuenta";
+            this.NombreCuenta.ReadOnly = true;
+            this.NombreCuenta.Width = 110;
+            // 
+            // NivelPermiso
+            // 
+            this.NivelPermiso.DataPropertyName = "NivelPermiso";
+            this.NivelPermiso.HeaderText = "Nivel de permiso";
+            this.NivelPermiso.Name = "NivelPermiso";
+            this.NivelPermiso.Width = 90;
+            // 
             // Gestionar_permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 385);
+            this.ClientSize = new System.Drawing.Size(571, 385);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAtras);
@@ -127,7 +166,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Gestionar_permisos";
             this.Text = "Gestionar permisos";
-            this.Load += new System.EventHandler(this.Gestionar_permisos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,5 +182,9 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombresYapellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NivelPermiso;
     }
 }
