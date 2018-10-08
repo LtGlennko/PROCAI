@@ -17,10 +17,10 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-        public InicioGuia(Usuario u)
+        public InicioGuia(string username)
         {            
             InitializeComponent();
-            //lblNombreUsu.Text += u.NombreUsuario;
+            lblNombreUsu.Text += username;
         }
 
         private void button1_Click(object sender, EventArgs e)

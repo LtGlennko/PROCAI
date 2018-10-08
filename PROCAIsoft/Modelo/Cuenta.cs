@@ -14,7 +14,6 @@ namespace Modelo
         private string nombreDeUsuario;
         private string contrasena;
         private Usuario usuario;
-
         public Cuenta(DateTime ultimaConexion, string nombreDeUsuario, string contrasena)
         {
             IdCuenta = ++i;

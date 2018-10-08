@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using LogicaNegocio;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,14 @@ namespace Presentacion
 {
     public partial class Login : Form
     {
+        private UsuarioBL usuarioBL;
         private static int numIntentos = 3;
+
+        public DateTime MyNullableDate { get; private set; }
+
         public Login()
         {
+            usuarioBL = new UsuarioBL();
             InitializeComponent();
         }
 
@@ -32,7 +38,6 @@ namespace Presentacion
                 return;
             }
 
-            //formularioDelJefe f = formularioDelJefe();
             if (txtUsuario.Text == "")
             {
                 lblUsuInval.Text = "Usuario no ingresado";
@@ -46,18 +51,34 @@ namespace Presentacion
             }
             lblConInval.Text = "";
             this.Visible = false;
-            Usuario usuIn = buscarUsuario(txtUsuario.Text, txtContraseña.Text);
+            string nomUsuario = txtUsuario.Text;
+            string contrasena = txtContraseña.Text;
+            int sgteForm = usuarioBL.buscarUsuario(nomUsuario, contrasena);
 
-            if(usuIn == null)
+            if(sgteForm == -1)
             {               
                 MessageBox.Show("Ingreso fallido, le quedan " + numIntentos + " intentos");
                 --numIntentos;
                 return;
             }
 
-            if (usuIn is Usuario)
+            if (sgteForm == 2)
             {
-                InicioAdministrativo IA = new InicioAdministrativo(usuIn);
+                InicioGuia IE = new InicioGuia(nomUsuario);
+                IE.StartPosition = FormStartPosition.CenterScreen;
+                this.Visible = false;
+                if (IE.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+                this.Visible = true;
+            }
+
+            //0 Alumno, 1 Orientador, 2 Guia, 3 Administrativo, 4 Ejecutivo, 5 Jefe
+
+            if (sgteForm == 3)
+            {
+                InicioAdministrativo IA = new InicioAdministrativo(nomUsuario);
                 IA.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IA.ShowDialog() == DialogResult.OK)
@@ -67,9 +88,9 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (usuIn is Usuario)
+            if (sgteForm == 4)
             {
-                InicioEjecutivo IG = new InicioEjecutivo(usuIn);
+                InicioEjecutivo IG = new InicioEjecutivo(nomUsuario);
                 IG.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IG.ShowDialog() == DialogResult.OK)
@@ -79,20 +100,9 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (usuIn is Guia)
+            if (sgteForm == 5) //El jefe tiene un nivel de permiso 5
             {
-                InicioGuia IE = new InicioGuia(usuIn);
-                IE.StartPosition = FormStartPosition.CenterScreen;
-                this.Visible = false;
-                if (IE.ShowDialog() == DialogResult.OK)
-                {
-
-                }
-                this.Visible = true;
-            }
-            if (usuIn.NivelPermiso == 5) //El jefe tiene un nivel de permiso 5
-            {
-                InicioJefe IJ = new InicioJefe(usuIn);
+                InicioJefe IJ = new InicioJefe(nomUsuario);
                 IJ.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IJ.ShowDialog() == DialogResult.OK)

@@ -14,9 +14,10 @@ namespace Presentacion
     public partial class InicioJefe : Form
     {
         BindingList<Usuario> usuarios;
-        public InicioJefe(Usuario u)
+        public InicioJefe(string username)
         {
             InitializeComponent();
+            lblNombreUsu.Text += username;
         }
 
         private void btnGestionarPermisos_Click(object sender, EventArgs e)

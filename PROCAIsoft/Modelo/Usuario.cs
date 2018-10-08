@@ -14,7 +14,6 @@ namespace Modelo
         private int nivelPermiso;
         private Cuenta cuentaUsuario;
 
-
         public Usuario(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaCreacion, int nivelPermiso) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico)
         {
             IdUsuario = ++i;

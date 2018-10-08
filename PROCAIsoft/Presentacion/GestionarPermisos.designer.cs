@@ -40,6 +40,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.nudNivel = new System.Windows.Forms.NumericUpDown();
+            this.lblLeyenda = new System.Windows.Forms.Label();
+            this.lblDescLeyenda = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +72,7 @@
             this.NombresYapellidos,
             this.NombreCuenta,
             this.NivelPermiso});
-            this.dvgUsuarios.Location = new System.Drawing.Point(34, 53);
+            this.dvgUsuarios.Location = new System.Drawing.Point(34, 62);
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.Size = new System.Drawing.Size(495, 274);
             this.dvgUsuarios.TabIndex = 2;
@@ -168,11 +170,32 @@
             0});
             this.nudNivel.ValueChanged += new System.EventHandler(this.nudNivel_ValueChanged);
             // 
+            // lblLeyenda
+            // 
+            this.lblLeyenda.AutoSize = true;
+            this.lblLeyenda.Location = new System.Drawing.Point(543, 87);
+            this.lblLeyenda.Name = "lblLeyenda";
+            this.lblLeyenda.Size = new System.Drawing.Size(81, 65);
+            this.lblLeyenda.TabIndex = 9;
+            this.lblLeyenda.Text = "1 Alumno\r\n2 Orientador\r\n3 Administrativo\r\n4 Ejecutivo\r\n5 Jefe";
+            // 
+            // lblDescLeyenda
+            // 
+            this.lblDescLeyenda.AutoSize = true;
+            this.lblDescLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescLeyenda.Location = new System.Drawing.Point(543, 67);
+            this.lblDescLeyenda.Name = "lblDescLeyenda";
+            this.lblDescLeyenda.Size = new System.Drawing.Size(54, 15);
+            this.lblDescLeyenda.TabIndex = 10;
+            this.lblDescLeyenda.Text = "Leyenda";
+            // 
             // Gestionar_permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 385);
+            this.ClientSize = new System.Drawing.Size(638, 385);
+            this.Controls.Add(this.lblDescLeyenda);
+            this.Controls.Add(this.lblLeyenda);
             this.Controls.Add(this.nudNivel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
@@ -204,5 +227,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn NivelPermiso;
         private System.Windows.Forms.NumericUpDown nudNivel;
+        private System.Windows.Forms.Label lblLeyenda;
+        private System.Windows.Forms.Label lblDescLeyenda;
     }
 }
