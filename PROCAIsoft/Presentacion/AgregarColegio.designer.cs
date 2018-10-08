@@ -136,6 +136,7 @@
             this.txtN.Name = "txtN";
             this.txtN.Size = new System.Drawing.Size(100, 20);
             this.txtN.TabIndex = 9;
+            this.txtN.Text = "Bertolt Bretch";
             // 
             // txtP
             // 
@@ -143,6 +144,7 @@
             this.txtP.Name = "txtP";
             this.txtP.Size = new System.Drawing.Size(100, 20);
             this.txtP.TabIndex = 10;
+            this.txtP.Text = "Perú";
             // 
             // txtD
             // 
@@ -150,6 +152,7 @@
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(100, 20);
             this.txtD.TabIndex = 11;
+            this.txtD.Text = "Lima";
             // 
             // txtPro
             // 
@@ -157,6 +160,7 @@
             this.txtPro.Name = "txtPro";
             this.txtPro.Size = new System.Drawing.Size(100, 20);
             this.txtPro.TabIndex = 12;
+            this.txtPro.Text = "Lima";
             // 
             // txtDis
             // 
@@ -164,6 +168,7 @@
             this.txtDis.Name = "txtDis";
             this.txtDis.Size = new System.Drawing.Size(100, 20);
             this.txtDis.TabIndex = 13;
+            this.txtDis.Text = "SJL";
             // 
             // txtDir
             // 
@@ -171,6 +176,7 @@
             this.txtDir.Name = "txtDir";
             this.txtDir.Size = new System.Drawing.Size(100, 20);
             this.txtDir.TabIndex = 14;
+            this.txtDir.Text = "Los Duraznos 167";
             // 
             // txtTipo
             // 
@@ -178,6 +184,7 @@
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(100, 20);
             this.txtTipo.TabIndex = 15;
+            this.txtTipo.Text = "Particular";
             // 
             // txtRuc
             // 
@@ -185,6 +192,7 @@
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(100, 20);
             this.txtRuc.TabIndex = 16;
+            this.txtRuc.Text = "56767455454";
             // 
             // txtTelf
             // 
@@ -192,6 +200,7 @@
             this.txtTelf.Name = "txtTelf";
             this.txtTelf.Size = new System.Drawing.Size(100, 20);
             this.txtTelf.TabIndex = 17;
+            this.txtTelf.Text = "5465855";
             // 
             // btnAceptar
             // 

@@ -46,22 +46,24 @@ namespace Presentacion
         {
             try
             {
-                int nNivel = Int32.Parse(txtNivel.Text);
-                if (nNivel <= 0 || nNivel > 5)
-                {
-                    MessageBox.Show("El valor seleccionado no está en el rango posible");
-                    return;
-                }
+                int nNivel = (int)nudNivel.Value;
                 ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NivelPermiso = nNivel;
+                string username = ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NombreCuenta;
+                MessageBox.Show("Nivel de permiso de usuario '" + username + "' cambiado a " + nNivel);
             }
             catch (Exception)
             {
-                MessageBox.Show("El valor ingresado debe ser un número");
+                MessageBox.Show("No se puedo cambiar el nivel de permiso");
             }
             
         }
 
         private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void nudNivel_ValueChanged(object sender, EventArgs e)
         {
 
         }

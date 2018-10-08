@@ -31,16 +31,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dvgUsuarios = new System.Windows.Forms.DataGridView();
-            this.txtNivel = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombresYapellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.nudNivel = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,12 +76,35 @@
             this.dvgUsuarios.TabIndex = 2;
             this.dvgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgUsuarios_CellContentClick);
             // 
-            // txtNivel
+            // FechaCreacion
             // 
-            this.txtNivel.Location = new System.Drawing.Point(397, 18);
-            this.txtNivel.Name = "txtNivel";
-            this.txtNivel.Size = new System.Drawing.Size(30, 20);
-            this.txtNivel.TabIndex = 3;
+            this.FechaCreacion.DataPropertyName = "FechaCreacion";
+            this.FechaCreacion.HeaderText = "Fecha de creacion";
+            this.FechaCreacion.Name = "FechaCreacion";
+            this.FechaCreacion.ReadOnly = true;
+            // 
+            // NombresYapellidos
+            // 
+            this.NombresYapellidos.DataPropertyName = "NombresYapellidos";
+            this.NombresYapellidos.HeaderText = "Datos";
+            this.NombresYapellidos.Name = "NombresYapellidos";
+            this.NombresYapellidos.ReadOnly = true;
+            this.NombresYapellidos.Width = 150;
+            // 
+            // NombreCuenta
+            // 
+            this.NombreCuenta.DataPropertyName = "NombreCuenta";
+            this.NombreCuenta.HeaderText = "Username";
+            this.NombreCuenta.Name = "NombreCuenta";
+            this.NombreCuenta.ReadOnly = true;
+            this.NombreCuenta.Width = 110;
+            // 
+            // NivelPermiso
+            // 
+            this.NivelPermiso.DataPropertyName = "NivelPermiso";
+            this.NivelPermiso.HeaderText = "Nivel de permiso";
+            this.NivelPermiso.Name = "NivelPermiso";
+            this.NivelPermiso.Width = 90;
             // 
             // label3
             // 
@@ -113,7 +137,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(435, 16);
+            this.button1.Location = new System.Drawing.Point(457, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 23);
             this.button1.TabIndex = 7;
@@ -121,52 +145,46 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // FechaCreacion
+            // nudNivel
             // 
-            this.FechaCreacion.DataPropertyName = "FechaCreacion";
-            this.FechaCreacion.HeaderText = "Fecha de creacion";
-            this.FechaCreacion.Name = "FechaCreacion";
-            this.FechaCreacion.ReadOnly = true;
-            // 
-            // NombresYapellidos
-            // 
-            this.NombresYapellidos.DataPropertyName = "NombresYapellidos";
-            this.NombresYapellidos.HeaderText = "Datos";
-            this.NombresYapellidos.Name = "NombresYapellidos";
-            this.NombresYapellidos.ReadOnly = true;
-            this.NombresYapellidos.Width = 150;
-            // 
-            // NombreCuenta
-            // 
-            this.NombreCuenta.DataPropertyName = "NombreCuenta";
-            this.NombreCuenta.HeaderText = "Username";
-            this.NombreCuenta.Name = "NombreCuenta";
-            this.NombreCuenta.ReadOnly = true;
-            this.NombreCuenta.Width = 110;
-            // 
-            // NivelPermiso
-            // 
-            this.NivelPermiso.DataPropertyName = "NivelPermiso";
-            this.NivelPermiso.HeaderText = "Nivel de permiso";
-            this.NivelPermiso.Name = "NivelPermiso";
-            this.NivelPermiso.Width = 90;
+            this.nudNivel.Location = new System.Drawing.Point(415, 19);
+            this.nudNivel.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudNivel.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudNivel.Name = "nudNivel";
+            this.nudNivel.Size = new System.Drawing.Size(36, 20);
+            this.nudNivel.TabIndex = 8;
+            this.nudNivel.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudNivel.ValueChanged += new System.EventHandler(this.nudNivel_ValueChanged);
             // 
             // Gestionar_permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 385);
+            this.Controls.Add(this.nudNivel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNivel);
             this.Controls.Add(this.dvgUsuarios);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Gestionar_permisos";
             this.Text = "Gestionar permisos";
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +195,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dvgUsuarios;
-        private System.Windows.Forms.TextBox txtNivel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnGuardar;
@@ -186,5 +203,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombresYapellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn NivelPermiso;
+        private System.Windows.Forms.NumericUpDown nudNivel;
     }
 }

@@ -24,7 +24,7 @@ namespace AccesoDatos
                 string tipoStr = "No definido";
                 if (colegio.Tipo == TipoColegio.Estatal) tipoStr = "Estatal";
                 else if (colegio.Tipo == TipoColegio.Particular) tipoStr = "Particular";
-                sql = "INSERT INTO COLEGIO(RUC,nombre,pais,departamento,provincia,direccion,tipo,telefonoContacto) " +
+                sql = "INSERT INTO Colegio(RUC,nombre,pais,departamento,provincia,direccion,tipo,telefonoContacto) " +
                              "VALUES('" + colegio.RUC1 + "','" + colegio.Nombre + "','" +
                                             colegio.Pais + "','" + colegio.Departamento + "','" +
                                             colegio.Provincia + "','" + colegio.Direccion + "','" +
