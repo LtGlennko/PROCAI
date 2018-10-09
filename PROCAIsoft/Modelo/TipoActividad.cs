@@ -8,16 +8,16 @@ namespace Modelo
 {
     public class TipoActividad
     {
-        private static int i = 0;
+        //private static int i = 0;
         private int IdTipoActividad;
         private string nombre;
         private string descripcion;
         private List<Actividad> listaActividades;
         private List<Pregunta> preguntas;
 
-        public TipoActividad(string nombre, string descripcion)
+        public TipoActividad(int id,string nombre, string descripcion)
         {
-            IdTipoActividad = ++i;
+            IdTipoActividad = id;
             this.nombre = nombre;
             this.descripcion = descripcion;
             this.listaActividades = new List<Actividad>();

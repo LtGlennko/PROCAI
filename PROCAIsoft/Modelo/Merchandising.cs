@@ -8,16 +8,16 @@ namespace Modelo
 {
     public class Merchandising
     {
-        protected static int i = 0;
+        //protected static int i = 0;
         private int IdMerchandising;
         private string nombre;
         private string descripcion;
         private int stock;
         private List<Actividad> actividades;
 
-        public Merchandising(string nombre, string descripcion, int stock)
+        public Merchandising(int id,string nombre, string descripcion, int stock)
         {
-            IdMerchandising = ++i;
+            IdMerchandising = id;
             this.nombre = nombre;
             this.descripcion = descripcion;
             this.stock = stock;
