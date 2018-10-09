@@ -62,6 +62,8 @@ namespace Presentacion
                 return;
             }
 
+            //0 Alumno, 1 Orientador, 2 Guia, 3 Administrativo, 4 Ejecutivo, 5 Jefe
+
             if (sgteForm == 2)
             {
                 InicioGuia IE = new InicioGuia(nomUsuario);
@@ -74,7 +76,6 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            //0 Alumno, 1 Orientador, 2 Guia, 3 Administrativo, 4 Ejecutivo, 5 Jefe
 
             if (sgteForm == 3)
             {

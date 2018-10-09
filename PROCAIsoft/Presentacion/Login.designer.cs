@@ -70,7 +70,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.Text = "Ejecutivo2";
+            this.txtUsuario.Text = "Jefe";
             // 
             // txtContraseña
             // 

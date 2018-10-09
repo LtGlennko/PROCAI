@@ -155,11 +155,6 @@
             0,
             0,
             0});
-            this.nudNivel.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.nudNivel.Name = "nudNivel";
             this.nudNivel.Size = new System.Drawing.Size(36, 20);
             this.nudNivel.TabIndex = 8;
@@ -175,9 +170,9 @@
             this.lblLeyenda.AutoSize = true;
             this.lblLeyenda.Location = new System.Drawing.Point(543, 87);
             this.lblLeyenda.Name = "lblLeyenda";
-            this.lblLeyenda.Size = new System.Drawing.Size(81, 65);
+            this.lblLeyenda.Size = new System.Drawing.Size(81, 78);
             this.lblLeyenda.TabIndex = 9;
-            this.lblLeyenda.Text = "1 Alumno\r\n2 Orientador\r\n3 Administrativo\r\n4 Ejecutivo\r\n5 Jefe";
+            this.lblLeyenda.Text = "0 Alumno\r\n1 Orientador\r\n2 Guia\r\n3 Administrativo\r\n4 Ejecutivo\r\n5 Jefe";
             // 
             // lblDescLeyenda
             // 

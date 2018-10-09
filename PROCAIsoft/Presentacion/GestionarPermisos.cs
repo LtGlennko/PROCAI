@@ -47,7 +47,13 @@ namespace Presentacion
             try
             {
                 int nNivel = (int)nudNivel.Value;
-                ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NivelPermiso = nNivel;
+                Usuario usuSel = (Usuario)dvgUsuarios.CurrentRow.DataBoundItem;
+                if(nNivel == 5 && usuSel.NivelPermiso < 3)
+                {
+                    MessageBox.Show("Solo un ejecutivo o un administrativo pueden ser jefes");
+                    return;
+                }
+                usuSel.NivelPermiso = nNivel;
                 string username = ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NombreCuenta;
                 MessageBox.Show("Nivel de permiso de usuario '" + username + "' cambiado a " + nNivel);
             }
