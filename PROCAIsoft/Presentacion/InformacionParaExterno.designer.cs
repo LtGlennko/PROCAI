@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InformacionParaExterno));
             this.button1 = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -54,11 +56,21 @@
             this.labelTitulo.TabIndex = 23;
             this.labelTitulo.Text = "¿Quiénes somos?";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(482, 117);
+            this.label1.TabIndex = 24;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
             // InformacionParaExterno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 301);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.button1);
             this.Name = "InformacionParaExterno";
@@ -73,5 +85,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label label1;
     }
 }
