@@ -47,6 +47,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(373, 267);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2);

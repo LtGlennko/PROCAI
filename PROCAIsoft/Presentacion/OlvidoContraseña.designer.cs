@@ -45,11 +45,13 @@
             // lblInstruccion
             // 
             this.lblInstruccion.AutoSize = true;
+            this.lblInstruccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.lblInstruccion.ForeColor = System.Drawing.Color.Teal;
             this.lblInstruccion.Location = new System.Drawing.Point(34, 35);
             this.lblInstruccion.Name = "lblInstruccion";
-            this.lblInstruccion.Size = new System.Drawing.Size(373, 13);
+            this.lblInstruccion.Size = new System.Drawing.Size(446, 13);
             this.lblInstruccion.TabIndex = 1;
-            this.lblInstruccion.Text = "Ingrese el correo vinculado a su cuenta para enviar un enllace de recupación";
+            this.lblInstruccion.Text = "Ingrese el correo vinculado a su cuenta para enviar un enlace de recupación";
             // 
             // btnEnviar
             // 
@@ -64,9 +66,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(123, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Correo";
             // 
@@ -84,7 +88,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 190);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(505, 192);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEnviar);

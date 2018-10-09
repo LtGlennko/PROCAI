@@ -71,7 +71,7 @@
             this.Dirigidoa});
             this.dgvPA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPA.Location = new System.Drawing.Point(0, 24);
-            this.dgvPA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPA.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPA.Name = "dgvPA";
             this.dgvPA.RowTemplate.Height = 24;
             this.dgvPA.Size = new System.Drawing.Size(567, 342);
@@ -109,11 +109,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(567, 366);
             this.Controls.Add(this.dgvPA);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProcesoAdm";
             this.Text = "Procesos de Admision";
             this.Load += new System.EventHandler(this.Form1_Load);

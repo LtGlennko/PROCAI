@@ -38,9 +38,11 @@
             // txtNombre
             // 
             this.txtNombre.AutoSize = true;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.txtNombre.ForeColor = System.Drawing.Color.Teal;
             this.txtNombre.Location = new System.Drawing.Point(99, 74);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(47, 13);
+            this.txtNombre.Size = new System.Drawing.Size(54, 13);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.Text = "Nombre:";
             this.txtNombre.Click += new System.EventHandler(this.label1_Click);
@@ -48,9 +50,11 @@
             // txtCant
             // 
             this.txtCant.AutoSize = true;
+            this.txtCant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.txtCant.ForeColor = System.Drawing.Color.Teal;
             this.txtCant.Location = new System.Drawing.Point(99, 112);
             this.txtCant.Name = "txtCant";
-            this.txtCant.Size = new System.Drawing.Size(52, 13);
+            this.txtCant.Size = new System.Drawing.Size(61, 13);
             this.txtCant.TabIndex = 1;
             this.txtCant.Text = "Cantidad:";
             // 
@@ -82,6 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(429, 390);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtC);

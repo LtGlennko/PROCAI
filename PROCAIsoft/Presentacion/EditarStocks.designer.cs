@@ -40,9 +40,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(101, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -50,9 +52,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(101, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cantidad:";
             // 
@@ -84,9 +88,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(105, 192);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Código:";
             // 
@@ -102,6 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(409, 380);
             this.Controls.Add(this.txtCod);
             this.Controls.Add(this.label4);

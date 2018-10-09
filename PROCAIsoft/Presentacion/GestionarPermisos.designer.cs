@@ -58,9 +58,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(31, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 13);
+            this.label2.Size = new System.Drawing.Size(181, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Seleccione usuario a modificar";
             // 
@@ -111,9 +113,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(233, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 13);
+            this.label3.Size = new System.Drawing.Size(193, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ingrese el nuevo nivel a ingresar";
             // 
@@ -139,7 +143,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(457, 16);
+            this.button1.Location = new System.Drawing.Point(526, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 23);
             this.button1.TabIndex = 7;
@@ -149,7 +153,7 @@
             // 
             // nudNivel
             // 
-            this.nudNivel.Location = new System.Drawing.Point(415, 19);
+            this.nudNivel.Location = new System.Drawing.Point(459, 19);
             this.nudNivel.Maximum = new decimal(new int[] {
             5,
             0,
@@ -168,19 +172,22 @@
             // lblLeyenda
             // 
             this.lblLeyenda.AutoSize = true;
+            this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.lblLeyenda.ForeColor = System.Drawing.Color.Teal;
             this.lblLeyenda.Location = new System.Drawing.Point(543, 87);
             this.lblLeyenda.Name = "lblLeyenda";
-            this.lblLeyenda.Size = new System.Drawing.Size(81, 78);
+            this.lblLeyenda.Size = new System.Drawing.Size(97, 78);
             this.lblLeyenda.TabIndex = 9;
             this.lblLeyenda.Text = "0 Alumno\r\n1 Orientador\r\n2 Guia\r\n3 Administrativo\r\n4 Ejecutivo\r\n5 Jefe";
             // 
             // lblDescLeyenda
             // 
             this.lblDescLeyenda.AutoSize = true;
-            this.lblDescLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.lblDescLeyenda.ForeColor = System.Drawing.Color.Teal;
             this.lblDescLeyenda.Location = new System.Drawing.Point(543, 67);
             this.lblDescLeyenda.Name = "lblDescLeyenda";
-            this.lblDescLeyenda.Size = new System.Drawing.Size(54, 15);
+            this.lblDescLeyenda.Size = new System.Drawing.Size(55, 13);
             this.lblDescLeyenda.TabIndex = 10;
             this.lblDescLeyenda.Text = "Leyenda";
             // 
@@ -188,7 +195,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 385);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(646, 385);
             this.Controls.Add(this.lblDescLeyenda);
             this.Controls.Add(this.lblLeyenda);
             this.Controls.Add(this.nudNivel);

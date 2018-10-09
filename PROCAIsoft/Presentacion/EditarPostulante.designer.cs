@@ -54,27 +54,33 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Teal;
             this.label5.Location = new System.Drawing.Point(39, 380);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 13);
+            this.label5.Size = new System.Drawing.Size(121, 13);
             this.label5.TabIndex = 36;
             this.label5.Text = "Telefono apoderado";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(39, 341);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(111, 13);
             this.label3.TabIndex = 34;
             this.label3.Text = "Correo electronico";
             // 
             // sxo
             // 
             this.sxo.AutoSize = true;
+            this.sxo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.sxo.ForeColor = System.Drawing.Color.Teal;
             this.sxo.Location = new System.Drawing.Point(39, 267);
             this.sxo.Name = "sxo";
-            this.sxo.Size = new System.Drawing.Size(31, 13);
+            this.sxo.Size = new System.Drawing.Size(35, 13);
             this.sxo.TabIndex = 33;
             this.sxo.Text = "Sexo";
             // 
@@ -88,45 +94,55 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(38, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 31;
             this.label2.Text = "Celular";
             // 
             // apmat
             // 
             this.apmat.AutoSize = true;
+            this.apmat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.apmat.ForeColor = System.Drawing.Color.Teal;
             this.apmat.Location = new System.Drawing.Point(38, 175);
             this.apmat.Name = "apmat";
-            this.apmat.Size = new System.Drawing.Size(91, 13);
+            this.apmat.Size = new System.Drawing.Size(108, 13);
             this.apmat.TabIndex = 30;
             this.apmat.Text = "Apellidos Materno";
             // 
             // appat
             // 
             this.appat.AutoSize = true;
+            this.appat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.appat.ForeColor = System.Drawing.Color.Teal;
             this.appat.Location = new System.Drawing.Point(36, 136);
             this.appat.Name = "appat";
-            this.appat.Size = new System.Drawing.Size(89, 13);
+            this.appat.Size = new System.Drawing.Size(106, 13);
             this.appat.TabIndex = 29;
             this.appat.Text = "Apellidos Paterno";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(36, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 28;
             this.label1.Text = "Nombres";
             // 
             // oof
             // 
             this.oof.AutoSize = true;
+            this.oof.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.oof.ForeColor = System.Drawing.Color.Teal;
             this.oof.Location = new System.Drawing.Point(39, 48);
             this.oof.Name = "oof";
-            this.oof.Size = new System.Drawing.Size(26, 13);
+            this.oof.Size = new System.Drawing.Size(29, 13);
             this.oof.TabIndex = 27;
             this.oof.Text = "DNI";
             // 
@@ -182,9 +198,11 @@
             // lblGrado
             // 
             this.lblGrado.AutoSize = true;
+            this.lblGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.lblGrado.ForeColor = System.Drawing.Color.Teal;
             this.lblGrado.Location = new System.Drawing.Point(39, 303);
             this.lblGrado.Name = "lblGrado";
-            this.lblGrado.Size = new System.Drawing.Size(36, 13);
+            this.lblGrado.Size = new System.Drawing.Size(41, 13);
             this.lblGrado.TabIndex = 38;
             this.lblGrado.Text = "Grado";
             // 
@@ -198,18 +216,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(273, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 39;
             this.label4.Text = "Antes";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Teal;
             this.label6.Location = new System.Drawing.Point(446, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 40;
             this.label6.Text = "Ahora";
             // 
@@ -227,6 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(584, 466);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);

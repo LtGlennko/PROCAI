@@ -37,10 +37,12 @@
             // labelIngresar
             // 
             this.labelIngresar.AutoSize = true;
+            this.labelIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.labelIngresar.ForeColor = System.Drawing.Color.Teal;
             this.labelIngresar.Location = new System.Drawing.Point(170, 36);
             this.labelIngresar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIngresar.Name = "labelIngresar";
-            this.labelIngresar.Size = new System.Drawing.Size(113, 13);
+            this.labelIngresar.Size = new System.Drawing.Size(134, 13);
             this.labelIngresar.TabIndex = 1;
             this.labelIngresar.Text = "Generador de reportes";
             // 
@@ -73,6 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(473, 248);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
