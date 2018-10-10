@@ -25,6 +25,8 @@ namespace Presentacion
             //btnRegistrar.Enabled = true;
             //btnModificar.Enabled = true;
             InitializeComponent();
+            txtNumero.Enabled = false;
+            dateEncuentra.Enabled = false;
             listaEncuestas = new BindingList<Encuesta>();
             dgvEncuestas.DataSource = listaEncuestas;
             dateEncuentra.Enabled = false;

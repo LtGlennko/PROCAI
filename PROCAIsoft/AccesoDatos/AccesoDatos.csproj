@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="ColegioDA.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="EncuestaDA.cs" />
     <Compile Include="GrupoDA.cs" />
     <Compile Include="MerchandisingDA.cs" />
     <Compile Include="PreguntaDA.cs" />
