@@ -21,10 +21,10 @@ namespace AccesoDatos
             con.Open();
             comando = new MySqlCommand();
             sql = "SELECT P.IdPersona, P.DNI, P.Nombres, P.ApellidoPaterno," +
-                " P.ApellidoMaterno, P.celular, P.sexo, P.correoElectronico, U.IdUsuario, " +
+                " P.ApellidoMaterno, P.celular, P.sexo, P.correoElectronico, " +
                 "U.fechaCreacion, U.nivelPermiso, C.IdCuenta, C.ultimaConexion, " +
                 "C.nombreDeUsuario, C.contrasena FROM Usuario U " +
-                "JOIN Persona P ON P.IdPersona = U.IdPersona " +
+                "JOIN Persona P ON P.IdPersona = U.IdUsuario " +
                 "JOIN Cuenta C ON C.IdUsuario = U.IdUsuario;";
             comando.CommandText = sql;
             comando.Connection = con;
@@ -45,13 +45,11 @@ namespace AccesoDatos
                 else sexo = TipoSexo.Personalizado;
                 string correo = lector.GetString("correoElectronico");
                 //Lectura de datos del usuario
-                int idUsuario = lector.GetInt32("IdUsuario");
                 DateTime fechaCreacion = lector.GetDateTime("fechaCreacion");
                 int nivelPermiso = lector.GetInt32("nivelPermiso");
                 //Creacion del usuario
                 Usuario usu = new Usuario(dni, nombres, apellPat, apellMat, celular, sexo, correo, fechaCreacion, nivelPermiso);
-                usu.IdPersona1 = idPersona;
-                usu.IdUsuario1 = idUsuario;
+                usu.IdPersona1 = usu.IdUsuario1 = idPersona;
                 //Lectura de datos de la cuenta
                 int idCuenta = lector.GetInt32("IdCuenta");
                 DateTime ultimaConexion = lector.GetDateTime("ultimaConexion");
@@ -74,10 +72,10 @@ namespace AccesoDatos
             con.Open();
             comando = new MySqlCommand();
             sql = "SELECT P.IdPersona, P.DNI, P.Nombres, P.ApellidoPaterno," +
-                " P.ApellidoMaterno, P.celular, P.sexo, P.correoElectronico, U.IdUsuario, " +
+                " P.ApellidoMaterno, P.celular, P.sexo, P.correoElectronico, " +
                 "U.fechaCreacion, U.nivelPermiso, C.IdCuenta, C.ultimaConexion, " +
                 "C.nombreDeUsuario, C.contrasena FROM Usuario U " +
-                "JOIN Persona P ON P.IdPersona = U.IdPersona " +
+                "JOIN Persona P ON P.IdPersona = U.IdUsuario " +
                 "JOIN Cuenta C ON C.IdUsuario = U.IdUsuario " +
                 "WHERE C.nombreDeUsuario = '" + username +"' AND C.contrasena = '" + password + "';";
             comando.CommandText = sql;
@@ -100,13 +98,11 @@ namespace AccesoDatos
                 else sexo = TipoSexo.Personalizado;
                 string correo = lector.GetString("correoElectronico");
                 //Lectura de datos del usuario
-                int idUsuario = lector.GetInt32("IdUsuario");
                 DateTime fechaCreacion = lector.GetDateTime("fechaCreacion");
                 int nivelPermiso = lector.GetInt32("nivelPermiso");
                 //Creacion del usuario
                 Usuario usu = new Usuario(dni, nombres, apellPat, apellMat, celular, sexo, correo, fechaCreacion, nivelPermiso);
-                usu.IdPersona1 = idPersona;
-                usu.IdUsuario1 = idUsuario;
+                usu.IdPersona1 = usu.IdUsuario1 = idPersona;
                 //Lectura de datos de la cuenta
                 int idCuenta = lector.GetInt32("IdCuenta");
                 DateTime ultimaConexion = lector.GetDateTime("ultimaConexion");

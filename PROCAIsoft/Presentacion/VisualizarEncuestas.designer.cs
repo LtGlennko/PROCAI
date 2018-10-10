@@ -34,12 +34,6 @@
             this.dateEncuentra = new System.Windows.Forms.DateTimePicker();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.dgvEncuestas = new System.Windows.Forms.DataGridView();
-            this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
@@ -71,6 +65,13 @@
             this.rdBtnP4_4 = new System.Windows.Forms.RadioButton();
             this.rdBtnP4_5 = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpP1.SuspendLayout();
@@ -138,6 +139,7 @@
             this.dgvEncuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEncuestas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NumGrupo,
+            this.IdEncuesta,
             this.FechaEncuesta,
             this.Pregunta1,
             this.Pregunta2,
@@ -148,40 +150,6 @@
             this.dgvEncuestas.Size = new System.Drawing.Size(582, 211);
             this.dgvEncuestas.TabIndex = 19;
             this.dgvEncuestas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // NumGrupo
-            // 
-            this.NumGrupo.HeaderText = "NumGrupoEncuesta";
-            this.NumGrupo.Name = "NumGrupo";
-            // 
-            // FechaEncuesta
-            // 
-            this.FechaEncuesta.HeaderText = "Fecha";
-            this.FechaEncuesta.Name = "FechaEncuesta";
-            // 
-            // Pregunta1
-            // 
-            this.Pregunta1.HeaderText = "Pregunta 1";
-            this.Pregunta1.Name = "Pregunta1";
-            this.Pregunta1.Width = 40;
-            // 
-            // Pregunta2
-            // 
-            this.Pregunta2.HeaderText = "Pregunta 2";
-            this.Pregunta2.Name = "Pregunta2";
-            this.Pregunta2.Width = 40;
-            // 
-            // Pregunta3
-            // 
-            this.Pregunta3.HeaderText = "Pregunta 3";
-            this.Pregunta3.Name = "Pregunta3";
-            this.Pregunta3.Width = 40;
-            // 
-            // Pregunta4
-            // 
-            this.Pregunta4.HeaderText = "Pregunta 4";
-            this.Pregunta4.Name = "Pregunta4";
-            this.Pregunta4.Width = 40;
             // 
             // btnModificar
             // 
@@ -569,6 +537,48 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // NumGrupo
+            // 
+            this.NumGrupo.DataPropertyName = "GrupoPerteneciente.IdGrupoEncuestas1";
+            this.NumGrupo.HeaderText = "Grupo";
+            this.NumGrupo.Name = "NumGrupo";
+            // 
+            // IdEncuesta
+            // 
+            this.IdEncuesta.DataPropertyName = "IdEncuesta1";
+            this.IdEncuesta.HeaderText = "IdEncuesta";
+            this.IdEncuesta.Name = "IdEncuesta";
+            // 
+            // FechaEncuesta
+            // 
+            this.FechaEncuesta.HeaderText = "Fecha";
+            this.FechaEncuesta.Name = "FechaEncuesta";
+            // 
+            // Pregunta1
+            // 
+            this.Pregunta1.DataPropertyName = "CalificacionesPorEncuesta[0].Calificacion";
+            this.Pregunta1.HeaderText = "Pregunta 1";
+            this.Pregunta1.Name = "Pregunta1";
+            this.Pregunta1.Width = 40;
+            // 
+            // Pregunta2
+            // 
+            this.Pregunta2.HeaderText = "Pregunta 2";
+            this.Pregunta2.Name = "Pregunta2";
+            this.Pregunta2.Width = 40;
+            // 
+            // Pregunta3
+            // 
+            this.Pregunta3.HeaderText = "Pregunta 3";
+            this.Pregunta3.Name = "Pregunta3";
+            this.Pregunta3.Width = 40;
+            // 
+            // Pregunta4
+            // 
+            this.Pregunta4.HeaderText = "Pregunta 4";
+            this.Pregunta4.Name = "Pregunta4";
+            this.Pregunta4.Width = 40;
+            // 
             // frmRegYeditEncuestas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -619,12 +629,6 @@
         private System.Windows.Forms.DateTimePicker dateEncuentra;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.DataGridView dgvEncuestas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumGrupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEncuesta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta4;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTitulo;
@@ -656,5 +660,12 @@
         private System.Windows.Forms.RadioButton rdBtnP4_4;
         private System.Windows.Forms.RadioButton rdBtnP4_5;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumGrupo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdEncuesta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEncuesta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta4;
     }
 }
