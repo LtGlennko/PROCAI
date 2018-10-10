@@ -13,12 +13,22 @@ namespace AccesoDatos
 {
     public class GrupoDA
     {
-        public BindingList<BuscarGrupoEncuesta> listarGrupo(){
-            BindingList<BuscarGrupoEncuesta> grupos = new BindingList<BuscarGrupoEncuesta>();
+        public BindingList<GrupoEncuestas> listarGrupo(){
+            BindingList<GrupoEncuestas> grupos = new BindingList<GrupoEncuestas>();
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             MySqlCommand comando = new MySqlCommand();
             con.Open();
-            String sql = "SELECT GR.IdGrupoEncuesta as ID_GRUPOENCUESTA, AC.fechaProgramada as FECHA, C.nombre as NOMBRE_COLEGIO, T.Nombre as TIPODEACTIVIDAD, P.nombres as NOMBREGUIA, P.apellidoMaterno as APELLIDOMATERNOGUIA, P.apellidoPaterno as APELLIDOPATERNOGUIA FROM GrupoEncuesta GR, Actividad AC, Guia G, Colegio C, TipoActividad T, Persona P where GR.IdActividad = AC.IdActividad and GR.IdGuia = G.IdGuia and GR.IdColegio = C.IdColegio and T.IdTipoActividad = AC.IdTipoActividad and G.IdPersona = P.IdPersona; ";
+            String sql = "SELECT GE.IdGrupoEncuesta, " +
+                        "A.IdActividad," +
+                        "A.fechaProgramada," +
+                        "A.estadoActividad," +
+                        "A.cantEstudiantes," +
+                        "TA.IdTipoActividad," +
+                        "TA.Nombre," +
+                        " TA.descripcion" +
+                        "FROM GrupoEncuesta GE, Actividad A, TipoActividad TA" +
+                        "WHERE GE.IdActividad = A.IdActividad and" +
+                        "A.IdTipoActividad = TA.IdTipoActividad;";
             comando.CommandText = sql;
             comando.Connection = con;
 
@@ -26,15 +36,36 @@ namespace AccesoDatos
 
             while (lector.Read())
             {
-                BuscarGrupoEncuesta grupo = new BuscarGrupoEncuesta();
-                grupo.Colegio = lector.GetString("NOMBRE_COLEGIO");
-                grupo.Guia_apellidom = lector.GetString("APELLIDOMATERNOGUIA");
-                grupo.Guia_apellidop = lector.GetString("APELLIDOPATERNOGUIA");
-                grupo.Guia_nombre = lector.GetString("NOMBRE_GUIA");
-                grupo.IdGrupo1 = lector.GetInt32("ID_GRUPOENCUESTA");
-                grupo.TipoActividad = lector.GetString("TIPODEACTIVIDAD");
-                grupo.Fecha = lector.GetDateTime("FECHA");
-
+                //BuscarGrupoEncuesta grupo = new BuscarGrupoEncuesta(); NO ES NECESARIO
+                //Leer Id del grupo de encuestas
+                int idGrupoEncuesta = lector.GetInt32("IdActividad");
+                //Crear grupo de encuestas
+                GrupoEncuestas grupo = new GrupoEncuestas();
+                grupo.IdGrupoEncuestas1 = idGrupoEncuesta;
+                //Leer datos de actividad
+                int idActividad = lector.GetInt32("IdActividad");
+                DateTime fechaProgram = lector.GetDateTime("fechaProgramada");
+                int estadoActividad = lector.GetInt32("estadoActividad");
+                int cantEstudiantes = lector.GetInt32("cantEstudiantes");
+                //Crear actividad
+                Actividad actividad = new Actividad(fechaProgram, estadoActividad, cantEstudiantes);
+                actividad.IdActividad1 = idActividad;
+                //Leer datos de tipo actividad
+                int idTipoActividad = lector.GetInt32("IdTipoActividad");
+                string nombreTipoAct = lector.GetString("Nombre");
+                string descTipoAct = lector.GetString("descripcion");
+                //Crear tipo actividad
+                TipoActividad tipoAct = new TipoActividad(nombreTipoAct, descTipoAct);
+                tipoAct.IdTipoActividad1 = idTipoActividad;
+                //Devolver lista de preguntas según el id del tipo de actividad
+                PreguntaDA preguntaDA = new PreguntaDA();
+                BindingList<Pregunta> listaPreguntas = preguntaDA.listaPreguntasSegunActividad(idTipoActividad);
+                //Agregar lista al tipo de actividad
+                tipoAct.Preguntas = listaPreguntas;
+                //Asignar tipo actividad a actividad y grupo de encuestas a actividad
+                actividad.setTipoActividad(tipoAct);
+                grupo.setActividad(actividad);
+                //Agregar grupo a la lista
                 grupos.Add(grupo);
             }
            
