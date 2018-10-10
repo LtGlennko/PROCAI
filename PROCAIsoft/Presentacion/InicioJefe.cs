@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class InicioJefe : Form
     {
-        BindingList<Usuario> usuarios;
+        //BindingList<Usuario> usuarios;
         public InicioJefe(string username)
         {
             InitializeComponent();

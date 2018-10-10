@@ -70,6 +70,7 @@
             this.rdBtnP4_3 = new System.Windows.Forms.RadioButton();
             this.rdBtnP4_4 = new System.Windows.Forms.RadioButton();
             this.rdBtnP4_5 = new System.Windows.Forms.RadioButton();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpP1.SuspendLayout();
@@ -122,7 +123,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(469, 114);
+            this.btnRegistrar.Location = new System.Drawing.Point(469, 354);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(85, 27);
@@ -556,12 +557,25 @@
             this.rdBtnP4_5.Text = "5";
             this.rdBtnP4_5.UseVisualStyleBackColor = true;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(469, 114);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(85, 27);
+            this.btnAgregar.TabIndex = 48;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // frmRegYeditEncuestas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(606, 684);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grpP4);
             this.Controls.Add(this.grpP3);
             this.Controls.Add(this.grpP2);
@@ -641,5 +655,6 @@
         private System.Windows.Forms.RadioButton rdBtnP4_3;
         private System.Windows.Forms.RadioButton rdBtnP4_4;
         private System.Windows.Forms.RadioButton rdBtnP4_5;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
