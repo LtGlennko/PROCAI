@@ -10,7 +10,7 @@ namespace Modelo
     public class Actividad
     {
         private static int i;
-        private int IdTipoActividad;
+        private int IdActividad;
         private TipoActividad tipoActividad;
         private DateTime fechaProgramada;
         private int estadoActividad;
@@ -20,14 +20,14 @@ namespace Modelo
 
         public Actividad(DateTime fechaProgramada, int estadoActividad, int cantEstudiantes)
         {
-            IdTipoActividad = ++i;
+            IdActividad = ++i;
             this.fechaProgramada = fechaProgramada;
             this.estadoActividad = estadoActividad;
             this.cantEstudiantes = cantEstudiantes;
             this.gruposDeEncuestas = new List<GrupoEncuestas>();
         }
 
-        public int IdTipoActividad1 { get => IdTipoActividad; set => IdTipoActividad = value; }
+        public int IdActividad1 { get => IdActividad; set => IdActividad = value; }
         public DateTime FechaProgramada { get => fechaProgramada; set => fechaProgramada = value; }
         public int EstadoActividad { get => estadoActividad; set => estadoActividad = value; }
         public int CantEstudiantes { get => cantEstudiantes; set => cantEstudiantes = value; }

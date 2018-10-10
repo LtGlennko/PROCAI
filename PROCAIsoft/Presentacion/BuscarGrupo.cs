@@ -15,11 +15,11 @@ namespace Presentacion
     public partial class BuscarGrupo : Form
     {
         private GrupoBL grupoBL;
-        private BuscarGrupoEncuesta bge;
+        GrupoEncuestas bge;
         public BuscarGrupo()
         {
+            grupoBL = new GrupoBL();
             InitializeComponent();
-            bge = new BuscarGrupoEncuesta();
             /*dataGridView1.ColumnCount = 7;
             dataGridView1.Columns[0].Name = "ID del grupo";
             dataGridView1.Columns[1].Name = "Fecha programada";
@@ -28,15 +28,14 @@ namespace Presentacion
             dataGridView1.Columns[4].Name = "Nombre del Guia";
             dataGridView1.Columns[5].Name = "Apellido materno del Guia";
             dataGridView1.Columns[6].Name = "Apellido paterno del Guia";*/
-            grupoBL = new GrupoBL();
-            dataGridView1.DataSource = grupoBL.listarGrupo();
-            dataGridView1.Columns[0].Name = "ID del grupo";
-            dataGridView1.Columns[1].Name = "Fecha programada";
-            dataGridView1.Columns[2].Name = "Colegio";
-            dataGridView1.Columns[3].Name = "Tipo de actividad";
-            dataGridView1.Columns[4].Name = "Nombre del Guia";
-            dataGridView1.Columns[5].Name = "Apellido materno del Guia";
-            dataGridView1.Columns[6].Name = "Apellido paterno del Guia"; //NO FUNCIONA
+            dataGridView1.DataSource = grupoBL.listarGrupos();
+            //dataGridView1.Columns[0].Name = "ID del grupo";
+            //dataGridView1.Columns[1].Name = "Fecha programada";
+            //dataGridView1.Columns[2].Name = "Colegio";
+            //dataGridView1.Columns[3].Name = "Tipo de actividad";
+            //dataGridView1.Columns[4].Name = "Nombre del Guia";
+            //dataGridView1.Columns[5].Name = "Apellido materno del Guia";
+            //dataGridView1.Columns[6].Name = "Apellido paterno del Guia"; //NO FUNCIONA
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -53,7 +52,7 @@ namespace Presentacion
 
             else
             {
-                bge = (BuscarGrupoEncuesta)dataGridView1.CurrentRow.DataBoundItem;//COPIAR 
+                bge = (GrupoEncuestas)dataGridView1.CurrentRow.DataBoundItem;//COPIAR 
                 this.DialogResult = DialogResult.OK;
             }
             

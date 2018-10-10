@@ -13,21 +13,24 @@ namespace AccesoDatos
 {
     public class GrupoDA
     {
-        public BindingList<GrupoEncuestas> listarGrupo(){
+        private MySqlConnection con;
+        MySqlCommand comando;
+        String sql;
+        public BindingList<GrupoEncuestas> listarGrupos(){
             BindingList<GrupoEncuestas> grupos = new BindingList<GrupoEncuestas>();
-            MySqlConnection con = new MySqlConnection(DBManager.cadena);
-            MySqlCommand comando = new MySqlCommand();
+            con = new MySqlConnection(DBManager.cadena);
+            comando = new MySqlCommand();
             con.Open();
-            String sql = "SELECT GE.IdGrupoEncuesta, " +
-                        "A.IdActividad," +
-                        "A.fechaProgramada," +
-                        "A.estadoActividad," +
-                        "A.cantEstudiantes," +
-                        "TA.IdTipoActividad," +
-                        "TA.Nombre," +
-                        " TA.descripcion" +
-                        "FROM GrupoEncuesta GE, Actividad A, TipoActividad TA" +
-                        "WHERE GE.IdActividad = A.IdActividad and" +
+            sql = "SELECT GE.IdGrupoEncuesta, " +
+                        "A.IdActividad, " +
+                        "A.fechaProgramada, " +
+                        "A.estadoActividad, " +
+                        "A.cantEstudiantes, " +
+                        "TA.IdTipoActividad, " +
+                        "TA.Nombre, " +
+                        "TA.descripcion " +
+                        "FROM GrupoEncuesta GE, Actividad A, TipoActividad TA " +
+                        "WHERE GE.IdActividad = A.IdActividad AND " +
                         "A.IdTipoActividad = TA.IdTipoActividad;";
             comando.CommandText = sql;
             comando.Connection = con;

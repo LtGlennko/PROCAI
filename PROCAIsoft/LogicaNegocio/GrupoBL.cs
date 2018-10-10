@@ -18,9 +18,9 @@ namespace LogicaNegocio
 
         }
 
-        public BindingList<BuscarGrupoEncuesta> listarGrupo()
+        public BindingList<GrupoEncuestas> listarGrupos()
         {
-            return grupoDA.listarGrupo();
+            return grupoDA.listarGrupos();
         }
 
     }

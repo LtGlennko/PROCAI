@@ -26,10 +26,11 @@ namespace AccesoDatos
             MySqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
             {
-                int IdTipoActividad = lector.GetInt32("IdTipoActividad");
+                int idTipoActividad = lector.GetInt32("IdTipoActividad");
                 string nombre = lector.GetString("Nombre");
                 string descripcion = lector.GetString("Descripcion");
-                TipoActividad a = new TipoActividad(IdTipoActividad, nombre, descripcion);
+                TipoActividad a = new TipoActividad(nombre, descripcion);
+                a.IdTipoActividad1 = idTipoActividad;
                 tactiviades.Add(a);
             }
             con.Close();
