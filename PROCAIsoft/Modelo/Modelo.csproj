@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actividad.cs" />
+    <Compile Include="BuscarGrupoEncuesta.cs" />
     <Compile Include="CalificacionPXE.cs" />
     <Compile Include="Cargo.cs" />
     <Compile Include="Carrera.cs" />

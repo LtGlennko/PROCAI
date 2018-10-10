@@ -71,6 +71,12 @@
     <Compile Include="agregarStock.designer.cs">
       <DependentUpon>agregarStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarGrupo.Designer.cs">
+      <DependentUpon>BuscarGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetalleEncuesta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     <EmbeddedResource Include="agregarStock.resx">
       <DependentUpon>agregarStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuscarGrupo.resx">
+      <DependentUpon>BuscarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetalleEncuesta.resx">
       <DependentUpon>DetalleEncuesta.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +373,10 @@
     <None Include="Resources\bbc500b6-9f12-45e0-b75d-1df036f6c47c.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{b06f7e2e-d8b0-48c5-a88d-fb3ca2903a77}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
       <Project>{55948bf7-0011-49c9-9b7e-28da0c1e964f}</Project>
       <Name>LogicaNegocio</Name>
