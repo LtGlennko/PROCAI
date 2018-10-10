@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaNegocio;
 
 namespace Presentacion
 {    
@@ -25,12 +26,12 @@ namespace Presentacion
             //btnRegistrar.Enabled = true;
             //btnModificar.Enabled = true;
             InitializeComponent();
-<<<<<<< HEAD
+
             txtNumero.Enabled = false;
             dateEncuentra.Enabled = false;
-=======
+
             dgvEncuestas.AutoGenerateColumns = false;
->>>>>>> 3ae4ef29592f23d100130330a37c2b7741dc79d8
+
             listaEncuestas = new BindingList<Encuesta>();
             dgvEncuestas.DataSource = listaEncuestas;
             dateEncuentra.Enabled = false;
@@ -44,6 +45,7 @@ namespace Presentacion
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Encuesta registrada con éxito");
+            Encuesta E = new Encuesta();
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -56,6 +58,8 @@ namespace Presentacion
             listaEncuestas.Add(encuestaCreada);
             dgvEncuestas.DataSource = listaEncuestas;
             //Inserto encuesta en la base de datos
+            EncuestaBL encuestaBL = new EncuestaBL();
+            encuestaBL.registrarEncuesta(encuestaCreada);
         }
 
         private void agregarCalificacionSeleccionada(Encuesta encuesta, GroupBox grupo, Pregunta preg)
@@ -107,7 +111,7 @@ namespace Presentacion
             //bg.Visible = true;
             if(bg.ShowDialog() == DialogResult.OK)
             {
-                grupoBuscado = bg.grupoEncuestasSel;
+                grupoBuscado = bg.getGrupoSel();
                 BindingList<Pregunta> preguntasSel = grupoBuscado.Actividad.TipoActividad.Preguntas;
                 //definir preg1, preg2, preg3 y preg4
                 if(preguntasSel.Count < 4)
@@ -124,6 +128,8 @@ namespace Presentacion
                 grpP2.Text = "Pregunta 2: " + preg2.Enunciado;
                 grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
+
+                dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
             }
             txtNumero.Text = grupoBuscado.IdGrupoEncuestas1.ToString();
             txtNumero.Enabled = false;

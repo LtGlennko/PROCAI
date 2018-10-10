@@ -12,8 +12,8 @@ namespace AccesoDatos
     public class EncuestaDA
     {
         private MySqlConnection con;
-        MySqlCommand comando;
-        String sql;
+        private MySqlCommand comando;
+        private String sql;
 
         public BindingList<Encuesta> listarEncuestas()
         {
@@ -44,8 +44,8 @@ namespace AccesoDatos
                 con = new MySqlConnection(DBManager.cadena);
                 con.Open();
                 comando = new MySqlCommand();
-                sql = "INSERT INTO Encuesta(GrupoPerteneciente,Calificaciones, Digitador) " +//NO SEGURA -> COMO SE LLAmAN EN EL WORKBENCH ?
-                             "VALUES('" + E.GrupoPerteneciente + "','" + E.CalificacionesPorEncuesta + "','" + E.Digitador + "')";
+                sql = "INSERT INTO Encuesta(IdEncuesta) " +
+                             "VALUES('" + E.IdEncuesta1 + "')";
                 comando.CommandText = sql;
                 comando.Connection = con;
                 comando.ExecuteNonQuery();
