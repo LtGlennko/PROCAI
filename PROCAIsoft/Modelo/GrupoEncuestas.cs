@@ -24,6 +24,9 @@ namespace Modelo
         public int IdGrupoEncuestas1 { get => IdGrupoEncuestas; set => IdGrupoEncuestas = value; }
         public Colegio Colegio { get => colegio; set => colegio = value; }
         public Actividad Actividad { get => actividad; set => actividad = value; }
+        public string TipoYnombreActividad { get => actividad.TipoActividad.Nombre + ": " + actividad.TipoActividad.Descripcion; }
+        public int CantAlumnos { get => Actividad.CantEstudiantes;  }
+        public DateTime FechaProgramada { get => actividad.FechaProgramada; }
         public Guia GuiaEvaluado { get => guiaEvaluado; set => guiaEvaluado = value; }
         public List<Encuesta> ListaDeEncuestas { get => listaDeEncuestas; set => listaDeEncuestas = value; }
         public void setColegio(Colegio col)

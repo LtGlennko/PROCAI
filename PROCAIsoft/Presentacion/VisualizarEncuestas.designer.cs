@@ -107,7 +107,7 @@
             this.txtNumero.Location = new System.Drawing.Point(205, 81);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(135, 20);
+            this.txtNumero.Size = new System.Drawing.Size(60, 20);
             this.txtNumero.TabIndex = 6;
             // 
             // dateEncuentra
@@ -129,7 +129,7 @@
             this.btnRegistrar.TabIndex = 18;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dgvEncuestas
             // 
@@ -279,7 +279,7 @@
             // btnBusca
             // 
             this.btnBusca.BackColor = System.Drawing.Color.White;
-            this.btnBusca.Location = new System.Drawing.Point(357, 81);
+            this.btnBusca.Location = new System.Drawing.Point(284, 81);
             this.btnBusca.Margin = new System.Windows.Forms.Padding(2);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(25, 23);

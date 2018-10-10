@@ -32,8 +32,8 @@ namespace Modelo
         public int EstadoActividad { get => estadoActividad; set => estadoActividad = value; }
         public int CantEstudiantes { get => cantEstudiantes; set => cantEstudiantes = value; }
         public List<GrupoEncuestas> GruposDeEncuestas { get => gruposDeEncuestas; set => gruposDeEncuestas = value; }
-        internal TipoActividad TipoActividad { get => tipoActividad; set => tipoActividad = value; }
-        internal Merchandising MaterialRepartido { get => materialRepartido; set => materialRepartido = value; }
+        public TipoActividad TipoActividad { get => tipoActividad; set => tipoActividad = value; }
+        public Merchandising MaterialRepartido { get => materialRepartido; set => materialRepartido = value; }
         public void setTipoActividad(TipoActividad tip)
         {
             this.tipoActividad = tip;

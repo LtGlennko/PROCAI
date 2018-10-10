@@ -25,6 +25,7 @@ namespace Presentacion
             //btnModificar.Enabled = true;
             encuestaCreada = new Encuesta();
             InitializeComponent();
+            dateEncuentra.Enabled = false;
             if (flag == 0)
             {
                 btnModificar.Enabled = false;
@@ -32,7 +33,7 @@ namespace Presentacion
             
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             //encuestaCreada.setGrupo(grupoBuscado);
             agregarCalificacionSeleccionada(encuestaCreada, grpP1, preg1);
@@ -89,7 +90,25 @@ namespace Presentacion
         private void btnBusca_Click(object sender, EventArgs e)
         {
             BuscarGrupo bg = new BuscarGrupo();
-            bg.Visible = true;
+            //bg.Visible = true;
+            if(bg.ShowDialog() == DialogResult.OK)
+            {
+                grupoBuscado = bg.grupoEncuestasSel;
+                BindingList<Pregunta> preguntasSel = grupoBuscado.Actividad.TipoActividad.Preguntas;
+                //definir preg1, preg2, preg3 y preg4
+                if(preguntasSel.Count < 4)
+                {
+                    MessageBox.Show("El tipo de actividad tiene menos de 4 preguntas relacionadas");
+                    return;
+                }
+                //Actualizar la fecha
+                preg1 = preguntasSel[0];
+                preg2 = preguntasSel[1];
+                preg3 = preguntasSel[2];
+                preg4 = preguntasSel[3];
+            }
+            txtNumero.Text = grupoBuscado.IdGrupoEncuestas1.ToString();
+            txtNumero.Enabled = false;
         }
     }
 }

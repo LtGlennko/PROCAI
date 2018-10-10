@@ -15,11 +15,12 @@ namespace Presentacion
     public partial class BuscarGrupo : Form
     {
         private GrupoBL grupoBL;
-        GrupoEncuestas bge;
+        public GrupoEncuestas grupoEncuestasSel;
         public BuscarGrupo()
         {
             grupoBL = new GrupoBL();
             InitializeComponent();
+            dgvGrupos.AutoGenerateColumns = false;
             /*dataGridView1.ColumnCount = 7;
             dataGridView1.Columns[0].Name = "ID del grupo";
             dataGridView1.Columns[1].Name = "Fecha programada";
@@ -28,7 +29,7 @@ namespace Presentacion
             dataGridView1.Columns[4].Name = "Nombre del Guia";
             dataGridView1.Columns[5].Name = "Apellido materno del Guia";
             dataGridView1.Columns[6].Name = "Apellido paterno del Guia";*/
-            dataGridView1.DataSource = grupoBL.listarGrupos();
+            dgvGrupos.DataSource = grupoBL.listarGrupos();
             //dataGridView1.Columns[0].Name = "ID del grupo";
             //dataGridView1.Columns[1].Name = "Fecha programada";
             //dataGridView1.Columns[2].Name = "Colegio";
@@ -45,14 +46,14 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count != 1)
+            if (dgvGrupos.SelectedRows.Count != 1)
             {
                 MessageBox.Show("Se debe seleccionar un grupo");
             }
 
             else
             {
-                bge = (GrupoEncuestas)dataGridView1.CurrentRow.DataBoundItem;//COPIAR 
+                grupoEncuestasSel = (GrupoEncuestas)dgvGrupos.CurrentRow.DataBoundItem;//COPIAR 
                 this.DialogResult = DialogResult.OK;
             }
             
