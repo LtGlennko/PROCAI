@@ -25,8 +25,12 @@ namespace Presentacion
             //btnRegistrar.Enabled = true;
             //btnModificar.Enabled = true;
             InitializeComponent();
+<<<<<<< HEAD
             txtNumero.Enabled = false;
             dateEncuentra.Enabled = false;
+=======
+            dgvEncuestas.AutoGenerateColumns = false;
+>>>>>>> 3ae4ef29592f23d100130330a37c2b7741dc79d8
             listaEncuestas = new BindingList<Encuesta>();
             dgvEncuestas.DataSource = listaEncuestas;
             dateEncuentra.Enabled = false;
@@ -50,6 +54,8 @@ namespace Presentacion
             agregarCalificacionSeleccionada(encuestaCreada, grpP3, preg3);
             agregarCalificacionSeleccionada(encuestaCreada, grpP4, preg4);
             listaEncuestas.Add(encuestaCreada);
+            dgvEncuestas.DataSource = listaEncuestas;
+            //Inserto encuesta en la base de datos
         }
 
         private void agregarCalificacionSeleccionada(Encuesta encuesta, GroupBox grupo, Pregunta preg)
