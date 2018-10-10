@@ -24,6 +24,11 @@ namespace Modelo
             this.actividades = new List<Actividad>();
         }
 
+        public Merchandising()
+        {
+
+        }
+
         public int IdMerchandising1 { get => IdMerchandising; set => IdMerchandising = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }

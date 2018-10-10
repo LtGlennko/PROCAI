@@ -29,3 +29,15 @@ C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj
 C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csproj.CopyComplete
 C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.dll
 C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.pdb
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csprojResolveAssemblyReference.cache
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.pdb
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.pdb
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.Entity.EF6.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Web.dll
+T:\ta1\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.pdb

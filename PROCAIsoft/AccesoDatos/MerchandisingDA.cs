@@ -21,7 +21,7 @@ namespace AccesoDatos
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
             comando = new MySqlCommand();
-            sql = "SELECT IdMerchandising, nombre ,descripcion,stock"
+            sql = "SELECT IdMerchandising, nombre ,descripcion, stock "
                 + "FROM Merchandising";
             comando.CommandText = sql;
             comando.Connection = con;

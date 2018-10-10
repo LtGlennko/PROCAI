@@ -32,19 +32,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySql.Data.dll</HintPath>
+      <HintPath>C:\Users\alulab14\Downloads\LAB05_2018-1\DRIVERS .NET\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6">
-      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySql.Data.Entity.EF6.dll</HintPath>
+      <HintPath>C:\Users\alulab14\Downloads\LAB05_2018-1\DRIVERS .NET\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
     <Reference Include="MySQL.Data.EntityFrameworkCore">
-      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySQL.Data.EntityFrameworkCore.dll</HintPath>
+      <HintPath>C:\Users\alulab14\Downloads\LAB05_2018-1\DRIVERS .NET\MySQL.Data.EntityFrameworkCore.dll</HintPath>
     </Reference>
     <Reference Include="MySQL.Data.EntityFrameworkCore.Design">
-      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
+      <HintPath>C:\Users\alulab14\Downloads\LAB05_2018-1\DRIVERS .NET\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Web">
-      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySql.Web.dll</HintPath>
+      <HintPath>C:\Users\alulab14\Downloads\LAB05_2018-1\DRIVERS .NET\MySql.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

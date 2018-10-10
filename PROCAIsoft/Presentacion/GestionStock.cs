@@ -38,7 +38,7 @@ namespace Presentacion
             //System.Console.WriteLine("OKOKOKKK");
             if (DialogResult.OK == agregar1.ShowDialog())
             {
-                dgvStock.AutoGenerateColumns = false;
+                //dgvStock.AutoGenerateColumns = false;
                 dgvStock.DataSource = mbl.listarMerchandising();
                 
             }
