@@ -35,12 +35,13 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvCol = new System.Windows.Forms.DataGridView();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCol)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 83);
+            this.textBox1.Location = new System.Drawing.Point(166, 84);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(129, 20);
             this.textBox1.TabIndex = 1;
@@ -48,13 +49,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(102, 90);
+            this.label1.Location = new System.Drawing.Point(105, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(56, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Buscar:";
+            this.label1.Text = "Codigo:";
             // 
             // btnAgregar
             // 
@@ -88,7 +89,7 @@
             // dgvCol
             // 
             this.dgvCol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCol.Location = new System.Drawing.Point(95, 140);
+            this.dgvCol.Location = new System.Drawing.Point(108, 140);
             this.dgvCol.Name = "dgvCol";
             this.dgvCol.Size = new System.Drawing.Size(284, 112);
             this.dgvCol.TabIndex = 6;
@@ -104,12 +105,22 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(317, 84);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
             // GestCol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(800, 401);
+            this.ClientSize = new System.Drawing.Size(613, 401);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dgvCol);
             this.Controls.Add(this.btnEliminar);
@@ -135,6 +146,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvCol;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 

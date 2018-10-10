@@ -10,7 +10,7 @@ using AccesoDatos;
 
 namespace LogicaNegocio
 {
-    class MerchandisingBL
+    public class MerchandisingBL
     {
         private MerchandisingDA merchandisingDA;
         public MerchandisingBL()

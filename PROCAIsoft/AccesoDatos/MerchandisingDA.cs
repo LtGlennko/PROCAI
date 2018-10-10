@@ -46,7 +46,7 @@ namespace AccesoDatos
                 con.Open();
                 comando = new MySqlCommand();
                 sql = "INSERT INTO Merchandising(nombre,descripcion,stock) " +
-                             "VALUES('" + m.Nombre+ "','" + m.Descripcion + "','" +
+                             "VALUES('" + m.Nombre+ "','" + m.Descripcion + "'," +
                                             m.Stock +  ")";
                 comando.CommandText = sql;
                 comando.Connection = con;

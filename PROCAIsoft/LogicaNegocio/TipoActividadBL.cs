@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace LogicaNegocio
 {
-    class TipoActividadBL
+    public class TipoActividadBL
     {
         private TipoActividadDA taDA;
 
