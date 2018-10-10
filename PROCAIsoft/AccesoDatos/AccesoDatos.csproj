@@ -32,19 +32,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\drivemysql\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6">
-      <HintPath>..\..\..\..\drivemysql\MySql.Data.Entity.EF6.dll</HintPath>
+      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
     <Reference Include="MySQL.Data.EntityFrameworkCore">
-      <HintPath>..\..\..\..\drivemysql\MySQL.Data.EntityFrameworkCore.dll</HintPath>
+      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySQL.Data.EntityFrameworkCore.dll</HintPath>
     </Reference>
     <Reference Include="MySQL.Data.EntityFrameworkCore.Design">
-      <HintPath>..\..\..\..\drivemysql\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
+      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Web">
-      <HintPath>..\..\..\..\drivemysql\MySql.Web.dll</HintPath>
+      <HintPath>..\..\..\..\Lenguaje de Programación 2\Practica Lab5\MySql.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,6 +60,7 @@
     <Compile Include="DBManager.cs" />
     <Compile Include="GrupoDA.cs" />
     <Compile Include="MerchandisingDA.cs" />
+    <Compile Include="PreguntaDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoActividadDA.cs" />
     <Compile Include="UsuarioDA.cs" />
