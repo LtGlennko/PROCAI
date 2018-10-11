@@ -83,9 +83,29 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Postulantes {
+            get {
+                object obj = ResourceManager.GetObject("Postulantes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PUCP_El_Comercio {
             get {
                 object obj = ResourceManager.GetObject("PUCP-El-Comercio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top5guias {
+            get {
+                object obj = ResourceManager.GetObject("Top5guias", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

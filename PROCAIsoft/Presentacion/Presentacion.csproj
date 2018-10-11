@@ -392,5 +392,11 @@
   <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top5guias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Postulantes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
