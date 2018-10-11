@@ -26,7 +26,7 @@ namespace Presentacion
             //btnRegistrar.Enabled = true;
             //btnModificar.Enabled = true;
             InitializeComponent();
-
+            
             txtNumero.Enabled = false;
             dateEncuentra.Enabled = false;
 
@@ -59,6 +59,12 @@ namespace Presentacion
             dgvEncuestas.DataSource = listaEncuestas;
             //Inserto encuesta en la base de datos
             EncuestaBL encuestaBL = new EncuestaBL();
+            GrupoEncuestas grupo = new GrupoEncuestas();
+            grupo.IdGrupoEncuestas1 = Int32.Parse(txtNumero.Text);
+            encuestaCreada.GrupoPerteneciente = grupo;
+
+
+
             encuestaBL.registrarEncuesta(encuestaCreada);
         }
 
@@ -135,5 +141,9 @@ namespace Presentacion
             txtNumero.Enabled = false;
         }
 
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
