@@ -81,7 +81,7 @@
             this.picFondo.Image = global::Presentacion.Properties.Resources.PUCP_El_Comercio;
             this.picFondo.Location = new System.Drawing.Point(-321, -66);
             this.picFondo.Name = "picFondo";
-            this.picFondo.Size = new System.Drawing.Size(533, 384);
+            this.picFondo.Size = new System.Drawing.Size(533, 371);
             this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFondo.TabIndex = 9;
             this.picFondo.TabStop = false;

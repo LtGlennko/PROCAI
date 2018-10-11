@@ -389,5 +389,8 @@
   <ItemGroup>
     <None Include="Resources\PUCP-El-Comercio.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

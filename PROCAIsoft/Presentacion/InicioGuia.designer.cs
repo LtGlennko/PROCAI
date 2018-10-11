@@ -31,7 +31,10 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lblNombreUsu = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -48,7 +51,7 @@
             // lblNombreUsu
             // 
             this.lblNombreUsu.AutoSize = true;
-            this.lblNombreUsu.Location = new System.Drawing.Point(12, 18);
+            this.lblNombreUsu.Location = new System.Drawing.Point(12, 48);
             this.lblNombreUsu.Name = "lblNombreUsu";
             this.lblNombreUsu.Size = new System.Drawing.Size(49, 13);
             this.lblNombreUsu.TabIndex = 3;
@@ -57,11 +60,33 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel1.Controls.Add(this.lblNombreUsu);
+            this.panel1.Controls.Add(this.lblTitulo);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 45);
             this.panel1.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.logout;
+            this.pictureBox1.Location = new System.Drawing.Point(336, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Navy;
+            this.lblTitulo.Location = new System.Drawing.Point(10, 12);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(135, 28);
+            this.lblTitulo.TabIndex = 9;
+            this.lblTitulo.Text = "PROCAIsoft";
             // 
             // InicioGuia
             // 
@@ -70,6 +95,7 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(371, 179);
             this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.lblNombreUsu);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InicioGuia";
@@ -77,7 +103,9 @@
             this.Load += new System.EventHandler(this.InicioGuia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,6 +113,8 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label lblNombreUsu;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
 

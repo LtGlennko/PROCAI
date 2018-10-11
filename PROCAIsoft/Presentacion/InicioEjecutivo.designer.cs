@@ -30,7 +30,6 @@
         {
             this.btnGestionarStock = new System.Windows.Forms.Button();
             this.btnGestionarColegios = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnCalendario = new System.Windows.Forms.Button();
             this.lblNombreUsu = new System.Windows.Forms.Label();
@@ -38,7 +37,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGestionarStock
@@ -60,16 +62,6 @@
             this.btnGestionarColegios.Text = "Gestionar Colegios";
             this.btnGestionarColegios.UseVisualStyleBackColor = true;
             this.btnGestionarColegios.Click += new System.EventHandler(this.btnGestionarColegios_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(15, 296);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Atrás";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -94,7 +86,7 @@
             // lblNombreUsu
             // 
             this.lblNombreUsu.AutoSize = true;
-            this.lblNombreUsu.Location = new System.Drawing.Point(12, 18);
+            this.lblNombreUsu.Location = new System.Drawing.Point(12, 48);
             this.lblNombreUsu.Name = "lblNombreUsu";
             this.lblNombreUsu.Size = new System.Drawing.Size(49, 13);
             this.lblNombreUsu.TabIndex = 5;
@@ -103,7 +95,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel1.Controls.Add(this.lblNombreUsu);
+            this.panel1.Controls.Add(this.lblTitulo);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(371, 45);
@@ -139,6 +132,27 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.logout;
+            this.pictureBox1.Location = new System.Drawing.Point(336, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Navy;
+            this.lblTitulo.Location = new System.Drawing.Point(10, 8);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(135, 28);
+            this.lblTitulo.TabIndex = 9;
+            this.lblTitulo.Text = "PROCAIsoft";
+            // 
             // InicioEjecutivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,11 +160,11 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(371, 331);
             this.Controls.Add(this.button7);
+            this.Controls.Add(this.lblNombreUsu);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnCalendario);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGestionarColegios);
             this.Controls.Add(this.btnGestionarStock);
             this.Controls.Add(this.panel1);
@@ -159,7 +173,9 @@
             this.Load += new System.EventHandler(this.InicioEjecutivo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,7 +183,6 @@
 
         private System.Windows.Forms.Button btnGestionarStock;
         private System.Windows.Forms.Button btnGestionarColegios;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnCalendario;
         private System.Windows.Forms.Label lblNombreUsu;
@@ -175,5 +190,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
