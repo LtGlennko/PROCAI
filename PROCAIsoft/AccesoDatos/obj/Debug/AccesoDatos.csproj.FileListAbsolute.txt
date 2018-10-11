@@ -54,3 +54,23 @@ C:\Users\alulab14\Downloads\PROCAAAAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\Ac
 C:\Users\alulab14\Downloads\PROCAAAAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.dll
 C:\Users\alulab14\Downloads\PROCAAAAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.pdb
 C:\Users\celin\Documents\Cours\GPSE 4A\Semestre d'échange\Cours\Lenguage de Programacion 2\Projet\PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.pdb
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Web.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.pdb
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.xml
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.xml
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.xml
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Web.xml
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csprojAssemblyReference.cache
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csproj.CopyComplete
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.dll
+C:\Users\Corrector Jin\Documents\C#\PROCAI-master6\PROCAI-master\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.pdb

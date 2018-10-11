@@ -41,14 +41,50 @@ namespace AccesoDatos
 
             try
             {
+                int Id_guia = 0;
+                int Id_grupoEncuesta = E.GrupoPerteneciente.IdGrupoEncuestas1;
                 con = new MySqlConnection(DBManager.cadena);
+
                 con.Open();
                 comando = new MySqlCommand();
-                sql = "INSERT INTO Encuesta(IdEncuesta) " +
-                             "VALUES('" + E.IdEncuesta1 + "')";
+                //aqui encuentro el ID del guia
+                sql = "Select * from GrupoEncuesta GE, Guia G " +
+                        " where GE.IdGrupoEncuesta = "+ Id_grupoEncuesta +
+                        " and GE.IdGuia = G.IdGuia; ";
+
                 comando.CommandText = sql;
                 comando.Connection = con;
-                comando.ExecuteNonQuery();
+
+                MySqlDataReader lector = comando.ExecuteReader();
+                //if(lector.Read())//s leyo el Id del guia (existe)
+                //{
+                ///    HASTQ AQUI YA FUNCIONA :D
+                lector.Read();
+                    Id_guia = lector.GetInt32("IdGuia");
+
+                    string sql2 = "INSERT INTO `Encuesta`(`IdGrupoEncuesta`,`IdGuia`) " +
+                             "VALUES("  + Id_grupoEncuesta   +","+ Id_guia + ")";
+
+
+                    
+                    comando.CommandText = sql2;
+                    comando.Connection = con;
+                    comando.ExecuteNonQuery();///AQUI SE CAE
+                //}
+                    
+                //////////////////////////////////////////////////////////////
+                ///
+
+                
+
+
+
+
+
+
+
+
+
                 con.Close();
                 return true;
             }
