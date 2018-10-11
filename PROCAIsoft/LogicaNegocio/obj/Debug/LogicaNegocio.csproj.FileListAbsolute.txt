@@ -40,3 +40,15 @@ C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\o
 C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CopyComplete
 C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 C:\Users\Glenn Lozano Tapia\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.dll
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.dll
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.dll
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Google.Protobuf.dll
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.pdb
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.pdb
+T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.xml
+T:\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+T:\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+T:\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

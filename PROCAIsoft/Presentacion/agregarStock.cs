@@ -30,6 +30,7 @@ namespace Presentacion
             Merchandising m = new Merchandising();
             m.Nombre = txtN.Text;
             m.Stock = Int32.Parse(txtC.Text);
+            m.Descripcion = txtDesc.Text;
             mbl.registarMerchandising(m);
             txtN.Text = String.Empty;
             txtC.Text = String.Empty;
@@ -51,6 +52,11 @@ namespace Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             Dispose(true);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

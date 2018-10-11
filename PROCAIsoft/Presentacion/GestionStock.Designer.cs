@@ -31,7 +31,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvStock = new System.Windows.Forms.DataGridView();
-            this.IdProducto1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -63,19 +62,11 @@
             // dgvStock
             // 
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdProducto1});
             this.dgvStock.Location = new System.Drawing.Point(48, 127);
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.Size = new System.Drawing.Size(405, 162);
             this.dgvStock.TabIndex = 5;
             this.dgvStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellContentClick);
-            // 
-            // IdProducto1
-            // 
-            this.IdProducto1.DataPropertyName = "Codigo";
-            this.IdProducto1.HeaderText = "Codigo";
-            this.IdProducto1.Name = "IdProducto1";
             // 
             // btnEliminar
             // 
@@ -186,7 +177,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;

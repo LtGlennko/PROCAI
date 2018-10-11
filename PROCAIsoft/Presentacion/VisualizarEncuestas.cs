@@ -36,7 +36,7 @@ namespace Presentacion
             dgvEncuestas.AutoGenerateColumns = false;
 
             listaEncuestas = new BindingList<Encuesta>();
-            dgvEncuestas.DataSource = listaEncuestas;
+            //dgvEncuestas.DataSource = listaEncuestas;
             dateEncuentra.Enabled = false;
             if (flag == 0)
             {
@@ -60,6 +60,7 @@ namespace Presentacion
             agregarCalificacionSeleccionada(encuestaCreada, grpP4, preg4);
             int cantCalif = encuestaCreada.CalificacionesPorEncuesta.Count;
             if (cantCalif >= 4)
+                dgvEncuestas.DataSource = listaEncuestas;
                 listaEncuestas.Add(encuestaCreada);
             //Inserto encuesta en la base de datos
             EncuestaBL encuestaBL = new EncuestaBL();
