@@ -33,6 +33,8 @@
             this.txtN = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -75,7 +77,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(170, 185);
+            this.btnAceptar.Location = new System.Drawing.Point(102, 182);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(85, 21);
             this.btnAceptar.TabIndex = 4;
@@ -83,12 +85,35 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(143, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Agregar Stock";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(252, 182);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // agregarStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(429, 390);
+            this.ClientSize = new System.Drawing.Size(429, 324);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtC);
             this.Controls.Add(this.txtN);
@@ -109,5 +134,7 @@
         private System.Windows.Forms.TextBox txtN;
         private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

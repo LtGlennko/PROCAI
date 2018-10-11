@@ -50,11 +50,17 @@ namespace Presentacion
             bool registrado = colegioBL.registrarColegio(col);
             if(registrado) MessageBox.Show("Escuela registrada con exito");
             else MessageBox.Show("Error al registrar");
+            this.DialogResult = DialogResult.OK;
         }
 
         private void AgregarColegio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dispose(true);
         }
     }
 }

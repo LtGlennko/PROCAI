@@ -8,14 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LogicaNegocio;
 namespace Presentacion
 {
     public partial class EditarStocks : Form
     {
+
+        private MerchandisingBL mbl;
         public EditarStocks()
         {
             InitializeComponent();
+            mbl = new MerchandisingBL();
         }
 
         
@@ -25,6 +28,7 @@ namespace Presentacion
             txtCod.Text = cod.ToString();
             txtC.Text = stock.ToString();
             txtN.Text = nomb;
+            mbl = new MerchandisingBL();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -42,13 +46,20 @@ namespace Presentacion
             string nomb = txtN.Text;
             int cant = Int32.Parse(txtC.Text);
             int cod = Int32.Parse(txtCod.Text);
+            Merchandising m = new Merchandising(cod, nomb, "xdxd", cant);
+            mbl.actualizarMerchandising(m);
             MessageBox.Show("Datos del producto modificado");
-            Dispose(true);
+            this.DialogResult = DialogResult.OK;
         }
 
         private void editarStockcs_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Dispose(true);
         }
     }
 }

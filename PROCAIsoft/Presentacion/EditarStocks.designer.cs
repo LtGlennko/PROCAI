@@ -35,6 +35,8 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCod = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(166, 257);
+            this.btnAceptar.Location = new System.Drawing.Point(104, 259);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 4;
@@ -104,12 +106,35 @@
             this.txtCod.Size = new System.Drawing.Size(124, 20);
             this.txtCod.TabIndex = 7;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
+            this.label3.Location = new System.Drawing.Point(99, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(219, 26);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Editar Merchandising";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(243, 259);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // EditarStocks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(409, 380);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCod);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAceptar);
@@ -134,5 +159,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCod;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

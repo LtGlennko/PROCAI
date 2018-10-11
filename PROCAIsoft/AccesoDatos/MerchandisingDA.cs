@@ -61,5 +61,18 @@ namespace AccesoDatos
             
         }
 
+        public void actualizarMerchandising(Merchandising m)
+        {
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            comando = new MySqlCommand();
+            sql = "UPDATE Merchandising SET nombre= '" + m.Nombre + "',"+" stock= "+ m.Stock + " WHERE IdMerchandising=" + m.IdMerchandising1;
+            comando.CommandText = sql;
+            comando.Connection = con;
+            comando.ExecuteNonQuery();
+            con.Close();
+
+        }
+
     }      
 }

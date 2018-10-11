@@ -27,5 +27,9 @@ namespace LogicaNegocio
         {
             return merchandisingDA.registrarMerchandising(m);
         }
+        public void actualizarMerchandising(Merchandising m)
+        {
+            merchandisingDA.actualizarMerchandising(m);
+        }
     }
 }

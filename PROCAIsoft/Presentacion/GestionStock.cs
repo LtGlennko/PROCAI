@@ -47,12 +47,20 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            int cod = (int)dgvStock.CurrentRow.Cells[0].Value;
-            string nombre = dgvStock.CurrentRow.Cells[1].Value.ToString();
-            int stock = (int)dgvStock.CurrentRow.Cells[2].Value;
+            int cod = (int)dgvStock.CurrentRow.Cells[1].Value;
+            string nombre = dgvStock.CurrentRow.Cells[2].Value.ToString();
+            int stock = (int)dgvStock.CurrentRow.Cells[4].Value;
+
             //dgvStock.CurrentRow.SetValues(cod,nombre,stock);//esta funcion puede simplificar la edicion
             //EditarStockcs editar = new editarStockcs(cod, nombre, stock, productos);
             dgvStock.Rows.RemoveAt(dgvStock.CurrentRow.Index);
+            EditarStocks editar = new EditarStocks(cod, nombre, stock);
+            if(DialogResult.OK == editar.ShowDialog())
+            {
+                dgvStock.DataSource = mbl.listarMerchandising();
+            }
+            //dgvStock.Rows.RemoveAt(dgvStock.CurrentRow.Index);
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
