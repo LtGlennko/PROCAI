@@ -82,8 +82,8 @@
             // 
             // BtnRegistrar
             // 
-            this.BtnRegistrar.Location = new System.Drawing.Point(81, 271);
-            this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnRegistrar.Location = new System.Drawing.Point(245, 280);
+            this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(67, 28);
             this.BtnRegistrar.TabIndex = 4;
@@ -94,8 +94,8 @@
             // BtnCancel
             // 
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(216, 271);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCancel.Location = new System.Drawing.Point(91, 280);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(68, 28);
             this.BtnCancel.TabIndex = 5;
@@ -106,7 +106,7 @@
             // textBox_nombre
             // 
             this.textBox_nombre.Location = new System.Drawing.Point(170, 63);
-            this.textBox_nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_nombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_nombre.Name = "textBox_nombre";
             this.textBox_nombre.Size = new System.Drawing.Size(177, 20);
             this.textBox_nombre.TabIndex = 6;
@@ -115,7 +115,7 @@
             // textBox_Vacantes
             // 
             this.textBox_Vacantes.Location = new System.Drawing.Point(170, 112);
-            this.textBox_Vacantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Vacantes.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vacantes.Name = "textBox_Vacantes";
             this.textBox_Vacantes.Size = new System.Drawing.Size(50, 20);
             this.textBox_Vacantes.TabIndex = 7;
@@ -161,7 +161,7 @@
             "Escolares",
             "No Escolares"});
             this.txt_dirigido.Location = new System.Drawing.Point(164, 231);
-            this.txt_dirigido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_dirigido.Margin = new System.Windows.Forms.Padding(2);
             this.txt_dirigido.Name = "txt_dirigido";
             this.txt_dirigido.Size = new System.Drawing.Size(121, 21);
             this.txt_dirigido.TabIndex = 15;
@@ -183,7 +183,7 @@
             "Noviembre",
             "Diciembre"});
             this.txt_mes.Location = new System.Drawing.Point(193, 173);
-            this.txt_mes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mes.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mes.Name = "txt_mes";
             this.txt_mes.Size = new System.Drawing.Size(92, 21);
             this.txt_mes.TabIndex = 16;
@@ -208,7 +208,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnVacantes);
             this.Controls.Add(this.BtnDescripcion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VentanaNuevoProcesoAdmision";
             this.Text = "Nuevo Proceso de Admision";
             this.Load += new System.EventHandler(this.VentanaNuevoProcesoAdmision_Load);

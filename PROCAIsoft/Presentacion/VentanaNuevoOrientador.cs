@@ -92,7 +92,7 @@ namespace Presentacion
             }
             catch (Exception)
             {
-                MessageBox.Show("Wrong number bitch!", "System", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Número incorrecto", "System", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
             //PA.EstaVigente = 1;

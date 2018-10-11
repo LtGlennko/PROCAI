@@ -32,8 +32,13 @@
             this.labelFecha = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.dateEncuentra = new System.Windows.Forms.DateTimePicker();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.dgvEncuestas = new System.Windows.Forms.DataGridView();
+            this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
@@ -65,12 +70,6 @@
             this.rdBtnP4_4 = new System.Windows.Forms.RadioButton();
             this.rdBtnP4_5 = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTipoEncuesta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,7 +106,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(206, 81);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(49, 20);
             this.txtNumero.TabIndex = 6;
@@ -116,23 +115,11 @@
             // dateEncuentra
             // 
             this.dateEncuentra.Location = new System.Drawing.Point(177, 124);
-            this.dateEncuentra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateEncuentra.Margin = new System.Windows.Forms.Padding(2);
             this.dateEncuentra.Name = "dateEncuentra";
             this.dateEncuentra.Size = new System.Drawing.Size(163, 20);
             this.dateEncuentra.TabIndex = 12;
             this.dateEncuentra.Value = new System.DateTime(2018, 9, 26, 18, 50, 1, 0);
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(470, 354);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(86, 28);
-            this.btnRegistrar.TabIndex = 18;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dgvEncuestas
             // 
@@ -151,11 +138,53 @@
             this.dgvEncuestas.TabIndex = 19;
             this.dgvEncuestas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // NumGrupo
+            // 
+            this.NumGrupo.DataPropertyName = "IdGrupoPerteneciente";
+            this.NumGrupo.HeaderText = "ID Grupo";
+            this.NumGrupo.Name = "NumGrupo";
+            this.NumGrupo.Width = 60;
+            // 
+            // FechaEncuesta
+            // 
+            this.FechaEncuesta.DataPropertyName = "FechaProgramada";
+            this.FechaEncuesta.HeaderText = "Fecha de llenado";
+            this.FechaEncuesta.Name = "FechaEncuesta";
+            this.FechaEncuesta.Width = 130;
+            // 
+            // Pregunta1
+            // 
+            this.Pregunta1.DataPropertyName = "CalificacionP1";
+            this.Pregunta1.HeaderText = "Preg 1";
+            this.Pregunta1.Name = "Pregunta1";
+            this.Pregunta1.Width = 40;
+            // 
+            // Pregunta2
+            // 
+            this.Pregunta2.DataPropertyName = "CalificacionP2";
+            this.Pregunta2.HeaderText = "Preg 2";
+            this.Pregunta2.Name = "Pregunta2";
+            this.Pregunta2.Width = 40;
+            // 
+            // Pregunta3
+            // 
+            this.Pregunta3.DataPropertyName = "CalificacionP3";
+            this.Pregunta3.HeaderText = "Preg 3";
+            this.Pregunta3.Name = "Pregunta3";
+            this.Pregunta3.Width = 40;
+            // 
+            // Pregunta4
+            // 
+            this.Pregunta4.DataPropertyName = "CalificacionP4";
+            this.Pregunta4.HeaderText = "Preg 4";
+            this.Pregunta4.Name = "Pregunta4";
+            this.Pregunta4.Width = 40;
+            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(470, 218);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(86, 28);
             this.btnModificar.TabIndex = 20;
@@ -189,7 +218,7 @@
             // 
             this.rdBtnP1_1.AutoSize = true;
             this.rdBtnP1_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_1.Name = "rdBtnP1_1";
             this.rdBtnP1_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_1.TabIndex = 23;
@@ -201,7 +230,7 @@
             // 
             this.rdBtnP1_2.AutoSize = true;
             this.rdBtnP1_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_2.Name = "rdBtnP1_2";
             this.rdBtnP1_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_2.TabIndex = 24;
@@ -214,7 +243,7 @@
             this.rdBtnP1_3.AutoSize = true;
             this.rdBtnP1_3.Checked = true;
             this.rdBtnP1_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_3.Name = "rdBtnP1_3";
             this.rdBtnP1_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_3.TabIndex = 25;
@@ -226,7 +255,7 @@
             // 
             this.rdBtnP1_4.AutoSize = true;
             this.rdBtnP1_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_4.Name = "rdBtnP1_4";
             this.rdBtnP1_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_4.TabIndex = 26;
@@ -238,7 +267,7 @@
             // 
             this.rdBtnP1_5.AutoSize = true;
             this.rdBtnP1_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_5.Name = "rdBtnP1_5";
             this.rdBtnP1_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_5.TabIndex = 27;
@@ -250,7 +279,7 @@
             // 
             this.btnBusca.BackColor = System.Drawing.Color.White;
             this.btnBusca.Location = new System.Drawing.Point(265, 81);
-            this.btnBusca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBusca.Margin = new System.Windows.Forms.Padding(2);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(26, 23);
             this.btnBusca.TabIndex = 43;
@@ -262,7 +291,7 @@
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
             this.pictureBox1.Location = new System.Drawing.Point(15, 634);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,7 +347,7 @@
             // 
             this.rdBtnP2_1.AutoSize = true;
             this.rdBtnP2_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_1.Name = "rdBtnP2_1";
             this.rdBtnP2_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_1.TabIndex = 23;
@@ -330,7 +359,7 @@
             // 
             this.rdBtnP2_2.AutoSize = true;
             this.rdBtnP2_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_2.Name = "rdBtnP2_2";
             this.rdBtnP2_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_2.TabIndex = 24;
@@ -343,7 +372,7 @@
             this.rdBtnP2_3.AutoSize = true;
             this.rdBtnP2_3.Checked = true;
             this.rdBtnP2_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_3.Name = "rdBtnP2_3";
             this.rdBtnP2_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_3.TabIndex = 25;
@@ -355,7 +384,7 @@
             // 
             this.rdBtnP2_4.AutoSize = true;
             this.rdBtnP2_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_4.Name = "rdBtnP2_4";
             this.rdBtnP2_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_4.TabIndex = 26;
@@ -367,7 +396,7 @@
             // 
             this.rdBtnP2_5.AutoSize = true;
             this.rdBtnP2_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_5.Name = "rdBtnP2_5";
             this.rdBtnP2_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_5.TabIndex = 27;
@@ -395,7 +424,7 @@
             // 
             this.rdBtnP3_1.AutoSize = true;
             this.rdBtnP3_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_1.Name = "rdBtnP3_1";
             this.rdBtnP3_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_1.TabIndex = 23;
@@ -407,7 +436,7 @@
             // 
             this.rdBtnP3_2.AutoSize = true;
             this.rdBtnP3_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_2.Name = "rdBtnP3_2";
             this.rdBtnP3_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_2.TabIndex = 24;
@@ -420,7 +449,7 @@
             this.rdBtnP3_3.AutoSize = true;
             this.rdBtnP3_3.Checked = true;
             this.rdBtnP3_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_3.Name = "rdBtnP3_3";
             this.rdBtnP3_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_3.TabIndex = 25;
@@ -432,7 +461,7 @@
             // 
             this.rdBtnP3_4.AutoSize = true;
             this.rdBtnP3_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_4.Name = "rdBtnP3_4";
             this.rdBtnP3_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_4.TabIndex = 26;
@@ -444,7 +473,7 @@
             // 
             this.rdBtnP3_5.AutoSize = true;
             this.rdBtnP3_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_5.Name = "rdBtnP3_5";
             this.rdBtnP3_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_5.TabIndex = 27;
@@ -472,7 +501,7 @@
             // 
             this.rdBtnP4_1.AutoSize = true;
             this.rdBtnP4_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_1.Name = "rdBtnP4_1";
             this.rdBtnP4_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_1.TabIndex = 23;
@@ -484,7 +513,7 @@
             // 
             this.rdBtnP4_2.AutoSize = true;
             this.rdBtnP4_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_2.Name = "rdBtnP4_2";
             this.rdBtnP4_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_2.TabIndex = 24;
@@ -497,7 +526,7 @@
             this.rdBtnP4_3.AutoSize = true;
             this.rdBtnP4_3.Checked = true;
             this.rdBtnP4_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_3.Name = "rdBtnP4_3";
             this.rdBtnP4_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_3.TabIndex = 25;
@@ -509,7 +538,7 @@
             // 
             this.rdBtnP4_4.AutoSize = true;
             this.rdBtnP4_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_4.Name = "rdBtnP4_4";
             this.rdBtnP4_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_4.TabIndex = 26;
@@ -521,7 +550,7 @@
             // 
             this.rdBtnP4_5.AutoSize = true;
             this.rdBtnP4_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_5.Name = "rdBtnP4_5";
             this.rdBtnP4_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_5.TabIndex = 27;
@@ -533,55 +562,13 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(470, 157);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(86, 28);
             this.btnAgregar.TabIndex = 48;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // NumGrupo
-            // 
-            this.NumGrupo.DataPropertyName = "IdGrupoPerteneciente";
-            this.NumGrupo.HeaderText = "ID Grupo";
-            this.NumGrupo.Name = "NumGrupo";
-            this.NumGrupo.Width = 60;
-            // 
-            // FechaEncuesta
-            // 
-            this.FechaEncuesta.DataPropertyName = "FechaProgramada";
-            this.FechaEncuesta.HeaderText = "Fecha de llenado";
-            this.FechaEncuesta.Name = "FechaEncuesta";
-            this.FechaEncuesta.Width = 130;
-            // 
-            // Pregunta1
-            // 
-            this.Pregunta1.DataPropertyName = "CalificacionP1";
-            this.Pregunta1.HeaderText = "Preg 1";
-            this.Pregunta1.Name = "Pregunta1";
-            this.Pregunta1.Width = 40;
-            // 
-            // Pregunta2
-            // 
-            this.Pregunta2.DataPropertyName = "CalificacionP2";
-            this.Pregunta2.HeaderText = "Preg 2";
-            this.Pregunta2.Name = "Pregunta2";
-            this.Pregunta2.Width = 40;
-            // 
-            // Pregunta3
-            // 
-            this.Pregunta3.DataPropertyName = "CalificacionP3";
-            this.Pregunta3.HeaderText = "Preg 3";
-            this.Pregunta3.Name = "Pregunta3";
-            this.Pregunta3.Width = 40;
-            // 
-            // Pregunta4
-            // 
-            this.Pregunta4.DataPropertyName = "CalificacionP4";
-            this.Pregunta4.HeaderText = "Preg 4";
-            this.Pregunta4.Name = "Pregunta4";
-            this.Pregunta4.Width = 40;
             // 
             // lblTipoEncuesta
             // 
@@ -615,12 +602,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dgvEncuestas);
-            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dateEncuentra);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelNumeroGrupo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegYeditEncuestas";
             this.Text = "Encuestas Registradas";
             this.Load += new System.EventHandler(this.frmRegYeditEncuestas_Load);
@@ -645,7 +631,6 @@
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.DateTimePicker dateEncuentra;
-        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.DataGridView dgvEncuestas;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button button1;

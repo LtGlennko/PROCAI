@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblNombreUsu = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -45,16 +44,6 @@
             this.btnRegistrar.Text = "Registrar datos de encuesta";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Atrás";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblNombreUsu
             // 
@@ -80,7 +69,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(371, 179);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -95,7 +83,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblNombreUsu;
         private System.Windows.Forms.Panel panel1;
     }

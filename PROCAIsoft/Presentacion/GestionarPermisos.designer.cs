@@ -36,14 +36,15 @@
             this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.nudNivel = new System.Windows.Forms.NumericUpDown();
             this.lblLeyenda = new System.Windows.Forms.Label();
             this.lblDescLeyenda = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -121,26 +122,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Ingrese el nuevo nivel a ingresar";
             // 
-            // btnAtras
-            // 
-            this.btnAtras.Location = new System.Drawing.Point(34, 342);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
-            this.btnAtras.TabIndex = 5;
-            this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(392, 342);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(115, 23);
-            this.btnGuardar.TabIndex = 6;
-            this.btnGuardar.Text = "Guardar cambios";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(526, 16);
@@ -191,18 +172,43 @@
             this.lblDescLeyenda.TabIndex = 10;
             this.lblDescLeyenda.Text = "Leyenda";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Teal;
+            this.label4.Location = new System.Drawing.Point(59, 373);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Atras";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 360);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Gestionar_permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(646, 385);
+            this.ClientSize = new System.Drawing.Size(646, 412);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDescLeyenda);
             this.Controls.Add(this.lblLeyenda);
             this.Controls.Add(this.nudNivel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dvgUsuarios);
             this.Controls.Add(this.label2);
@@ -211,6 +217,7 @@
             this.Text = "Gestionar permisos";
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNivel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,8 +229,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dvgUsuarios;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombresYapellidos;
@@ -232,5 +237,7 @@
         private System.Windows.Forms.NumericUpDown nudNivel;
         private System.Windows.Forms.Label lblLeyenda;
         private System.Windows.Forms.Label lblDescLeyenda;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

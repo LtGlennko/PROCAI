@@ -70,5 +70,15 @@ namespace Presentacion
         {
             
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

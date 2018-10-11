@@ -26,5 +26,16 @@ namespace Presentacion
         {
             Dispose();
         }
+
+        private void txtCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cambios guardados con éxito");
+            Dispose();
+        }
     }
 }

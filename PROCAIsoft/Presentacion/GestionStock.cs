@@ -19,6 +19,7 @@ namespace Presentacion
         {
             InitializeComponent();
             mbl = new MerchandisingBL();
+            dgvStock.DataSource = mbl.listarMerchandising();
         }
 
         private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +41,7 @@ namespace Presentacion
             {
                 //dgvStock.AutoGenerateColumns = false;
                 dgvStock.DataSource = mbl.listarMerchandising();
-                
+
             }
             
         }
@@ -83,13 +84,29 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow fila in dgvStock.Rows)
-                foreach (DataGridViewCell celda in fila.Cells)
-                    if (txtBuscar.Text.IndexOf(celda.Value.ToString()) >= 0)
-                        celda.Style.BackColor = Color.Red;
+            try
+            {
+                foreach (DataGridViewRow fila in dgvStock.Rows)
+                    foreach (DataGridViewCell celda in fila.Cells)
+                        if (txtBuscar.Text.IndexOf(celda.Value.ToString()) >= 0)
+                            celda.Style.BackColor = Color.Red;
+            }catch (Exception)
+            {
+                MessageBox.Show("Producto no encontrado");
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

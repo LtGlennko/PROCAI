@@ -50,30 +50,30 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(178, 86);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(151, 20);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(99, 483);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(246, 476);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 28);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Registrar";
+            this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(238, 483);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(70, 476);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 28);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Cancelar";
+            this.button2.Text = "Atrás";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -164,7 +164,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(178, 172);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(151, 20);
             this.textBox3.TabIndex = 15;
@@ -172,7 +172,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(178, 132);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(151, 20);
             this.textBox2.TabIndex = 16;
@@ -180,7 +180,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(176, 219);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(152, 20);
             this.textBox4.TabIndex = 17;
@@ -188,7 +188,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(176, 269);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(76, 20);
             this.textBox5.TabIndex = 18;
@@ -211,9 +211,9 @@
             this.comboBox5.Items.AddRange(new object[] {
             "Masculino",
             "Femenino",
-            "Informatico"});
+            "Personalizado"});
             this.comboBox5.Location = new System.Drawing.Point(176, 317);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(92, 21);
             this.comboBox5.TabIndex = 30;
@@ -234,7 +234,7 @@
             "ALTAIR",
             "SAN FRANCISCO DE ASIS"});
             this.comboBox1.Location = new System.Drawing.Point(176, 369);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 21);
             this.comboBox1.TabIndex = 31;
@@ -263,7 +263,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VentanaNuevoOrientador";
             this.Text = "VentanaNuevoOrientador";
             this.Load += new System.EventHandler(this.VentanaNuevoOrientador_Load);

@@ -37,9 +37,9 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(222, 72);
+            this.txtCorreo.Location = new System.Drawing.Point(199, 71);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(100, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(189, 20);
             this.txtCorreo.TabIndex = 0;
             // 
             // lblInstruccion
@@ -55,7 +55,7 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(313, 136);
+            this.btnEnviar.Location = new System.Drawing.Point(371, 136);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 2;

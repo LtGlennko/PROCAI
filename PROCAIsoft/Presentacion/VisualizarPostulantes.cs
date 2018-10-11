@@ -23,6 +23,11 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            EditarPostulante EP = new EditarPostulante();
+            if (EP.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,14 +42,15 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            EditarPostulante EP = new EditarPostulante();
-            if (EP.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             Dispose();
         }
