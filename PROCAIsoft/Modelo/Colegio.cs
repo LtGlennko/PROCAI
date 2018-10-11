@@ -23,15 +23,15 @@ namespace Modelo
         private List<Escolar> escolares;
         private List<GrupoEncuestas> encuestasLlenadas;
 
-        public Colegio(string rUC, string nombre, string pais, string departamento, string provincia, string distrito, string direccion, TipoColegio tipo, int telefonoContacto)
+        public Colegio(int id,string rUC, string nombre, string pais, string departamento, string provincia/*, string distrito*/, string direccion, TipoColegio tipo, int telefonoContacto)
         {
-            IdColegio = ++i;
+            IdColegio = id;
             RUC = rUC;
             this.nombre = nombre;
             this.pais = pais;
             this.departamento = departamento;
             this.provincia = provincia;
-            this.distrito = distrito;
+            //this.distrito = distrito;
             this.direccion = direccion;
             this.tipo = tipo;
             this.telefonoContacto = telefonoContacto;
@@ -39,6 +39,23 @@ namespace Modelo
             this.escolares = new List<Escolar>();
             this.encuestasLlenadas = new List<GrupoEncuestas>();
         }
+        public Colegio( string rUC, string nombre, string pais, string departamento, string provincia/*, string distrito*/, string direccion, TipoColegio tipo, int telefonoContacto)
+        {
+            //IdColegio = id;
+            RUC = rUC;
+            this.nombre = nombre;
+            this.pais = pais;
+            this.departamento = departamento;
+            this.provincia = provincia;
+            //this.distrito = distrito;
+            this.direccion = direccion;
+            this.tipo = tipo;
+            this.telefonoContacto = telefonoContacto;
+            this.orientadores = new List<Orientador>();
+            this.escolares = new List<Escolar>();
+            this.encuestasLlenadas = new List<GrupoEncuestas>();
+        }
+
 
         public int IdColegio1 { get => IdColegio; set => IdColegio = value; }
         public string RUC1 { get => RUC; set => RUC = value; }

@@ -1,4 +1,5 @@
 ﻿using Modelo;
+using LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,18 +14,23 @@ namespace Presentacion
 {
     public partial class GestCol : Form
     {
-        private BindingList<Colegio> colegios;
+        private ColegioBL cbl;
         public GestCol()
         {
             InitializeComponent();
-            colegios = new BindingList<Colegio>();
+            cbl = new ColegioBL();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarColegio a = new AgregarColegio(colegios);
-            a.Show();
-            dgvCol.DataSource = colegios;
+            AgregarColegio a = new AgregarColegio();
+
+            if (DialogResult.OK == a.ShowDialog())
+            {
+                //dgvStock.AutoGenerateColumns = false;
+                dgvCol.DataSource = cbl.listarColegios();
+
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

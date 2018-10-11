@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+
 
 namespace LogicaNegocio
 {
@@ -20,5 +22,11 @@ namespace LogicaNegocio
         {
             return colegioDA.registrarColegio(colegio);
         }
+
+        public BindingList<Colegio> listarColegios()
+        {
+            return colegioDA.listarColegio();
+        }
     }
+     
 }

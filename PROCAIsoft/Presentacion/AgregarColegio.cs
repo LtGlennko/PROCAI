@@ -14,19 +14,15 @@ namespace Presentacion
 {
     public partial class AgregarColegio : Form
     {
-        private BindingList<Colegio> colegios;
+        
         private ColegioBL colegioBL;
         public AgregarColegio()
         {
-            colegios = new BindingList<Colegio>();
+           
             InitializeComponent();
             colegioBL = new ColegioBL();
         }
-        public AgregarColegio(BindingList<Colegio> col)
-        {
-            InitializeComponent();
-            colegios = col;
-        }
+        
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string nom = txtN.Text;
@@ -50,7 +46,7 @@ namespace Presentacion
                 return;
             }
             string nro = txtTelf.Text;
-            Colegio col = new Colegio(ruc, nom, pai, dep, pro, dis, dir, tip, tel);
+            Colegio col = new Colegio(ruc, nom, pai, dep, pro, dir, tip, tel);
             bool registrado = colegioBL.registrarColegio(col);
             if(registrado) MessageBox.Show("Escuela registrada con exito");
             else MessageBox.Show("Error al registrar");

@@ -19,7 +19,7 @@ namespace Presentacion
 
             
 
-            Application.Run(new frmRegYeditEncuestas(1));
+            Application.Run(new GestCol());
 
         }
     }

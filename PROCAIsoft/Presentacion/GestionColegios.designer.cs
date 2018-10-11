@@ -36,6 +36,7 @@
             this.dgvCol = new System.Windows.Forms.DataGridView();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCol)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(31, 355);
+            this.btnAtras.Location = new System.Drawing.Point(22, 283);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 23);
             this.btnAtras.TabIndex = 7;
@@ -114,12 +115,24 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(187, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(205, 26);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Gestión de Colegios";
+            // 
             // GestCol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(613, 401);
+            this.ClientSize = new System.Drawing.Size(595, 339);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dgvCol);
@@ -147,6 +160,7 @@
         private System.Windows.Forms.DataGridView dgvCol;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label2;
     }
 }
 
