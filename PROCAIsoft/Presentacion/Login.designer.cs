@@ -35,12 +35,12 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.lblOlvido = new System.Windows.Forms.LinkLabel();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.lb = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblUsuInval = new System.Windows.Forms.Label();
             this.lblConInval = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -94,23 +94,13 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(134, 193);
+            this.btnIniciar.Location = new System.Drawing.Point(147, 187);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(106, 23);
+            this.btnIniciar.Size = new System.Drawing.Size(85, 23);
             this.btnIniciar.TabIndex = 5;
-            this.btnIniciar.Text = "Iniciar Sesion";
+            this.btnIniciar.Text = "Acceder";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
-            // lb
-            // 
-            this.lb.AutoSize = true;
-            this.lb.Font = new System.Drawing.Font("Bauhaus 93", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb.Location = new System.Drawing.Point(87, 30);
-            this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(187, 28);
-            this.lb.TabIndex = 6;
-            this.lb.Text = "PROCAIsoft v0.1";
             // 
             // btnSalir
             // 
@@ -160,18 +150,29 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
+            this.label3.Location = new System.Drawing.Point(118, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 26);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Iniciar Sesión";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(374, 256);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblConInval);
             this.Controls.Add(this.lblUsuInval);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.lb);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.lblOlvido);
             this.Controls.Add(this.txtContraseña);
@@ -196,12 +197,12 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.LinkLabel lblOlvido;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label lb;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblUsuInval;
         private System.Windows.Forms.Label lblConInval;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

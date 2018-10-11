@@ -26,7 +26,7 @@ namespace Presentacion
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmRegYeditEncuestas ME = new frmRegYeditEncuestas(1);
+            frmRegYeditEncuestas ME = new frmRegYeditEncuestas(1, 0);
             this.Visible = false;
             ME.StartPosition = FormStartPosition.CenterScreen;
             if (ME.ShowDialog() == DialogResult.OK)

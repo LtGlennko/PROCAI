@@ -36,55 +36,20 @@ namespace AccesoDatos
             con.Close();
             return encuestas;
         }
-        public bool registrarEncuesta (Encuesta E)
+        public bool registrarEncuesta (Encuesta E, int idGuia)
         {
-
             try
             {
-                int Id_guia = 0;
-                int Id_grupoEncuesta = E.GrupoPerteneciente.IdGrupoEncuestas1;
+                int id_grupoEncuesta = E.GrupoPerteneciente.IdGrupoEncuestas1;
                 con = new MySqlConnection(DBManager.cadena);
 
                 con.Open();
                 comando = new MySqlCommand();
-                //aqui encuentro el ID del guia
-                sql = "Select * from GrupoEncuesta GE, Guia G " +
-                        " where GE.IdGrupoEncuesta = "+ Id_grupoEncuesta +
-                        " and GE.IdGuia = G.IdGuia; ";
-
+                string sql = "INSERT INTO `Encuesta`(`IdGrupoEncuesta`,`IdGuia`) " +
+                             "VALUES("  + id_grupoEncuesta + ", "+ idGuia + ")";
                 comando.CommandText = sql;
                 comando.Connection = con;
-
-                MySqlDataReader lector = comando.ExecuteReader();
-                //if(lector.Read())//s leyo el Id del guia (existe)
-                //{
-                ///    HASTQ AQUI YA FUNCIONA :D
-                lector.Read();
-                    Id_guia = lector.GetInt32("IdGuia");
-
-                    string sql2 = "INSERT INTO `Encuesta`(`IdGrupoEncuesta`,`IdGuia`) " +
-                             "VALUES("  + Id_grupoEncuesta   +","+ Id_guia + ")";
-
-
-                    
-                    comando.CommandText = sql2;
-                    comando.Connection = con;
-                    comando.ExecuteNonQuery();///AQUI SE CAE
-                //}
-                    
-                //////////////////////////////////////////////////////////////
-                ///
-
-                
-
-
-
-
-
-
-
-
-
+                comando.ExecuteNonQuery();
                 con.Close();
                 return true;
             }

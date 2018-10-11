@@ -15,17 +15,20 @@ namespace Presentacion
     public partial class frmRegYeditEncuestas : Form
     {
         private Encuesta encuestaCreada;
+        private int idUsu;
         private GrupoEncuestas grupoBuscado;
         private Pregunta preg1;
         private Pregunta preg2;
         private Pregunta preg3;
         private Pregunta preg4;
         private BindingList<Encuesta> listaEncuestas;
-        public frmRegYeditEncuestas(int flag)
+        public frmRegYeditEncuestas(int flag, int id)
         {
+            idUsu = id;
             //btnRegistrar.Enabled = true;
             //btnModificar.Enabled = true;
             InitializeComponent();
+            btnAgregar.Enabled = false;
             
             txtNumero.Enabled = false;
             dateEncuentra.Enabled = false;
@@ -55,33 +58,32 @@ namespace Presentacion
             agregarCalificacionSeleccionada(encuestaCreada, grpP2, preg2);
             agregarCalificacionSeleccionada(encuestaCreada, grpP3, preg3);
             agregarCalificacionSeleccionada(encuestaCreada, grpP4, preg4);
-            listaEncuestas.Add(encuestaCreada);
-            dgvEncuestas.DataSource = listaEncuestas;
+            int cantCalif = encuestaCreada.CalificacionesPorEncuesta.Count;
+            if (cantCalif >= 4)
+                listaEncuestas.Add(encuestaCreada);
             //Inserto encuesta en la base de datos
             EncuestaBL encuestaBL = new EncuestaBL();
-            GrupoEncuestas grupo = new GrupoEncuestas();
-            grupo.IdGrupoEncuestas1 = Int32.Parse(txtNumero.Text);
-            encuestaCreada.GrupoPerteneciente = grupo;
-
-
-
-            encuestaBL.registrarEncuesta(encuestaCreada);
+            if (encuestaBL.registrarEncuesta(encuestaCreada, idUsu))
+                MessageBox.Show("Registrado con éxito");
+            else
+                MessageBox.Show("Error al registrar");
         }
 
         private void agregarCalificacionSeleccionada(Encuesta encuesta, GroupBox grupo, Pregunta preg)
         {
             RadioButton btn = grupo.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked);
-            modificaYagregaCalif(btn, encuesta, preg, "1");
-            modificaYagregaCalif(btn, encuesta, preg, "2");
-            modificaYagregaCalif(btn, encuesta, preg, "3");
-            modificaYagregaCalif(btn, encuesta, preg, "4");
+            modificaYagregaCalif(btn, encuesta, preg, 1);
+            modificaYagregaCalif(btn, encuesta, preg, 2);
+            modificaYagregaCalif(btn, encuesta, preg, 3);
+            modificaYagregaCalif(btn, encuesta, preg, 4);
+            modificaYagregaCalif(btn, encuesta, preg, 5);
         }
 
-        private void modificaYagregaCalif(RadioButton btn, Encuesta encuesta, Pregunta preg, string nroStr)
+        private void modificaYagregaCalif(RadioButton btn, Encuesta encuesta, Pregunta preg, int nro)
         {
-            if ((btn.Text).Equals(nroStr))
+            if ((btn.Text).Equals(nro.ToString()))
             {
-                CalificacionPXE calif = new CalificacionPXE(Int32.Parse(nroStr));
+                CalificacionPXE calif = new CalificacionPXE(nro);
                 calif.setPregunta(preg);
                 encuesta.addCalificacionPorEncuesta(calif);
             }
@@ -134,14 +136,20 @@ namespace Presentacion
                 grpP2.Text = "Pregunta 2: " + preg2.Enunciado;
                 grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
-
+                lblTipoEncuesta.Text = "Tipo de actividad: " + grupoBuscado.Actividad.TipoActividad.Nombre;
                 dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
             }
             txtNumero.Text = grupoBuscado.IdGrupoEncuestas1.ToString();
             txtNumero.Enabled = false;
+            btnAgregar.Enabled = true;
         }
 
         private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTipoEncuesta_Click(object sender, EventArgs e)
         {
 
         }

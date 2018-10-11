@@ -53,9 +53,9 @@ namespace Presentacion
             this.Visible = false;
             string nomUsuario = txtUsuario.Text;
             string contrasena = txtContraseña.Text;
-            int sgteForm = usuarioBL.buscarUsuario(nomUsuario, contrasena);
-
-            if(sgteForm == -1)
+            List<int> IdYnivelPer = usuarioBL.buscarUsuario(nomUsuario, contrasena);
+            int idUsu = IdYnivelPer[0];
+            if(IdYnivelPer[1] == -1)
             {               
                 MessageBox.Show("Ingreso fallido, le quedan " + numIntentos + " intentos");
                 --numIntentos;
@@ -64,9 +64,9 @@ namespace Presentacion
 
             //0 Alumno, 1 Orientador, 2 Guia, 3 Administrativo, 4 Ejecutivo, 5 Jefe
 
-            if (sgteForm == 2)
+            if (IdYnivelPer[1] == 2)
             {
-                InicioGuia IE = new InicioGuia(nomUsuario);
+                InicioGuia IE = new InicioGuia(nomUsuario, idUsu);
                 IE.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IE.ShowDialog() == DialogResult.OK)
@@ -77,7 +77,7 @@ namespace Presentacion
             }
 
 
-            if (sgteForm == 3)
+            if (IdYnivelPer[1] == 3)
             {
                 InicioAdministrativo IA = new InicioAdministrativo(nomUsuario);
                 IA.StartPosition = FormStartPosition.CenterScreen;
@@ -89,7 +89,7 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (sgteForm == 4)
+            if (IdYnivelPer[1] == 4)
             {
                 InicioEjecutivo IG = new InicioEjecutivo(nomUsuario);
                 IG.StartPosition = FormStartPosition.CenterScreen;
@@ -101,7 +101,7 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (sgteForm == 5) //El jefe tiene un nivel de permiso 5
+            if (IdYnivelPer[1] == 5) //El jefe tiene un nivel de permiso 5
             {
                 InicioJefe IJ = new InicioJefe(nomUsuario);
                 IJ.StartPosition = FormStartPosition.CenterScreen;

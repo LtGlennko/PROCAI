@@ -34,13 +34,6 @@
             this.dateEncuentra = new System.Windows.Forms.DateTimePicker();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.dgvEncuestas = new System.Windows.Forms.DataGridView();
-            this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pregunta4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
@@ -72,6 +65,13 @@
             this.rdBtnP4_4 = new System.Windows.Forms.RadioButton();
             this.rdBtnP4_5 = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTipoEncuesta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpP1.SuspendLayout();
@@ -85,9 +85,10 @@
             this.labelNumeroGrupo.AutoSize = true;
             this.labelNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNumeroGrupo.ForeColor = System.Drawing.Color.Teal;
-            this.labelNumeroGrupo.Location = new System.Drawing.Point(40, 100);
+            this.labelNumeroGrupo.Location = new System.Drawing.Point(30, 81);
+            this.labelNumeroGrupo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNumeroGrupo.Name = "labelNumeroGrupo";
-            this.labelNumeroGrupo.Size = new System.Drawing.Size(202, 17);
+            this.labelNumeroGrupo.Size = new System.Drawing.Size(159, 13);
             this.labelNumeroGrupo.TabIndex = 0;
             this.labelNumeroGrupo.Text = "ID del grupo perteneciente";
             // 
@@ -96,37 +97,38 @@
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFecha.ForeColor = System.Drawing.Color.Teal;
-            this.labelFecha.Location = new System.Drawing.Point(40, 158);
+            this.labelFecha.Location = new System.Drawing.Point(30, 128);
+            this.labelFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(164, 17);
+            this.labelFecha.Size = new System.Drawing.Size(130, 13);
             this.labelFecha.TabIndex = 1;
             this.labelFecha.Text = "Fecha de la encuesta";
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(274, 100);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumero.Location = new System.Drawing.Point(206, 81);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(79, 22);
+            this.txtNumero.Size = new System.Drawing.Size(49, 20);
             this.txtNumero.TabIndex = 6;
             this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // dateEncuentra
             // 
-            this.dateEncuentra.Location = new System.Drawing.Point(236, 153);
-            this.dateEncuentra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateEncuentra.Location = new System.Drawing.Point(177, 124);
+            this.dateEncuentra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateEncuentra.Name = "dateEncuentra";
-            this.dateEncuentra.Size = new System.Drawing.Size(216, 22);
+            this.dateEncuentra.Size = new System.Drawing.Size(163, 20);
             this.dateEncuentra.TabIndex = 12;
             this.dateEncuentra.Value = new System.DateTime(2018, 9, 26, 18, 50, 1, 0);
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(626, 436);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(470, 354);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(114, 34);
+            this.btnRegistrar.Size = new System.Drawing.Size(86, 28);
             this.btnRegistrar.TabIndex = 18;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -138,68 +140,24 @@
             this.dgvEncuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEncuestas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NumGrupo,
-            this.IdEncuesta,
             this.FechaEncuesta,
             this.Pregunta1,
             this.Pregunta2,
             this.Pregunta3,
             this.Pregunta4});
-            this.dgvEncuestas.Location = new System.Drawing.Point(20, 505);
-            this.dgvEncuestas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEncuestas.Location = new System.Drawing.Point(15, 410);
             this.dgvEncuestas.Name = "dgvEncuestas";
-            this.dgvEncuestas.Size = new System.Drawing.Size(720, 260);
+            this.dgvEncuestas.Size = new System.Drawing.Size(540, 211);
             this.dgvEncuestas.TabIndex = 19;
             this.dgvEncuestas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // NumGrupo
-            // 
-            this.NumGrupo.DataPropertyName = "GrupoPerteneciente.IdGrupoEncuestas1";
-            this.NumGrupo.HeaderText = "Grupo";
-            this.NumGrupo.Name = "NumGrupo";
-            // 
-            // IdEncuesta
-            // 
-            this.IdEncuesta.DataPropertyName = "IdEncuesta1";
-            this.IdEncuesta.HeaderText = "IdEncuesta";
-            this.IdEncuesta.Name = "IdEncuesta";
-            // 
-            // FechaEncuesta
-            // 
-            this.FechaEncuesta.HeaderText = "Fecha";
-            this.FechaEncuesta.Name = "FechaEncuesta";
-            // 
-            // Pregunta1
-            // 
-            this.Pregunta1.DataPropertyName = "CalificacionesPorEncuesta[0].Calificacion";
-            this.Pregunta1.HeaderText = "Pregunta 1";
-            this.Pregunta1.Name = "Pregunta1";
-            this.Pregunta1.Width = 40;
-            // 
-            // Pregunta2
-            // 
-            this.Pregunta2.HeaderText = "Pregunta 2";
-            this.Pregunta2.Name = "Pregunta2";
-            this.Pregunta2.Width = 40;
-            // 
-            // Pregunta3
-            // 
-            this.Pregunta3.HeaderText = "Pregunta 3";
-            this.Pregunta3.Name = "Pregunta3";
-            this.Pregunta3.Width = 40;
-            // 
-            // Pregunta4
-            // 
-            this.Pregunta4.HeaderText = "Pregunta 4";
-            this.Pregunta4.Name = "Pregunta4";
-            this.Pregunta4.Width = 40;
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(626, 212);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModificar.Location = new System.Drawing.Point(470, 218);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(114, 34);
+            this.btnModificar.Size = new System.Drawing.Size(86, 28);
             this.btnModificar.TabIndex = 20;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -207,10 +165,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(626, 290);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(470, 279);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 34);
+            this.button1.Size = new System.Drawing.Size(86, 28);
             this.button1.TabIndex = 21;
             this.button1.Text = "Visualizar";
             this.button1.UseVisualStyleBackColor = false;
@@ -221,19 +178,20 @@
             this.labelTitulo.AutoSize = true;
             this.labelTitulo.Font = new System.Drawing.Font("Franklin Gothic Demi", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.ForeColor = System.Drawing.Color.Teal;
-            this.labelTitulo.Location = new System.Drawing.Point(322, 20);
+            this.labelTitulo.Location = new System.Drawing.Point(242, 16);
+            this.labelTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(142, 34);
+            this.labelTitulo.Size = new System.Drawing.Size(117, 28);
             this.labelTitulo.TabIndex = 22;
             this.labelTitulo.Text = "ENCUESTA";
             // 
             // rdBtnP1_1
             // 
             this.rdBtnP1_1.AutoSize = true;
-            this.rdBtnP1_1.Location = new System.Drawing.Point(21, 21);
-            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP1_1.Location = new System.Drawing.Point(16, 17);
+            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP1_1.Name = "rdBtnP1_1";
-            this.rdBtnP1_1.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP1_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_1.TabIndex = 23;
             this.rdBtnP1_1.TabStop = true;
             this.rdBtnP1_1.Text = "1";
@@ -242,10 +200,10 @@
             // rdBtnP1_2
             // 
             this.rdBtnP1_2.AutoSize = true;
-            this.rdBtnP1_2.Location = new System.Drawing.Point(93, 21);
-            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP1_2.Location = new System.Drawing.Point(70, 17);
+            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP1_2.Name = "rdBtnP1_2";
-            this.rdBtnP1_2.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP1_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_2.TabIndex = 24;
             this.rdBtnP1_2.TabStop = true;
             this.rdBtnP1_2.Text = "2";
@@ -254,10 +212,11 @@
             // rdBtnP1_3
             // 
             this.rdBtnP1_3.AutoSize = true;
-            this.rdBtnP1_3.Location = new System.Drawing.Point(165, 21);
-            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP1_3.Checked = true;
+            this.rdBtnP1_3.Location = new System.Drawing.Point(124, 17);
+            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP1_3.Name = "rdBtnP1_3";
-            this.rdBtnP1_3.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP1_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_3.TabIndex = 25;
             this.rdBtnP1_3.TabStop = true;
             this.rdBtnP1_3.Text = "3";
@@ -266,10 +225,10 @@
             // rdBtnP1_4
             // 
             this.rdBtnP1_4.AutoSize = true;
-            this.rdBtnP1_4.Location = new System.Drawing.Point(235, 21);
-            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP1_4.Location = new System.Drawing.Point(176, 17);
+            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP1_4.Name = "rdBtnP1_4";
-            this.rdBtnP1_4.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP1_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_4.TabIndex = 26;
             this.rdBtnP1_4.TabStop = true;
             this.rdBtnP1_4.Text = "4";
@@ -278,10 +237,10 @@
             // rdBtnP1_5
             // 
             this.rdBtnP1_5.AutoSize = true;
-            this.rdBtnP1_5.Location = new System.Drawing.Point(301, 21);
-            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP1_5.Location = new System.Drawing.Point(226, 17);
+            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP1_5.Name = "rdBtnP1_5";
-            this.rdBtnP1_5.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP1_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_5.TabIndex = 27;
             this.rdBtnP1_5.TabStop = true;
             this.rdBtnP1_5.Text = "5";
@@ -290,10 +249,10 @@
             // btnBusca
             // 
             this.btnBusca.BackColor = System.Drawing.Color.White;
-            this.btnBusca.Location = new System.Drawing.Point(379, 100);
-            this.btnBusca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBusca.Location = new System.Drawing.Point(265, 81);
+            this.btnBusca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBusca.Name = "btnBusca";
-            this.btnBusca.Size = new System.Drawing.Size(34, 28);
+            this.btnBusca.Size = new System.Drawing.Size(26, 23);
             this.btnBusca.TabIndex = 43;
             this.btnBusca.Text = "...";
             this.btnBusca.UseVisualStyleBackColor = false;
@@ -302,10 +261,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 780);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 634);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
@@ -316,9 +275,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(84, 796);
+            this.label1.Location = new System.Drawing.Point(63, 647);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 45;
             this.label1.Text = "Atras";
             // 
@@ -331,11 +291,9 @@
             this.grpP1.Controls.Add(this.rdBtnP1_5);
             this.grpP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP1.ForeColor = System.Drawing.Color.Teal;
-            this.grpP1.Location = new System.Drawing.Point(44, 212);
-            this.grpP1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP1.Location = new System.Drawing.Point(33, 172);
             this.grpP1.Name = "grpP1";
-            this.grpP1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpP1.Size = new System.Drawing.Size(512, 50);
+            this.grpP1.Size = new System.Drawing.Size(384, 41);
             this.grpP1.TabIndex = 46;
             this.grpP1.TabStop = false;
             this.grpP1.Text = "Pregunta 1";
@@ -349,11 +307,9 @@
             this.grpP2.Controls.Add(this.rdBtnP2_5);
             this.grpP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP2.ForeColor = System.Drawing.Color.Teal;
-            this.grpP2.Location = new System.Drawing.Point(44, 272);
-            this.grpP2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP2.Location = new System.Drawing.Point(33, 221);
             this.grpP2.Name = "grpP2";
-            this.grpP2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpP2.Size = new System.Drawing.Size(512, 50);
+            this.grpP2.Size = new System.Drawing.Size(384, 41);
             this.grpP2.TabIndex = 47;
             this.grpP2.TabStop = false;
             this.grpP2.Text = "Pregunta 2";
@@ -361,10 +317,10 @@
             // rdBtnP2_1
             // 
             this.rdBtnP2_1.AutoSize = true;
-            this.rdBtnP2_1.Location = new System.Drawing.Point(21, 21);
-            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP2_1.Location = new System.Drawing.Point(16, 17);
+            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP2_1.Name = "rdBtnP2_1";
-            this.rdBtnP2_1.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP2_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_1.TabIndex = 23;
             this.rdBtnP2_1.TabStop = true;
             this.rdBtnP2_1.Text = "1";
@@ -373,10 +329,10 @@
             // rdBtnP2_2
             // 
             this.rdBtnP2_2.AutoSize = true;
-            this.rdBtnP2_2.Location = new System.Drawing.Point(93, 21);
-            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP2_2.Location = new System.Drawing.Point(70, 17);
+            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP2_2.Name = "rdBtnP2_2";
-            this.rdBtnP2_2.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP2_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_2.TabIndex = 24;
             this.rdBtnP2_2.TabStop = true;
             this.rdBtnP2_2.Text = "2";
@@ -385,10 +341,11 @@
             // rdBtnP2_3
             // 
             this.rdBtnP2_3.AutoSize = true;
-            this.rdBtnP2_3.Location = new System.Drawing.Point(165, 21);
-            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP2_3.Checked = true;
+            this.rdBtnP2_3.Location = new System.Drawing.Point(124, 17);
+            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP2_3.Name = "rdBtnP2_3";
-            this.rdBtnP2_3.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP2_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_3.TabIndex = 25;
             this.rdBtnP2_3.TabStop = true;
             this.rdBtnP2_3.Text = "3";
@@ -397,10 +354,10 @@
             // rdBtnP2_4
             // 
             this.rdBtnP2_4.AutoSize = true;
-            this.rdBtnP2_4.Location = new System.Drawing.Point(235, 21);
-            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP2_4.Location = new System.Drawing.Point(176, 17);
+            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP2_4.Name = "rdBtnP2_4";
-            this.rdBtnP2_4.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP2_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_4.TabIndex = 26;
             this.rdBtnP2_4.TabStop = true;
             this.rdBtnP2_4.Text = "4";
@@ -409,10 +366,10 @@
             // rdBtnP2_5
             // 
             this.rdBtnP2_5.AutoSize = true;
-            this.rdBtnP2_5.Location = new System.Drawing.Point(301, 21);
-            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP2_5.Location = new System.Drawing.Point(226, 17);
+            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP2_5.Name = "rdBtnP2_5";
-            this.rdBtnP2_5.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP2_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_5.TabIndex = 27;
             this.rdBtnP2_5.TabStop = true;
             this.rdBtnP2_5.Text = "5";
@@ -427,11 +384,9 @@
             this.grpP3.Controls.Add(this.rdBtnP3_5);
             this.grpP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP3.ForeColor = System.Drawing.Color.Teal;
-            this.grpP3.Location = new System.Drawing.Point(44, 330);
-            this.grpP3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP3.Location = new System.Drawing.Point(33, 268);
             this.grpP3.Name = "grpP3";
-            this.grpP3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpP3.Size = new System.Drawing.Size(512, 50);
+            this.grpP3.Size = new System.Drawing.Size(384, 41);
             this.grpP3.TabIndex = 47;
             this.grpP3.TabStop = false;
             this.grpP3.Text = "Pregunta 3";
@@ -439,10 +394,10 @@
             // rdBtnP3_1
             // 
             this.rdBtnP3_1.AutoSize = true;
-            this.rdBtnP3_1.Location = new System.Drawing.Point(21, 21);
-            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP3_1.Location = new System.Drawing.Point(16, 17);
+            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP3_1.Name = "rdBtnP3_1";
-            this.rdBtnP3_1.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP3_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_1.TabIndex = 23;
             this.rdBtnP3_1.TabStop = true;
             this.rdBtnP3_1.Text = "1";
@@ -451,10 +406,10 @@
             // rdBtnP3_2
             // 
             this.rdBtnP3_2.AutoSize = true;
-            this.rdBtnP3_2.Location = new System.Drawing.Point(93, 21);
-            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP3_2.Location = new System.Drawing.Point(70, 17);
+            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP3_2.Name = "rdBtnP3_2";
-            this.rdBtnP3_2.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP3_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_2.TabIndex = 24;
             this.rdBtnP3_2.TabStop = true;
             this.rdBtnP3_2.Text = "2";
@@ -463,10 +418,11 @@
             // rdBtnP3_3
             // 
             this.rdBtnP3_3.AutoSize = true;
-            this.rdBtnP3_3.Location = new System.Drawing.Point(165, 21);
-            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP3_3.Checked = true;
+            this.rdBtnP3_3.Location = new System.Drawing.Point(124, 17);
+            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP3_3.Name = "rdBtnP3_3";
-            this.rdBtnP3_3.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP3_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_3.TabIndex = 25;
             this.rdBtnP3_3.TabStop = true;
             this.rdBtnP3_3.Text = "3";
@@ -475,10 +431,10 @@
             // rdBtnP3_4
             // 
             this.rdBtnP3_4.AutoSize = true;
-            this.rdBtnP3_4.Location = new System.Drawing.Point(235, 21);
-            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP3_4.Location = new System.Drawing.Point(176, 17);
+            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP3_4.Name = "rdBtnP3_4";
-            this.rdBtnP3_4.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP3_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_4.TabIndex = 26;
             this.rdBtnP3_4.TabStop = true;
             this.rdBtnP3_4.Text = "4";
@@ -487,10 +443,10 @@
             // rdBtnP3_5
             // 
             this.rdBtnP3_5.AutoSize = true;
-            this.rdBtnP3_5.Location = new System.Drawing.Point(301, 21);
-            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP3_5.Location = new System.Drawing.Point(226, 17);
+            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP3_5.Name = "rdBtnP3_5";
-            this.rdBtnP3_5.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP3_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_5.TabIndex = 27;
             this.rdBtnP3_5.TabStop = true;
             this.rdBtnP3_5.Text = "5";
@@ -505,11 +461,9 @@
             this.grpP4.Controls.Add(this.rdBtnP4_5);
             this.grpP4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP4.ForeColor = System.Drawing.Color.Teal;
-            this.grpP4.Location = new System.Drawing.Point(44, 388);
-            this.grpP4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP4.Location = new System.Drawing.Point(33, 315);
             this.grpP4.Name = "grpP4";
-            this.grpP4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpP4.Size = new System.Drawing.Size(512, 50);
+            this.grpP4.Size = new System.Drawing.Size(384, 41);
             this.grpP4.TabIndex = 47;
             this.grpP4.TabStop = false;
             this.grpP4.Text = "Pregunta 4";
@@ -517,10 +471,10 @@
             // rdBtnP4_1
             // 
             this.rdBtnP4_1.AutoSize = true;
-            this.rdBtnP4_1.Location = new System.Drawing.Point(21, 21);
-            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP4_1.Location = new System.Drawing.Point(16, 17);
+            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP4_1.Name = "rdBtnP4_1";
-            this.rdBtnP4_1.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP4_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_1.TabIndex = 23;
             this.rdBtnP4_1.TabStop = true;
             this.rdBtnP4_1.Text = "1";
@@ -529,10 +483,10 @@
             // rdBtnP4_2
             // 
             this.rdBtnP4_2.AutoSize = true;
-            this.rdBtnP4_2.Location = new System.Drawing.Point(93, 21);
-            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP4_2.Location = new System.Drawing.Point(70, 17);
+            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP4_2.Name = "rdBtnP4_2";
-            this.rdBtnP4_2.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP4_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_2.TabIndex = 24;
             this.rdBtnP4_2.TabStop = true;
             this.rdBtnP4_2.Text = "2";
@@ -541,10 +495,11 @@
             // rdBtnP4_3
             // 
             this.rdBtnP4_3.AutoSize = true;
-            this.rdBtnP4_3.Location = new System.Drawing.Point(165, 21);
-            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP4_3.Checked = true;
+            this.rdBtnP4_3.Location = new System.Drawing.Point(124, 17);
+            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP4_3.Name = "rdBtnP4_3";
-            this.rdBtnP4_3.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP4_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_3.TabIndex = 25;
             this.rdBtnP4_3.TabStop = true;
             this.rdBtnP4_3.Text = "3";
@@ -553,10 +508,10 @@
             // rdBtnP4_4
             // 
             this.rdBtnP4_4.AutoSize = true;
-            this.rdBtnP4_4.Location = new System.Drawing.Point(235, 21);
-            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP4_4.Location = new System.Drawing.Point(176, 17);
+            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP4_4.Name = "rdBtnP4_4";
-            this.rdBtnP4_4.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP4_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_4.TabIndex = 26;
             this.rdBtnP4_4.TabStop = true;
             this.rdBtnP4_4.Text = "4";
@@ -565,10 +520,10 @@
             // rdBtnP4_5
             // 
             this.rdBtnP4_5.AutoSize = true;
-            this.rdBtnP4_5.Location = new System.Drawing.Point(301, 21);
-            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdBtnP4_5.Location = new System.Drawing.Point(226, 17);
+            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdBtnP4_5.Name = "rdBtnP4_5";
-            this.rdBtnP4_5.Size = new System.Drawing.Size(38, 21);
+            this.rdBtnP4_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_5.TabIndex = 27;
             this.rdBtnP4_5.TabStop = true;
             this.rdBtnP4_5.Text = "5";
@@ -577,21 +532,77 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(626, 140);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(470, 157);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(114, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(86, 28);
             this.btnAgregar.TabIndex = 48;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // NumGrupo
+            // 
+            this.NumGrupo.DataPropertyName = "IdGrupoPerteneciente";
+            this.NumGrupo.HeaderText = "ID Grupo";
+            this.NumGrupo.Name = "NumGrupo";
+            this.NumGrupo.Width = 60;
+            // 
+            // FechaEncuesta
+            // 
+            this.FechaEncuesta.DataPropertyName = "FechaProgramada";
+            this.FechaEncuesta.HeaderText = "Fecha de llenado";
+            this.FechaEncuesta.Name = "FechaEncuesta";
+            this.FechaEncuesta.Width = 130;
+            // 
+            // Pregunta1
+            // 
+            this.Pregunta1.DataPropertyName = "CalificacionP1";
+            this.Pregunta1.HeaderText = "Preg 1";
+            this.Pregunta1.Name = "Pregunta1";
+            this.Pregunta1.Width = 40;
+            // 
+            // Pregunta2
+            // 
+            this.Pregunta2.DataPropertyName = "CalificacionP2";
+            this.Pregunta2.HeaderText = "Preg 2";
+            this.Pregunta2.Name = "Pregunta2";
+            this.Pregunta2.Width = 40;
+            // 
+            // Pregunta3
+            // 
+            this.Pregunta3.DataPropertyName = "CalificacionP3";
+            this.Pregunta3.HeaderText = "Preg 3";
+            this.Pregunta3.Name = "Pregunta3";
+            this.Pregunta3.Width = 40;
+            // 
+            // Pregunta4
+            // 
+            this.Pregunta4.DataPropertyName = "CalificacionP4";
+            this.Pregunta4.HeaderText = "Preg 4";
+            this.Pregunta4.Name = "Pregunta4";
+            this.Pregunta4.Width = 40;
+            // 
+            // lblTipoEncuesta
+            // 
+            this.lblTipoEncuesta.AutoSize = true;
+            this.lblTipoEncuesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoEncuesta.ForeColor = System.Drawing.Color.Teal;
+            this.lblTipoEncuesta.Location = new System.Drawing.Point(333, 81);
+            this.lblTipoEncuesta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTipoEncuesta.Name = "lblTipoEncuesta";
+            this.lblTipoEncuesta.Size = new System.Drawing.Size(114, 13);
+            this.lblTipoEncuesta.TabIndex = 49;
+            this.lblTipoEncuesta.Text = "Tipo de actividad: ";
+            this.lblTipoEncuesta.Click += new System.EventHandler(this.lblTipoEncuesta_Click);
+            // 
             // frmRegYeditEncuestas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(808, 840);
+            this.ClientSize = new System.Drawing.Size(606, 695);
+            this.Controls.Add(this.lblTipoEncuesta);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grpP4);
             this.Controls.Add(this.grpP3);
@@ -609,7 +620,7 @@
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelNumeroGrupo);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmRegYeditEncuestas";
             this.Text = "Encuestas Registradas";
             this.Load += new System.EventHandler(this.frmRegYeditEncuestas_Load);
@@ -668,11 +679,11 @@
         private System.Windows.Forms.RadioButton rdBtnP4_5;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumGrupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdEncuesta;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaEncuesta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta4;
+        private System.Windows.Forms.Label lblTipoEncuesta;
     }
 }

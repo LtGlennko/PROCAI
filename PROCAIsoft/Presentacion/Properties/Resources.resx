@@ -121,4 +121,7 @@
   <data name="bbc500b6-9f12-45e0-b75d-1df036f6c47c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bbc500b6-9f12-45e0-b75d-1df036f6c47c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PUCP-El-Comercio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PUCP-El-Comercio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

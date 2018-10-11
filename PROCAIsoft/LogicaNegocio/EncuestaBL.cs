@@ -22,9 +22,9 @@ namespace LogicaNegocio
         {
             return encuestaDA.listarEncuestas();
         }
-        public bool registrarEncuesta (Encuesta E)
+        public bool registrarEncuesta (Encuesta E, int idUsu)
         {
-             return encuestaDA.registrarEncuesta(E);
+             return encuestaDA.registrarEncuesta(E, idUsu);
         }
     }
 }

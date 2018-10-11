@@ -23,6 +23,12 @@ namespace Modelo
         public GrupoEncuestas GrupoPerteneciente { get => grupoPerteneciente; set => grupoPerteneciente = value; }
         public List<CalificacionPXE> CalificacionesPorEncuesta { get => calificacionesPorEncuesta; set => calificacionesPorEncuesta = value; }
         public Guia Digitador { get => digitador; set => digitador = value; }
+        public int IdGrupoPerteneciente { get => grupoPerteneciente.IdGrupoEncuestas1; }
+        public DateTime FechaProgramada { get => grupoPerteneciente.Actividad.FechaProgramada; }
+        public int CalificacionP1 { get => calificacionesPorEncuesta[0].Calificacion; }
+        public int CalificacionP2 { get => calificacionesPorEncuesta[1].Calificacion; }
+        public int CalificacionP3 { get => calificacionesPorEncuesta[2].Calificacion; }
+        public int CalificacionP4 { get => calificacionesPorEncuesta[3].Calificacion; }
         public void setGrupo(GrupoEncuestas gru)
         {
             this.grupoPerteneciente = gru;

@@ -19,7 +19,7 @@ namespace Presentacion
 
             
 
-            Application.Run(new frmGestStock());
+            Application.Run(new Inicio());
 
         }
     }
