@@ -66,9 +66,8 @@ namespace AccesoDatos
             return usuarios;
         }
 
-        public List<int> buscarUsuario(string username, string password)
+        public Usuario buscarUsuario(string username, string password)
         {
-            List<int> IdYnivelPer = new List<int>();
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
             comando = new MySqlCommand();
@@ -114,16 +113,12 @@ namespace AccesoDatos
                 //Asigamos cuenta al usuario
                 usu.setCuenta(cue);
                 con.Close();
-                IdYnivelPer.Add(usu.IdUsuario1);
-                IdYnivelPer.Add(usu.NivelPermiso);
-                return IdYnivelPer;
+                return usu;
             } catch (Exception)
             {
                 //En caso no haya encontrado la cuenta asociada
-                con.Close();
-                IdYnivelPer.Add(-1);
-                IdYnivelPer.Add(-1);
-                return IdYnivelPer;
+                con.Close();                
+                return null;
             }            
         }
     }

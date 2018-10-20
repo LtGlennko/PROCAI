@@ -18,11 +18,10 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-        public InicioGuia(string username, int id)
+        public InicioGuia(Usuario usu)
         {
-            idUsu = id;
             InitializeComponent();
-            lblNombreUsu.Text += username;
+            lblNombreUsu.Text += usu.NombreCuenta;
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -13,10 +13,10 @@ namespace Presentacion
 {
     public partial class InicioAdministrativo : Form
     {
-        public InicioAdministrativo(string username)
+        public InicioAdministrativo(Usuario usu)
         {            
             InitializeComponent();
-            lblNombreUsu.Text += username;
+            lblNombreUsu.Text += usu.NombreCuenta;
         }
 
         private void btnGestionarPostul_Click(object sender, EventArgs e)

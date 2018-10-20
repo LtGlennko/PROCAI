@@ -15,6 +15,7 @@ namespace Presentacion
     public partial class Login : Form
     {
         private UsuarioBL usuarioBL;
+        private Usuario usuarioBuscado;
         private static int numIntentos = 3;
 
         public DateTime MyNullableDate { get; private set; }
@@ -53,9 +54,8 @@ namespace Presentacion
             this.Visible = false;
             string nomUsuario = txtUsuario.Text;
             string contrasena = txtContraseña.Text;
-            List<int> IdYnivelPer = usuarioBL.buscarUsuario(nomUsuario, contrasena);
-            int idUsu = IdYnivelPer[0];
-            if(IdYnivelPer[1] == -1)
+            usuarioBuscado = usuarioBL.buscarUsuario(nomUsuario, contrasena);
+            if (usuarioBuscado == null)
             {               
                 MessageBox.Show("Ingreso fallido, le quedan " + numIntentos + " intentos");
                 --numIntentos;
@@ -64,9 +64,9 @@ namespace Presentacion
 
             //0 Alumno, 1 Orientador, 2 Guia, 3 Administrativo, 4 Ejecutivo, 5 Jefe
 
-            if (IdYnivelPer[1] == 2)
+            if (usuarioBuscado.NivelPermiso == 2)
             {
-                InicioGuia IE = new InicioGuia(nomUsuario, idUsu);
+                InicioGuia IE = new InicioGuia(usuarioBuscado);
                 IE.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IE.ShowDialog() == DialogResult.OK)
@@ -77,9 +77,9 @@ namespace Presentacion
             }
 
 
-            if (IdYnivelPer[1] == 3)
+            if (usuarioBuscado.NivelPermiso == 3)
             {
-                InicioAdministrativo IA = new InicioAdministrativo(nomUsuario);
+                InicioAdministrativo IA = new InicioAdministrativo(usuarioBuscado);
                 IA.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IA.ShowDialog() == DialogResult.OK)
@@ -89,9 +89,9 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (IdYnivelPer[1] == 4)
+            if (usuarioBuscado.NivelPermiso == 4)
             {
-                InicioEjecutivo IG = new InicioEjecutivo(nomUsuario);
+                InicioEjecutivo IG = new InicioEjecutivo(usuarioBuscado);
                 IG.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IG.ShowDialog() == DialogResult.OK)
@@ -101,9 +101,9 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (IdYnivelPer[1] == 5) //El jefe tiene un nivel de permiso 5
+            if (usuarioBuscado.NivelPermiso == 5) //El jefe tiene un nivel de permiso 5
             {
-                InicioJefe IJ = new InicioJefe(nomUsuario);
+                InicioJefe IJ = new InicioJefe(usuarioBuscado);
                 IJ.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IJ.ShowDialog() == DialogResult.OK)
@@ -134,10 +134,5 @@ namespace Presentacion
             Dispose();
         }
         
-        public Usuario buscarUsuario(string nombre, string contra)
-        {
-            //BUSCAR USUARIO
-            return null;
-        }
     }
 }

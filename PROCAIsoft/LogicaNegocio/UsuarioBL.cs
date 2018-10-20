@@ -22,8 +22,8 @@ namespace LogicaNegocio
             return usuarioDA.listarUsuarios();
         }
 
-        public List<int> buscarUsuario(string username, string password)
-        {
+        public Usuario buscarUsuario(string username, string password)
+        {            
             return usuarioDA.buscarUsuario(username, password);
         }
     }
