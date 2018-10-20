@@ -22,11 +22,11 @@ namespace Presentacion
         private Pregunta preg3;
         private Pregunta preg4;
         private BindingList<Encuesta> listaEncuestas;
-        public frmRegYeditEncuestas(int flag, int id)
+        public frmRegYeditEncuestas(Usuario usu)
         {
-            idUsu = id;
             //btnRegistrar.Enabled = true;
             //btnModificar.Enabled = true;
+            idUsu = usu.IdUsuario1;
             InitializeComponent();
             btnAgregar.Enabled = false;
             
@@ -37,12 +37,7 @@ namespace Presentacion
 
             listaEncuestas = new BindingList<Encuesta>();
             //dgvEncuestas.DataSource = listaEncuestas;
-            dateEncuentra.Enabled = false;
-            if (flag == 0)
-            {
-                btnModificar.Enabled = false;
-            }
-            
+            dateEncuentra.Enabled = false;           
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

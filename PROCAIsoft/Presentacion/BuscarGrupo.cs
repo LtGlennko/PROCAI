@@ -45,17 +45,8 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dgvGrupos.SelectedRows.Count != 1)
-            {
-                MessageBox.Show("Se debe seleccionar un grupo");
-            }
-
-            else
-            {
-                grupoEncuestasSel = (GrupoEncuestas)dgvGrupos.CurrentRow.DataBoundItem;//COPIAR 
-                this.DialogResult = DialogResult.OK;
-            }
-            
+            grupoEncuestasSel = (GrupoEncuestas)dgvGrupos.CurrentRow.DataBoundItem;//COPIAR 
+            this.DialogResult = DialogResult.OK;            
         }
     }
 }

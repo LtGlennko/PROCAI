@@ -24,18 +24,6 @@ namespace Presentacion
             Dispose();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            frmRegYeditEncuestas ME = new frmRegYeditEncuestas(1, 0);
-            this.Visible = false;
-            ME.StartPosition = FormStartPosition.CenterScreen;
-            if (ME.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
-        }
-
         private void btnCalendario_Click(object sender, EventArgs e)
         {
             GestionCal IE = new GestionCal();

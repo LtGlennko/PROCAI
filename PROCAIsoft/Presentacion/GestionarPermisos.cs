@@ -42,27 +42,6 @@ namespace Presentacion
             MessageBox.Show("Los cambios han sido guardados con éxito");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int nNivel = (int)nudNivel.Value;
-                Usuario usuSel = (Usuario)dvgUsuarios.CurrentRow.DataBoundItem;
-                if(nNivel == 5 && usuSel.NivelPermiso < 3)
-                {
-                    MessageBox.Show("Solo un ejecutivo o un administrativo pueden ser jefes");
-                    return;
-                }
-                usuSel.NivelPermiso = nNivel;
-                string username = ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NombreCuenta;
-                MessageBox.Show("Nivel de permiso de usuario '" + username + "' cambiado a " + nNivel);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("No se puedo cambiar el nivel de permiso");
-            }
-            
-        }
 
         private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -82,6 +61,42 @@ namespace Presentacion
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dvgUsuarios_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            try
+            {
+                int nivelAntes = Int32.Parse(dvgUsuarios[e.ColumnIndex, e.RowIndex].Value.ToString());
+                int nivelDespues = Int32.Parse(e.FormattedValue.ToString());
+                if (nivelAntes != nivelDespues)
+                {
+                    if (nivelDespues < 0 || nivelDespues > 5)
+                    {
+                        MessageBox.Show("Nivel fuera del rango (1-5)", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        e.Cancel = true;
+                        return;
+                    }
+                    if (nivelDespues == 5 && nivelAntes < 3)
+                    {
+                        MessageBox.Show("Solo un Administrativo o Ejecutivo puede ser Jefe", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        e.Cancel = true;
+                        return;
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+            //if (nivelNuevo == 5 && int(nivelAnterior) < 3)
+            //{
+            //    MessageBox.Show("Solo un ejecutivo o un administrativo pueden ser jefes");
+            //    e.Cancel = true;
+            //    return;
+            //}                
+            //string username = ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NombreCuenta;
+            //MessageBox.Show("Nivel de permiso de usuario '" + username + "' cambiado a " + nivelNuevo);
         }
     }
 }
