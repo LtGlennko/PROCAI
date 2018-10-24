@@ -17,7 +17,7 @@ namespace Presentacion
         private GrupoBL grupoBL;
         private GrupoEncuestas grupoEncuestasSel;
 
-        public GrupoEncuestas getGrupoSel()
+        public GrupoEncuestas getGrupoSel()  //para dar la informaciones al precediente formulario
         {
             return grupoEncuestasSel;
         }
@@ -27,15 +27,8 @@ namespace Presentacion
             grupoBL = new GrupoBL();
             InitializeComponent();
             dgvGrupos.AutoGenerateColumns = false;
-            
             dgvGrupos.DataSource = grupoBL.listarGrupos();
-            //dataGridView1.Columns[0].Name = "ID del grupo";
-            //dataGridView1.Columns[1].Name = "Fecha programada";
-            //dataGridView1.Columns[2].Name = "Colegio";
-            //dataGridView1.Columns[3].Name = "Tipo de actividad";
-            //dataGridView1.Columns[4].Name = "Nombre del Guia";
-            //dataGridView1.Columns[5].Name = "Apellido materno del Guia";
-            //dataGridView1.Columns[6].Name = "Apellido paterno del Guia"; //NO FUNCIONA
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
