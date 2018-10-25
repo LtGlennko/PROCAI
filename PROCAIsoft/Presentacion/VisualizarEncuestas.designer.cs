@@ -71,19 +71,12 @@
             this.rdBtnP4_5 = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblTipoEncuesta = new System.Windows.Forms.Label();
-            this.grpP5 = new System.Windows.Forms.GroupBox();
-            this.rdBtnP5_1 = new System.Windows.Forms.RadioButton();
-            this.rdBtnP5_2 = new System.Windows.Forms.RadioButton();
-            this.rdBtnP5_3 = new System.Windows.Forms.RadioButton();
-            this.rdBtnP5_4 = new System.Windows.Forms.RadioButton();
-            this.rdBtnP5_5 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpP1.SuspendLayout();
             this.grpP2.SuspendLayout();
             this.grpP3.SuspendLayout();
             this.grpP4.SuspendLayout();
-            this.grpP5.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNumeroGrupo
@@ -134,11 +127,12 @@
             this.Pregunta2,
             this.Pregunta3,
             this.Pregunta4});
-            this.dgvEncuestas.Location = new System.Drawing.Point(22, 688);
+            this.dgvEncuestas.Location = new System.Drawing.Point(49, 612);
             this.dgvEncuestas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvEncuestas.Name = "dgvEncuestas";
-            this.dgvEncuestas.Size = new System.Drawing.Size(810, 255);
+            this.dgvEncuestas.Size = new System.Drawing.Size(810, 309);
             this.dgvEncuestas.TabIndex = 19;
+            this.dgvEncuestas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEncuestas_CellDoubleClick);
             // 
             // NumGrupo
             // 
@@ -191,6 +185,7 @@
             this.btnModificar.TabIndex = 20;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // button1
             // 
@@ -566,84 +561,12 @@
             this.lblTipoEncuesta.TabIndex = 49;
             this.lblTipoEncuesta.Text = "Tipo de actividad: ";
             // 
-            // grpP5
-            // 
-            this.grpP5.Controls.Add(this.rdBtnP5_5);
-            this.grpP5.Controls.Add(this.rdBtnP5_4);
-            this.grpP5.Controls.Add(this.rdBtnP5_3);
-            this.grpP5.Controls.Add(this.rdBtnP5_2);
-            this.grpP5.Controls.Add(this.rdBtnP5_1);
-            this.grpP5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpP5.ForeColor = System.Drawing.Color.Teal;
-            this.grpP5.Location = new System.Drawing.Point(50, 565);
-            this.grpP5.Name = "grpP5";
-            this.grpP5.Size = new System.Drawing.Size(576, 64);
-            this.grpP5.TabIndex = 50;
-            this.grpP5.TabStop = false;
-            this.grpP5.Text = "Pregunta 5";
-            // 
-            // rdBtnP5_1
-            // 
-            this.rdBtnP5_1.AutoSize = true;
-            this.rdBtnP5_1.Location = new System.Drawing.Point(24, 26);
-            this.rdBtnP5_1.Name = "rdBtnP5_1";
-            this.rdBtnP5_1.Size = new System.Drawing.Size(44, 24);
-            this.rdBtnP5_1.TabIndex = 0;
-            this.rdBtnP5_1.TabStop = true;
-            this.rdBtnP5_1.Text = "1";
-            this.rdBtnP5_1.UseVisualStyleBackColor = true;
-            // 
-            // rdBtnP5_2
-            // 
-            this.rdBtnP5_2.AutoSize = true;
-            this.rdBtnP5_2.Location = new System.Drawing.Point(105, 26);
-            this.rdBtnP5_2.Name = "rdBtnP5_2";
-            this.rdBtnP5_2.Size = new System.Drawing.Size(44, 24);
-            this.rdBtnP5_2.TabIndex = 1;
-            this.rdBtnP5_2.TabStop = true;
-            this.rdBtnP5_2.Text = "2";
-            this.rdBtnP5_2.UseVisualStyleBackColor = true;
-            // 
-            // rdBtnP5_3
-            // 
-            this.rdBtnP5_3.AutoSize = true;
-            this.rdBtnP5_3.Location = new System.Drawing.Point(186, 26);
-            this.rdBtnP5_3.Name = "rdBtnP5_3";
-            this.rdBtnP5_3.Size = new System.Drawing.Size(44, 24);
-            this.rdBtnP5_3.TabIndex = 2;
-            this.rdBtnP5_3.TabStop = true;
-            this.rdBtnP5_3.Text = "3";
-            this.rdBtnP5_3.UseVisualStyleBackColor = true;
-            // 
-            // rdBtnP5_4
-            // 
-            this.rdBtnP5_4.AutoSize = true;
-            this.rdBtnP5_4.Location = new System.Drawing.Point(264, 26);
-            this.rdBtnP5_4.Name = "rdBtnP5_4";
-            this.rdBtnP5_4.Size = new System.Drawing.Size(44, 24);
-            this.rdBtnP5_4.TabIndex = 3;
-            this.rdBtnP5_4.TabStop = true;
-            this.rdBtnP5_4.Text = "4";
-            this.rdBtnP5_4.UseVisualStyleBackColor = true;
-            // 
-            // rdBtnP5_5
-            // 
-            this.rdBtnP5_5.AutoSize = true;
-            this.rdBtnP5_5.Location = new System.Drawing.Point(339, 25);
-            this.rdBtnP5_5.Name = "rdBtnP5_5";
-            this.rdBtnP5_5.Size = new System.Drawing.Size(44, 24);
-            this.rdBtnP5_5.TabIndex = 4;
-            this.rdBtnP5_5.TabStop = true;
-            this.rdBtnP5_5.Text = "5";
-            this.rdBtnP5_5.UseVisualStyleBackColor = true;
-            // 
             // frmRegYeditEncuestas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(909, 1050);
-            this.Controls.Add(this.grpP5);
             this.Controls.Add(this.lblTipoEncuesta);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.grpP4);
@@ -673,8 +596,6 @@
             this.grpP3.PerformLayout();
             this.grpP4.ResumeLayout(false);
             this.grpP4.PerformLayout();
-            this.grpP5.ResumeLayout(false);
-            this.grpP5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -725,11 +646,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta4;
         private System.Windows.Forms.Label lblTipoEncuesta;
-        private System.Windows.Forms.GroupBox grpP5;
-        private System.Windows.Forms.RadioButton rdBtnP5_5;
-        private System.Windows.Forms.RadioButton rdBtnP5_4;
-        private System.Windows.Forms.RadioButton rdBtnP5_3;
-        private System.Windows.Forms.RadioButton rdBtnP5_2;
-        private System.Windows.Forms.RadioButton rdBtnP5_1;
     }
 }

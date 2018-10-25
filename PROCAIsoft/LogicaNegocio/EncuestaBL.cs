@@ -26,5 +26,10 @@ namespace LogicaNegocio
         {
              return encuestaDA.registrarEncuesta(E, idUsu);
         }
+
+        public bool modificarEncuesta(Encuesta E, int idUsu)
+        {
+            return encuestaDA.modificarEncuesta(E, idUsu);
+        }
     }
 }

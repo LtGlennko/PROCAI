@@ -34,5 +34,10 @@ namespace Modelo
             this.pregunta = pre;
             pre.CalificacionesPorPregunta.Add(this);
         }
+
+        public Pregunta getPregunta()
+        {
+            return this.pregunta;
+        }
     }
 }

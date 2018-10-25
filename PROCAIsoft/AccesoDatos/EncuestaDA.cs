@@ -36,7 +36,7 @@ namespace AccesoDatos
             con.Close();
             return encuestas;
         }
-        public bool registrarEncuesta (Encuesta E, int idGuia)
+        public bool registrarEncuesta(Encuesta E, int idGuia)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace AccesoDatos
                 con.Open();
                 comando = new MySqlCommand();
                 string sql = "INSERT INTO `Encuesta`(`IdGrupoEncuesta`,`IdGuia`) " +
-                             "VALUES("  + id_grupoEncuesta + ", "+ idGuia + ")";
+                             "VALUES(" + id_grupoEncuesta + ", " + idGuia + ")"; //FALTA REGISTRAR CALIFICACIONES
                 comando.CommandText = sql;
                 comando.Connection = con;
                 comando.ExecuteNonQuery();
@@ -58,5 +58,32 @@ namespace AccesoDatos
                 return false;
             }
         }
+
+            public bool modificarEncuesta(Encuesta E, int idGuia)
+            {
+                try
+                {
+                    int id_grupoEncuesta = E.GrupoPerteneciente.IdGrupoEncuestas1;
+                    con = new MySqlConnection(DBManager.cadena);
+
+                    con.Open();
+                    comando = new MySqlCommand();
+                    // string sql = "UPDATE `Encuesta`(calificaciones) " +"VALUES(" +cal1 + ", " + cal2 + etc ")"; 
+                    comando.CommandText = sql;
+                    comando.Connection = con;
+                    comando.ExecuteNonQuery();
+                    con.Close();
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+        }
     }
-}
+
+
+
+

@@ -20,11 +20,12 @@ namespace Presentacion
     {
         private GrupoEncuestas grupoSeleccionado; //para el boton buscar, y llenar campos
         private Encuesta encuestaCreada;
+        private Encuesta encuestaModificada;
         private Pregunta preg1;
         private Pregunta preg2;
         private Pregunta preg3;
         private Pregunta preg4;
-        private Pregunta preg5; //las preguntas para recorgerlas 
+        //las preguntas para recorgerlas 
         private BindingList<Encuesta> listaEncuestas; //para el datagridview
         private int idUsu;
         public frmRegYeditEncuestas(Usuario usu)
@@ -45,8 +46,8 @@ namespace Presentacion
             {
                 grupoSeleccionado = bg.getGrupoSel();
                 BindingList<Pregunta> preguntasSel = grupoSeleccionado.Actividad.TipoActividad.Preguntas;
-                //definir preg1, preg2, preg3 y preg4 Y PREG5
-                if (preguntasSel.Count < 5)
+                //definir preg1, preg2, preg3 y preg4 
+                if (preguntasSel.Count < 4)
                 {
                     MessageBox.Show("El tipo de actividad tiene menos de 5 preguntas relacionadas");
                     return;
@@ -56,12 +57,12 @@ namespace Presentacion
                 preg2 = preguntasSel[1];
                 preg3 = preguntasSel[2];
                 preg4 = preguntasSel[3];
-                preg5 = preguntasSel[4];
+
                 grpP1.Text = "Pregunta 1: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg1.Enunciado;
                 grpP2.Text = "Pregunta 2: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg2.Enunciado;
                 grpP3.Text = "Pregunta 3: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg4.Enunciado;
-                grpP5.Text = "Pregunta 5: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg5.Enunciado;
+
                 lblTipoEncuesta.Text = "Tipo de actividad: " + grupoSeleccionado.Actividad.TipoActividad.Nombre;
 
             }
@@ -95,13 +96,8 @@ namespace Presentacion
             {
                 grpP4.ForeColor = Color.Red;
             }
-            if (grpP5.Controls.Count == 1) agregarCalificacionSeleccionada(encuestaCreada, grpP5, preg5);
-            else
-            {
-                grpP5.ForeColor = Color.Red;
-            }
 
-            if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red || grpP5.ForeColor == Color.Red)
+            if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red)
             {
                 MessageBox.Show("Tiene que llenar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -117,6 +113,8 @@ namespace Presentacion
                 else
                     MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
 
         private void agregarCalificacionSeleccionada(Encuesta encuesta, GroupBox grupo, Pregunta preg)
@@ -144,55 +142,126 @@ namespace Presentacion
             Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //VISUALIZACION
         {
-            frmDetalleEncuesta DE = new frmDetalleEncuesta();
-            if (DE.ShowDialog() == DialogResult.OK)
+            if (dgvEncuestas.SelectedRows.Count == 0) MessageBox.Show("Tiene que seleccionar una encuesta en la tabla para visualizarla", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (dgvEncuestas.SelectedRows.Count > 1) MessageBox.Show("Hay demasiado encuentras seleccionadas. Tiene que seleccionar solamente una", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
             {
-
+                Encuesta E = new Encuesta();
+                E = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
+                frmDetalleEncuesta DE = new frmDetalleEncuesta(E);
+                DE.Visible = true;
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            //verificar si habia evento doble click sobre datagridview
+            if (dgvEncuestas.SelectedRows.Count == 0) MessageBox.Show("Tiene que seleccionar una encuesta en la tabla para modificarla (doble click)", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (dgvEncuestas.SelectedRows.Count > 1) MessageBox.Show("Hay demasiado encuentras seleccionadas. Puede modificar las encuestas una tras otra. (Doble click sobre una)", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                encuestaModificada = new Encuesta();
+                encuestaModificada = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
+                listaEncuestas.Remove(encuestaModificada);
+                agregarCalificacionSeleccionada(encuestaModificada, grpP1, preg1);
+                agregarCalificacionSeleccionada(encuestaModificada, grpP2, preg2);
+                agregarCalificacionSeleccionada(encuestaModificada, grpP3, preg3);
+                agregarCalificacionSeleccionada(encuestaModificada, grpP4, preg4);
+
+                listaEncuestas.Add(encuestaModificada);
+                dgvEncuestas.DataSource = listaEncuestas;
+                //Inserto encuesta en la base de datos
+                EncuestaBL encuestaBL = new EncuestaBL();
+                if (encuestaBL.modificarEncuesta(encuestaModificada, idUsu))
+                    MessageBox.Show("Modificada con éxito");
+                else
+                    MessageBox.Show("Error al modificar");
+            }
+        }
+
+        private void dgvEncuestas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            estadoComponentes(estado.MODIFICAR);
+            Encuesta E = new Encuesta();
+            E = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
+            
+
+            Pregunta pregun1 = E.CalificacionesPorEncuesta[0].getPregunta();
+            Pregunta pregun2 = E.CalificacionesPorEncuesta[1].getPregunta();
+            Pregunta pregun3 = E.CalificacionesPorEncuesta[2].getPregunta();
+            Pregunta pregun4 = E.CalificacionesPorEncuesta[3].getPregunta();
+        
+
+            grpP1.Text = "Pregunta 1: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun1.Enunciado;
+            grpP2.Text = "Pregunta 2: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun2.Enunciado;
+            grpP3.Text = "Pregunta 3: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun3.Enunciado;
+            grpP4.Text = "Pregunta 4: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun4.Enunciado;
+
+            //SET LAS CALIFICACIONES
+
+            // Y LA ACTIVIDAD lblTipoEncuesta.Text = "Tipo de actividad: " + grupoSeleccionado.Actividad.TipoActividad.Nombre;
+
+        
+        txtNumero.Text = E.IdGrupoPerteneciente.ToString();
+        dateEncuentra.Value = E.FechaProgramada;
+        }
+
+
         public void estadoComponentes(estado e)
         {
             switch (e)
             {
                 case estado.INICIAL:
                     txtNumero.Enabled = false;
-                    //las preguntas false
+                    grpP1.Enabled = false;
+                    grpP2.Enabled = false;
+                    grpP3.Enabled = false;
+                    grpP4.Enabled = false;
                     dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = false;
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
-                    //bouton vizualizar 
+                    button1.Enabled = false;
                     break;
                 case estado.BUSQUEDA:
                     txtNumero.Enabled = false;
-                    //las preguntas true
+                    grpP1.Enabled = true;
+                    grpP2.Enabled = true;
+                    grpP3.Enabled = true;
+                    grpP4.Enabled = true;
                     dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
-                    btnModificar.Enabled = true;
+                    btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
-                    //bouton vizualizar
+                    button1.Enabled = true;
                     limpiarCampos();
                     break;
                 case estado.MODIFICAR:
                     txtNumero.Enabled = false;
-                    //las preguntas true
-                    dateEncuentra.Enabled = false;
-                    btnAgregar.Enabled = true;
-                    btnModificar.Enabled = false;
-                    btnBusca.Enabled = true;
-                    //bouton vizualizar 
-                    break;
-
-                case estado.AGREGAR:
-                    txtNumero.Enabled = false;
-                    //las preguntas false
+                    grpP1.Enabled = true;
+                    grpP2.Enabled = true;
+                    grpP3.Enabled = true;
+                    grpP4.Enabled = true;
                     dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnBusca.Enabled = true;
-                    //bouton vizualizar 
+                    button1.Enabled = true;
+                    break;
+
+                case estado.AGREGAR:
+                    txtNumero.Enabled = false;
+                    grpP1.Enabled = false;
+                    grpP2.Enabled = false;
+                    grpP3.Enabled = false;
+                    grpP4.Enabled = false;
+                    dateEncuentra.Enabled = false;
+                    btnAgregar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnBusca.Enabled = true;
+                    button1.Enabled = true;
                     break;
             }
         }
@@ -201,8 +270,12 @@ namespace Presentacion
         {
             txtNumero.Text = "";
             dateEncuentra.Value = DateTime.Now;
-            //limpiar preguntas
+            grpP1.Controls.Clear();
+            grpP2.Controls.Clear();
+            grpP3.Controls.Clear();
+            grpP4.Controls.Clear();
         }
+
 
     }
 }
