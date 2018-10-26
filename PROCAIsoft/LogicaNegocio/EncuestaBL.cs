@@ -25,6 +25,7 @@ namespace LogicaNegocio
         public bool registrarEncuesta (Encuesta E, int idUsu)
         {
              return encuestaDA.registrarEncuesta(E, idUsu);
+            
         }
 
         public bool modificarEncuesta(Encuesta E, int idUsu)

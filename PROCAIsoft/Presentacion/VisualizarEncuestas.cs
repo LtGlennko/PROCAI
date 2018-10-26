@@ -38,6 +38,15 @@ namespace Presentacion
 
         }
 
+        public frmRegYeditEncuestas()
+        {
+            InitializeComponent();
+            estadoComponentes(estado.INICIAL);
+            dgvEncuestas.AutoGenerateColumns = false;
+            listaEncuestas = new BindingList<Encuesta>();
+
+        }
+
         private void btnBusca_Click(object sender, EventArgs e)
         {
             BuscarGrupo bg = new BuscarGrupo();
@@ -58,10 +67,10 @@ namespace Presentacion
                 preg3 = preguntasSel[2];
                 preg4 = preguntasSel[3];
 
-                grpP1.Text = "Pregunta 1: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg1.Enunciado;
-                grpP2.Text = "Pregunta 2: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg2.Enunciado;
-                grpP3.Text = "Pregunta 3: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg3.Enunciado;
-                grpP4.Text = "Pregunta 4: De 0 (No, en absoluto) a 5 (Si, totalmente), " + preg4.Enunciado;
+                grpP1.Text = "Pregunta 1: " + preg1.Enunciado;
+                grpP2.Text = "Pregunta 2: " + preg2.Enunciado;
+                grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
+                grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
 
                 lblTipoEncuesta.Text = "Tipo de actividad: " + grupoSeleccionado.Actividad.TipoActividad.Nombre;
 
@@ -71,27 +80,52 @@ namespace Presentacion
 
         }
 
+        private bool existeSeleccionado(GroupBox g)
+        {
+            foreach(RadioButton r in g.Controls)
+            {
+                if (r.Checked == true) return true;
+            }
+            return false;
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             estadoComponentes(estado.AGREGAR);
             encuestaCreada = new Encuesta();
             encuestaCreada.setGrupo(grupoSeleccionado);
-            if (grpP1.Controls.Count == 1) agregarCalificacionSeleccionada(encuestaCreada, grpP1, preg1);
+
+            if (existeSeleccionado(grpP1))
+            {
+                agregarCalificacionSeleccionada(encuestaCreada, grpP1, preg1);
+                grpP1.ForeColor = Color.Black;
+            }
             else
             {
                 grpP1.ForeColor = Color.Red;
             }
-            if (grpP2.Controls.Count == 1) agregarCalificacionSeleccionada(encuestaCreada, grpP2, preg2);
+            if (existeSeleccionado(grpP2))
+            {
+                agregarCalificacionSeleccionada(encuestaCreada, grpP2, preg2);
+                grpP2.ForeColor = Color.Black;
+            }
             else
             {
                 grpP2.ForeColor = Color.Red;
             }
-            if (grpP3.Controls.Count == 1) agregarCalificacionSeleccionada(encuestaCreada, grpP3, preg3);
+            if (existeSeleccionado(grpP3))
+            {
+                agregarCalificacionSeleccionada(encuestaCreada, grpP3, preg3);
+                grpP3.ForeColor = Color.Black;
+            }
             else
             {
                 grpP3.ForeColor = Color.Red;
             }
-            if (grpP4.Controls.Count == 1) agregarCalificacionSeleccionada(encuestaCreada, grpP4, preg4);
+            if (existeSeleccionado(grpP4))
+            {
+                agregarCalificacionSeleccionada(encuestaCreada, grpP4, preg4);
+                grpP4.ForeColor = Color.Black;
+            }
             else
             {
                 grpP4.ForeColor = Color.Red;
@@ -100,6 +134,10 @@ namespace Presentacion
             if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red)
             {
                 MessageBox.Show("Tiene que llenar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                grpP1.Enabled = true;
+                grpP2.Enabled = true;
+                grpP3.Enabled = true;
+                grpP4.Enabled = true;
             }
 
             else
@@ -158,10 +196,8 @@ namespace Presentacion
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //verificar si habia evento doble click sobre datagridview
-            if (dgvEncuestas.SelectedRows.Count == 0) MessageBox.Show("Tiene que seleccionar una encuesta en la tabla para modificarla (doble click)", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (dgvEncuestas.SelectedRows.Count > 1) MessageBox.Show("Hay demasiado encuentras seleccionadas. Puede modificar las encuestas una tras otra. (Doble click sobre una)", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-            {
+            
+            
                 encuestaModificada = new Encuesta();
                 encuestaModificada = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
                 listaEncuestas.Remove(encuestaModificada);
@@ -178,7 +214,7 @@ namespace Presentacion
                     MessageBox.Show("Modificada con éxito");
                 else
                     MessageBox.Show("Error al modificar");
-            }
+            
         }
 
         private void dgvEncuestas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -194,10 +230,10 @@ namespace Presentacion
             Pregunta pregun4 = E.CalificacionesPorEncuesta[3].getPregunta();
         
 
-            grpP1.Text = "Pregunta 1: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun1.Enunciado;
-            grpP2.Text = "Pregunta 2: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun2.Enunciado;
-            grpP3.Text = "Pregunta 3: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun3.Enunciado;
-            grpP4.Text = "Pregunta 4: De 0 (No, en absoluto) a 5 (Si, totalmente), " + pregun4.Enunciado;
+            grpP1.Text = "Pregunta 1: " + pregun1.Enunciado;
+            grpP2.Text = "Pregunta 2: " + pregun2.Enunciado;
+            grpP3.Text = "Pregunta 3: " + pregun3.Enunciado;
+            grpP4.Text = "Pregunta 4: " + pregun4.Enunciado;
 
             //SET LAS CALIFICACIONES
 
@@ -236,7 +272,7 @@ namespace Presentacion
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
-                    limpiarCampos();
+                    //limpiarCampos();
                     break;
                 case estado.MODIFICAR:
                     txtNumero.Enabled = false;

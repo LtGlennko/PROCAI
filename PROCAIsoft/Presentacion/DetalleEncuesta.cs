@@ -18,10 +18,14 @@ namespace Presentacion
             InitializeComponent();
 
             //Se pone el id del grupo
-            labelRespuestaGrupo.Text = E.IdGrupoPerteneciente.ToString();
+            labelRespuestaGrupo.Text = E.GrupoPerteneciente.TipoYnombreActividad;
 
             //Se pone la fecha
-            labelRespuestaFecha.Text = E.FechaProgramada.ToString();
+            int dia = E.FechaProgramada.Day;
+            int mes = E.FechaProgramada.Month;
+            int anho = E.FechaProgramada.Year;
+
+            labelRespuestaFecha.Text = dia.ToString() +"/"+ mes.ToString() + "/" + anho.ToString();
 
             //Se ponen la calificaciones
             labelRespuestaPregunta1.Text = E.CalificacionP1.ToString();
@@ -30,8 +34,10 @@ namespace Presentacion
             labelRespuestaPregunta4.Text = E.CalificacionP4.ToString();
 
             //Se pone el detalle de las preguntas
-            //HACERLO
-
+            labelPregunta1.Text = E.CalificacionesPorEncuesta[0].Pregunta.Enunciado.ToString();
+            labelPregunta2.Text = E.CalificacionesPorEncuesta[1].Pregunta.Enunciado.ToString();
+            labelPregunta3.Text = E.CalificacionesPorEncuesta[2].Pregunta.Enunciado.ToString();
+            labelPregunta4.Text = E.CalificacionesPorEncuesta[3].Pregunta.Enunciado.ToString();
 
         }
 

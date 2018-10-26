@@ -38,13 +38,16 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.gestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGestionarStock
             // 
-            this.btnGestionarStock.Location = new System.Drawing.Point(28, 80);
+            this.btnGestionarStock.Location = new System.Drawing.Point(357, 179);
             this.btnGestionarStock.Name = "btnGestionarStock";
             this.btnGestionarStock.Size = new System.Drawing.Size(130, 23);
             this.btnGestionarStock.TabIndex = 0;
@@ -54,7 +57,7 @@
             // 
             // btnGestionarColegios
             // 
-            this.btnGestionarColegios.Location = new System.Drawing.Point(209, 80);
+            this.btnGestionarColegios.Location = new System.Drawing.Point(538, 179);
             this.btnGestionarColegios.Name = "btnGestionarColegios";
             this.btnGestionarColegios.Size = new System.Drawing.Size(130, 23);
             this.btnGestionarColegios.TabIndex = 1;
@@ -64,7 +67,7 @@
             // 
             // btnCalendario
             // 
-            this.btnCalendario.Location = new System.Drawing.Point(209, 140);
+            this.btnCalendario.Location = new System.Drawing.Point(538, 239);
             this.btnCalendario.Name = "btnCalendario";
             this.btnCalendario.Size = new System.Drawing.Size(130, 23);
             this.btnCalendario.TabIndex = 4;
@@ -75,7 +78,7 @@
             // lblNombreUsu
             // 
             this.lblNombreUsu.AutoSize = true;
-            this.lblNombreUsu.Location = new System.Drawing.Point(12, 48);
+            this.lblNombreUsu.Location = new System.Drawing.Point(12, 49);
             this.lblNombreUsu.Name = "lblNombreUsu";
             this.lblNombreUsu.Size = new System.Drawing.Size(49, 13);
             this.lblNombreUsu.TabIndex = 5;
@@ -85,10 +88,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.lblTitulo);
+            this.panel1.Controls.Add(this.lblNombreUsu);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 45);
+            this.panel1.Size = new System.Drawing.Size(792, 77);
             this.panel1.TabIndex = 6;
             // 
             // lblTitulo
@@ -114,7 +118,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(114, 257);
+            this.button5.Location = new System.Drawing.Point(443, 356);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(153, 23);
             this.button5.TabIndex = 7;
@@ -124,7 +128,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(209, 192);
+            this.button6.Location = new System.Drawing.Point(538, 291);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(130, 38);
             this.button6.TabIndex = 8;
@@ -134,7 +138,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(28, 192);
+            this.button7.Location = new System.Drawing.Point(357, 291);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(130, 38);
             this.button7.TabIndex = 9;
@@ -142,26 +146,46 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 80);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(109, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // gestToolStripMenuItem
+            // 
+            this.gestToolStripMenuItem.Name = "gestToolStripMenuItem";
+            this.gestToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.gestToolStripMenuItem.Text = "Gestionar Stock";
+            // 
             // InicioEjecutivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(371, 331);
+            this.ClientSize = new System.Drawing.Size(790, 536);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.lblNombreUsu);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnCalendario);
             this.Controls.Add(this.btnGestionarColegios);
             this.Controls.Add(this.btnGestionarStock);
             this.Controls.Add(this.panel1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "InicioEjecutivo";
             this.Text = "InicioEjecutivo";
             this.Load += new System.EventHandler(this.InicioEjecutivo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +203,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem gestToolStripMenuItem;
     }
 }

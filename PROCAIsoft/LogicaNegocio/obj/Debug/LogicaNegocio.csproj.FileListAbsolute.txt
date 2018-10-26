@@ -52,3 +52,15 @@ T:\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.xml
 T:\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
 T:\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 T:\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.dll
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.dll
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.dll
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Google.Protobuf.dll
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.pdb
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.pdb
+C:\temp\GIT PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.xml

@@ -11,7 +11,6 @@ namespace Modelo
         protected static int i = 0;
         private int IdGuia;
         private TipoGuia tipoGuia;
-        private string licencia;
         private List<GrupoEncuestas> gruposDondeFueEvaluado;
         private List<Encuesta> encuestasDigitadas;
 
@@ -19,17 +18,16 @@ namespace Modelo
         {
             IdGuia = ++i;
             this.tipoGuia = tipoGuia;
-            this.licencia = licencia;
         }
 
-        public Guia(Usuario usu, TipoGuia tipoGuia, string licencia) : base(usu.DNI1, usu.Nombres, usu.ApellidoPaterno, usu.ApellidoMaterno, usu.Celular, usu.Sexo, usu.CorreoElectronico, usu.FechaCreacion, usu.NivelPermiso, usu.Fec)
+        public Guia(Usuario usu, string licencia, DateTime fechaIngreso, int estadoTrabajador, int telefonoOfi, int celularOfi, string correOfi, TipoGuia tipoGuia) : base(usu.DNI1, usu.Nombres, usu.ApellidoPaterno, usu.ApellidoMaterno, usu.Celular, usu.Sexo, usu.CorreoElectronico, usu.FechaCreacion, usu.NivelPermiso, fechaIngreso, estadoTrabajador, telefonoOfi, celularOfi, correOfi)
         {
-
+            IdGuia = ++i;
+            this.tipoGuia = tipoGuia;
         }
 
         public int IdGuia1 { get => IdGuia; set => IdGuia = value; }
         public TipoGuia TipoGuia { get => tipoGuia; set => tipoGuia = value; }
-        public string Licencia { get => licencia; set => licencia = value; }
         public List<GrupoEncuestas> GruposDondeFueEvaluado { get => gruposDondeFueEvaluado; set => gruposDondeFueEvaluado = value; }
         public List<Encuesta> EncuestasDigitadas { get => encuestasDigitadas; set => encuestasDigitadas = value; }
 

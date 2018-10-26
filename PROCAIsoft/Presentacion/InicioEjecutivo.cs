@@ -13,10 +13,17 @@ namespace Presentacion
 {
     public partial class InicioEjecutivo : Form
     {
+        private frmGestStock gestionarStock;
+        public InicioEjecutivo()
+        {
+            InitializeComponent();
+            this.IsMdiContainer = true;
+        }
         public InicioEjecutivo(Usuario usu)
         {
             InitializeComponent();
             lblNombreUsu.Text += usu.NombreCuenta;
+            this.IsMdiContainer = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -91,14 +98,28 @@ namespace Presentacion
 
         private void btnGestionarStock_Click(object sender, EventArgs e)
         {
-            frmGestStock FS = new frmGestStock();
-            FS.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
-            if (FS.ShowDialog() == DialogResult.OK)
+            if (gestionarStock == null)
             {
+                gestionarStock = new frmGestStock();
+                gestionarStock.MdiParent = this;
+                gestionarStock.Visible = true;
+                gestionarStock.FormClosing += volverNulo;
+                //FS.StartPosition = FormStartPosition.CenterScreen;
+                ////this.Visible = false;
+                //FS.MdiParent = this;
+                //FS.Visible = true;
+                //if (FS.ShowDialog() == DialogResult.OK)
+                //{
 
+                //}
             }
-            this.Visible = true;
+
         }
+
+        public void volverNulo(object sender, FormClosingEventArgs e)
+        {
+            gestionarStock = null;
+        }
+        
     }
 }
