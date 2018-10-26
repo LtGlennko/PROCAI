@@ -22,6 +22,11 @@ namespace Modelo
             this.licencia = licencia;
         }
 
+        public Guia(Usuario usu, TipoGuia tipoGuia, string licencia) : base(usu.DNI1, usu.Nombres, usu.ApellidoPaterno, usu.ApellidoMaterno, usu.Celular, usu.Sexo, usu.CorreoElectronico, usu.FechaCreacion, usu.NivelPermiso, usu.Fec)
+        {
+
+        }
+
         public int IdGuia1 { get => IdGuia; set => IdGuia = value; }
         public TipoGuia TipoGuia { get => tipoGuia; set => tipoGuia = value; }
         public string Licencia { get => licencia; set => licencia = value; }
