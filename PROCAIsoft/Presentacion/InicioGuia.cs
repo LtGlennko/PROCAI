@@ -40,15 +40,15 @@ namespace Presentacion
             }
             this.Visible = true;
         }
-
-        private void InicioGuia_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click_1(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

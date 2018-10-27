@@ -96,30 +96,67 @@ namespace Presentacion
             this.Visible = true;
         }
 
-        private void btnGestionarStock_Click(object sender, EventArgs e)
-        {
-            if (gestionarStock == null)
-            {
-                gestionarStock = new frmGestStock();
-                gestionarStock.MdiParent = this;
-                gestionarStock.Visible = true;
-                gestionarStock.FormClosing += volverNulo;
-                //FS.StartPosition = FormStartPosition.CenterScreen;
-                ////this.Visible = false;
-                //FS.MdiParent = this;
-                //FS.Visible = true;
-                //if (FS.ShowDialog() == DialogResult.OK)
-                //{
-
-                //}
-            }
-
-        }
 
         public void volverNulo(object sender, FormClosingEventArgs e)
         {
             gestionarStock = null;
         }
-        
+
+        private void ptrDespliegue_Click(object sender, EventArgs e)
+        {
+            if (pnlOpciones.Width == 200) pnlOpciones.Width = 45;
+            else pnlOpciones.Width = 200;
+        }
+
+        private void pnlOpciones_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void abrirFormInPanel(object formHijo)
+        {
+            if (this.pnlVentanas.Controls.Count > 0)
+                this.pnlVentanas.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            
+            fh.Dock = DockStyle.Fill;
+            this.pnlVentanas.Controls.Add(fh);
+            this.pnlVentanas.Tag = fh;
+            fh.Show();
+        }
+        private void btnGestionarStock_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new frmGestStock());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void mnuGestionarStock_Click(object sender, EventArgs e)
+        //{
+        //    if (gestionarStock == null)
+        //    {
+        //        gestionarStock = new frmGestStock();
+        //        gestionarStock.MdiParent = this;
+        //        gestionarStock.Visible = true;
+        //        gestionarStock.FormClosing += volverNulo;
+        //        //FS.StartPosition = FormStartPosition.CenterScreen;
+        //        ////this.Visible = false;
+        //        //FS.MdiParent = this;
+        //        //FS.Visible = true;
+        //        //if (FS.ShowDialog() == DialogResult.OK)
+        //        //{
+
+        //        //}
+        //    }
+        //}
     }
 }
