@@ -45,8 +45,11 @@
     <Compile Include="EncuestaBL.cs" />
     <Compile Include="GrupoBL.cs" />
     <Compile Include="MerchandisingBL.cs" />
+    <Compile Include="ProcesoAdmisionBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolicitudInscripcionBL.cs" />
     <Compile Include="TipoActividadBL.cs" />
+    <Compile Include="TipoProcesoAdmisionBL.cs" />
     <Compile Include="UsuarioBL.cs" />
   </ItemGroup>
   <ItemGroup>
