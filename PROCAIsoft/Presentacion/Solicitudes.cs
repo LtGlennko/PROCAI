@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LogicaNegocio;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,26 +14,47 @@ namespace Presentacion
 {
     public partial class frmSolicitudes : Form
     {
+        BindingList<SolicitudInscripcionActividad> listaSIA = new BindingList<SolicitudInscripcionActividad>();
+        private int idSeleccionado =0;
+        private SolicitudInscripcionActividad SIAseleccionado;
         public frmSolicitudes()
         {
             InitializeComponent();
+            SolicitudInscripcionBL SIBL = new SolicitudInscripcionBL();
+            if (SIBL.listarSolicitudInscripcionActividad(listaSIA)) {
+                this.dgv_Solicitudes.DataSource = null;
+                this.dgv_Solicitudes.DataSource = listaSIA;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Validado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //dataGridView1.Rows.Add();
-            //dataGridView1[0, 5].ValueType() = "Validado";
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InfoSolicitud IS = new InfoSolicitud();
+            InfoSolicitud IS = new InfoSolicitud(this.SIAseleccionado);
             IS.Show();
         }
 
         private void frmSolicitudes_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgv_Solicitudes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dgv_Solicitudes.Rows[index];
+            this.idSeleccionado = Int32.Parse(selectedRow.Cells[0].Value.ToString());
+            foreach (SolicitudInscripcionActividad SI_rec in listaSIA) {
+                if (SI_rec.IdSolicitudInscripcion1 == this.idSeleccionado) {
+                    this.SIAseleccionado = SI_rec;
+                    break;
+                }
+            }
 
         }
     }

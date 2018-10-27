@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using LogicaNegocio;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,22 @@ namespace Presentacion
 {
     public partial class frmProcesoAdm : Form
     {
-        //List<ProcesoAdmision> procesos = new List<ProcesoAdmision>();
+        private BindingList<ProcesoAdmision> listaProcesos = new BindingList<ProcesoAdmision>();
         public frmProcesoAdm()
         {
             InitializeComponent();
 
+            llenarDGV();
+            
         }
+        public void llenarDGV() {
+            ProcesoAdmisionBL PABL = new ProcesoAdmisionBL();
+            if (listaProcesos != null) this.listaProcesos = new BindingList<ProcesoAdmision>();
+            PABL.listarProcesosAdmision(listaProcesos);
 
+            dgvProcesoAdmin.DataSource = null;
+            dgvProcesoAdmin.DataSource = listaProcesos;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -27,17 +37,11 @@ namespace Presentacion
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VentanaNuevoProcesoAdmision VNPA = new VentanaNuevoProcesoAdmision();
+            //ProcesoAdmision PA = null;
+            
+            VentanaNuevoProcesoAdmision VNPA = new VentanaNuevoProcesoAdmision(this);
             VNPA.Show();
-            int i = 0;
-            //foreach (ProcesoAdmision pa in VNPA.ProcesosAdmision) {
-            //    dgvPA.Rows.Add();
-            //    dgvPA[i, 0].Value = tostring(i);
-            //    dgvPA[i, 1].Value = pa.Descripcion;
-            //    dgvPA[i, 2].Value = tostring(pa.CantidadVacantes);
-            //    dgvPA[i, 3].Value = pa.Descripcion;
-
-            //}
+            //llenarDGV();
 
         }
 
@@ -56,9 +60,6 @@ namespace Presentacion
             Dispose();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
