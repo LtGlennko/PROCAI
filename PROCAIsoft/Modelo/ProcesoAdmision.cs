@@ -6,7 +6,7 @@ namespace Modelo
 {
     public class ProcesoAdmision
     {
-        protected static int i = 0;
+        
         private int IdProceso;
         private TipoProcesoAdmision tipoProceso;
         private string nombreProceso;
@@ -15,9 +15,10 @@ namespace Modelo
         private int cantInscritos;
         private List<PostulanteXprocesoAdmision> postulacionesDeProceso;
 
+        public ProcesoAdmision() { }
         public ProcesoAdmision(TipoProcesoAdmision tipoProceso, string nombreProceso, string descripcion, DateTime fechaRealizacion, int cantVacantes,int cantInscritos)
         {
-            IdProceso = ++i;
+            
             this.tipoProceso = tipoProceso;
             this.nombreProceso = nombreProceso;
             this.fechaRealizacion = fechaRealizacion;
@@ -43,6 +44,9 @@ namespace Modelo
         {
             this.postulacionesDeProceso.Add(pxp);
             pxp.ProcesoDeAdmision = this;
+        }
+        public override string ToString() {
+            return this.TipoProceso.NombreTipoProceso;
         }
     }
 }

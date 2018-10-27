@@ -62,6 +62,7 @@
     <Compile Include="ProcesoAdmision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolicitudColegio.cs" />
+    <Compile Include="SolicitudInscripcionActividad.cs" />
     <Compile Include="TipoActividad.cs" />
     <Compile Include="TipoProcesoAdmision.cs" />
     <Compile Include="TrabajadorOCAI.cs" />

@@ -13,7 +13,7 @@ namespace Modelo
         private string nombreTipoProceso;
         private string descripcion;
         private List<ProcesoAdmision> procesosCreados;
-
+        public TipoProcesoAdmision() { }
         public TipoProcesoAdmision(string nombreTipoProceso, string descripcion)
         {
             IdTipoProceso = ++i;

@@ -87,5 +87,9 @@ namespace Modelo
             this.encuestasLlenadas.Add(gru);
             gru.Colegio = this;
         }
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
     }
 }

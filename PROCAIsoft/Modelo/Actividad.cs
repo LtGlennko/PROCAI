@@ -20,9 +20,8 @@ namespace Modelo
 
         public Actividad(DateTime fechaProgramada, int estadoActividad, int cantEstudiantes)
         {
-            IdActividad = ++i;
+            this.estadoActividad= estadoActividad;
             this.fechaProgramada = fechaProgramada;
-            this.estadoActividad = estadoActividad;
             this.cantEstudiantes = cantEstudiantes;
             this.gruposDeEncuestas = new List<GrupoEncuestas>();
         }
@@ -48,6 +47,10 @@ namespace Modelo
         {
             this.gruposDeEncuestas.Add(gru);
             gru.Actividad = this;
+        }
+        public override string ToString()
+        {
+            return this.TipoActividad.Nombre;
         }
     }
 }
