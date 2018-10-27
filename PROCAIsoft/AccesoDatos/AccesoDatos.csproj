@@ -71,8 +71,11 @@
     <Compile Include="GuiaDA.cs" />
     <Compile Include="MerchandisingDA.cs" />
     <Compile Include="PreguntaDA.cs" />
+    <Compile Include="ProcesoAdmisionDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolicitudInscripcionDA.cs" />
     <Compile Include="TipoActividadDA.cs" />
+    <Compile Include="TipoProcesoAdmisionDA.cs" />
     <Compile Include="UsuarioDA.cs" />
   </ItemGroup>
   <ItemGroup>
