@@ -26,10 +26,6 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
@@ -66,6 +62,7 @@ namespace Presentacion
 
             if (usuarioBuscado.NivelPermiso == 2)
             {
+                Guia g = Guia
                 InicioGuia IE = new InicioGuia(usuarioBuscado);
                 IE.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;

@@ -44,6 +44,7 @@
     <Compile Include="ColegioBL.cs" />
     <Compile Include="EncuestaBL.cs" />
     <Compile Include="GrupoBL.cs" />
+    <Compile Include="GuiaBL.cs" />
     <Compile Include="MerchandisingBL.cs" />
     <Compile Include="ProcesoAdmisionBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

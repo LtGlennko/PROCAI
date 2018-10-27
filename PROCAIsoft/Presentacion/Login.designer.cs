@@ -53,7 +53,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblContraseña
             // 
