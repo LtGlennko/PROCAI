@@ -32,23 +32,22 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbx_orientador = new System.Windows.Forms.GroupBox();
-            this.lbl_titulo = new System.Windows.Forms.Label();
-            this.gbx_Colegio = new System.Windows.Forms.GroupBox();
-            this.gbx_actividad = new System.Windows.Forms.GroupBox();
-            this.lbl_nombres = new System.Windows.Forms.Label();
-            this.txt_nombres = new System.Windows.Forms.Label();
-            this.txt_apPaterno = new System.Windows.Forms.Label();
-            this.lbl_apPaterno = new System.Windows.Forms.Label();
-            this.txt_dni = new System.Windows.Forms.Label();
-            this.lbl_DNI = new System.Windows.Forms.Label();
-            this.txt_apMaterno = new System.Windows.Forms.Label();
-            this.lbl_apMaterno = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
             this.txt_sexo = new System.Windows.Forms.Label();
             this.lbl_sexo = new System.Windows.Forms.Label();
             this.txt_celular = new System.Windows.Forms.Label();
             this.lbl_celular = new System.Windows.Forms.Label();
-            this.txt_email = new System.Windows.Forms.Label();
-            this.lbl_email = new System.Windows.Forms.Label();
+            this.txt_dni = new System.Windows.Forms.Label();
+            this.lbl_DNI = new System.Windows.Forms.Label();
+            this.txt_apMaterno = new System.Windows.Forms.Label();
+            this.lbl_apMaterno = new System.Windows.Forms.Label();
+            this.txt_apPaterno = new System.Windows.Forms.Label();
+            this.lbl_apPaterno = new System.Windows.Forms.Label();
+            this.txt_nombres = new System.Windows.Forms.Label();
+            this.lbl_nombres = new System.Windows.Forms.Label();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.gbx_Colegio = new System.Windows.Forms.GroupBox();
             this.txt_telf = new System.Windows.Forms.Label();
             this.lbl_telf = new System.Windows.Forms.Label();
             this.txt_particular = new System.Windows.Forms.Label();
@@ -63,18 +62,19 @@
             this.lbl_ruc = new System.Windows.Forms.Label();
             this.txt_nombrecolegio = new System.Windows.Forms.Label();
             this.lbl_nombrecolegio = new System.Windows.Forms.Label();
+            this.gbx_actividad = new System.Windows.Forms.GroupBox();
+            this.lbl_nombreactividad = new System.Windows.Forms.Label();
+            this.txt_nombreactividad = new System.Windows.Forms.Label();
             this.txt_desc = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_desc = new System.Windows.Forms.Label();
+            this.txt_fecha = new System.Windows.Forms.Label();
             this.txt_cel = new System.Windows.Forms.Label();
+            this.lbl_cantestudiantes = new System.Windows.Forms.Label();
             this.lbl_cel = new System.Windows.Forms.Label();
+            this.txt_cantestudiantes = new System.Windows.Forms.Label();
             this.txt_merch = new System.Windows.Forms.Label();
             this.lbl_merch = new System.Windows.Forms.Label();
-            this.txt_cantestudiantes = new System.Windows.Forms.Label();
-            this.lbl_cantestudiantes = new System.Windows.Forms.Label();
-            this.txt_fecha = new System.Windows.Forms.Label();
-            this.lbl_fecha = new System.Windows.Forms.Label();
-            this.txt_nombreactividad = new System.Windows.Forms.Label();
-            this.lbl_nombreactividad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbx_orientador.SuspendLayout();
             this.gbx_Colegio.SuspendLayout();
@@ -119,6 +119,7 @@
             // 
             // gbx_orientador
             // 
+            this.gbx_orientador.BackColor = System.Drawing.SystemColors.Desktop;
             this.gbx_orientador.Controls.Add(this.txt_email);
             this.gbx_orientador.Controls.Add(this.lbl_email);
             this.gbx_orientador.Controls.Add(this.txt_sexo);
@@ -143,148 +144,26 @@
             this.gbx_orientador.Text = "Orientador:";
             this.gbx_orientador.Enter += new System.EventHandler(this.InfoSolicitud_Load);
             // 
-            // lbl_titulo
+            // txt_email
             // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Franklin Gothic Demi", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.Teal;
-            this.lbl_titulo.Location = new System.Drawing.Point(335, 18);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(296, 34);
-            this.lbl_titulo.TabIndex = 51;
-            this.lbl_titulo.Text = "DETALLE DE SOLICITUD";
+            this.txt_email.AutoSize = true;
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_email.Location = new System.Drawing.Point(42, 324);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(54, 17);
+            this.txt_email.TabIndex = 13;
+            this.txt_email.Text = "label14";
             // 
-            // gbx_Colegio
+            // lbl_email
             // 
-            this.gbx_Colegio.Controls.Add(this.txt_telf);
-            this.gbx_Colegio.Controls.Add(this.lbl_telf);
-            this.gbx_Colegio.Controls.Add(this.txt_particular);
-            this.gbx_Colegio.Controls.Add(this.lbl_particular);
-            this.gbx_Colegio.Controls.Add(this.txt_direccion);
-            this.gbx_Colegio.Controls.Add(this.lbl_direccion);
-            this.gbx_Colegio.Controls.Add(this.txt_departamento);
-            this.gbx_Colegio.Controls.Add(this.lbl_departamento);
-            this.gbx_Colegio.Controls.Add(this.txt_pais);
-            this.gbx_Colegio.Controls.Add(this.lbl_pais);
-            this.gbx_Colegio.Controls.Add(this.txt_ruc);
-            this.gbx_Colegio.Controls.Add(this.lbl_ruc);
-            this.gbx_Colegio.Controls.Add(this.txt_nombrecolegio);
-            this.gbx_Colegio.Controls.Add(this.lbl_nombrecolegio);
-            this.gbx_Colegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbx_Colegio.ForeColor = System.Drawing.Color.Teal;
-            this.gbx_Colegio.Location = new System.Drawing.Point(341, 69);
-            this.gbx_Colegio.Name = "gbx_Colegio";
-            this.gbx_Colegio.Size = new System.Drawing.Size(308, 392);
-            this.gbx_Colegio.TabIndex = 49;
-            this.gbx_Colegio.TabStop = false;
-            this.gbx_Colegio.Text = "Colegio:";
-            // 
-            // gbx_actividad
-            // 
-            this.gbx_actividad.Controls.Add(this.lbl_nombreactividad);
-            this.gbx_actividad.Controls.Add(this.txt_nombreactividad);
-            this.gbx_actividad.Controls.Add(this.txt_desc);
-            this.gbx_actividad.Controls.Add(this.lbl_fecha);
-            this.gbx_actividad.Controls.Add(this.lbl_desc);
-            this.gbx_actividad.Controls.Add(this.txt_fecha);
-            this.gbx_actividad.Controls.Add(this.txt_cel);
-            this.gbx_actividad.Controls.Add(this.lbl_cantestudiantes);
-            this.gbx_actividad.Controls.Add(this.lbl_cel);
-            this.gbx_actividad.Controls.Add(this.txt_cantestudiantes);
-            this.gbx_actividad.Controls.Add(this.txt_merch);
-            this.gbx_actividad.Controls.Add(this.lbl_merch);
-            this.gbx_actividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbx_actividad.ForeColor = System.Drawing.Color.Teal;
-            this.gbx_actividad.Location = new System.Drawing.Point(670, 69);
-            this.gbx_actividad.Name = "gbx_actividad";
-            this.gbx_actividad.Size = new System.Drawing.Size(289, 392);
-            this.gbx_actividad.TabIndex = 49;
-            this.gbx_actividad.TabStop = false;
-            this.gbx_actividad.Text = "Actividad:";
-            // 
-            // lbl_nombres
-            // 
-            this.lbl_nombres.AutoSize = true;
-            this.lbl_nombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombres.Location = new System.Drawing.Point(24, 36);
-            this.lbl_nombres.Name = "lbl_nombres";
-            this.lbl_nombres.Size = new System.Drawing.Size(77, 17);
-            this.lbl_nombres.TabIndex = 0;
-            this.lbl_nombres.Text = "Nombres:";
-            // 
-            // txt_nombres
-            // 
-            this.txt_nombres.AutoSize = true;
-            this.txt_nombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombres.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_nombres.Location = new System.Drawing.Point(36, 53);
-            this.txt_nombres.Name = "txt_nombres";
-            this.txt_nombres.Size = new System.Drawing.Size(46, 17);
-            this.txt_nombres.TabIndex = 1;
-            this.txt_nombres.Text = "label2";
-            // 
-            // txt_apPaterno
-            // 
-            this.txt_apPaterno.AutoSize = true;
-            this.txt_apPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apPaterno.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_apPaterno.Location = new System.Drawing.Point(42, 105);
-            this.txt_apPaterno.Name = "txt_apPaterno";
-            this.txt_apPaterno.Size = new System.Drawing.Size(46, 17);
-            this.txt_apPaterno.TabIndex = 3;
-            this.txt_apPaterno.Text = "label3";
-            // 
-            // lbl_apPaterno
-            // 
-            this.lbl_apPaterno.AutoSize = true;
-            this.lbl_apPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apPaterno.Location = new System.Drawing.Point(24, 88);
-            this.lbl_apPaterno.Name = "lbl_apPaterno";
-            this.lbl_apPaterno.Size = new System.Drawing.Size(99, 17);
-            this.lbl_apPaterno.TabIndex = 2;
-            this.lbl_apPaterno.Text = "Ap. Paterno:";
-            // 
-            // txt_dni
-            // 
-            this.txt_dni.AutoSize = true;
-            this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_dni.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_dni.Location = new System.Drawing.Point(42, 216);
-            this.txt_dni.Name = "txt_dni";
-            this.txt_dni.Size = new System.Drawing.Size(46, 17);
-            this.txt_dni.TabIndex = 7;
-            this.txt_dni.Text = "label5";
-            // 
-            // lbl_DNI
-            // 
-            this.lbl_DNI.AutoSize = true;
-            this.lbl_DNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DNI.Location = new System.Drawing.Point(24, 199);
-            this.lbl_DNI.Name = "lbl_DNI";
-            this.lbl_DNI.Size = new System.Drawing.Size(39, 17);
-            this.lbl_DNI.TabIndex = 6;
-            this.lbl_DNI.Text = "DNI:";
-            // 
-            // txt_apMaterno
-            // 
-            this.txt_apMaterno.AutoSize = true;
-            this.txt_apMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apMaterno.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_apMaterno.Location = new System.Drawing.Point(42, 160);
-            this.txt_apMaterno.Name = "txt_apMaterno";
-            this.txt_apMaterno.Size = new System.Drawing.Size(46, 17);
-            this.txt_apMaterno.TabIndex = 5;
-            this.txt_apMaterno.Text = "label7";
-            // 
-            // lbl_apMaterno
-            // 
-            this.lbl_apMaterno.AutoSize = true;
-            this.lbl_apMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apMaterno.Location = new System.Drawing.Point(24, 143);
-            this.lbl_apMaterno.Name = "lbl_apMaterno";
-            this.lbl_apMaterno.Size = new System.Drawing.Size(101, 17);
-            this.lbl_apMaterno.TabIndex = 4;
-            this.lbl_apMaterno.Text = "Ap. Materno:";
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_email.Location = new System.Drawing.Point(24, 307);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(58, 17);
+            this.lbl_email.TabIndex = 12;
+            this.lbl_email.Text = "E-mail:";
             // 
             // txt_sexo
             // 
@@ -328,26 +207,126 @@
             this.lbl_celular.TabIndex = 8;
             this.lbl_celular.Text = "Celular:";
             // 
-            // txt_email
+            // txt_dni
             // 
-            this.txt_email.AutoSize = true;
-            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_email.Location = new System.Drawing.Point(42, 324);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(54, 17);
-            this.txt_email.TabIndex = 13;
-            this.txt_email.Text = "label14";
+            this.txt_dni.AutoSize = true;
+            this.txt_dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dni.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_dni.Location = new System.Drawing.Point(42, 216);
+            this.txt_dni.Name = "txt_dni";
+            this.txt_dni.Size = new System.Drawing.Size(46, 17);
+            this.txt_dni.TabIndex = 7;
+            this.txt_dni.Text = "label5";
             // 
-            // lbl_email
+            // lbl_DNI
             // 
-            this.lbl_email.AutoSize = true;
-            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(24, 307);
-            this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(58, 17);
-            this.lbl_email.TabIndex = 12;
-            this.lbl_email.Text = "E-mail:";
+            this.lbl_DNI.AutoSize = true;
+            this.lbl_DNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DNI.Location = new System.Drawing.Point(24, 199);
+            this.lbl_DNI.Name = "lbl_DNI";
+            this.lbl_DNI.Size = new System.Drawing.Size(39, 17);
+            this.lbl_DNI.TabIndex = 6;
+            this.lbl_DNI.Text = "DNI:";
+            // 
+            // txt_apMaterno
+            // 
+            this.txt_apMaterno.AutoSize = true;
+            this.txt_apMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apMaterno.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_apMaterno.Location = new System.Drawing.Point(42, 160);
+            this.txt_apMaterno.Name = "txt_apMaterno";
+            this.txt_apMaterno.Size = new System.Drawing.Size(46, 17);
+            this.txt_apMaterno.TabIndex = 5;
+            this.txt_apMaterno.Text = "label7";
+            // 
+            // lbl_apMaterno
+            // 
+            this.lbl_apMaterno.AutoSize = true;
+            this.lbl_apMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apMaterno.Location = new System.Drawing.Point(24, 143);
+            this.lbl_apMaterno.Name = "lbl_apMaterno";
+            this.lbl_apMaterno.Size = new System.Drawing.Size(101, 17);
+            this.lbl_apMaterno.TabIndex = 4;
+            this.lbl_apMaterno.Text = "Ap. Materno:";
+            // 
+            // txt_apPaterno
+            // 
+            this.txt_apPaterno.AutoSize = true;
+            this.txt_apPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apPaterno.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_apPaterno.Location = new System.Drawing.Point(42, 105);
+            this.txt_apPaterno.Name = "txt_apPaterno";
+            this.txt_apPaterno.Size = new System.Drawing.Size(46, 17);
+            this.txt_apPaterno.TabIndex = 3;
+            this.txt_apPaterno.Text = "label3";
+            // 
+            // lbl_apPaterno
+            // 
+            this.lbl_apPaterno.AutoSize = true;
+            this.lbl_apPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apPaterno.Location = new System.Drawing.Point(24, 88);
+            this.lbl_apPaterno.Name = "lbl_apPaterno";
+            this.lbl_apPaterno.Size = new System.Drawing.Size(99, 17);
+            this.lbl_apPaterno.TabIndex = 2;
+            this.lbl_apPaterno.Text = "Ap. Paterno:";
+            // 
+            // txt_nombres
+            // 
+            this.txt_nombres.AutoSize = true;
+            this.txt_nombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombres.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_nombres.Location = new System.Drawing.Point(36, 53);
+            this.txt_nombres.Name = "txt_nombres";
+            this.txt_nombres.Size = new System.Drawing.Size(46, 17);
+            this.txt_nombres.TabIndex = 1;
+            this.txt_nombres.Text = "label2";
+            // 
+            // lbl_nombres
+            // 
+            this.lbl_nombres.AutoSize = true;
+            this.lbl_nombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombres.Location = new System.Drawing.Point(24, 36);
+            this.lbl_nombres.Name = "lbl_nombres";
+            this.lbl_nombres.Size = new System.Drawing.Size(77, 17);
+            this.lbl_nombres.TabIndex = 0;
+            this.lbl_nombres.Text = "Nombres:";
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Franklin Gothic Demi", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.Teal;
+            this.lbl_titulo.Location = new System.Drawing.Point(335, 18);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(296, 34);
+            this.lbl_titulo.TabIndex = 51;
+            this.lbl_titulo.Text = "DETALLE DE SOLICITUD";
+            // 
+            // gbx_Colegio
+            // 
+            this.gbx_Colegio.BackColor = System.Drawing.SystemColors.Desktop;
+            this.gbx_Colegio.Controls.Add(this.txt_telf);
+            this.gbx_Colegio.Controls.Add(this.lbl_telf);
+            this.gbx_Colegio.Controls.Add(this.txt_particular);
+            this.gbx_Colegio.Controls.Add(this.lbl_particular);
+            this.gbx_Colegio.Controls.Add(this.txt_direccion);
+            this.gbx_Colegio.Controls.Add(this.lbl_direccion);
+            this.gbx_Colegio.Controls.Add(this.txt_departamento);
+            this.gbx_Colegio.Controls.Add(this.lbl_departamento);
+            this.gbx_Colegio.Controls.Add(this.txt_pais);
+            this.gbx_Colegio.Controls.Add(this.lbl_pais);
+            this.gbx_Colegio.Controls.Add(this.txt_ruc);
+            this.gbx_Colegio.Controls.Add(this.lbl_ruc);
+            this.gbx_Colegio.Controls.Add(this.txt_nombrecolegio);
+            this.gbx_Colegio.Controls.Add(this.lbl_nombrecolegio);
+            this.gbx_Colegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbx_Colegio.ForeColor = System.Drawing.Color.Teal;
+            this.gbx_Colegio.Location = new System.Drawing.Point(341, 69);
+            this.gbx_Colegio.Name = "gbx_Colegio";
+            this.gbx_Colegio.Size = new System.Drawing.Size(308, 392);
+            this.gbx_Colegio.TabIndex = 49;
+            this.gbx_Colegio.TabStop = false;
+            this.gbx_Colegio.Text = "Colegio:";
             // 
             // txt_telf
             // 
@@ -496,6 +475,51 @@
             this.lbl_nombrecolegio.TabIndex = 14;
             this.lbl_nombrecolegio.Text = "Nombre:";
             // 
+            // gbx_actividad
+            // 
+            this.gbx_actividad.BackColor = System.Drawing.SystemColors.Desktop;
+            this.gbx_actividad.Controls.Add(this.lbl_nombreactividad);
+            this.gbx_actividad.Controls.Add(this.txt_nombreactividad);
+            this.gbx_actividad.Controls.Add(this.txt_desc);
+            this.gbx_actividad.Controls.Add(this.lbl_fecha);
+            this.gbx_actividad.Controls.Add(this.lbl_desc);
+            this.gbx_actividad.Controls.Add(this.txt_fecha);
+            this.gbx_actividad.Controls.Add(this.txt_cel);
+            this.gbx_actividad.Controls.Add(this.lbl_cantestudiantes);
+            this.gbx_actividad.Controls.Add(this.lbl_cel);
+            this.gbx_actividad.Controls.Add(this.txt_cantestudiantes);
+            this.gbx_actividad.Controls.Add(this.txt_merch);
+            this.gbx_actividad.Controls.Add(this.lbl_merch);
+            this.gbx_actividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbx_actividad.ForeColor = System.Drawing.Color.Teal;
+            this.gbx_actividad.Location = new System.Drawing.Point(670, 69);
+            this.gbx_actividad.Name = "gbx_actividad";
+            this.gbx_actividad.Size = new System.Drawing.Size(289, 392);
+            this.gbx_actividad.TabIndex = 49;
+            this.gbx_actividad.TabStop = false;
+            this.gbx_actividad.Text = "Actividad:";
+            // 
+            // lbl_nombreactividad
+            // 
+            this.lbl_nombreactividad.AutoSize = true;
+            this.lbl_nombreactividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombreactividad.Location = new System.Drawing.Point(30, 36);
+            this.lbl_nombreactividad.Name = "lbl_nombreactividad";
+            this.lbl_nombreactividad.Size = new System.Drawing.Size(69, 17);
+            this.lbl_nombreactividad.TabIndex = 28;
+            this.lbl_nombreactividad.Text = "Nombre:";
+            // 
+            // txt_nombreactividad
+            // 
+            this.txt_nombreactividad.AutoSize = true;
+            this.txt_nombreactividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombreactividad.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_nombreactividad.Location = new System.Drawing.Point(46, 53);
+            this.txt_nombreactividad.Name = "txt_nombreactividad";
+            this.txt_nombreactividad.Size = new System.Drawing.Size(54, 17);
+            this.txt_nombreactividad.TabIndex = 29;
+            this.txt_nombreactividad.Text = "label42";
+            // 
             // txt_desc
             // 
             this.txt_desc.AutoSize = true;
@@ -507,6 +531,16 @@
             this.txt_desc.TabIndex = 39;
             this.txt_desc.Text = "label32";
             // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.Location = new System.Drawing.Point(30, 88);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(149, 17);
+            this.lbl_fecha.TabIndex = 30;
+            this.lbl_fecha.Text = "Fecha programada:";
+            // 
             // lbl_desc
             // 
             this.lbl_desc.AutoSize = true;
@@ -516,6 +550,17 @@
             this.lbl_desc.Size = new System.Drawing.Size(98, 17);
             this.lbl_desc.TabIndex = 38;
             this.lbl_desc.Text = "Descripcion:";
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.AutoSize = true;
+            this.txt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_fecha.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_fecha.Location = new System.Drawing.Point(46, 105);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(54, 17);
+            this.txt_fecha.TabIndex = 31;
+            this.txt_fecha.Text = "label40";
             // 
             // txt_cel
             // 
@@ -528,6 +573,16 @@
             this.txt_cel.TabIndex = 37;
             this.txt_cel.Text = "label34";
             // 
+            // lbl_cantestudiantes
+            // 
+            this.lbl_cantestudiantes.AutoSize = true;
+            this.lbl_cantestudiantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cantestudiantes.Location = new System.Drawing.Point(30, 143);
+            this.lbl_cantestudiantes.Name = "lbl_cantestudiantes";
+            this.lbl_cantestudiantes.Size = new System.Drawing.Size(166, 17);
+            this.lbl_cantestudiantes.TabIndex = 32;
+            this.lbl_cantestudiantes.Text = "Cantidad estudiantes:";
+            // 
             // lbl_cel
             // 
             this.lbl_cel.AutoSize = true;
@@ -537,6 +592,17 @@
             this.lbl_cel.Size = new System.Drawing.Size(64, 17);
             this.lbl_cel.TabIndex = 36;
             this.lbl_cel.Text = "Celular:";
+            // 
+            // txt_cantestudiantes
+            // 
+            this.txt_cantestudiantes.AutoSize = true;
+            this.txt_cantestudiantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantestudiantes.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.txt_cantestudiantes.Location = new System.Drawing.Point(51, 160);
+            this.txt_cantestudiantes.Name = "txt_cantestudiantes";
+            this.txt_cantestudiantes.Size = new System.Drawing.Size(54, 17);
+            this.txt_cantestudiantes.TabIndex = 33;
+            this.txt_cantestudiantes.Text = "label38";
             // 
             // txt_merch
             // 
@@ -558,69 +624,6 @@
             this.lbl_merch.Size = new System.Drawing.Size(197, 17);
             this.lbl_merch.TabIndex = 34;
             this.lbl_merch.Text = "Merchandising disponible:";
-            // 
-            // txt_cantestudiantes
-            // 
-            this.txt_cantestudiantes.AutoSize = true;
-            this.txt_cantestudiantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantestudiantes.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_cantestudiantes.Location = new System.Drawing.Point(51, 160);
-            this.txt_cantestudiantes.Name = "txt_cantestudiantes";
-            this.txt_cantestudiantes.Size = new System.Drawing.Size(54, 17);
-            this.txt_cantestudiantes.TabIndex = 33;
-            this.txt_cantestudiantes.Text = "label38";
-            // 
-            // lbl_cantestudiantes
-            // 
-            this.lbl_cantestudiantes.AutoSize = true;
-            this.lbl_cantestudiantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cantestudiantes.Location = new System.Drawing.Point(30, 143);
-            this.lbl_cantestudiantes.Name = "lbl_cantestudiantes";
-            this.lbl_cantestudiantes.Size = new System.Drawing.Size(166, 17);
-            this.lbl_cantestudiantes.TabIndex = 32;
-            this.lbl_cantestudiantes.Text = "Cantidad estudiantes:";
-            // 
-            // txt_fecha
-            // 
-            this.txt_fecha.AutoSize = true;
-            this.txt_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_fecha.Location = new System.Drawing.Point(46, 105);
-            this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(54, 17);
-            this.txt_fecha.TabIndex = 31;
-            this.txt_fecha.Text = "label40";
-            // 
-            // lbl_fecha
-            // 
-            this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.Location = new System.Drawing.Point(30, 88);
-            this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(149, 17);
-            this.lbl_fecha.TabIndex = 30;
-            this.lbl_fecha.Text = "Fecha programada:";
-            // 
-            // txt_nombreactividad
-            // 
-            this.txt_nombreactividad.AutoSize = true;
-            this.txt_nombreactividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombreactividad.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_nombreactividad.Location = new System.Drawing.Point(46, 53);
-            this.txt_nombreactividad.Name = "txt_nombreactividad";
-            this.txt_nombreactividad.Size = new System.Drawing.Size(54, 17);
-            this.txt_nombreactividad.TabIndex = 29;
-            this.txt_nombreactividad.Text = "label42";
-            // 
-            // lbl_nombreactividad
-            // 
-            this.lbl_nombreactividad.AutoSize = true;
-            this.lbl_nombreactividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombreactividad.Location = new System.Drawing.Point(30, 36);
-            this.lbl_nombreactividad.Name = "lbl_nombreactividad";
-            this.lbl_nombreactividad.Size = new System.Drawing.Size(69, 17);
-            this.lbl_nombreactividad.TabIndex = 28;
-            this.lbl_nombreactividad.Text = "Nombre:";
             // 
             // InfoSolicitud
             // 

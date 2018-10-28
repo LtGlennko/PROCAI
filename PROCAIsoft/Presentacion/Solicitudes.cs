@@ -16,7 +16,7 @@ namespace Presentacion
     {
         BindingList<SolicitudInscripcionActividad> listaSIA = new BindingList<SolicitudInscripcionActividad>();
         private int idSeleccionado =0;
-        private SolicitudInscripcionActividad SIAseleccionado;
+        private SolicitudInscripcionActividad SIAseleccionado=null;
         public frmSolicitudes()
         {
             InitializeComponent();
@@ -33,11 +33,7 @@ namespace Presentacion
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            InfoSolicitud IS = new InfoSolicitud(this.SIAseleccionado);
-            IS.Show();
-        }
+        
 
         private void frmSolicitudes_Load(object sender, EventArgs e)
         {
@@ -56,6 +52,16 @@ namespace Presentacion
                 }
             }
 
+        }
+
+        private void btnDertalles_Click(object sender, EventArgs e)
+        {
+            if(SIAseleccionado==null)
+                this.SIAseleccionado = listaSIA[0];
+
+            InfoSolicitud IS = new InfoSolicitud(this.SIAseleccionado);
+            
+            IS.Show();
         }
     }
 }
