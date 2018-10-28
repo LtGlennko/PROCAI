@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public enum estado
     {
-        INICIAL, BUSQUEDA, AGREGAR, MODIFICAR
+        INICIAL, NUEVO, GUARDAR, BUSQUEDA, AGREGAR, MODIFICAR
     }
     public partial class frmRegYeditEncuestas : Form
     {
@@ -24,8 +24,8 @@ namespace Presentacion
         private Pregunta preg1;
         private Pregunta preg2;
         private Pregunta preg3;
-        private Pregunta preg4;
-        //las preguntas para recorgerlas 
+        private Pregunta preg4;//las preguntas para recorgerlas 
+        private bool flagGrupo;//para saber si tenemos que registar el guia o no
         private BindingList<Encuesta> listaEncuestas; //para el datagridview
         private int idGuia;
         public frmRegYeditEncuestas(Guia g)
@@ -58,7 +58,7 @@ namespace Presentacion
                 //definir preg1, preg2, preg3 y preg4
                 if (preguntasSel.Count < 4)
                 {
-                    MessageBox.Show("El tipo de actividad tiene menos de 5 preguntas relacionadas");
+                    MessageBox.Show("El tipo de actividad tiene menos de 4 preguntas relacionadas");
                     return;
                 }
 
@@ -72,10 +72,12 @@ namespace Presentacion
                 grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
 
-                lblTipoEncuesta.Text = "Tipo de actividad: " + grupoSeleccionado.Actividad.TipoActividad.Nombre;
+                txtActividad.Text = grupoSeleccionado.Actividad.TipoActividad.Nombre;
 
             }
             txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
+            txtGuia.Text = grupoSeleccionado.GuiaEvaluado.NombresYapellidos.ToString();
+            txtColegio.Text = grupoSeleccionado.Colegio.Nombre.ToString();
             dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
 
         }
@@ -92,7 +94,7 @@ namespace Presentacion
         {
             estadoComponentes(estado.AGREGAR);
             encuestaCreada = new Encuesta();
-            encuestaCreada.setGrupo(grupoSeleccionado);
+            
 
             if (existeSeleccionado(grpP1))
             {
@@ -131,6 +133,8 @@ namespace Presentacion
                 grpP4.ForeColor = Color.Red;
             }
 
+            if (flagGrupo == true) encuestaCreada.setGrupo(grupoSeleccionado);
+            //else flagGrupo == false : como registar y assignar el nuevo grupo ?
             if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red)
             {
                 MessageBox.Show("Tiene que llenar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -142,14 +146,13 @@ namespace Presentacion
 
             else
             {
-                listaEncuestas.Add(encuestaCreada);
-                dgvEncuestas.DataSource = listaEncuestas;
-                //Inserto encuesta en la base de datos
-                EncuestaBL encuestaBL = new EncuestaBL();
-                if (encuestaBL.registrarEncuesta(encuestaCreada, idGuia))
-                    MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (txtColegio.Text == "" || txtNumero.Text == "" || txtActividad.Text == "" || txtGuia.Text == "") MessageBox.Show("Tiene que llenar las informaciones del grupo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    listaEncuestas.Add(encuestaCreada);
+                    dgvEncuestas.DataSource = listaEncuestas;
+                    
+                }
             }
 
 
@@ -236,12 +239,37 @@ namespace Presentacion
             grpP4.Text = "Pregunta 4: " + pregun4.Enunciado;
 
             //SET LAS CALIFICACIONES
+            limpiarRadioBottones();
+            if (E.CalificacionP1 == 1) rdBtnP1_1.Checked = true;
+            else if (E.CalificacionP1 == 2) rdBtnP1_2.Checked = true;
+            else if (E.CalificacionP1 == 3) rdBtnP1_3.Checked = true;
+            else if (E.CalificacionP1 == 4) rdBtnP1_4.Checked = true;
+            else if (E.CalificacionP1 == 5) rdBtnP1_5.Checked = true;
 
-            // Y LA ACTIVIDAD lblTipoEncuesta.Text = "Tipo de actividad: " + grupoSeleccionado.Actividad.TipoActividad.Nombre;
+            if (E.CalificacionP2 == 1) rdBtnP2_1.Checked = true;
+            else if (E.CalificacionP2 == 2) rdBtnP2_2.Checked = true;
+            else if (E.CalificacionP2 == 3) rdBtnP2_3.Checked = true;
+            else if (E.CalificacionP2 == 4) rdBtnP2_4.Checked = true;
+            else if (E.CalificacionP2 == 5) rdBtnP2_5.Checked = true;
 
-        
-        txtNumero.Text = E.IdGrupoPerteneciente.ToString();
-        dateEncuentra.Value = E.FechaProgramada;
+            if (E.CalificacionP3 == 1) rdBtnP3_1.Checked = true;
+            else if (E.CalificacionP3 == 2) rdBtnP3_2.Checked = true;
+            else if (E.CalificacionP3 == 3) rdBtnP3_3.Checked = true;
+            else if (E.CalificacionP3 == 4) rdBtnP3_4.Checked = true;
+            else if (E.CalificacionP3 == 5) rdBtnP3_5.Checked = true;
+
+            if (E.CalificacionP4 == 1) rdBtnP4_1.Checked = true;
+            else if (E.CalificacionP4 == 2) rdBtnP4_2.Checked = true;
+            else if (E.CalificacionP4 == 3) rdBtnP4_3.Checked = true;
+            else if (E.CalificacionP4 == 4) rdBtnP4_4.Checked = true;
+            else if (E.CalificacionP4 == 5) rdBtnP4_5.Checked = true;
+            
+            // Y El GRUPO
+            txtNumero.Text = E.IdGrupoPerteneciente.ToString();
+            txtActividad.Text = E.GrupoPerteneciente.Actividad.TipoActividad.ToString();
+            txtColegio.Text = E.GrupoPerteneciente.Colegio.Nombre.ToString();
+            txtGuia.Text = E.GrupoPerteneciente.GuiaEvaluado.NombresYapellidos.ToString();
+            dateEncuentra.Value = E.FechaProgramada;
         }
 
 
@@ -251,6 +279,9 @@ namespace Presentacion
             {
                 case estado.INICIAL:
                     txtNumero.Enabled = false;
+                    txtActividad.Enabled = false;
+                    txtColegio.Enabled = false;
+                    txtGuia.Enabled = false;
                     grpP1.Enabled = false;
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
@@ -258,11 +289,55 @@ namespace Presentacion
                     dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = false;
                     btnModificar.Enabled = false;
-                    btnBusca.Enabled = true;
+                    btnBusca.Enabled = false;
                     button1.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    btnNuevo.Enabled = true;
+                    flagGrupo = false;
+                    break;
+
+                case estado.NUEVO:
+                    txtNumero.Enabled = true;
+                    txtActividad.Enabled = true;
+                    txtColegio.Enabled = true;
+                    txtGuia.Enabled = true;
+                    grpP1.Enabled = true;
+                    grpP2.Enabled = true;
+                    grpP3.Enabled = true;
+                    grpP4.Enabled = true;
+                    dateEncuentra.Enabled = true;
+                    btnAgregar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnBusca.Enabled = true;
+                    button1.Enabled = true;
+                    btnGuardar.Enabled = true;
+                    btnNuevo.Enabled = true;
+                    flagGrupo = false;
+                    limpiarCampos();
+                    break;
+
+                case estado.GUARDAR:
+                    txtNumero.Enabled = false;
+                    txtActividad.Enabled = false;
+                    txtColegio.Enabled = false;
+                    txtGuia.Enabled = false;
+                    grpP1.Enabled = false;
+                    grpP2.Enabled = false;
+                    grpP3.Enabled = false;
+                    grpP4.Enabled = false;
+                    dateEncuentra.Enabled = false;
+                    btnAgregar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnBusca.Enabled = false;
+                    button1.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnNuevo.Enabled = true;
                     break;
                 case estado.BUSQUEDA:
                     txtNumero.Enabled = false;
+                    txtActividad.Enabled = false;
+                    txtColegio.Enabled = false;
+                    txtGuia.Enabled = false;
                     grpP1.Enabled = true;
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
@@ -272,10 +347,17 @@ namespace Presentacion
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
-                    //limpiarCampos();
+                    btnGuardar.Enabled = true;
+                    btnNuevo.Enabled = true;
+                    flagGrupo = true;
+                    limpiarCampos();
+                    //anadir listEncuesta = null ?
                     break;
                 case estado.MODIFICAR:
                     txtNumero.Enabled = false;
+                    txtActividad.Enabled = false;
+                    txtColegio.Enabled = false;
+                    txtGuia.Enabled = false;
                     grpP1.Enabled = true;
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
@@ -285,10 +367,15 @@ namespace Presentacion
                     btnModificar.Enabled = true;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnNuevo.Enabled = true;
                     break;
 
                 case estado.AGREGAR:
                     txtNumero.Enabled = false;
+                    txtActividad.Enabled = false;
+                    txtColegio.Enabled = false;
+                    txtGuia.Enabled = false;
                     grpP1.Enabled = false;
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
@@ -298,6 +385,8 @@ namespace Presentacion
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
+                    btnGuardar.Enabled = true;
+                    btnNuevo.Enabled = false;
                     break;
             }
         }
@@ -305,14 +394,70 @@ namespace Presentacion
         public void limpiarCampos()
         {
             txtNumero.Text = "";
+            txtActividad.Text = "";
+            txtColegio.Text = "";
+            txtGuia.Text = "";
+
             dateEncuentra.Value = DateTime.Now;
-            grpP1.Controls.Clear();
-            grpP2.Controls.Clear();
-            grpP3.Controls.Clear();
-            grpP4.Controls.Clear();
+
+            grpP1.Text = "Pregunta 1: ";
+            grpP2.Text = "Pregunta 2: ";
+            grpP3.Text = "Pregunta 3: ";
+            grpP4.Text = "Pregunta 4: ";
+
+            limpiarRadioBottones();
         }
 
+        public void limpiarRadioBottones()
+        {
+            rdBtnP1_1.Checked = false;
+            rdBtnP1_2.Checked = false;
+            rdBtnP1_3.Checked = false;
+            rdBtnP1_4.Checked = false;
+            rdBtnP1_5.Checked = false;
+            rdBtnP2_1.Checked = false;
+            rdBtnP2_2.Checked = false;
+            rdBtnP2_3.Checked = false;
+            rdBtnP2_4.Checked = false;
+            rdBtnP2_5.Checked = false;
+            rdBtnP3_1.Checked = false;
+            rdBtnP3_2.Checked = false;
+            rdBtnP3_3.Checked = false;
+            rdBtnP3_4.Checked = false;
+            rdBtnP3_5.Checked = false;
+            rdBtnP4_1.Checked = false;
+            rdBtnP4_2.Checked = false;
+            rdBtnP4_3.Checked = false;
+            rdBtnP4_4.Checked = false;
+            rdBtnP4_5.Checked = false;
+        }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            estadoComponentes(estado.NUEVO);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+             
+            estadoComponentes(estado.GUARDAR);
+
+            // verificar si flag = true o false -> si false, tenemos que guardarlo...
+
+            EncuestaBL encuestaBL = new EncuestaBL();
+            if (listaEncuestas == null) MessageBox.Show("No hay encuentra para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                foreach (Encuesta E in listaEncuestas)
+                {
+                    if (encuestaBL.registrarEncuesta(E, idGuia))
+                        //este mensaje va a ponerse 3 veces en seguida si hay 3 encuestas... como hacer solamente uno ?
+                        MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
 
