@@ -55,7 +55,7 @@ namespace Presentacion
             {
                 grupoSeleccionado = bg.getGrupoSel();
                 BindingList<Pregunta> preguntasSel = grupoSeleccionado.Actividad.TipoActividad.Preguntas;
-                //definir preg1, preg2, preg3 y preg4 
+                //definir preg1, preg2, preg3 y preg4
                 if (preguntasSel.Count < 4)
                 {
                     MessageBox.Show("El tipo de actividad tiene menos de 5 preguntas relacionadas");

@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalificacionPXEDA.cs" />
     <Compile Include="CargoDA.cs" />
     <Compile Include="ColegioDA.cs" />
     <Compile Include="DBManager.cs" />
