@@ -51,6 +51,7 @@
     <Compile Include="SolicitudInscripcionBL.cs" />
     <Compile Include="TipoActividadBL.cs" />
     <Compile Include="TipoProcesoAdmisionBL.cs" />
+    <Compile Include="TrabajadorOCAIBL.cs" />
     <Compile Include="UsuarioBL.cs" />
   </ItemGroup>
   <ItemGroup>

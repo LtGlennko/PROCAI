@@ -76,6 +76,7 @@
     <Compile Include="SolicitudInscripcionDA.cs" />
     <Compile Include="TipoActividadDA.cs" />
     <Compile Include="TipoProcesoAdmisionDA.cs" />
+    <Compile Include="TrabajadorOCAIDA.cs" />
     <Compile Include="UsuarioDA.cs" />
   </ItemGroup>
   <ItemGroup>

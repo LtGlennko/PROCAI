@@ -39,6 +39,7 @@
             this.NombresYapellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jefe = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,10 +71,11 @@
             this.FechaCreacion,
             this.NombresYapellidos,
             this.NombreCuenta,
-            this.NivelPermiso});
+            this.NivelPermiso,
+            this.Jefe});
             this.dvgUsuarios.Location = new System.Drawing.Point(34, 62);
             this.dvgUsuarios.Name = "dvgUsuarios";
-            this.dvgUsuarios.Size = new System.Drawing.Size(495, 274);
+            this.dvgUsuarios.Size = new System.Drawing.Size(580, 274);
             this.dvgUsuarios.TabIndex = 2;
             this.dvgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgUsuarios_CellContentClick);
             this.dvgUsuarios.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dvgUsuarios_CellValidating);
@@ -83,7 +85,7 @@
             this.lblLeyenda.AutoSize = true;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.lblLeyenda.ForeColor = System.Drawing.Color.Teal;
-            this.lblLeyenda.Location = new System.Drawing.Point(543, 87);
+            this.lblLeyenda.Location = new System.Drawing.Point(569, 138);
             this.lblLeyenda.Name = "lblLeyenda";
             this.lblLeyenda.Size = new System.Drawing.Size(97, 78);
             this.lblLeyenda.TabIndex = 9;
@@ -94,7 +96,7 @@
             this.lblDescLeyenda.AutoSize = true;
             this.lblDescLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.lblDescLeyenda.ForeColor = System.Drawing.Color.Teal;
-            this.lblDescLeyenda.Location = new System.Drawing.Point(543, 67);
+            this.lblDescLeyenda.Location = new System.Drawing.Point(548, 26);
             this.lblDescLeyenda.Name = "lblDescLeyenda";
             this.lblDescLeyenda.Size = new System.Drawing.Size(55, 13);
             this.lblDescLeyenda.TabIndex = 10;
@@ -156,6 +158,12 @@
             this.NivelPermiso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.NivelPermiso.Width = 90;
             // 
+            // Jefe
+            // 
+            this.Jefe.HeaderText = "Jefe";
+            this.Jefe.Name = "Jefe";
+            this.Jefe.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // Gestionar_permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombresYapellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn NivelPermiso;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Jefe;
     }
 }

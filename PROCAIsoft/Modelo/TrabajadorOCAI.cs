@@ -15,6 +15,15 @@ namespace Modelo
         private int telefonoOfi;
         private int celularOfi;
         private string correOfi;
+        public TrabajadorOCAI(Usuario usu, DateTime fechaIngreso, int telefonoOfi, int celularOfi, string correOfi) : base(usu.DNI1, usu.Nombres, usu.ApellidoPaterno, usu.ApellidoMaterno, usu.Celular, usu.Sexo, usu.CorreoElectronico, usu.FechaCreacion, usu.NivelPermiso)
+        {
+            IdTrabajadorOCAI = ++i;
+            this.fechaIngreso = fechaIngreso;
+            this.telefonoOfi = telefonoOfi;
+            this.celularOfi = celularOfi;
+            this.correOfi = correOfi;
+            this.setCuenta(usu.CuentaUsuario);
+        }
 
         public TrabajadorOCAI(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaCreacion, int nivelPermiso, DateTime fechaIngreso, int telefonoOfi, int celularOfi, string correOfi) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico, fechaCreacion, nivelPermiso)
         {

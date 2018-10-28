@@ -27,12 +27,12 @@ namespace Presentacion
         private Pregunta preg4;
         //las preguntas para recorgerlas 
         private BindingList<Encuesta> listaEncuestas; //para el datagridview
-        private int idUsu;
-        public frmRegYeditEncuestas(Usuario usu)
+        private int idGuia;
+        public frmRegYeditEncuestas(Guia g)
         {
             InitializeComponent();
             estadoComponentes(estado.INICIAL);
-            idUsu = usu.IdUsuario1;
+            idGuia = g.IdGuia1;
             dgvEncuestas.AutoGenerateColumns = false;
             listaEncuestas = new BindingList<Encuesta>();
 
@@ -146,7 +146,7 @@ namespace Presentacion
                 dgvEncuestas.DataSource = listaEncuestas;
                 //Inserto encuesta en la base de datos
                 EncuestaBL encuestaBL = new EncuestaBL();
-                if (encuestaBL.registrarEncuesta(encuestaCreada, idUsu))
+                if (encuestaBL.registrarEncuesta(encuestaCreada, idGuia))
                     MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -210,7 +210,7 @@ namespace Presentacion
                 dgvEncuestas.DataSource = listaEncuestas;
                 //Inserto encuesta en la base de datos
                 EncuestaBL encuestaBL = new EncuestaBL();
-                if (encuestaBL.modificarEncuesta(encuestaModificada, idUsu))
+                if (encuestaBL.modificarEncuesta(encuestaModificada, idGuia))
                     MessageBox.Show("Modificada con éxito");
                 else
                     MessageBox.Show("Error al modificar");

@@ -15,6 +15,8 @@ namespace Presentacion
     public partial class Login : Form
     {
         private UsuarioBL usuarioBL;
+        private GuiaBL guiaBL;
+        private TrabajadorOCAIBL trabajadorOCAIBL;
         private Usuario usuarioBuscado;
         private static int numIntentos = 3;
 
@@ -23,6 +25,8 @@ namespace Presentacion
         public Login()
         {
             usuarioBL = new UsuarioBL();
+            guiaBL = new GuiaBL();
+            trabajadorOCAIBL = new TrabajadorOCAIBL();
             InitializeComponent();
         }
 
@@ -62,8 +66,13 @@ namespace Presentacion
 
             if (usuarioBuscado.NivelPermiso == 2)
             {
-                Guia g = Guia
-                InicioGuia IE = new InicioGuia(usuarioBuscado);
+                Guia g = guiaBL.crearGuia(usuarioBuscado);
+                if (g == null)
+                {
+                    MessageBox.Show("Error en la base de datos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                InicioGuia IE = new InicioGuia(g);
                 IE.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IE.ShowDialog() == DialogResult.OK)
@@ -76,7 +85,13 @@ namespace Presentacion
 
             if (usuarioBuscado.NivelPermiso == 3)
             {
-                InicioAdministrativo IA = new InicioAdministrativo(usuarioBuscado);
+                TrabajadorOCAI t = trabajadorOCAIBL.crearTrabajadorOCAI(usuarioBuscado);
+                if (t == null)
+                {
+                    MessageBox.Show("Error en la base de datos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                InicioAdministrativo IA = new InicioAdministrativo(t);
                 IA.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IA.ShowDialog() == DialogResult.OK)
@@ -88,7 +103,13 @@ namespace Presentacion
 
             if (usuarioBuscado.NivelPermiso == 4)
             {
-                InicioEjecutivo IG = new InicioEjecutivo(usuarioBuscado);
+                TrabajadorOCAI t = trabajadorOCAIBL.crearTrabajadorOCAI(usuarioBuscado);
+                if (t == null)
+                {
+                    MessageBox.Show("Error en la base de datos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                InicioEjecutivo IG = new InicioEjecutivo(t);
                 IG.StartPosition = FormStartPosition.CenterScreen;
                 this.Visible = false;
                 if (IG.ShowDialog() == DialogResult.OK)

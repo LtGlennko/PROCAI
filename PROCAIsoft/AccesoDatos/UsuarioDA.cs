@@ -59,8 +59,8 @@ namespace AccesoDatos
                 Cuenta cue = new Cuenta(ultimaConexion, nombreUsuario, contrasena);
                 //Asigamos cuenta al usuario
                 usu.setCuenta(cue);
-                //Agregamos el usuario a la lista
-                usuarios.Add(usu);
+                //Agregamos el usuario a la lista solo si es guia, ejecutivo o administrativo
+                if(usu.NivelPermiso >= 2) usuarios.Add(usu);
             }
             con.Close();
             return usuarios;

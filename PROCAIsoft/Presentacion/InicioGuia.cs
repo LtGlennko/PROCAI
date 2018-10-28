@@ -13,16 +13,16 @@ namespace Presentacion
 {
     public partial class InicioGuia : Form
     {
-        private Usuario usuGuia;
+        private Guia guia;
         public InicioGuia()
         {
             InitializeComponent();
         }
-        public InicioGuia(Usuario usu)
+        public InicioGuia(Guia g)
         {
             InitializeComponent();
-            usuGuia = usu;
-            lblNombreUsu.Text += usu.NombreCuenta;
+            guia = g;
+            lblNombreUsu.Text += guia.NombreCuenta;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace Presentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            frmRegYeditEncuestas R = new frmRegYeditEncuestas(usuGuia);
+            frmRegYeditEncuestas R = new frmRegYeditEncuestas(guia);
             this.Visible = false;
             R.StartPosition = FormStartPosition.CenterScreen;
             if (R.ShowDialog() == DialogResult.OK)

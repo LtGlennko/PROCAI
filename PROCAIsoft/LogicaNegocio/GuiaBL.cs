@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AccesoDatos;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +10,15 @@ namespace LogicaNegocio
 {
     public class GuiaBL
     {
-        private GuiaBL gUiaBL;
-
+        private GuiaDA guiaDA;
         public GuiaBL()
         {
-            gUiaBL = new GuiaBL();
+            guiaDA = new GuiaDA();
         }
 
-        public GuiaBL crearGuia(UsuarioBL u)
+        public Guia crearGuia(Usuario u)
         {
-            //return 
+            return guiaDA.crearGuia(u);
         }
     }
 }

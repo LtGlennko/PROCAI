@@ -8,59 +8,56 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos
 {
-    public class GuiaDA
+    public class TrabajadorOCAIDA
     {
         private MySqlConnection con;
         MySqlCommand comando;
         string sql;
         //Este metodo recibe como parametro de entrada un usuario y crea un nuevo guia usando las características de este
-        public Guia crearGuia(Usuario usu)
+        public TrabajadorOCAI crearTrabajadorOCAI(Usuario usu)
         {
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
             comando = new MySqlCommand();
-            sql = "SELECT G.tipoguia, T.fechaIngreso, T.telefonoOfi, T.celularOfi, T.correOfi, C.IdCargo, C.NombreCargo " +
-                "FROM Guia G, TrabajadorOCAI T, Cargo C " +
-                "WHERE G.IdGuia = T.IdTrabajadorOCAI AND C.IdCargo = T.IdCargo AND IdGuia = " + usu.IdUsuario1 + ";";
+            sql = "SELECT T.fechaIngreso, T.telefonoOfi, T.celularOfi, T.correOfi, C.IdCargo, C.NombreCargo " +
+                "FROM TrabajadorOCAI T, Cargo C " +
+                "WHERE C.IdCargo = T.IdCargo AND IdTrabajadorOCAI = " + usu.IdUsuario1 + ";";
             comando.CommandText = sql;
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();
             try
             {
                 lector.Read();
-                //Lectura de datos del guía
-                string tipoStr = lector.GetString("tipoGuia");
-                TipoGuia tipo = TipoGuia.Inscriptor;
-                if (tipoStr == "Expositor") tipo = TipoGuia.Expositor;
+                //Lectura de datos del trabajadorOCAI
                 DateTime fechaIn = lector.GetDateTime("fechaIngreso");
                 int tlfOfi = 0;
-                if (!lector.IsDBNull(2)) tlfOfi = lector.GetInt32("telefonoOfi");
+                if (!lector.IsDBNull(1)) tlfOfi = lector.GetInt32("telefonoOfi");
                 int celOfi = 0;
-                if (!lector.IsDBNull(3)) celOfi = lector.GetInt32("celularOfi");
+                if (!lector.IsDBNull(2)) celOfi = lector.GetInt32("celularOfi");
                 string corOfi = "";
-                if (!lector.IsDBNull(4)) corOfi = lector.GetString("correOfi");
-                //Creacion del guia
-                Guia g = new Guia(usu, fechaIn, tlfOfi, celOfi, corOfi, tipo);
-                g.IdGuia1 = g.IdTrabajadorOCAI1 = usu.IdUsuario1;
+                if (!lector.IsDBNull(3)) corOfi = lector.GetString("correOfi");
+                //Creacion del trabajadorOCAI
+                TrabajadorOCAI t = new TrabajadorOCAI(usu, fechaIn, tlfOfi, celOfi, corOfi);
+                t.IdTrabajadorOCAI1 = usu.IdUsuario1;
                 //Lectura de datos su cargo
                 int idCarg = lector.GetInt32("IdCargo");
                 string nomCarg = lector.GetString("NombreCargo");
-                if (nomCarg != "Guia")
+                if ((usu.NivelPermiso == 3 && nomCarg != "Administrativo") || (usu.NivelPermiso == 4 && nomCarg != "Ejecutivo"))
                 {
-                    //En caso el guia no presente el cargo correcto
+                    //En caso el trabajadorOCAI no presente el cargo correcto
                     con.Close();
                     return null;
                 }
                 Cargo c = new Cargo(nomCarg);
                 c.IdCargo1 = idCarg;
                 //Asignacion del cargo
-                g.Cargo = c;
+                t.Cargo = c;
                 con.Close();
-                return g;
+                return t;
             }
             catch (Exception)
             {
-                //En caso no haya leido bien los datos del guia
+                //En caso no haya leido bien los datos del trabajadorOCAI
                 con.Close();
                 return null;
             }

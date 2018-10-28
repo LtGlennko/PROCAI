@@ -20,7 +20,7 @@ namespace Modelo
             this.tipoGuia = tipoGuia;
         }
 
-        public Guia(Usuario usu, DateTime fechaIngreso, int telefonoOfi, int celularOfi, string correOfi, TipoGuia tipoGuia) : base(usu.DNI1, usu.Nombres, usu.ApellidoPaterno, usu.ApellidoMaterno, usu.Celular, usu.Sexo, usu.CorreoElectronico, usu.FechaCreacion, usu.NivelPermiso, fechaIngreso, telefonoOfi, celularOfi, correOfi)
+        public Guia(Usuario usu, DateTime fechaIngreso, int telefonoOfi, int celularOfi, string correOfi, TipoGuia tipoGuia) : base(usu, fechaIngreso, telefonoOfi, celularOfi, correOfi)
         {
             IdGuia = ++i;
             this.tipoGuia = tipoGuia;
