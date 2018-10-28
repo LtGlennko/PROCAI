@@ -140,6 +140,64 @@ namespace Presentacion
 
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            frmSolicitudes s = new frmSolicitudes();
+            s.StartPosition = FormStartPosition.CenterScreen;
+            this.Visible = false;
+            if (s.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmProcesoAdm FP = new frmProcesoAdm();
+            FP.StartPosition = FormStartPosition.CenterScreen;
+            this.Visible = false;
+            if (FP.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
+        }
+
+        private void btnGestOrientadores_Click(object sender, EventArgs e)
+        {
+            GestionOrientadores GO = new GestionOrientadores();
+            GO.StartPosition = FormStartPosition.CenterScreen;
+            this.Visible = false;
+            if (GO.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
+        }
+
+        private void btnGestColegios_Click(object sender, EventArgs e)
+        {
+            GestCol GS = new GestCol();
+            GS.SetDesktopLocation(100, 100);
+            this.Visible = false;
+            if (GS.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
+        }
+
+        private void btnGestCalendario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void mnuGestionarStock_Click(object sender, EventArgs e)
         //{
         //    if (gestionarStock == null)
