@@ -42,7 +42,7 @@ namespace AccesoDatos
                 //Lectura de datos su cargo
                 int idCarg = lector.GetInt32("IdCargo");
                 string nomCarg = lector.GetString("NombreCargo");
-                if ((usu.NivelPermiso == 3 && nomCarg != "Administrativo") || (usu.NivelPermiso == 4 && nomCarg != "Ejecutivo"))
+                if ((usu.NivelPermiso == 2 && nomCarg != "Guia") || (usu.NivelPermiso == 3 && nomCarg != "Administrativo") || (usu.NivelPermiso == 4 && nomCarg != "Ejecutivo"))
                 {
                     //En caso el trabajadorOCAI no presente el cargo correcto
                     con.Close();

@@ -38,8 +38,7 @@
             this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombresYapellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NivelPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jefe = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.cboCargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,13 +70,11 @@
             this.FechaCreacion,
             this.NombresYapellidos,
             this.NombreCuenta,
-            this.NivelPermiso,
-            this.Jefe});
+            this.cboCargo});
             this.dvgUsuarios.Location = new System.Drawing.Point(34, 62);
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.Size = new System.Drawing.Size(580, 274);
             this.dvgUsuarios.TabIndex = 2;
-            this.dvgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgUsuarios_CellContentClick);
             this.dvgUsuarios.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dvgUsuarios_CellValidating);
             // 
             // lblLeyenda
@@ -137,7 +134,7 @@
             // NombresYapellidos
             // 
             this.NombresYapellidos.DataPropertyName = "NombresYapellidos";
-            this.NombresYapellidos.HeaderText = "Datos";
+            this.NombresYapellidos.HeaderText = "Nombres y apellidos";
             this.NombresYapellidos.Name = "NombresYapellidos";
             this.NombresYapellidos.ReadOnly = true;
             this.NombresYapellidos.Width = 150;
@@ -150,19 +147,11 @@
             this.NombreCuenta.ReadOnly = true;
             this.NombreCuenta.Width = 110;
             // 
-            // NivelPermiso
+            // cboCargo
             // 
-            this.NivelPermiso.DataPropertyName = "NivelPermiso";
-            this.NivelPermiso.HeaderText = "Nivel de permiso";
-            this.NivelPermiso.Name = "NivelPermiso";
-            this.NivelPermiso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NivelPermiso.Width = 90;
-            // 
-            // Jefe
-            // 
-            this.Jefe.HeaderText = "Jefe";
-            this.Jefe.Name = "Jefe";
-            this.Jefe.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cboCargo.HeaderText = "Cargo";
+            this.cboCargo.Name = "cboCargo";
+            this.cboCargo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Gestionar_permisos
             // 
@@ -198,7 +187,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombresYapellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NivelPermiso;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Jefe;
+        private System.Windows.Forms.DataGridViewComboBoxColumn cboCargo;
     }
 }

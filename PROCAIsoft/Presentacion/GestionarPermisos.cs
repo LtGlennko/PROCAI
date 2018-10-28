@@ -14,16 +14,36 @@ namespace Presentacion
 {
     public partial class Gestionar_permisos : Form
     {
-        BindingList<Usuario> usuarios;
+        BindingList<TrabajadorOCAI> trabajadores;
         public Gestionar_permisos()
         {
             UsuarioBL usuarioBL = new UsuarioBL();
-            usuarios = usuarioBL.listarUsuarios();
-            List<Usuario> sortedUsu = usuarios.OrderBy(x => x.FechaCreacion).ToList();
-            sortedUsu.Reverse();
+            CargoBL cargoBL = new CargoBL();
+            BindingList<Usuario> usuarios = usuarioBL.listarUsuarios();
+            trabajadores = convertirUsuariosAtrabajadores(usuarios);
+            List<TrabajadorOCAI> sortedTrab = trabajadores.OrderBy(x => x.FechaCreacion).ToList();
+            sortedTrab.Reverse();
             InitializeComponent();
             dvgUsuarios.AutoGenerateColumns = false;
-            dvgUsuarios.DataSource = sortedUsu;
+            dvgUsuarios.DataSource = sortedTrab;
+            cboCargo.DataSource = cargoBL.listarCargos();
+            cboCargo.DisplayMember = "NombreCargo";
+            cboCargo.ValueMember = "IdCargo1";
+        }
+
+        private BindingList<TrabajadorOCAI> convertirUsuariosAtrabajadores(BindingList<Usuario> usuarios)
+        {
+            TrabajadorOCAIBL trabajadorOCAIBL = new TrabajadorOCAIBL();
+            BindingList<TrabajadorOCAI> trabajadores = new BindingList<TrabajadorOCAI>();
+            foreach(Usuario u in usuarios)
+            {
+                if(u.NivelPermiso >= 2)
+                {
+                    TrabajadorOCAI t = trabajadorOCAIBL.crearTrabajadorOCAI(u);
+                    trabajadores.Add(t);
+                }
+            }
+            return trabajadores;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,12 +60,6 @@ namespace Presentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Los cambios han sido guardados con éxito");
-        }
-
-
-        private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void nudNivel_ValueChanged(object sender, EventArgs e)
