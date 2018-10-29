@@ -38,17 +38,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtN = new System.Windows.Forms.TextBox();
-            this.txtP = new System.Windows.Forms.TextBox();
             this.txtD = new System.Windows.Forms.TextBox();
             this.txtPro = new System.Windows.Forms.TextBox();
             this.txtDis = new System.Windows.Forms.TextBox();
             this.txtDir = new System.Windows.Forms.TextBox();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtRuc = new System.Windows.Forms.TextBox();
             this.txtTelf = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cboTipoCol = new System.Windows.Forms.ComboBox();
+            this.cboPais = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -158,14 +158,6 @@
             this.txtN.TabIndex = 9;
             this.txtN.Text = "Bertolt Bretch";
             // 
-            // txtP
-            // 
-            this.txtP.Location = new System.Drawing.Point(170, 97);
-            this.txtP.Name = "txtP";
-            this.txtP.Size = new System.Drawing.Size(100, 20);
-            this.txtP.TabIndex = 10;
-            this.txtP.Text = "Perú";
-            // 
             // txtD
             // 
             this.txtD.Location = new System.Drawing.Point(170, 138);
@@ -197,14 +189,6 @@
             this.txtDir.Size = new System.Drawing.Size(100, 20);
             this.txtDir.TabIndex = 14;
             this.txtDir.Text = "Los Duraznos 167";
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(170, 295);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(100, 20);
-            this.txtTipo.TabIndex = 15;
-            this.txtTipo.Text = "Particular";
             // 
             // txtRuc
             // 
@@ -253,23 +237,56 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cboTipoCol
+            // 
+            this.cboTipoCol.FormattingEnabled = true;
+            this.cboTipoCol.Items.AddRange(new object[] {
+            "Particular",
+            "Estatal"});
+            this.cboTipoCol.Location = new System.Drawing.Point(170, 295);
+            this.cboTipoCol.Name = "cboTipoCol";
+            this.cboTipoCol.Size = new System.Drawing.Size(121, 21);
+            this.cboTipoCol.TabIndex = 21;
+            this.cboTipoCol.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // cboPais
+            // 
+            this.cboPais.FormattingEnabled = true;
+            this.cboPais.Items.AddRange(new object[] {
+            "Perú",
+            "Ecuador",
+            "Brasil",
+            "Venezuela",
+            "Argentina",
+            "Estados Unidos",
+            "Cánada",
+            "Francia",
+            "España",
+            "Inglaterra",
+            "Rusia",
+            "Chile"});
+            this.cboPais.Location = new System.Drawing.Point(170, 97);
+            this.cboPais.Name = "cboPais";
+            this.cboPais.Size = new System.Drawing.Size(121, 21);
+            this.cboPais.TabIndex = 22;
+            // 
             // AgregarColegio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(398, 520);
+            this.Controls.Add(this.cboPais);
+            this.Controls.Add(this.cboTipoCol);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtTelf);
             this.Controls.Add(this.txtRuc);
-            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtDir);
             this.Controls.Add(this.txtDis);
             this.Controls.Add(this.txtPro);
             this.Controls.Add(this.txtD);
-            this.Controls.Add(this.txtP);
             this.Controls.Add(this.txtN);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -300,16 +317,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtN;
-        private System.Windows.Forms.TextBox txtP;
         private System.Windows.Forms.TextBox txtD;
         private System.Windows.Forms.TextBox txtPro;
         private System.Windows.Forms.TextBox txtDis;
         private System.Windows.Forms.TextBox txtDir;
-        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtRuc;
         private System.Windows.Forms.TextBox txtTelf;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cboTipoCol;
+        private System.Windows.Forms.ComboBox cboPais;
     }
 }

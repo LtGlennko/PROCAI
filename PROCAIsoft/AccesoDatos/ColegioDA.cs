@@ -73,5 +73,26 @@ namespace AccesoDatos
             return col;
         }
 
+        public bool actualizarColegio(Colegio colegio)
+        {
+            try
+            {
+                con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                comando = new MySqlCommand();
+                sql = "UPDATE Colegio SET RUC = '" + colegio.RUC1+"',nombre='"+colegio.Nombre+"',pais='"+colegio.Pais+"',departamento='"+colegio.Departamento+"',provincia='"+
+                    colegio.Provincia+"',direccion='"+colegio.Provincia+"',tipo'"+colegio.Tipo+"',telefonoContacto="+colegio.TelefonoContacto +"WHERE IdColegio="+colegio.IdColegio1;
+                comando.CommandText = sql;
+                comando.Connection = con;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

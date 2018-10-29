@@ -19,6 +19,7 @@ namespace Presentacion
         {
             InitializeComponent();
             cbl = new ColegioBL();
+            dgvCol.DataSource = cbl.listarColegios();
         }
 
         private void button1_Click(object sender, EventArgs e)

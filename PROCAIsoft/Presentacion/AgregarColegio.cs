@@ -26,12 +26,12 @@ namespace Presentacion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string nom = txtN.Text;
-            string pai = txtP.Text;
+            string pai = cboPais.SelectedText;
             string dep = txtD.Text;
             string pro = txtPro.Text;
             string dis = txtDis.Text;
             string dir = txtDir.Text;
-            string tipStr = txtTipo.Text;
+            string tipStr = cboTipoCol.SelectedText;
             TipoColegio tip;
             if (tipStr == "Estatal") tip = TipoColegio.Estatal;
             else tip = TipoColegio.Particular;
@@ -61,6 +61,16 @@ namespace Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             Dispose(true);
+        }
+
+        private void txtTipo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
