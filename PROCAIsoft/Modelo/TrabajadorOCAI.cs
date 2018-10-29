@@ -36,6 +36,7 @@ namespace Modelo
 
         public int IdTrabajadorOCAI1 { get => IdTrabajadorOCAI; set => IdTrabajadorOCAI = value; }
         public Cargo Cargo { get => cargo; set => cargo = value; }
+        public string NomCargo { get => cargo.NombreCargo; }
         public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public int TelefonoOfi { get => telefonoOfi; set => telefonoOfi = value; }
         public int CelularOfi { get => celularOfi; set => celularOfi = value; }

@@ -50,7 +50,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -75,14 +74,14 @@
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.Size = new System.Drawing.Size(580, 274);
             this.dvgUsuarios.TabIndex = 2;
-            this.dvgUsuarios.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dvgUsuarios_CellValidating);
+            this.dvgUsuarios.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dvgUsuarios_EditingControlShowing);
             // 
             // lblLeyenda
             // 
             this.lblLeyenda.AutoSize = true;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.lblLeyenda.ForeColor = System.Drawing.Color.Teal;
-            this.lblLeyenda.Location = new System.Drawing.Point(569, 138);
+            this.lblLeyenda.Location = new System.Drawing.Point(601, 119);
             this.lblLeyenda.Name = "lblLeyenda";
             this.lblLeyenda.Size = new System.Drawing.Size(97, 78);
             this.lblLeyenda.TabIndex = 9;
@@ -93,7 +92,7 @@
             this.lblDescLeyenda.AutoSize = true;
             this.lblDescLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.lblDescLeyenda.ForeColor = System.Drawing.Color.Teal;
-            this.lblDescLeyenda.Location = new System.Drawing.Point(548, 26);
+            this.lblDescLeyenda.Location = new System.Drawing.Point(620, 86);
             this.lblDescLeyenda.Name = "lblDescLeyenda";
             this.lblDescLeyenda.Size = new System.Drawing.Size(55, 13);
             this.lblDescLeyenda.TabIndex = 10;
@@ -110,7 +109,6 @@
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 49;
             this.label4.Text = "Atras";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox1
             // 
@@ -158,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(646, 412);
+            this.ClientSize = new System.Drawing.Size(710, 412);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDescLeyenda);
