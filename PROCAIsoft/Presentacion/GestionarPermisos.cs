@@ -15,6 +15,7 @@ namespace Presentacion
     public partial class Gestionar_permisos : Form
     {
         BindingList<TrabajadorOCAI> trabajadores;
+        BindingList<Cargo> cargos;
         public Gestionar_permisos()
         {
             UsuarioBL usuarioBL = new UsuarioBL();
@@ -26,27 +27,30 @@ namespace Presentacion
             InitializeComponent();
             dvgUsuarios.AutoGenerateColumns = false;
             dvgUsuarios.DataSource = sortedTrab;
-            cboCargo.AutoComplete = true;
-            cboCargo.DataSource = cargoBL.listarCargos();
-            //cboCargo.DataPropertyName = "NomCargo";
-            cboCargo.DisplayMember = "NombreCargo";
+            //cboCargo.AutoComplete = true;
+            cargos = cargoBL.listarCargos();
+            cboCargo.DataSource = cargos;
             cboCargo.ValueMember = "IdCargo1";
-            dvgUsuarios.Rows[0].Cells[3].Value = 1;
+            cboCargo.DisplayMember = "NombreCargo";
+            //dvgUsuarios.Rows[0].Cells[3].Value = "Ejecutivo";
             //Precargar los datos de los cargos por usuario
             //preasignarCargos(dvgUsuarios);
+            dvgUsuarios.Columns[4].ReadOnly = false;
         }
 
-        private void preasignarCargos(DataGridView dvgUsuarios)
-        {
-            DataGridViewComboBoxColumn column = (DataGridViewComboBoxColumn)
-                dvgUsuarios.Columns["cboCargo"];
-            foreach (DataGridViewRow r in dvgUsuarios.Rows)
-            {
-                TrabajadorOCAI t = (TrabajadorOCAI)r.DataBoundItem;
-                DataGridViewComboBoxCell cbo = (DataGridViewComboBoxCell)(r.Cells["cboCargo"]);
-                cbo.Value = 1;
-            }
-        }
+        //private void preasignarCargos(DataGridView dvgUsuarios)
+        //{
+        //    DataGridViewComboBoxColumn column = (DataGridViewComboBoxColumn)
+        //        dvgUsuarios.Columns["cboCargo"];
+        //    foreach (DataGridViewRow r in dvgUsuarios.Rows)
+        //    {
+        //        TrabajadorOCAI t = (TrabajadorOCAI)r.DataBoundItem;
+        //        DataGridViewComboBoxCell cbo = (DataGridViewComboBoxCell)(r.Cells["cboCargo"]);
+        //        //ComboBox c = (ComboBox)cbo as ComboBox;
+        //        //c.Sele
+        //        cbo.Value = 1;
+        //    }
+        //}
 
         private BindingList<TrabajadorOCAI> convertirUsuariosAtrabajadores(BindingList<Usuario> usuarios)
         {
@@ -81,58 +85,65 @@ namespace Presentacion
 
         private void dvgUsuarios_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            if(dvgUsuarios.CurrentCell.ColumnIndex == 3 && e.Control is ComboBox)
+            //dvgUsuarios.CancelEdit = true;
+            if (dvgUsuarios.CurrentCell.ColumnIndex == 3 && e.Control is ComboBox)
             {
                 ComboBox cbo = e.Control as ComboBox;
-                if(cbo != null)
+                if (cbo != null)
                 {
                     cbo.SelectedIndexChanged -= new EventHandler(cbo_SelectedIndexChanged);
-                    cbo.SelectedIndexChanged += new EventHandler(cbo_SelectedIndexChanged);                    
+                    cbo.SelectedIndexChanged += new EventHandler(cbo_SelectedIndexChanged);
                 }
             }
         }
 
-        void cbo_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void cbo_SelectedIndexChanged(object sender, EventArgs e)
+        {            
+            int idAntes = Int32.Parse(dvgUsuarios.CurrentRow.Cells[3].Value.ToString());
+            Cargo cargoAntes = cargos[idAntes - 1];
             ComboBox cbo = sender as ComboBox;
-            Cargo c = (Cargo)cbo.SelectedItem;
-            MessageBox.Show(c.NombreCargo);
+            if (cbo.SelectedItem != null)
+            {
+                Cargo cargoAhora = (Cargo)cbo.SelectedItem;
+                if(cargoAntes.IdCargo1 != cargoAhora.IdCargo1)
+                    MessageBox.Show(cargoAntes.NombreCargo + " vs " + cargoAhora.NombreCargo);
+                dvgUsuarios.CurrentRow.Cells[3].Value = cargoAhora.IdCargo1;
+            }
         }
 
-        //    private void dvgUsuarios_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        //private void dvgUsuarios_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        //{
+        //    if (e.ColumnIndex == 3)
         //    {
-        //        try
+        //        ComboBox cbo = sender as ComboBox;
+        //        Cargo cargoAntes = (Cargo)dvgUsuarios[e.ColumnIndex, e.RowIndex].Value;
+        //        Cargo cargoDespues = (Cargo)e.FormattedValue;
+        //        if (cargoAntes != cargoDespues)
         //        {
-        //            int nivelAntes = Int32.Parse(dvgUsuarios[e.ColumnIndex, e.RowIndex].Value.ToString());
-        //            int nivelDespues = Int32.Parse(e.FormattedValue.ToString());
-        //            if (nivelAntes != nivelDespues)
-        //            {
-        //                if (nivelDespues < 0 || nivelDespues > 5)
-        //                {
-        //                    MessageBox.Show("Nivel fuera del rango (1-5)", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //                    e.Cancel = true;
-        //                    return;
-        //                }
-        //                if (nivelDespues == 5 && nivelAntes < 3)
-        //                {
-        //                    MessageBox.Show("Solo un Administrativo o Ejecutivo puede ser Jefe", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //                    e.Cancel = true;
-        //                    return;
-        //                }
-        //            }
+        //            MessageBox.Show(cargoDespues.NombreCargo);
+        //            //if (nivelDespues < 0 || nivelDespues > 5)
+        //            //{
+        //            //    MessageBox.Show("Nivel fuera del rango (1-5)", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            //    e.Cancel = true;
+        //            //    return;
+        //            //}
+        //            //if (nivelDespues == 5 && nivelAntes < 3)
+        //            //{
+        //            //    MessageBox.Show("Solo un Administrativo o Ejecutivo puede ser Jefe", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            //    e.Cancel = true;
+        //            //    return;
+        //            //}
         //        }
-        //        catch
-        //        {
-
-        //        }
-        //        //if (nivelNuevo == 5 && int(nivelAnterior) < 3)
-        //        //{
-        //        //    MessageBox.Show("Solo un ejecutivo o un administrativo pueden ser jefes");
-        //        //    e.Cancel = true;
-        //        //    return;
-        //        //}                
-        //        //string username = ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NombreCuenta;
-        //        //MessageBox.Show("Nivel de permiso de usuario '" + username + "' cambiado a " + nivelNuevo);
+        //        else e.Cancel = true;
         //    }
+        //    //if (nivelNuevo == 5 && int(nivelAnterior) < 3)
+        //    //{
+        //    //    MessageBox.Show("Solo un ejecutivo o un administrativo pueden ser jefes");
+        //    //    e.Cancel = true;
+        //    //    return;
+        //    //}                
+        //    //string username = ((Usuario)dvgUsuarios.CurrentRow.DataBoundItem).NombreCuenta;
+        //    //MessageBox.Show("Nivel de permiso de usuario '" + username + "' cambiado a " + nivelNuevo);
+        //}
     }
 }

@@ -33,14 +33,28 @@ namespace Modelo
             this.celularOfi = celularOfi;
             this.correOfi = correOfi;
         }
-
+        private bool esJefe()
+        {
+            if (this.NivelPermiso == 5) return true;
+            return false;
+        }
+        private void volverJefe()
+        {
+            this.NivelPermiso = 5;
+        }
+        private void cambiarCargo(int nivPer)
+        {
+            Cargo.IdCargo1 = nivPer;
+        }
         public int IdTrabajadorOCAI1 { get => IdTrabajadorOCAI; set => IdTrabajadorOCAI = value; }
         public Cargo Cargo { get => cargo; set => cargo = value; }
         public string NomCargo { get => cargo.NombreCargo; }
+        public int IdCargo { get => cargo.IdCargo1; set => cambiarCargo(value); }
         public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public int TelefonoOfi { get => telefonoOfi; set => telefonoOfi = value; }
         public int CelularOfi { get => celularOfi; set => celularOfi = value; }
         public string CorreOfi { get => correOfi; set => correOfi = value; }
+        public bool EsJefe { get => esJefe(); set => volverJefe(); }
         public void setCargo(Cargo car)
         {
             this.cargo = car;

@@ -39,6 +39,7 @@
             this.NombresYapellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboCargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Jefe = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,8 @@
             this.FechaCreacion,
             this.NombresYapellidos,
             this.NombreCuenta,
-            this.cboCargo});
+            this.cboCargo,
+            this.Jefe});
             this.dvgUsuarios.Location = new System.Drawing.Point(34, 62);
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.Size = new System.Drawing.Size(580, 274);
@@ -147,9 +149,20 @@
             // 
             // cboCargo
             // 
+            this.cboCargo.AutoComplete = false;
+            this.cboCargo.DataPropertyName = "IdCargo";
             this.cboCargo.HeaderText = "Cargo";
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Jefe
+            // 
+            this.Jefe.DataPropertyName = "EsJefe";
+            this.Jefe.HeaderText = "Jefe";
+            this.Jefe.Name = "Jefe";
+            this.Jefe.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Jefe.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Jefe.Width = 30;
             // 
             // Gestionar_permisos
             // 
@@ -186,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombresYapellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
         private System.Windows.Forms.DataGridViewComboBoxColumn cboCargo;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Jefe;
     }
 }
