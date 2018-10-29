@@ -14,15 +14,17 @@ namespace Presentacion
     public partial class InicioJefe : Form
     {
         //BindingList<Usuario> usuarios;
+        private Usuario u;
         public InicioJefe(Usuario usu)
         {
             InitializeComponent();
+            u = usu;
             lblNombreUsu.Text += usu.NombreCuenta;
         }
 
         private void btnGestionarPermisos_Click(object sender, EventArgs e)
         {
-            Gestionar_permisos f = new Gestionar_permisos();
+            Gestionar_permisos f = new Gestionar_permisos(u);
             f.StartPosition = FormStartPosition.CenterScreen;
             this.Visible = false;
             if (f.ShowDialog() == DialogResult.OK)

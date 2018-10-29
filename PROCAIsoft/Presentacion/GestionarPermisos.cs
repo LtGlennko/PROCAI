@@ -16,12 +16,19 @@ namespace Presentacion
     {
         BindingList<TrabajadorOCAI> trabajadores;
         BindingList<Cargo> cargos;
-        public Gestionar_permisos()
+        GuiaBL guiaBL;
+        CargoBL cargoBL;
+        UsuarioBL usuarioBL;
+        public Gestionar_permisos(Usuario u)
         {
-            UsuarioBL usuarioBL = new UsuarioBL();
-            CargoBL cargoBL = new CargoBL();
+            guiaBL = new GuiaBL();
+            cargoBL = new CargoBL();
+            usuarioBL = new UsuarioBL();
             BindingList<Usuario> usuarios = usuarioBL.listarUsuarios();
             trabajadores = convertirUsuariosAtrabajadores(usuarios);
+            //Eliminar su propia cuenta
+            eliminarElemento(trabajadores, u.IdUsuario1);
+            //Ordenar lista por fecha de creación
             List<TrabajadorOCAI> sortedTrab = trabajadores.OrderBy(x => x.FechaCreacion).ToList();
             sortedTrab.Reverse();
             InitializeComponent();
@@ -35,7 +42,21 @@ namespace Presentacion
             //dvgUsuarios.Rows[0].Cells[3].Value = "Ejecutivo";
             //Precargar los datos de los cargos por usuario
             //preasignarCargos(dvgUsuarios);
+            chkJefe.TrueValue = "True";
+            chkJefe.FalseValue = "False";
             dvgUsuarios.Columns[4].ReadOnly = false;
+        }
+
+        private void eliminarElemento(BindingList<TrabajadorOCAI> trabajadores, int id)
+        {
+            foreach (TrabajadorOCAI t in trabajadores)
+            {
+                if (t.IdTrabajadorOCAI1 == id)
+                {
+                    trabajadores.Remove(t);
+                    return;
+                }
+            }
         }
 
         //private void preasignarCargos(DataGridView dvgUsuarios)
@@ -67,12 +88,6 @@ namespace Presentacion
             return trabajadores;
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            Dispose();
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Los cambios han sido guardados con éxito");
@@ -100,14 +115,49 @@ namespace Presentacion
         private void cbo_SelectedIndexChanged(object sender, EventArgs e)
         {            
             int idAntes = Int32.Parse(dvgUsuarios.CurrentRow.Cells[3].Value.ToString());
-            Cargo cargoAntes = cargos[idAntes - 1];
+            Cargo cargoAntes = cargoBuscado(cargos, idAntes);
             ComboBox cbo = sender as ComboBox;
-            if (cbo.SelectedItem != null)
+            if (cbo.SelectedItem != null && cargoAntes != null)
             {
                 Cargo cargoAhora = (Cargo)cbo.SelectedItem;
-                if(cargoAntes.IdCargo1 != cargoAhora.IdCargo1)
-                    MessageBox.Show(cargoAntes.NombreCargo + " vs " + cargoAhora.NombreCargo);
+                if (cargoAntes.IdCargo1 != cargoAhora.IdCargo1)
+                {
+                    MessageBox.Show("Antes: " + cargoAntes.NombreCargo + "\nAhora:  " + cargoAhora.NombreCargo);
+                    if(cargoAntes.NombreCargo == "Guia")
+                    {
+                        //guiaBL.EliminarGuia(dv)
+                    }
+                }
                 dvgUsuarios.CurrentRow.Cells[3].Value = cargoAhora.IdCargo1;
+            }
+        }
+
+        private Cargo cargoBuscado(BindingList<Cargo> cargos, int id)
+        {
+            foreach(Cargo c in cargos)
+            {
+                if(c.IdCargo1 == id)
+                    return c;
+            }
+            return null;
+        }
+
+        private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //dvgUsuarios.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            if(e.ColumnIndex == 3)
+            {
+                //Evento de desplegar combobox al dar click
+            }
+            if(e.ColumnIndex == 4)
+            {
+                DataGridViewCheckBoxCell chk = dvgUsuarios[e.ColumnIndex, e.RowIndex] as DataGridViewCheckBoxCell;
+                Boolean valor = Convert.ToBoolean(chk.Value);
+                if (valor)
+                    MessageBox.Show("False");
+                else
+                    MessageBox.Show("True");
+                dvgUsuarios.CurrentRow.Cells[4].Value = !valor;
             }
         }
 

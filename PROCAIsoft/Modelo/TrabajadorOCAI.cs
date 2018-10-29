@@ -38,9 +38,9 @@ namespace Modelo
             if (this.NivelPermiso == 5) return true;
             return false;
         }
-        private void volverJefe()
+        private void volverJefe(bool jefe)
         {
-            this.NivelPermiso = 5;
+            if(jefe) this.NivelPermiso = 5;
         }
         private void cambiarCargo(int nivPer)
         {
@@ -54,7 +54,7 @@ namespace Modelo
         public int TelefonoOfi { get => telefonoOfi; set => telefonoOfi = value; }
         public int CelularOfi { get => celularOfi; set => celularOfi = value; }
         public string CorreOfi { get => correOfi; set => correOfi = value; }
-        public bool EsJefe { get => esJefe(); set => volverJefe(); }
+        public bool EsJefe { get => esJefe(); set => volverJefe(value); }
         public void setCargo(Cargo car)
         {
             this.cargo = car;
