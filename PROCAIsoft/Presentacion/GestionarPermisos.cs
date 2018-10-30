@@ -39,11 +39,10 @@ namespace Presentacion
             cboCargo.DataSource = cargos;
             cboCargo.ValueMember = "IdCargo1";
             cboCargo.DisplayMember = "NombreCargo";
-            //dvgUsuarios.Rows[0].Cells[3].Value = "Ejecutivo";
             //Precargar los datos de los cargos por usuario
             //preasignarCargos(dvgUsuarios);
-            chkJefe.TrueValue = "True";
-            chkJefe.FalseValue = "False";
+            //chkJefe.TrueValue = "true";
+            //chkJefe.FalseValue = "false";
             dvgUsuarios.Columns[4].ReadOnly = false;
         }
 
@@ -101,6 +100,7 @@ namespace Presentacion
         private void dvgUsuarios_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             //dvgUsuarios.CancelEdit = true;
+            //MessageBox.Show("Fila que activo evento: " + dvgUsuarios.CurrentCell.RowIndex);
             if (dvgUsuarios.CurrentCell.ColumnIndex == 3 && e.Control is ComboBox)
             {
                 ComboBox cbo = e.Control as ComboBox;
@@ -117,7 +117,7 @@ namespace Presentacion
             int idAntes = Int32.Parse(dvgUsuarios.CurrentRow.Cells[3].Value.ToString());
             Cargo cargoAntes = cargoBuscado(cargos, idAntes);
             ComboBox cbo = sender as ComboBox;
-            if (cbo.SelectedItem != null && cargoAntes != null)
+            if (cbo.SelectedItem != null && cargoAntes != null && cbo.DataSource != null && cbo.ContainsFocus)
             {
                 Cargo cargoAhora = (Cargo)cbo.SelectedItem;
                 if (cargoAntes.IdCargo1 != cargoAhora.IdCargo1)
@@ -144,20 +144,21 @@ namespace Presentacion
 
         private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //dvgUsuarios.CommitEdit(DataGridViewDataErrorContexts.Commit);
-            if(e.ColumnIndex == 3)
-            {
-                //Evento de desplegar combobox al dar click
-            }
             if(e.ColumnIndex == 4)
             {
-                DataGridViewCheckBoxCell chk = dvgUsuarios[e.ColumnIndex, e.RowIndex] as DataGridViewCheckBoxCell;
+                DataGridViewCheckBoxCell chk = dvgUsuarios.CurrentRow.Cells[4] as DataGridViewCheckBoxCell;
                 Boolean valor = Convert.ToBoolean(chk.Value);
                 if (valor)
                     MessageBox.Show("False");
                 else
                     MessageBox.Show("True");
-                dvgUsuarios.CurrentRow.Cells[4].Value = !valor;
+                dvgUsuarios.CurrentRow.Cells[4].ReadOnly = false;
+                //dvgUsuarios.CurrentRow.Cells[4].FormattedValue = true;
+                //if (valor)
+                    dvgUsuarios.CurrentRow.Cells[4].Value = false;
+                //if (!valor)
+                //    dvgUsuarios.CurrentRow.Cells[4].Value = true;
+                MessageBox.Show("Valor cambiado a: " + dvgUsuarios.CurrentRow.Cells[4].Value.ToString() +  "\nFormated value: " + dvgUsuarios.CurrentRow.Cells[4].FormattedValue);
             }
         }
 
