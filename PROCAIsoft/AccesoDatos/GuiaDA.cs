@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,6 +65,24 @@ namespace AccesoDatos
                 con.Close();
                 return null;
             }
+        }
+
+        public BindingList<Guia> listarGuias()
+        {
+            BindingList<Guia> guias = new BindingList<Guia>();
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            comando = new MySqlCommand();
+            sql = "SELECT * FROM GUIA";
+            comando.CommandText = sql;
+            comando.Connection = con;
+            MySqlDataReader lector = comando.ExecuteReader();
+            while (lector.Read())
+            {
+                //LLENAR TODO
+            }
+            con.Close();
+            return guias;
         }
     }
 }

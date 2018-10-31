@@ -38,8 +38,16 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            grupoEncuestasSel = (GrupoEncuestas)dgvGrupos.CurrentRow.DataBoundItem;//COPIAR 
-            this.DialogResult = DialogResult.OK;            
+            try
+            {
+                grupoEncuestasSel = (GrupoEncuestas)dgvGrupos.CurrentRow.DataBoundItem;//COPIAR 
+                this.DialogResult = DialogResult.OK;
+            }
+            catch
+            {
+                MessageBox.Show("Tiene que selecionar a un grupo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
         }
     }
 }

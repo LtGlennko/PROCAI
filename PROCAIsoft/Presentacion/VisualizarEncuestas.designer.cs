@@ -77,13 +77,13 @@
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.grpBoxGrupo = new System.Windows.Forms.GroupBox();
-            this.labelColegio = new System.Windows.Forms.Label();
             this.labelGuia = new System.Windows.Forms.Label();
-            this.txtActividad = new System.Windows.Forms.TextBox();
-            this.txtGuia = new System.Windows.Forms.TextBox();
-            this.txtColegio = new System.Windows.Forms.TextBox();
+            this.labelColegio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelF = new System.Windows.Forms.Label();
+            this.cboColegio = new System.Windows.Forms.ComboBox();
+            this.cboActividad = new System.Windows.Forms.ComboBox();
+            this.cboGuia = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpP1.SuspendLayout();
@@ -626,9 +626,9 @@
             // 
             // grpBoxGrupo
             // 
-            this.grpBoxGrupo.Controls.Add(this.txtColegio);
-            this.grpBoxGrupo.Controls.Add(this.txtGuia);
-            this.grpBoxGrupo.Controls.Add(this.txtActividad);
+            this.grpBoxGrupo.Controls.Add(this.cboGuia);
+            this.grpBoxGrupo.Controls.Add(this.cboActividad);
+            this.grpBoxGrupo.Controls.Add(this.cboColegio);
             this.grpBoxGrupo.Controls.Add(this.labelGuia);
             this.grpBoxGrupo.Controls.Add(this.labelColegio);
             this.grpBoxGrupo.Controls.Add(this.labelNumeroGrupo);
@@ -644,17 +644,6 @@
             this.grpBoxGrupo.TabStop = false;
             this.grpBoxGrupo.Text = "Grupo ";
             // 
-            // labelColegio
-            // 
-            this.labelColegio.AutoSize = true;
-            this.labelColegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColegio.ForeColor = System.Drawing.Color.Teal;
-            this.labelColegio.Location = new System.Drawing.Point(380, 65);
-            this.labelColegio.Name = "labelColegio";
-            this.labelColegio.Size = new System.Drawing.Size(180, 20);
-            this.labelColegio.TabIndex = 50;
-            this.labelColegio.Text = "Nombre del Colegio : ";
-            // 
             // labelGuia
             // 
             this.labelGuia.AutoSize = true;
@@ -666,26 +655,16 @@
             this.labelGuia.TabIndex = 51;
             this.labelGuia.Text = "Nombre completo del guia : ";
             // 
-            // txtActividad
+            // labelColegio
             // 
-            this.txtActividad.Location = new System.Drawing.Point(181, 123);
-            this.txtActividad.Name = "txtActividad";
-            this.txtActividad.Size = new System.Drawing.Size(577, 30);
-            this.txtActividad.TabIndex = 52;
-            // 
-            // txtGuia
-            // 
-            this.txtGuia.Location = new System.Drawing.Point(250, 180);
-            this.txtGuia.Name = "txtGuia";
-            this.txtGuia.Size = new System.Drawing.Size(508, 30);
-            this.txtGuia.TabIndex = 53;
-            // 
-            // txtColegio
-            // 
-            this.txtColegio.Location = new System.Drawing.Point(568, 58);
-            this.txtColegio.Name = "txtColegio";
-            this.txtColegio.Size = new System.Drawing.Size(190, 30);
-            this.txtColegio.TabIndex = 54;
+            this.labelColegio.AutoSize = true;
+            this.labelColegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelColegio.ForeColor = System.Drawing.Color.Teal;
+            this.labelColegio.Location = new System.Drawing.Point(380, 65);
+            this.labelColegio.Name = "labelColegio";
+            this.labelColegio.Size = new System.Drawing.Size(180, 20);
+            this.labelColegio.TabIndex = 50;
+            this.labelColegio.Text = "Nombre del Colegio : ";
             // 
             // groupBox1
             // 
@@ -713,6 +692,30 @@
             this.labelF.Size = new System.Drawing.Size(192, 20);
             this.labelF.TabIndex = 55;
             this.labelF.Text = "Fecha de la encuesta :";
+            // 
+            // cboColegio
+            // 
+            this.cboColegio.FormattingEnabled = true;
+            this.cboColegio.Location = new System.Drawing.Point(577, 60);
+            this.cboColegio.Name = "cboColegio";
+            this.cboColegio.Size = new System.Drawing.Size(225, 33);
+            this.cboColegio.TabIndex = 52;
+            // 
+            // cboActividad
+            // 
+            this.cboActividad.FormattingEnabled = true;
+            this.cboActividad.Location = new System.Drawing.Point(199, 122);
+            this.cboActividad.Name = "cboActividad";
+            this.cboActividad.Size = new System.Drawing.Size(603, 33);
+            this.cboActividad.TabIndex = 53;
+            // 
+            // cboGuia
+            // 
+            this.cboGuia.FormattingEnabled = true;
+            this.cboGuia.Location = new System.Drawing.Point(260, 184);
+            this.cboGuia.Name = "cboGuia";
+            this.cboGuia.Size = new System.Drawing.Size(542, 33);
+            this.cboGuia.TabIndex = 54;
             // 
             // frmRegYeditEncuestas
             // 
@@ -804,12 +807,12 @@
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.GroupBox grpBoxGrupo;
-        private System.Windows.Forms.TextBox txtColegio;
-        private System.Windows.Forms.TextBox txtGuia;
-        private System.Windows.Forms.TextBox txtActividad;
         private System.Windows.Forms.Label labelGuia;
         private System.Windows.Forms.Label labelColegio;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelF;
+        private System.Windows.Forms.ComboBox cboGuia;
+        private System.Windows.Forms.ComboBox cboActividad;
+        private System.Windows.Forms.ComboBox cboColegio;
     }
 }

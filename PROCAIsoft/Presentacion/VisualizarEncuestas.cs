@@ -28,6 +28,9 @@ namespace Presentacion
         private bool flagGrupo;//para saber si tenemos que registar el guia o no
         private BindingList<Encuesta> listaEncuestas; //para el datagridview
         private int idGuia;
+        private ColegioBL colegioBL;//para combobox
+        private GuiaBL guiaBL;//para combobox;
+        private TipoActividadBL tipoActividadBL;//para el combobox
         public frmRegYeditEncuestas(Guia g)
         {
             InitializeComponent();
@@ -35,6 +38,19 @@ namespace Presentacion
             idGuia = g.IdGuia1;
             dgvEncuestas.AutoGenerateColumns = false;
             listaEncuestas = new BindingList<Encuesta>();
+
+            colegioBL = new ColegioBL();
+            guiaBL = new GuiaBL();
+            tipoActividadBL = new TipoActividadBL();
+
+            cboColegio.DataSource = colegioBL.listarColegios();
+            cboColegio.DisplayMember = "nombre";
+            cboActividad.DataSource = tipoActividadBL.listarTipoActividad();
+            cboActividad.DisplayMember = "nombre";
+            cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!!
+            cboGuia.DataSource = "nombre" + "appelidoP" + "appelidoM";//NO SEGURA
+
+
 
         }
 
@@ -44,6 +60,7 @@ namespace Presentacion
             estadoComponentes(estado.INICIAL);
             dgvEncuestas.AutoGenerateColumns = false;
             listaEncuestas = new BindingList<Encuesta>();
+            //initialiser les combobox
 
         }
 
@@ -72,12 +89,12 @@ namespace Presentacion
                 grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
 
-                txtActividad.Text = grupoSeleccionado.Actividad.TipoActividad.Nombre;
+                cboActividad.Text = grupoSeleccionado.Actividad.TipoActividad.Nombre;
 
             }
             txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
-            txtGuia.Text = grupoSeleccionado.GuiaEvaluado.NombresYapellidos.ToString();
-            txtColegio.Text = grupoSeleccionado.Colegio.Nombre.ToString();
+            cboGuia.Text = grupoSeleccionado.GuiaEvaluado.NombresYapellidos.ToString();
+            cboColegio.Text = grupoSeleccionado.Colegio.Nombre.ToString();
             dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
 
         }
@@ -146,7 +163,7 @@ namespace Presentacion
 
             else
             {
-                if (txtColegio.Text == "" || txtNumero.Text == "" || txtActividad.Text == "" || txtGuia.Text == "") MessageBox.Show("Tiene que llenar las informaciones del grupo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (txtNumero.Text == "") MessageBox.Show("Tiene que llenar las informaciones del grupo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     listaEncuestas.Add(encuestaCreada);
@@ -266,9 +283,9 @@ namespace Presentacion
             
             // Y El GRUPO
             txtNumero.Text = E.IdGrupoPerteneciente.ToString();
-            txtActividad.Text = E.GrupoPerteneciente.Actividad.TipoActividad.ToString();
-            txtColegio.Text = E.GrupoPerteneciente.Colegio.Nombre.ToString();
-            txtGuia.Text = E.GrupoPerteneciente.GuiaEvaluado.NombresYapellidos.ToString();
+            cboActividad.Text = E.GrupoPerteneciente.Actividad.TipoActividad.ToString();
+            cboColegio.Text = E.GrupoPerteneciente.Colegio.Nombre.ToString();
+            cboGuia.Text = E.GrupoPerteneciente.GuiaEvaluado.NombresYapellidos.ToString();
             dateEncuentra.Value = E.FechaProgramada;
         }
 
@@ -279,9 +296,9 @@ namespace Presentacion
             {
                 case estado.INICIAL:
                     txtNumero.Enabled = false;
-                    txtActividad.Enabled = false;
-                    txtColegio.Enabled = false;
-                    txtGuia.Enabled = false;
+                    cboActividad.Enabled = false;
+                    cboColegio.Enabled = false;
+                    cboGuia.Enabled = false;
                     grpP1.Enabled = false;
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
@@ -298,9 +315,9 @@ namespace Presentacion
 
                 case estado.NUEVO:
                     txtNumero.Enabled = true;
-                    txtActividad.Enabled = true;
-                    txtColegio.Enabled = true;
-                    txtGuia.Enabled = true;
+                    cboActividad.Enabled = true;
+                    cboColegio.Enabled = true;
+                    cboGuia.Enabled = true;
                     grpP1.Enabled = true;
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
@@ -318,9 +335,9 @@ namespace Presentacion
 
                 case estado.GUARDAR:
                     txtNumero.Enabled = false;
-                    txtActividad.Enabled = false;
-                    txtColegio.Enabled = false;
-                    txtGuia.Enabled = false;
+                    cboActividad.Enabled = false;
+                    cboColegio.Enabled = false;
+                    cboGuia.Enabled = false;
                     grpP1.Enabled = false;
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
@@ -335,9 +352,9 @@ namespace Presentacion
                     break;
                 case estado.BUSQUEDA:
                     txtNumero.Enabled = false;
-                    txtActividad.Enabled = false;
-                    txtColegio.Enabled = false;
-                    txtGuia.Enabled = false;
+                    cboActividad.Enabled = false;
+                    cboColegio.Enabled = false;
+                    cboGuia.Enabled = false;
                     grpP1.Enabled = true;
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
@@ -355,9 +372,9 @@ namespace Presentacion
                     break;
                 case estado.MODIFICAR:
                     txtNumero.Enabled = false;
-                    txtActividad.Enabled = false;
-                    txtColegio.Enabled = false;
-                    txtGuia.Enabled = false;
+                    cboActividad.Enabled = false;
+                    cboColegio.Enabled = false;
+                    cboGuia.Enabled = false;
                     grpP1.Enabled = true;
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
@@ -373,9 +390,9 @@ namespace Presentacion
 
                 case estado.AGREGAR:
                     txtNumero.Enabled = false;
-                    txtActividad.Enabled = false;
-                    txtColegio.Enabled = false;
-                    txtGuia.Enabled = false;
+                    cboActividad.Enabled = false;
+                    cboColegio.Enabled = false;
+                    cboGuia.Enabled = false;
                     grpP1.Enabled = false;
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
@@ -394,9 +411,9 @@ namespace Presentacion
         public void limpiarCampos()
         {
             txtNumero.Text = "";
-            txtActividad.Text = "";
-            txtColegio.Text = "";
-            txtGuia.Text = "";
+            cboActividad.DisplayMember = "TIPOACTIVIDAD"; //comment s'appelle la colonne ?
+            cboColegio.Text = "NOMBRE"; //On doit remettre dataSource ?
+            cboGuia.Text = "NOMBRES";
 
             dateEncuentra.Value = DateTime.Now;
 
