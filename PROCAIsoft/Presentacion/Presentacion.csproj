@@ -83,6 +83,12 @@
     <Compile Include="DetalleEncuesta.designer.cs">
       <DependentUpon>DetalleEncuesta.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalleNivelPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleNivelPermiso.Designer.cs">
+      <DependentUpon>DetalleNivelPermiso.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarPostulante.cs">
       <SubType>Form</SubType>
     </Compile>

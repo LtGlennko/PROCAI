@@ -24,38 +24,16 @@ namespace Presentacion
             guiaBL = new GuiaBL();
             cargoBL = new CargoBL();
             usuarioBL = new UsuarioBL();
-            BindingList<Usuario> usuarios = usuarioBL.listarUsuarios();
+            BindingList<Usuario> usuarios = usuarioBL.listarUsuariosSinGestionador(u.IdUsuario1);
             trabajadores = convertirUsuariosAtrabajadores(usuarios);
-            //Eliminar su propia cuenta
-            eliminarElemento(trabajadores, u.IdUsuario1);
-            //Ordenar lista por fecha de creación
-            List<TrabajadorOCAI> sortedTrab = trabajadores.OrderBy(x => x.FechaCreacion).ToList();
-            sortedTrab.Reverse();
             InitializeComponent();
             dvgUsuarios.AutoGenerateColumns = false;
-            dvgUsuarios.DataSource = sortedTrab;
+            dvgUsuarios.DataSource = trabajadores;
             //cboCargo.AutoComplete = true;
             cargos = cargoBL.listarCargos();
-            cboCargo.DataSource = cargos;
-            cboCargo.ValueMember = "IdCargo1";
-            cboCargo.DisplayMember = "NombreCargo";
-            //Precargar los datos de los cargos por usuario
-            //preasignarCargos(dvgUsuarios);
-            //chkJefe.TrueValue = "true";
-            //chkJefe.FalseValue = "false";
-            dvgUsuarios.Columns[4].ReadOnly = false;
-        }
-
-        private void eliminarElemento(BindingList<TrabajadorOCAI> trabajadores, int id)
-        {
-            foreach (TrabajadorOCAI t in trabajadores)
-            {
-                if (t.IdTrabajadorOCAI1 == id)
-                {
-                    trabajadores.Remove(t);
-                    return;
-                }
-            }
+            //cboCargo.DataSource = cargos;
+            //cboCargo.ValueMember = "IdCargo1";
+            //cboCargo.DisplayMember = "NombreCargo";
         }
 
         //private void preasignarCargos(DataGridView dvgUsuarios)
@@ -97,40 +75,40 @@ namespace Presentacion
             Dispose();
         }
 
-        private void dvgUsuarios_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            //dvgUsuarios.CancelEdit = true;
-            //MessageBox.Show("Fila que activo evento: " + dvgUsuarios.CurrentCell.RowIndex);
-            if (dvgUsuarios.CurrentCell.ColumnIndex == 3 && e.Control is ComboBox)
-            {
-                ComboBox cbo = e.Control as ComboBox;
-                if (cbo != null)
-                {
-                    cbo.SelectedIndexChanged -= new EventHandler(cbo_SelectedIndexChanged);
-                    cbo.SelectedIndexChanged += new EventHandler(cbo_SelectedIndexChanged);
-                }
-            }
-        }
+        //private void dvgUsuarios_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        //{
+        //    //dvgUsuarios.CancelEdit = true;
+        //    //MessageBox.Show("Fila que activo evento: " + dvgUsuarios.CurrentCell.RowIndex);
+        //    if (dvgUsuarios.CurrentCell.ColumnIndex == 3 && e.Control is ComboBox)
+        //    {
+        //        ComboBox cbo = e.Control as ComboBox;
+        //        if (cbo != null)
+        //        {
+        //            cbo.SelectedIndexChanged -= new EventHandler(cbo_SelectedIndexChanged);
+        //            cbo.SelectedIndexChanged += new EventHandler(cbo_SelectedIndexChanged);
+        //        }
+        //    }
+        //}
 
-        private void cbo_SelectedIndexChanged(object sender, EventArgs e)
-        {            
-            int idAntes = Int32.Parse(dvgUsuarios.CurrentRow.Cells[3].Value.ToString());
-            Cargo cargoAntes = cargoBuscado(cargos, idAntes);
-            ComboBox cbo = sender as ComboBox;
-            if (cbo.SelectedItem != null && cargoAntes != null && cbo.DataSource != null && cbo.ContainsFocus)
-            {
-                Cargo cargoAhora = (Cargo)cbo.SelectedItem;
-                if (cargoAntes.IdCargo1 != cargoAhora.IdCargo1)
-                {
-                    MessageBox.Show("Antes: " + cargoAntes.NombreCargo + "\nAhora:  " + cargoAhora.NombreCargo);
-                    if(cargoAntes.NombreCargo == "Guia")
-                    {
-                        //guiaBL.EliminarGuia(dv)
-                    }
-                }
-                dvgUsuarios.CurrentRow.Cells[3].Value = cargoAhora.IdCargo1;
-            }
-        }
+        //private void cbo_SelectedIndexChanged(object sender, EventArgs e)
+        //{            
+        //    int idAntes = Int32.Parse(dvgUsuarios.CurrentRow.Cells[3].Value.ToString());
+        //    Cargo cargoAntes = cargoBuscado(cargos, idAntes);
+        //    ComboBox cbo = sender as ComboBox;
+        //    if (cbo.SelectedItem != null && cargoAntes != null && cbo.DataSource != null && cbo.ContainsFocus)
+        //    {
+        //        Cargo cargoAhora = (Cargo)cbo.SelectedItem;
+        //        if (cargoAntes.IdCargo1 != cargoAhora.IdCargo1)
+        //        {
+        //            MessageBox.Show("Antes: " + cargoAntes.NombreCargo + "\nAhora:  " + cargoAhora.NombreCargo);
+        //            if(cargoAntes.NombreCargo == "Guia")
+        //            {
+        //                //guiaBL.EliminarGuia(dv)
+        //            }
+        //        }
+        //        dvgUsuarios.CurrentRow.Cells[3].Value = cargoAhora.IdCargo1;
+        //    }
+        //}
 
         private Cargo cargoBuscado(BindingList<Cargo> cargos, int id)
         {
@@ -142,25 +120,43 @@ namespace Presentacion
             return null;
         }
 
-        private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-            if(e.ColumnIndex == 4)
+            TrabajadorOCAI trabActual = (TrabajadorOCAI)dvgUsuarios.CurrentRow.DataBoundItem;
+            if(trabActual == null)
             {
-                DataGridViewCheckBoxCell chk = dvgUsuarios.CurrentRow.Cells[4] as DataGridViewCheckBoxCell;
-                Boolean valor = Convert.ToBoolean(chk.Value);
-                if (valor)
-                    MessageBox.Show("False");
-                else
-                    MessageBox.Show("True");
-                dvgUsuarios.CurrentRow.Cells[4].ReadOnly = false;
-                //dvgUsuarios.CurrentRow.Cells[4].FormattedValue = true;
-                //if (valor)
-                    dvgUsuarios.CurrentRow.Cells[4].Value = false;
-                //if (!valor)
-                //    dvgUsuarios.CurrentRow.Cells[4].Value = true;
-                MessageBox.Show("Valor cambiado a: " + dvgUsuarios.CurrentRow.Cells[4].Value.ToString() +  "\nFormated value: " + dvgUsuarios.CurrentRow.Cells[4].FormattedValue);
+                MessageBox.Show("Debe seleccionar un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+            DetalleNivelPermiso dnp = new DetalleNivelPermiso();
+            dnp.StartPosition = FormStartPosition.CenterScreen;
+            this.Visible = false;
+            if (dnp.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
         }
+
+        //private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if(e.ColumnIndex == 4)
+        //    {
+        //        DataGridViewCheckBoxCell chk = dvgUsuarios.CurrentRow.Cells[4] as DataGridViewCheckBoxCell;
+        //        Boolean valor = Convert.ToBoolean(chk.Value);
+        //        if (valor)
+        //            MessageBox.Show("False");
+        //        else
+        //            MessageBox.Show("True");
+        //        dvgUsuarios.CurrentRow.Cells[4].ReadOnly = false;
+        //        //dvgUsuarios.CurrentRow.Cells[4].FormattedValue = true;
+        //        //if (valor)
+        //            dvgUsuarios.CurrentRow.Cells[4].Value = false;
+        //        //if (!valor)
+        //        //    dvgUsuarios.CurrentRow.Cells[4].Value = true;
+        //        MessageBox.Show("Valor cambiado a: " + dvgUsuarios.CurrentRow.Cells[4].Value.ToString() +  "\nFormated value: " + dvgUsuarios.CurrentRow.Cells[4].FormattedValue);
+        //    }
+        //}
 
         //private void dvgUsuarios_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         //{

@@ -22,6 +22,11 @@ namespace LogicaNegocio
             return usuarioDA.listarUsuarios();
         }
 
+        public BindingList<Usuario> listarUsuariosSinGestionador(int idJefe)
+        {
+            return usuarioDA.listarUsuariosSinGestionador(idJefe);
+        }
+
         public Usuario buscarUsuario(string username, string password)
         {            
             return usuarioDA.buscarUsuario(username, password);
