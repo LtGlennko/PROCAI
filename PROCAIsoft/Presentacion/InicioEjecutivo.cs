@@ -38,11 +38,6 @@ namespace Presentacion
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             frmProcesoAdm FP = new frmProcesoAdm();
@@ -79,11 +74,6 @@ namespace Presentacion
             this.Visible = true;
         }
 
-        private void InicioEjecutivo_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGestionarColegios_Click(object sender, EventArgs e)
         {
             GestCol GS = new GestCol();
@@ -100,11 +90,6 @@ namespace Presentacion
         {
             if (pnlOpciones.Width == MAX_SIZE) pnlOpciones.Width = MIN_SIZE;
             else pnlOpciones.Width = MAX_SIZE;
-        }
-
-        private void pnlOpciones_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         //ESTE METODO DESLIEGA LA VENTANA EN EL PANEL

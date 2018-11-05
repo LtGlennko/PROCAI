@@ -149,6 +149,12 @@
     <Compile Include="InfoSolicitud.designer.cs">
       <DependentUpon>InfoSolicitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="InicioAdministrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioAdministrativo.Designer.cs">
+      <DependentUpon>InicioAdministrativo.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioExterno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,12 +184,6 @@
     </Compile>
     <Compile Include="Inicio.designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InicioAdministrativo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InicioAdministrativo.designer.cs">
-      <DependentUpon>InicioAdministrativo.cs</DependentUpon>
     </Compile>
     <Compile Include="InicioEjecutivo.cs">
       <SubType>Form</SubType>
@@ -298,6 +298,9 @@
     <EmbeddedResource Include="InfoSolicitud.resx">
       <DependentUpon>InfoSolicitud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InicioAdministrativo.resx">
+      <DependentUpon>InicioAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioExterno.resx">
       <DependentUpon>InicioExterno.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,9 +315,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InicioAdministrativo.resx">
-      <DependentUpon>InicioAdministrativo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioEjecutivo.resx">
       <DependentUpon>InicioEjecutivo.cs</DependentUpon>
