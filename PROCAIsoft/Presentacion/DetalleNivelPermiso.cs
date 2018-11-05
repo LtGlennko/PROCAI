@@ -43,18 +43,19 @@ namespace Presentacion
         {
             if(((Cargo)cboCargo.SelectedItem).NombreCargo == "Guia" && chkJefe.Checked)
             {
-                MessageBox.Show("Un guia no puede ser un jefe", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Un guia no puede ser jefe", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (Int32.Parse(cboCargo.SelectedValue.ToString()) != trabMos.Cargo.IdCargo1
-                || fueJefe != chkJefe.Checked)
+            cargoSel = (Cargo)cboCargo.SelectedItem;
+            esJefeSel = chkJefe.Checked;
+            if (cargoSel.IdCargo1 != trabMos.Cargo.IdCargo1 || fueJefe != esJefeSel)
             {
-                DialogResult result = MessageBox.Show("¿Esta seguro de sus cambios?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("¿Esta seguro de sus cambios?", "Confirmaciòn", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No) return;
-                cargoSel = (Cargo)cboCargo.SelectedItem;
-                esJefeSel = chkJefe.Checked;
+                this.DialogResult = DialogResult.OK;
+                return;
             }
-            this.DialogResult = DialogResult.OK;
+            this.Dispose();
         }
     }
 }

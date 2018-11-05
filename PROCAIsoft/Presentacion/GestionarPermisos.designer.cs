@@ -71,7 +71,7 @@
             this.NombreCuenta,
             this.Cargo,
             this.chkJefe});
-            this.dvgUsuarios.Location = new System.Drawing.Point(34, 96);
+            this.dvgUsuarios.Location = new System.Drawing.Point(33, 66);
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.Size = new System.Drawing.Size(580, 274);
             this.dvgUsuarios.TabIndex = 2;

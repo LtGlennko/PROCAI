@@ -19,11 +19,13 @@ namespace Presentacion
         GuiaBL guiaBL;
         CargoBL cargoBL;
         UsuarioBL usuarioBL;
+        TrabajadorOCAIBL trabajadorOCAIBL;
         public Gestionar_permisos(TrabajadorOCAI t)
         {
             guiaBL = new GuiaBL();
             cargoBL = new CargoBL();
             usuarioBL = new UsuarioBL();
+            trabajadorOCAIBL = new TrabajadorOCAIBL();
             BindingList<Usuario> usuarios = usuarioBL.listarUsuariosSinGestionador(t.IdUsuario1);
             trabajadores = convertirUsuariosAtrabajadores(usuarios);
             InitializeComponent();
@@ -131,8 +133,13 @@ namespace Presentacion
             dnp.StartPosition = FormStartPosition.CenterParent;
             if (dnp.ShowDialog() == DialogResult.OK)
             {
-                //Actualizar usuario con cargoSel y esJefeSel
-                
+                //Actualizar usuario con cargoSel y esJefeSel, para entrar aqui ya he asegurado que hubiero cambios
+                if (!trabajadorOCAIBL.actualizarCargo(trabActual, dnp.CargoSel))
+                    MessageBox.Show(trabajadorOCAIBL.MsgError, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(!trabajadorOCAIBL.actualizarEstadoJefe(trabActual, dnp.EsJefeSel))
+                    MessageBox.Show("Error al actualizar el estado de jefe", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                trabActual.Cargo = dnp.CargoSel;
+                trabActual.EsJefe = dnp.EsJefeSel;
             }
         }
 

@@ -84,5 +84,47 @@ namespace AccesoDatos
             con.Close();
             return guias;
         }
+        public bool insertarGuia(int idTrabajadorOCAI)
+        {
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            try
+            {
+                comando.CommandText = "CREAR_GUIA";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.Add("_IdTrabajadorOCAI", MySqlDbType.Int32).Value = idTrabajadorOCAI;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return false;
+            }
+        }
+        public bool eliminarGuia(int idGuia)
+        {
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            try
+            {
+                comando.CommandText = "ELIMINAR_GUIA";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.Add("_IdGuia", MySqlDbType.Int32).Value = idGuia;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return false;
+            }
+        }
     }
 }

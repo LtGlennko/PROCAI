@@ -174,5 +174,27 @@ namespace AccesoDatos
                 return null;
             }            
         }
+        public bool actualizarNivelPermiso(int idUsuario, int nivelPermiso)
+        {
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            try
+            {
+                comando.CommandText = "ACTUALIZAR_NIVEL_PERMISO";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.Add("_IdUsuario", MySqlDbType.Int32).Value = idUsuario;
+                comando.Parameters.Add("_nivelPermiso", MySqlDbType.Int32).Value = nivelPermiso;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return false;
+            }
+        }
     }
 }

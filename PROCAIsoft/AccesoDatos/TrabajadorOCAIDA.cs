@@ -65,20 +65,49 @@ namespace AccesoDatos
                 return null;
             }
         }
-        public bool actualizarPermisos(Cargo cargo, bool esJefe)
+        public bool actualizarCargo(int idTrabajadorOCAI, int idCargo)
         {
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("ACTUALIZAR_CARGO");
-            cmd.ExecuteNonQuery();
-            MySqlCommand cmd2 = new MySqlCommand("SELECT MAX(ID_PEDIDO) FROM PEDIDO_FARMACIA", conexion);
-            MySqlDataReader reader = null;
-            reader = cmd2.ExecuteReader();
-            reader.Read();
-
-            int idpedido = reader.GetInt32(0);
-            con.Close();
-            return true;
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            try
+            {
+                comando.CommandText = "ACTUALIZAR_CARGO";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.Add("_IdTrabajadorOCAI", MySqlDbType.Int32).Value = idTrabajadorOCAI;
+                comando.Parameters.Add("_IdCargo", MySqlDbType.Int32).Value = idCargo;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return false;
+            }
+        }
+        public bool actualizarEsJefe(int idTrabajadorOCAI, bool esJefe)
+        {
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            try
+            {
+                comando.CommandText = "ACTUALIZAR_ESJEFE";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.Add("_IdTrabajadorOCAI", MySqlDbType.Int32).Value = idTrabajadorOCAI;
+                comando.Parameters.Add("_esJefe", MySqlDbType.Int16).Value = esJefe;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return false;
+            }
         }
     }
 }
