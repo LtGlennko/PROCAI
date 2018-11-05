@@ -119,17 +119,17 @@ namespace Presentacion
                 this.Visible = true;
             }
 
-            if (usuarioBuscado.NivelPermiso == 5) //El jefe tiene un nivel de permiso 5
-            {
-                InicioJefe IJ = new InicioJefe(usuarioBuscado);
-                IJ.StartPosition = FormStartPosition.CenterScreen;
-                this.Visible = false;
-                if (IJ.ShowDialog() == DialogResult.OK)
-                {
+            //if (usuarioBuscado.NivelPermiso == 5) //El jefe tiene un nivel de permiso 5
+            //{
+            //    InicioJefe IJ = new InicioJefe(usuarioBuscado);
+            //    IJ.StartPosition = FormStartPosition.CenterScreen;
+            //    this.Visible = false;
+            //    if (IJ.ShowDialog() == DialogResult.OK)
+            //    {
 
-                }
-                this.Visible = true;
-            }
+            //    }
+            //    this.Visible = true;
+            //}
         }
 
         private void Login_Load(object sender, EventArgs e)

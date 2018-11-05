@@ -47,8 +47,8 @@ namespace Presentacion
             cboColegio.DisplayMember = "nombre";
             cboActividad.DataSource = tipoActividadBL.listarTipoActividad();
             cboActividad.DisplayMember = "nombre";
-            cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!!
-            cboGuia.DataSource = "nombre" + "appelidoP" + "appelidoM";//NO SEGURA
+            //cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!!
+            //cboGuia.DataSource = "nombre" + "appelidoP" + "appelidoM";//NO SEGURA
 
 
 

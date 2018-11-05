@@ -19,17 +19,16 @@ namespace Presentacion
         GuiaBL guiaBL;
         CargoBL cargoBL;
         UsuarioBL usuarioBL;
-        public Gestionar_permisos(Usuario u)
+        public Gestionar_permisos(TrabajadorOCAI t)
         {
             guiaBL = new GuiaBL();
             cargoBL = new CargoBL();
             usuarioBL = new UsuarioBL();
-            BindingList<Usuario> usuarios = usuarioBL.listarUsuariosSinGestionador(u.IdUsuario1);
+            BindingList<Usuario> usuarios = usuarioBL.listarUsuariosSinGestionador(t.IdUsuario1);
             trabajadores = convertirUsuariosAtrabajadores(usuarios);
             InitializeComponent();
             dvgUsuarios.AutoGenerateColumns = false;
             dvgUsuarios.DataSource = trabajadores;
-            //cboCargo.AutoComplete = true;
             cargos = cargoBL.listarCargos();
             //cboCargo.DataSource = cargos;
             //cboCargo.ValueMember = "IdCargo1";
@@ -128,14 +127,13 @@ namespace Presentacion
                 MessageBox.Show("Debe seleccionar un registro", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            DetalleNivelPermiso dnp = new DetalleNivelPermiso();
-            dnp.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
+            DetalleNivelPermiso dnp = new DetalleNivelPermiso(trabActual);
+            dnp.StartPosition = FormStartPosition.CenterParent;
             if (dnp.ShowDialog() == DialogResult.OK)
             {
-
+                //Actualizar usuario con cargoSel y esJefeSel
+                
             }
-            this.Visible = true;
         }
 
         //private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

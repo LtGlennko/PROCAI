@@ -13,34 +13,34 @@ namespace Presentacion
 {
     public partial class InicioEjecutivo : Form
     {
-        private frmGestStock gestionarStock;
+        public const int MIN_SIZE = 46;
+        public const int MAX_SIZE = 215;
+        private TrabajadorOCAI trabajador;
         public InicioEjecutivo()
         {
             InitializeComponent();
-            this.IsMdiContainer = true;
+            btnGenerarReportes.Visible = false;
+            btnGestionarPermisos.Visible = false;
+            pictureBox8.Visible = false;
+            pictureBox9.Visible = false;
         }
-        public InicioEjecutivo(Usuario usu)
+        public InicioEjecutivo(TrabajadorOCAI t)
         {
             InitializeComponent();
-            lblNombreUsu.Text += usu.NombreCuenta;
-            this.IsMdiContainer = true;
+            trabajador = t;
+            lblNombreUsu.Text += t.NombresYapellidos;
+            if (!t.EsJefe)
+            {
+                btnGenerarReportes.Visible = false;
+                btnGestionarPermisos.Visible = false;
+                pictureBox8.Visible = false;
+                pictureBox9.Visible = false;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Dispose();
-        }
-
-        private void btnCalendario_Click(object sender, EventArgs e)
-        {
-            GestionCal IE = new GestionCal();
-            IE.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
-            if (IE.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -96,16 +96,10 @@ namespace Presentacion
             this.Visible = true;
         }
 
-
-        public void volverNulo(object sender, FormClosingEventArgs e)
-        {
-            gestionarStock = null;
-        }
-
         private void ptrDespliegue_Click(object sender, EventArgs e)
         {
-            if (pnlOpciones.Width == 200) pnlOpciones.Width = 45;
-            else pnlOpciones.Width = 200;
+            if (pnlOpciones.Width == MAX_SIZE) pnlOpciones.Width = MIN_SIZE;
+            else pnlOpciones.Width = MAX_SIZE;
         }
 
         private void pnlOpciones_Paint(object sender, PaintEventArgs e)
@@ -113,14 +107,15 @@ namespace Presentacion
 
         }
 
+        //ESTE METODO DESLIEGA LA VENTANA EN EL PANEL
         private void abrirFormInPanel(object formHijo)
         {
             if (this.pnlVentanas.Controls.Count > 0)
                 this.pnlVentanas.Controls.RemoveAt(0);
             Form fh = formHijo as Form;
             fh.TopLevel = false;
-            
-            fh.Dock = DockStyle.Fill;
+            fh.StartPosition = FormStartPosition.CenterParent;
+            //fh.Dock = DockStyle.Fill;
             this.pnlVentanas.Controls.Add(fh);
             this.pnlVentanas.Tag = fh;
             fh.Show();
@@ -128,6 +123,7 @@ namespace Presentacion
         private void btnGestionarStock_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new frmGestStock());
+            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -135,10 +131,6 @@ namespace Presentacion
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button9_Click(object sender, EventArgs e)
         {
@@ -190,12 +182,31 @@ namespace Presentacion
 
         private void btnGestCalendario_Click(object sender, EventArgs e)
         {
+            GestionCal IE = new GestionCal();
+            IE.StartPosition = FormStartPosition.CenterScreen;
+            this.Visible = false;
+            if (IE.ShowDialog() == DialogResult.OK)
+            {
 
+            }
+            this.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+        }
 
+        private void btnGestionarPermisos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new Gestionar_permisos(trabajador));
+            pnlOpciones.Width = MIN_SIZE;
+        }
+
+        private void btnGenerarReportes_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new GeneradorRepEncuestas());
+            pnlOpciones.Width = MIN_SIZE;
         }
 
         //private void mnuGestionarStock_Click(object sender, EventArgs e)

@@ -22,16 +22,6 @@ namespace Presentacion
             dgvStock.DataSource = mbl.listarMerchandising();
         }
 
-        private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmGestStock_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             agregarStock agregar1 = new agregarStock();

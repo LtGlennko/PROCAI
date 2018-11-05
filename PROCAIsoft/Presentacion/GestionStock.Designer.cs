@@ -66,7 +66,6 @@
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.Size = new System.Drawing.Size(405, 162);
             this.dgvStock.TabIndex = 5;
-            this.dgvStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellContentClick);
             // 
             // btnEliminar
             // 
@@ -164,7 +163,6 @@
             this.Controls.Add(this.btnBuscar);
             this.Name = "frmGestStock";
             this.Text = "GestionStock";
-            this.Load += new System.EventHandler(this.frmGestStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

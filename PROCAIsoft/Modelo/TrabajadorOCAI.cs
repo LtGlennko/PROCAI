@@ -15,6 +15,7 @@ namespace Modelo
         private int telefonoOfi;
         private int celularOfi;
         private string correOfi;
+        private bool esJefe;
         public TrabajadorOCAI(Usuario usu, DateTime fechaIngreso, int telefonoOfi, int celularOfi, string correOfi) : base(usu.DNI1, usu.Nombres, usu.ApellidoPaterno, usu.ApellidoMaterno, usu.Celular, usu.Sexo, usu.CorreoElectronico, usu.FechaCreacion, usu.NivelPermiso)
         {
             IdTrabajadorOCAI = ++i;
@@ -23,6 +24,7 @@ namespace Modelo
             this.celularOfi = celularOfi;
             this.correOfi = correOfi;
             this.setCuenta(usu.CuentaUsuario);
+            this.esJefe = false;
         }
 
         public TrabajadorOCAI(string dNI, string nombres, string apellidoPaterno, string apellidoMaterno, int celular, TipoSexo sexo, string correoElectronico, DateTime fechaCreacion, int nivelPermiso, DateTime fechaIngreso, int telefonoOfi, int celularOfi, string correOfi) : base(dNI, nombres, apellidoPaterno, apellidoMaterno, celular, sexo, correoElectronico, fechaCreacion, nivelPermiso)
@@ -32,15 +34,6 @@ namespace Modelo
             this.telefonoOfi = telefonoOfi;
             this.celularOfi = celularOfi;
             this.correOfi = correOfi;
-        }
-        private bool esJefe()
-        {
-            if (this.NivelPermiso == 5) return true;
-            return false;
-        }
-        private void volverJefe(bool jefe)
-        {
-            if(jefe) this.NivelPermiso = 5;
         }
         private void cambiarCargo(int nivPer)
         {
@@ -54,7 +47,8 @@ namespace Modelo
         public int TelefonoOfi { get => telefonoOfi; set => telefonoOfi = value; }
         public int CelularOfi { get => celularOfi; set => celularOfi = value; }
         public string CorreOfi { get => correOfi; set => correOfi = value; }
-        public bool EsJefe { get => esJefe(); set => volverJefe(value); }
+        public bool EsJefe { get => esJefe; set => esJefe = value; }
+
         public void setCargo(Cargo car)
         {
             this.cargo = car;

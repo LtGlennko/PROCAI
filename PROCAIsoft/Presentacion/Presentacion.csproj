@@ -191,12 +191,6 @@
     <Compile Include="InicioExterno.designer.cs">
       <DependentUpon>InicioExterno.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioJefe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InicioJefe.designer.cs">
-      <DependentUpon>InicioJefe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +265,9 @@
     <EmbeddedResource Include="DetalleEncuesta.resx">
       <DependentUpon>DetalleEncuesta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetalleNivelPermiso.resx">
+      <DependentUpon>DetalleNivelPermiso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarPostulante.resx">
       <DependentUpon>EditarPostulante.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,9 +318,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioExterno.resx">
       <DependentUpon>InicioExterno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InicioJefe.resx">
-      <DependentUpon>InicioJefe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
