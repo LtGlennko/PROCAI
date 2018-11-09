@@ -108,7 +108,6 @@ namespace Presentacion
         private void btnGestionarStock_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new frmGestStock());
-            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -191,7 +190,6 @@ namespace Presentacion
         private void btnGenerarReportes_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new GeneradorRepEncuestas());
-            pnlOpciones.Width = MIN_SIZE;
         }
 
         //private void mnuGestionarStock_Click(object sender, EventArgs e)

@@ -41,13 +41,11 @@ namespace Presentacion
         private void btnSugerirColegio_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new SolicitarColegio());
-            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void btnInformacion_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new InformacionParaExterno());
-            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
