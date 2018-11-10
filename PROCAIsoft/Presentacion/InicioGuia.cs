@@ -13,6 +13,8 @@ namespace Presentacion
 {
     public partial class InicioGuia : Form
     {
+        public const int MIN_SIZE = 46;
+        public const int MAX_SIZE = 215;
         private Guia guia;
         public InicioGuia()
         {
@@ -22,12 +24,7 @@ namespace Presentacion
         {
             InitializeComponent();
             guia = g;
-            lblNombreUsu.Text += guia.NombreCuenta;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
+            lblNombreUsu.Text += guia.NombresYapellidos;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -40,15 +37,36 @@ namespace Presentacion
             }
             this.Visible = true;
         }
-        
-        private void button1_Click_1(object sender, EventArgs e)
+
+        //ESTE METODO DESLIEGA LA VENTANA EN EL PANEL
+        private void abrirFormInPanel(object formHijo)
+        {
+            if (this.pnlVentanas.Controls.Count > 0)
+                this.pnlVentanas.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.StartPosition = FormStartPosition.CenterParent;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.pnlVentanas.Controls.Add(fh);
+            this.pnlVentanas.Tag = fh;
+            fh.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void ptrDespliegue_Click(object sender, EventArgs e)
         {
+            if (pnlOpciones.Width == MAX_SIZE) pnlOpciones.Width = MIN_SIZE;
+            else pnlOpciones.Width = MAX_SIZE;
+        }
 
+        private void btnSugerirColegio_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new frmRegYeditEncuestas());
         }
     }
 }

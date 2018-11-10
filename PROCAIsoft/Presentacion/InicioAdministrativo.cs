@@ -58,7 +58,8 @@ namespace Presentacion
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.StartPosition = FormStartPosition.CenterParent;
-            //fh.Dock = DockStyle.Fill;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
             this.pnlVentanas.Controls.Add(fh);
             this.pnlVentanas.Tag = fh;
             fh.Show();
@@ -67,19 +68,16 @@ namespace Presentacion
         private void btnGestionarPermisos_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new Gestionar_permisos(trabajador));
-            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void btnGenerarReportes_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new GeneradorRepEncuestas());
-            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void btnGestionarPostulantes_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new frmVisualizarPostulantes());
-            pnlOpciones.Width = MIN_SIZE;
         }
     }
 }

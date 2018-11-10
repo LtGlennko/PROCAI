@@ -100,7 +100,8 @@ namespace Presentacion
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.StartPosition = FormStartPosition.CenterParent;
-            //fh.Dock = DockStyle.Fill;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
             this.pnlVentanas.Controls.Add(fh);
             this.pnlVentanas.Tag = fh;
             fh.Show();
@@ -109,71 +110,19 @@ namespace Presentacion
         {
             abrirFormInPanel(new frmGestStock());
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            frmSolicitudes s = new frmSolicitudes();
-            s.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
-            if (s.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            frmProcesoAdm FP = new frmProcesoAdm();
-            FP.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
-            if (FP.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
-        }
-
         private void btnGestOrientadores_Click(object sender, EventArgs e)
         {
-            GestionOrientadores GO = new GestionOrientadores();
-            GO.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
-            if (GO.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
+            abrirFormInPanel(new GestionOrientadores());
         }
 
         private void btnGestColegios_Click(object sender, EventArgs e)
         {
-            GestCol GS = new GestCol();
-            GS.SetDesktopLocation(100, 100);
-            this.Visible = false;
-            if (GS.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
+            abrirFormInPanel(new GestCol());
         }
 
         private void btnGestCalendario_Click(object sender, EventArgs e)
         {
-            GestionCal IE = new GestionCal();
-            IE.StartPosition = FormStartPosition.CenterScreen;
-            this.Visible = false;
-            if (IE.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            this.Visible = true;
+            abrirFormInPanel(new GestionCal());
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -184,12 +133,21 @@ namespace Presentacion
         private void btnGestionarPermisos_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new Gestionar_permisos(trabajador));
-            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void btnGenerarReportes_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new GeneradorRepEncuestas());
+        }
+
+        private void btnGestProcesosAdm_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new frmProcesoAdm());
+        }
+
+        private void btnIncripcionAct_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new frmSolicitudes());
         }
 
         //private void mnuGestionarStock_Click(object sender, EventArgs e)

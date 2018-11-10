@@ -147,10 +147,11 @@
             // 
             // frmGestStock
             // 
+            this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1019, 563);
+            this.ClientSize = new System.Drawing.Size(636, 376);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -161,6 +162,7 @@
             this.Controls.Add(this.dgvStock);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnBuscar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestStock";
             this.Text = "GestionStock";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();

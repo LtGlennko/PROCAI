@@ -32,7 +32,8 @@ namespace Presentacion
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.StartPosition = FormStartPosition.CenterParent;
-            //fh.Dock = DockStyle.Fill;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
             this.pnlVentanas.Controls.Add(fh);
             this.pnlVentanas.Tag = fh;
             fh.Show();

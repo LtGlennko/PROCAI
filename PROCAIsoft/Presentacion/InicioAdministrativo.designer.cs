@@ -208,9 +208,9 @@
             // 
             // pnlVentanas
             // 
-            this.pnlVentanas.Location = new System.Drawing.Point(45, 44);
+            this.pnlVentanas.Location = new System.Drawing.Point(45, 79);
             this.pnlVentanas.Name = "pnlVentanas";
-            this.pnlVentanas.Size = new System.Drawing.Size(900, 550);
+            this.pnlVentanas.Size = new System.Drawing.Size(900, 515);
             this.pnlVentanas.TabIndex = 17;
             // 
             // InicioAdministrativo
