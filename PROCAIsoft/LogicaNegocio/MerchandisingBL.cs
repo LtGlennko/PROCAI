@@ -23,6 +23,11 @@ namespace LogicaNegocio
             return merchandisingDA.listarMerchandising();
         }
 
+        public BindingList<Merchandising> buscarMerchandising(string pista)
+        {
+            return merchandisingDA.buscarMerchandising(pista);
+        }
+
         public bool registarMerchandising(Merchandising m)
         {
             return merchandisingDA.registrarMerchandising(m);

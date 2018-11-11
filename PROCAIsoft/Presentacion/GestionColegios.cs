@@ -81,5 +81,10 @@ namespace Presentacion
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvCol.DataSource = cbl.buscarColegio(txtBuscar.Text);
+        }
     }
 }

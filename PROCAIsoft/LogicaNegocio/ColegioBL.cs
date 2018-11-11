@@ -18,6 +18,8 @@ namespace LogicaNegocio
             colegioDA = new ColegioDA();
         }
 
+        
+
         public bool registrarColegio(Colegio colegio)
         {
             return colegioDA.registrarColegio(colegio);
@@ -26,6 +28,11 @@ namespace LogicaNegocio
         public BindingList<Colegio> listarColegios()
         {
             return colegioDA.listarColegio();
+        }
+
+        public BindingList<Colegio> buscarColegio(string pista)
+        {
+            return colegioDA.buscarColegio(pista);
         }
     }
      

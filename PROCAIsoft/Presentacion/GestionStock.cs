@@ -75,16 +75,7 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                foreach (DataGridViewRow fila in dgvStock.Rows)
-                    foreach (DataGridViewCell celda in fila.Cells)
-                        if (txtBuscar.Text.IndexOf(celda.Value.ToString()) >= 0)
-                            celda.Style.BackColor = Color.Red;
-            }catch (Exception)
-            {
-                MessageBox.Show("Producto no encontrado");
-            }
+            dgvStock.DataSource = mbl.buscarMerchandising(txtBuscar.Text);
         }
 
         private void label2_Click(object sender, EventArgs e)
