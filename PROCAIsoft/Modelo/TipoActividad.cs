@@ -16,9 +16,21 @@ namespace Modelo
         private BindingList<Actividad> listaActividades;
         private BindingList<Pregunta> preguntas;
 
-        public TipoActividad(string nombre, string descripcion)
+        public TipoActividad()
         {
-            IdTipoActividad = i++;
+
+        }
+
+        public TipoActividad(string nombre,string descripcion)
+        {
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.listaActividades = new BindingList<Actividad>();
+            this.preguntas = new BindingList<Pregunta>();
+        }
+        public TipoActividad(int id,string nombre, string descripcion)
+        {
+            IdTipoActividad =id;
             this.nombre = nombre;
             this.descripcion = descripcion;
             this.listaActividades = new BindingList<Actividad>();

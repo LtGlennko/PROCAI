@@ -71,6 +71,12 @@
     <Compile Include="agregarStock.designer.cs">
       <DependentUpon>agregarStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarTA.Designer.cs">
+      <DependentUpon>AgregarTA.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="EditarStocks.designer.cs">
       <DependentUpon>EditarStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarTA.Designer.cs">
+      <DependentUpon>EditarTA.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionOrientadores.cs">
       <SubType>Form</SubType>
@@ -142,6 +154,12 @@
     </Compile>
     <Compile Include="GestionStock.Designer.cs">
       <DependentUpon>GestionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionTA.Designer.cs">
+      <DependentUpon>GestionTA.cs</DependentUpon>
     </Compile>
     <Compile Include="InfoSolicitud.cs">
       <SubType>Form</SubType>
@@ -259,6 +277,9 @@
     <EmbeddedResource Include="agregarStock.resx">
       <DependentUpon>agregarStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarTA.resx">
+      <DependentUpon>AgregarTA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscarGrupo.resx">
       <DependentUpon>BuscarGrupo.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarStocks.resx">
       <DependentUpon>EditarStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarTA.resx">
+      <DependentUpon>EditarTA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionOrientadores.resx">
       <DependentUpon>GestionOrientadores.cs</DependentUpon>
@@ -294,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionStock.resx">
       <DependentUpon>GestionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionTA.resx">
+      <DependentUpon>GestionTA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoSolicitud.resx">
       <DependentUpon>InfoSolicitud.cs</DependentUpon>

@@ -23,9 +23,18 @@ namespace LogicaNegocio
             return taDA.listarTipoActividades();
         }
 
+        public BindingList<TipoActividad> buscarTipoActivdad(string pista)
+        {
+            return taDA.buscarTA( pista);
+        }
         public bool registarTipoActividad(TipoActividad ta)
         {
             return taDA.registrarTipoActividad(ta);
+        }
+
+        public bool actualizarTipoActividad(TipoActividad ta)
+        {
+            return taDA.actualizarTipoActividad(ta);
         }
     }
 }

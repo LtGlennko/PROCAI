@@ -52,6 +52,8 @@
             this.ptrDespliegue = new System.Windows.Forms.PictureBox();
             this.pnlVentanas = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.btnGestionTA = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -64,6 +66,7 @@
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombreUsu
@@ -89,6 +92,8 @@
             // pnlOpciones
             // 
             this.pnlOpciones.BackColor = System.Drawing.Color.Navy;
+            this.pnlOpciones.Controls.Add(this.pictureBox1);
+            this.pnlOpciones.Controls.Add(this.btnGestionTA);
             this.pnlOpciones.Controls.Add(this.pictureBox8);
             this.pnlOpciones.Controls.Add(this.pictureBox9);
             this.pnlOpciones.Controls.Add(this.btnGenerarReportes);
@@ -122,6 +127,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 30;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox9
             // 
@@ -358,6 +364,31 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnGestionTA
+            // 
+            this.btnGestionTA.FlatAppearance.BorderSize = 0;
+            this.btnGestionTA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionTA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionTA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGestionTA.Location = new System.Drawing.Point(44, 536);
+            this.btnGestionTA.Name = "btnGestionTA";
+            this.btnGestionTA.Size = new System.Drawing.Size(167, 46);
+            this.btnGestionTA.TabIndex = 16;
+            this.btnGestionTA.Text = "Gestionar Tipo de Actividad";
+            this.btnGestionTA.UseVisualStyleBackColor = true;
+            this.btnGestionTA.Click += new System.EventHandler(this.btnGestionTA_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.flecha;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 545);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // InicioEjecutivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +418,7 @@
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,5 +448,7 @@
         private System.Windows.Forms.Button btnGestOrientadores;
         private System.Windows.Forms.Button btnGestCalendario;
         private System.Windows.Forms.Button btnGestColegios;
+        private System.Windows.Forms.Button btnGestionTA;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

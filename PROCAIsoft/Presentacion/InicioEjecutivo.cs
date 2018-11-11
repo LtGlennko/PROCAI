@@ -150,6 +150,21 @@ namespace Presentacion
             abrirFormInPanel(new frmSolicitudes());
         }
 
+        private void btnGestionTA_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new GestionTA());
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void mnuGestionarStock_Click(object sender, EventArgs e)
         //{
         //    if (gestionarStock == null)
