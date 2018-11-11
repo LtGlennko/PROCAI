@@ -36,11 +36,14 @@ namespace Presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el producto?", "Salir", MessageBoxButtons.YesNoCancel);
+            DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el Colegio?", "Salir", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
-                dgvCol.Rows.RemoveAt(dgvCol.CurrentRow.Index);
-                MessageBox.Show("Producto Eliminado");
+                int cod = (int)dgvCol.CurrentRow.Cells[0].Value;
+                bool eliminado=cbl.eliminarColegio(cod);
+                dgvCol.DataSource = cbl.listarColegios();
+                if(eliminado) MessageBox.Show("Colegio eliminado");
+                else MessageBox.Show("Colegio no se pudo eliminar");
             }
             else if (result == DialogResult.No)
             {

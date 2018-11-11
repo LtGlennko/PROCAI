@@ -31,6 +31,8 @@
             this.lblNombreUsu = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlOpciones = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGestionTA = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnGenerarReportes = new System.Windows.Forms.Button();
@@ -52,9 +54,8 @@
             this.ptrDespliegue = new System.Windows.Forms.PictureBox();
             this.pnlVentanas = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.btnGestionTA = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlOpciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogOut)).BeginInit();
@@ -66,7 +67,6 @@
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombreUsu
@@ -115,8 +115,33 @@
             this.pnlOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOpciones.Location = new System.Drawing.Point(0, 0);
             this.pnlOpciones.Name = "pnlOpciones";
-            this.pnlOpciones.Size = new System.Drawing.Size(215, 594);
+            this.pnlOpciones.Size = new System.Drawing.Size(215, 641);
             this.pnlOpciones.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.flecha;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 570);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnGestionTA
+            // 
+            this.btnGestionTA.FlatAppearance.BorderSize = 0;
+            this.btnGestionTA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionTA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionTA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGestionTA.Location = new System.Drawing.Point(45, 554);
+            this.btnGestionTA.Name = "btnGestionTA";
+            this.btnGestionTA.Size = new System.Drawing.Size(167, 46);
+            this.btnGestionTA.TabIndex = 16;
+            this.btnGestionTA.Text = "Gestionar Tipo de Actividad";
+            this.btnGestionTA.UseVisualStyleBackColor = true;
+            this.btnGestionTA.Click += new System.EventHandler(this.btnGestionTA_Click);
             // 
             // pictureBox8
             // 
@@ -364,31 +389,6 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnGestionTA
-            // 
-            this.btnGestionTA.FlatAppearance.BorderSize = 0;
-            this.btnGestionTA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionTA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionTA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGestionTA.Location = new System.Drawing.Point(44, 536);
-            this.btnGestionTA.Name = "btnGestionTA";
-            this.btnGestionTA.Size = new System.Drawing.Size(167, 46);
-            this.btnGestionTA.TabIndex = 16;
-            this.btnGestionTA.Text = "Gestionar Tipo de Actividad";
-            this.btnGestionTA.UseVisualStyleBackColor = true;
-            this.btnGestionTA.Click += new System.EventHandler(this.btnGestionTA_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.flecha;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 545);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // InicioEjecutivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,7 +396,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(946, 594);
+            this.ClientSize = new System.Drawing.Size(946, 641);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlOpciones);
@@ -406,6 +406,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioEjecutivo";
             this.pnlOpciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogOut)).EndInit();
@@ -418,7 +419,6 @@
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -18,6 +18,10 @@ namespace LogicaNegocio
             taDA = new TipoActividadDA();
         }
 
+        public bool eliminarTipoActividad(int id)
+        {
+            return taDA.eliminarTipoActividad(id);
+        }
         public BindingList<TipoActividad> listarTipoActividad()
         {
             return taDA.listarTipoActividades();

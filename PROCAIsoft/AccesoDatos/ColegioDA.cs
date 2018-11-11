@@ -48,7 +48,7 @@ namespace AccesoDatos
             con.Open();
             comando = new MySqlCommand();
             sql = "SELECT IdColegio, RUC, nombre, pais, departamento, provincia,  direccion, tipo, telefonoContacto "
-                + "FROM Colegio";
+                + "FROM Colegio WHERE estado=1";
             comando.CommandText = sql;
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();
@@ -104,6 +104,26 @@ namespace AccesoDatos
             }
             con.Close();
             return col;
+        }
+
+        public bool eliminarColegio(int id)
+        {
+            try
+            {
+                con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                comando = new MySqlCommand();
+                sql = "UPDATE Colegio SET estado=0 WHERE IdColegio= "+id+";";
+                comando.CommandText = sql;
+                comando.Connection = con;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public bool actualizarColegio(Colegio colegio)

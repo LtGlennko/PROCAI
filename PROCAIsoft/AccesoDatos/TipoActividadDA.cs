@@ -20,7 +20,7 @@ namespace AccesoDatos
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
             comando = new MySqlCommand();
-            sql = "SELECT IdTIpoActividad,Nombre,Descripcion FROM TipoActividad";
+            sql = "SELECT IdTIpoActividad,Nombre,Descripcion FROM TipoActividad WHERE estado=1";
             comando.CommandText = sql;
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();
@@ -60,6 +60,26 @@ namespace AccesoDatos
             }
             con.Close();
             return tactiviades;
+        }
+
+        public bool eliminarTipoActividad(int id)
+        {
+            try
+            {
+                con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                comando = new MySqlCommand();
+                sql = "UPDATE TipoActividad SET estado=0 WHERE IdTipoActividad="+id;
+                comando.CommandText = sql;
+                comando.Connection = con;
+                comando.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public bool registrarTipoActividad(TipoActividad ta)
         {

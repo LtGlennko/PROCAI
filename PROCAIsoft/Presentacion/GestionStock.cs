@@ -60,8 +60,11 @@ namespace Presentacion
             DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el producto?", "Salir", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
-                dgvStock.Rows.RemoveAt(dgvStock.CurrentRow.Index);
-                MessageBox.Show("Producto Eliminado");
+                int cod = (int)dgvStock.CurrentRow.Cells[0].Value;
+                bool eliminado = mbl.eliminarMerchandising(cod);
+                dgvStock.DataSource = mbl.listarMerchandising();
+                if(eliminado) MessageBox.Show("Producto Eliminado");
+                else MessageBox.Show("Producto no se pudo eliminar");
             }
             else if (result == DialogResult.No)
             {

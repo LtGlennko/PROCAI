@@ -93,9 +93,9 @@
             // dgvCol
             // 
             this.dgvCol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCol.Location = new System.Drawing.Point(108, 140);
+            this.dgvCol.Location = new System.Drawing.Point(21, 119);
             this.dgvCol.Name = "dgvCol";
-            this.dgvCol.Size = new System.Drawing.Size(284, 112);
+            this.dgvCol.Size = new System.Drawing.Size(428, 163);
             this.dgvCol.TabIndex = 6;
             this.dgvCol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

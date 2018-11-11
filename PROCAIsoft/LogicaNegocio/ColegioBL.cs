@@ -18,7 +18,10 @@ namespace LogicaNegocio
             colegioDA = new ColegioDA();
         }
 
-        
+        public bool eliminarColegio(int id)
+        {
+            return colegioDA.eliminarColegio(id);
+        }
 
         public bool registrarColegio(Colegio colegio)
         {

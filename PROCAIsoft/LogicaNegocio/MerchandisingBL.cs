@@ -36,5 +36,10 @@ namespace LogicaNegocio
         {
             merchandisingDA.actualizarMerchandising(m);
         }
+
+        public bool eliminarMerchandising(int id)
+        {
+            return merchandisingDA.eliminarMerchandising(id);
+        }
     }
 }

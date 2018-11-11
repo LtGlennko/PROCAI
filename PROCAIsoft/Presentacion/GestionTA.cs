@@ -64,5 +64,27 @@ namespace Presentacion
         {
             dgvTA.DataSource = tipoactBL.buscarTipoActivdad(txtBuscar.Text);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el Tipo de Actividad?", "Salir", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                int cod = (int)dgvTA.CurrentRow.Cells[0].Value;
+                bool eliminado = tipoactBL.eliminarTipoActividad(cod);
+                dgvTA.DataSource = tipoactBL.listarTipoActividad();
+                if (eliminado) MessageBox.Show("Tipo de Actividad Eliminado");
+                else MessageBox.Show("No se pudo eliminar el Tipo de Actividad");
+
+            }
+            else if (result == DialogResult.No)
+            {
+
+            }
+            else if (result == DialogResult.Cancel)
+            {
+
+            }
+        }
     }
 }
