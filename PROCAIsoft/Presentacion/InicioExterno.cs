@@ -53,5 +53,20 @@ namespace Presentacion
         {
             this.Dispose();
         }
+
+        private void lblTitulo_MouseHover(object sender, EventArgs e)
+        {
+            //pnlOpciones.Width = MAX_SIZE;
+        }
+
+        private void pnlOpciones_MouseLeave(object sender, EventArgs e)
+        {
+            pnlOpciones.Width = MIN_SIZE;
+        }
+
+        private void pnlOpciones_MouseEnter(object sender, EventArgs e)
+        {
+            pnlOpciones.Width = MAX_SIZE;
+        }
     }
 }

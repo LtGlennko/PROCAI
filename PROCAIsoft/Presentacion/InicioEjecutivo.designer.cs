@@ -117,6 +117,8 @@
             this.pnlOpciones.Name = "pnlOpciones";
             this.pnlOpciones.Size = new System.Drawing.Size(215, 641);
             this.pnlOpciones.TabIndex = 11;
+            this.pnlOpciones.MouseLeave += new System.EventHandler(this.pnlOpciones_MouseLeave);
+            this.pnlOpciones.MouseHover += new System.EventHandler(this.pnlOpciones_MouseHover);
             // 
             // pictureBox1
             // 

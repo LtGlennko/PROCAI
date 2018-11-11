@@ -59,6 +59,7 @@
             this.lblTitulo.Size = new System.Drawing.Size(180, 39);
             this.lblTitulo.TabIndex = 9;
             this.lblTitulo.Text = "ROCAIsoft";
+            this.lblTitulo.MouseHover += new System.EventHandler(this.lblTitulo_MouseHover);
             // 
             // btnSalir
             // 
@@ -85,6 +86,8 @@
             this.pnlOpciones.Name = "pnlOpciones";
             this.pnlOpciones.Size = new System.Drawing.Size(215, 594);
             this.pnlOpciones.TabIndex = 15;
+            this.pnlOpciones.MouseEnter += new System.EventHandler(this.pnlOpciones_MouseEnter);
+            this.pnlOpciones.MouseLeave += new System.EventHandler(this.pnlOpciones_MouseLeave);
             // 
             // pictureBox3
             // 

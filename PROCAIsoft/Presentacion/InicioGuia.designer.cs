@@ -57,6 +57,8 @@
             this.pnlOpciones.Name = "pnlOpciones";
             this.pnlOpciones.Size = new System.Drawing.Size(215, 594);
             this.pnlOpciones.TabIndex = 20;
+            this.pnlOpciones.MouseLeave += new System.EventHandler(this.pnlOpciones_MouseLeave);
+            this.pnlOpciones.MouseHover += new System.EventHandler(this.pnlOpciones_MouseHover);
             // 
             // label1
             // 
@@ -78,6 +80,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseHover += new System.EventHandler(this.btnSugerirColegio_MouseHover);
             // 
             // btnSugerirColegio
             // 
@@ -92,6 +95,7 @@
             this.btnSugerirColegio.Text = "Gestionar Encuestas";
             this.btnSugerirColegio.UseVisualStyleBackColor = true;
             this.btnSugerirColegio.Click += new System.EventHandler(this.btnSugerirColegio_Click);
+            this.btnSugerirColegio.MouseHover += new System.EventHandler(this.btnSugerirColegio_MouseHover);
             // 
             // lblTitulo
             // 
@@ -102,6 +106,7 @@
             this.lblTitulo.Size = new System.Drawing.Size(180, 39);
             this.lblTitulo.TabIndex = 9;
             this.lblTitulo.Text = "ROCAIsoft";
+            this.lblTitulo.MouseHover += new System.EventHandler(this.btnSugerirColegio_MouseHover);
             // 
             // pnlVentanas
             // 
