@@ -79,7 +79,8 @@ namespace AccesoDatos
             MySqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
             {
-                //LLENAR TODO
+                int id = lector.GetInt32("ID");
+                //como llenar los otros
             }
             con.Close();
             return guias;

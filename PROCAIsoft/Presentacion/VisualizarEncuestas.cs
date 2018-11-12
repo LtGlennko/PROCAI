@@ -31,6 +31,7 @@ namespace Presentacion
         private ColegioBL colegioBL;//para combobox
         private GuiaBL guiaBL;//para combobox;
         private ActividadBL actividadBL;//para el combobox
+        private bool modificar = false;
         public frmRegYeditEncuestas(Guia g)
         {
             InitializeComponent();
@@ -53,7 +54,7 @@ namespace Presentacion
             
             cboGuia.ValueMember = "IdGuia1";
             cboGuia.DisplayMember = "NombresYapellidos";
-            cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!! Hecha
+            cboGuia.DataSource = guiaBL.listarGuias();//FUNCION NO COMPLETA!
         }
 
         public frmRegYeditEncuestas()
@@ -172,7 +173,15 @@ namespace Presentacion
             }
 
             if (flagGrupo == true) encuestaCreada.setGrupo(grupoSeleccionado);
-            //else flagGrupo == false : como registar y assignar el nuevo grupo ?
+            else
+            {//registracion del nuevo grupo
+                GrupoEncuestas NuevoGrupo = new GrupoEncuestas();
+                NuevoGrupo.setActividad((Actividad)cboActividad.SelectedValue);
+                NuevoGrupo.setColegio((Colegio)cboColegio.SelectedValue);
+                NuevoGrupo.setGuiaEvaluado((Guia)cboGuia.SelectedValue);
+                encuestaCreada.setGrupo(NuevoGrupo);
+            }
+            
             if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red)
             {
                 MessageBox.Show("Tiene que llenar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -184,13 +193,13 @@ namespace Presentacion
 
             else
             {
-                if (txtNumero.Text == "") MessageBox.Show("Tiene que llenar las informaciones del grupo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                {
+                //if (txtNumero.Text == "") MessageBox.Show("Tiene que llenar las informaciones del grupo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //else
+                //{
                     listaEncuestas.Add(encuestaCreada);
                     dgvEncuestas.DataSource = listaEncuestas;
                     
-                }
+                //}
             }
 
 
@@ -215,11 +224,6 @@ namespace Presentacion
                 encuesta.addCalificacionPorEncuesta(calif);
             }
         }
-        //Para hacer atras 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
 
         private void button1_Click(object sender, EventArgs e) //VISUALIZACION
         {
@@ -236,9 +240,9 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //verificar si habia evento doble click sobre datagridview
-            
-            
+            //verifica si habia evento doble click sobre datagridview
+            if (modificar == true)
+            {
                 encuestaModificada = new Encuesta();
                 encuestaModificada = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
                 listaEncuestas.Remove(encuestaModificada);
@@ -255,6 +259,11 @@ namespace Presentacion
                     MessageBox.Show("Modificada con éxito");
                 else
                     MessageBox.Show("Error al modificar");
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una encuesta para modificarla");
+            }
             
         }
 
@@ -308,6 +317,8 @@ namespace Presentacion
             cboColegio.Text = E.GrupoPerteneciente.Colegio.Nombre.ToString();
             cboGuia.Text = E.GrupoPerteneciente.GuiaEvaluado.NombresYapellidos.ToString();
             dateEncuentra.Value = E.FechaProgramada;
+
+            modificar = true;
         }
 
 
@@ -335,6 +346,7 @@ namespace Presentacion
                     btnGuardar.Enabled = false;
                     btnNuevo.Enabled = true;
                     flagGrupo = false;
+                    btnEncuestaGrupo.Enabled = false;
                     break;
 
                 case estado.NUEVO:
@@ -355,6 +367,7 @@ namespace Presentacion
                     btnNuevo.Enabled = true;
                     flagGrupo = false;
                     limpiarCampos();
+                    btnEncuestaGrupo.Enabled = false;
                     break;
 
                 case estado.GUARDAR:
@@ -373,6 +386,7 @@ namespace Presentacion
                     button1.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnNuevo.Enabled = true;
+                    btnEncuestaGrupo.Enabled = false;
                     break;
                 case estado.BUSQUEDA:
                     txtNumero.Enabled = false;
@@ -390,9 +404,10 @@ namespace Presentacion
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnNuevo.Enabled = true;
-                    flagGrupo = true;
+                    flagGrupo = false;
+                    btnEncuestaGrupo.Enabled = true;
                     limpiarCampos();
-                    //anadir listEncuesta = null ?
+                    
                     break;
                 case estado.MODIFICAR:
                     txtNumero.Enabled = false;
@@ -406,10 +421,12 @@ namespace Presentacion
                     dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = false;
                     btnModificar.Enabled = true;
-                    btnBusca.Enabled = true;
+                    btnBusca.Enabled = false;
                     button1.Enabled = true;
                     btnGuardar.Enabled = false;
+                    flagGrupo = false;
                     btnNuevo.Enabled = true;
+                    btnEncuestaGrupo.Enabled = false;
                     break;
 
                 case estado.AGREGAR:
@@ -428,6 +445,8 @@ namespace Presentacion
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnNuevo.Enabled = false;
+                    flagGrupo = false;
+                    btnEncuestaGrupo.Enabled = false;
                     break;
             }
         }
@@ -483,7 +502,7 @@ namespace Presentacion
              
             estadoComponentes(estado.GUARDAR);
 
-            // verificar si flag = true o false -> si false, tenemos que guardarlo...
+            
 
             EncuestaBL encuestaBL = new EncuestaBL();
             if (listaEncuestas == null) MessageBox.Show("No hay encuentra para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -491,150 +510,21 @@ namespace Presentacion
             {
                 foreach (Encuesta E in listaEncuestas)
                 {
+                    int compteur = listaEncuestas.Count; //para que el mensaje de exito aparece solamenta una vez
                     if (encuestaBL.registrarEncuesta(E, idGuia))
-                        //este mensaje va a ponerse 3 veces en seguida si hay 3 encuestas... como hacer solamente uno ?
-                        MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        compteur--;
+
                     else
                         MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (compteur == 0) MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
+
+        private void btnEncuestaGrupo_Click(object sender, EventArgs e)
+        {
+            VerEncuestasGrupo veg = new VerEncuestasGrupo(grupoSeleccionado);
+            veg.Visible = true;
+        }
     }
 }
-
-        
-
-
-        //        private Encuesta encuestaCreada;
-        //        private int idUsu;
-        //        private GrupoEncuestas grupoBuscado;
-        //        private Pregunta preg1;
-        //        private Pregunta preg2;
-        //        private Pregunta preg3;
-        //        private Pregunta preg4;
-        //        private BindingList<Encuesta> listaEncuestas;
-        //        public frmRegYeditEncuestas(Usuario usu)
-        //        {
-        //            //btnRegistrar.Enabled = true;
-        //            //btnModificar.Enabled = true;
-        //            idUsu = usu.IdUsuario1;
-        //            InitializeComponent();
-        //            btnAgregar.Enabled = false;
-
-        //            txtNumero.Enabled = false;
-        //            dateEncuentra.Enabled = false;
-
-        //            dgvEncuestas.AutoGenerateColumns = false;
-
-        //            listaEncuestas = new BindingList<Encuesta>();
-        //            //dgvEncuestas.DataSource = listaEncuestas;
-        //            dateEncuentra.Enabled = false;           
-        //        }
-
-        //        private void btnRegistrar_Click(object sender, EventArgs e)
-        //        {
-        //            MessageBox.Show("Encuesta registrada con éxito");
-        //            Encuesta E = new Encuesta();
-        //        }
-        //        private void btnAgregar_Click(object sender, EventArgs e)
-        //        {
-        //            encuestaCreada = new Encuesta();
-        //            encuestaCreada.setGrupo(grupoBuscado);
-        //            agregarCalificacionSeleccionada(encuestaCreada, grpP1, preg1);
-        //            agregarCalificacionSeleccionada(encuestaCreada, grpP2, preg2);
-        //            agregarCalificacionSeleccionada(encuestaCreada, grpP3, preg3);
-        //            agregarCalificacionSeleccionada(encuestaCreada, grpP4, preg4);
-        //            int cantCalif = encuestaCreada.CalificacionesPorEncuesta.Count;
-        //            if (cantCalif >= 4)
-        //                dgvEncuestas.DataSource = listaEncuestas;
-        //                listaEncuestas.Add(encuestaCreada);
-        //            //Inserto encuesta en la base de datos
-        //            EncuestaBL encuestaBL = new EncuestaBL();
-        //            if (encuestaBL.registrarEncuesta(encuestaCreada, idUsu))
-        //                MessageBox.Show("Registrado con éxito");
-        //            else
-        //                MessageBox.Show("Error al registrar");
-        //        }
-
-        //        private void agregarCalificacionSeleccionada(Encuesta encuesta, GroupBox grupo, Pregunta preg)
-        //        {
-        //            RadioButton btn = grupo.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked);
-        //            modificaYagregaCalif(btn, encuesta, preg, 1);
-        //            modificaYagregaCalif(btn, encuesta, preg, 2);
-        //            modificaYagregaCalif(btn, encuesta, preg, 3);
-        //            modificaYagregaCalif(btn, encuesta, preg, 4);
-        //            modificaYagregaCalif(btn, encuesta, preg, 5);
-        //        }
-
-        //        private void modificaYagregaCalif(RadioButton btn, Encuesta encuesta, Pregunta preg, int nro)
-        //        {
-        //            if ((btn.Text).Equals(nro.ToString()))
-        //            {
-        //                CalificacionPXE calif = new CalificacionPXE(nro);
-        //                calif.setPregunta(preg);
-        //                encuesta.addCalificacionPorEncuesta(calif);
-        //            }
-        //        }
-
-        //        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //        {
-
-        //        }
-
-        //        private void button1_Click(object sender, EventArgs e)
-        //        {
-        //            frmDetalleEncuesta DE = new frmDetalleEncuesta();
-        //            if (DE.ShowDialog() == DialogResult.OK)
-        //            {
-
-        //            }
-        //        }
-
-        //        private void frmRegYeditEncuestas_Load(object sender, EventArgs e)
-        //        {
-
-        //        }
-
-        //        private void pictureBox1_Click(object sender, EventArgs e)
-        //        {
-        //            Dispose();
-        //        }
-
-        //        private void btnBusca_Click(object sender, EventArgs e)
-        //        {
-        //            BuscarGrupo bg = new BuscarGrupo();
-        //            //bg.Visible = true;
-        //            if(bg.ShowDialog() == DialogResult.OK)
-        //            {
-        //                grupoBuscado = bg.getGrupoSel();
-        //                BindingList<Pregunta> preguntasSel = grupoBuscado.Actividad.TipoActividad.Preguntas;
-        //                //definir preg1, preg2, preg3 y preg4
-        //                if(preguntasSel.Count < 4)
-        //                {
-        //                    MessageBox.Show("El tipo de actividad tiene menos de 4 preguntas relacionadas");
-        //                    return;
-        //                }
-        //                //Actualizar la fecha
-        //                preg1 = preguntasSel[0];
-        //                preg2 = preguntasSel[1];
-        //                preg3 = preguntasSel[2];
-        //                preg4 = preguntasSel[3];
-        //                grpP1.Text = "Pregunta 1: " + preg1.Enunciado;
-        //                grpP2.Text = "Pregunta 2: " + preg2.Enunciado;
-        //                grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
-        //                grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
-        //                lblTipoEncuesta.Text = "Tipo de actividad: " + grupoBuscado.Actividad.TipoActividad.Nombre;
-        //                dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
-        //            }
-        //            txtNumero.Text = grupoBuscado.IdGrupoEncuestas1.ToString();
-        //            txtNumero.Enabled = false;
-        //            btnAgregar.Enabled = true;
-        //        }
-
-        //       
-        //        private void lblTipoEncuesta_Click(object sender, EventArgs e)
-        //        {
-
-        //        }
-        //    }
-    

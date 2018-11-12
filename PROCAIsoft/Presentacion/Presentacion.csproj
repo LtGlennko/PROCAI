@@ -253,6 +253,12 @@
     <Compile Include="VentanaNuevoProcesoAdmision.designer.cs">
       <DependentUpon>VentanaNuevoProcesoAdmision.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerEncuestasGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerEncuestasGrupo.Designer.cs">
+      <DependentUpon>VerEncuestasGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisualizarEncuestas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaNuevoProcesoAdmision.resx">
       <DependentUpon>VentanaNuevoProcesoAdmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerEncuestasGrupo.resx">
+      <DependentUpon>VerEncuestasGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisualizarEncuestas.resx">
       <DependentUpon>VisualizarEncuestas.cs</DependentUpon>
