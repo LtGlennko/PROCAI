@@ -33,6 +33,7 @@ namespace Modelo
         public List<GrupoEncuestas> GruposDeEncuestas { get => gruposDeEncuestas; set => gruposDeEncuestas = value; }
         public TipoActividad TipoActividad { get => tipoActividad; set => tipoActividad = value; }
         public Merchandising MaterialRepartido { get => materialRepartido; set => materialRepartido = value; }
+        public string nombreDeTipoYfecha { get => tipoActividad.Nombre + " - " + fechaProgramada; }
         public void setTipoActividad(TipoActividad tip)
         {
             this.tipoActividad = tip;

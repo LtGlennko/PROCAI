@@ -40,7 +40,10 @@ namespace Presentacion
             //ProcesoAdmision PA = null;
             
             VentanaNuevoProcesoAdmision VNPA = new VentanaNuevoProcesoAdmision(this);
-            VNPA.Show();
+            if (VNPA.ShowDialog() == DialogResult.OK)
+            {
+
+            }
             //llenarDGV();
 
         }

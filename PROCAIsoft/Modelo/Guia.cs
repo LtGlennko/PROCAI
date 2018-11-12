@@ -30,7 +30,7 @@ namespace Modelo
         public TipoGuia TipoGuia { get => tipoGuia; set => tipoGuia = value; }
         public List<GrupoEncuestas> GruposDondeFueEvaluado { get => gruposDondeFueEvaluado; set => gruposDondeFueEvaluado = value; }
         public List<Encuesta> EncuestasDigitadas { get => encuestasDigitadas; set => encuestasDigitadas = value; }
-
+        public string NombresYapellidosGuia { get => NombresYapellidos; }
         public void addEncuestaDigitada(Encuesta enc)
         {
             this.encuestasDigitadas.Add(enc);

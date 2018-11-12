@@ -42,7 +42,7 @@ namespace AccesoDatos
                 if (!lector.IsDBNull(4)) corOfi = lector.GetString("correOfi");
                 //Creacion del guia
                 Guia g = new Guia(usu, fechaIn, tlfOfi, celOfi, corOfi, tipo);
-                g.IdGuia1 = g.IdTrabajadorOCAI1 = usu.IdUsuario1;
+                g.IdGuia1 = g.IdTrabajadorOCAI1 = g.IdUsuario1 = usu.IdUsuario1;
                 //Lectura de datos su cargo
                 int idCarg = lector.GetInt32("IdCargo");
                 string nomCarg = lector.GetString("NombreCargo");

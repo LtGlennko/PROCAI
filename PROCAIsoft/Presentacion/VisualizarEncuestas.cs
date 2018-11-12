@@ -30,7 +30,7 @@ namespace Presentacion
         private int idGuia;
         private ColegioBL colegioBL;//para combobox
         private GuiaBL guiaBL;//para combobox;
-        private TipoActividadBL tipoActividadBL;//para el combobox
+        private ActividadBL actividadBL;//para el combobox
         public frmRegYeditEncuestas(Guia g)
         {
             InitializeComponent();
@@ -41,17 +41,19 @@ namespace Presentacion
 
             colegioBL = new ColegioBL();
             guiaBL = new GuiaBL();
-            tipoActividadBL = new TipoActividadBL();
+            actividadBL = new ActividadBL();
 
             cboColegio.DataSource = colegioBL.listarColegios();
+            cboColegio.ValueMember = "IdColegio1";
             cboColegio.DisplayMember = "nombre";
-            cboActividad.DataSource = tipoActividadBL.listarTipoActividad();
-            cboActividad.DisplayMember = "nombre";
-            //cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!!
-            //cboGuia.DataSource = "nombre" + "appelidoP" + "appelidoM";//NO SEGURA
 
-
-
+            cboActividad.DataSource = actividadBL.listarActividades();
+            cboActividad.ValueMember = "IdActividad1";
+            cboActividad.DisplayMember = "nombreDeTipoYfecha";
+            
+            cboGuia.ValueMember = "IdGuia1";
+            cboGuia.DisplayMember = "NombresYapellidos";
+            cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!! Hecha
         }
 
         public frmRegYeditEncuestas()
@@ -60,7 +62,22 @@ namespace Presentacion
             estadoComponentes(estado.INICIAL);
             dgvEncuestas.AutoGenerateColumns = false;
             listaEncuestas = new BindingList<Encuesta>();
-            //initialiser les combobox
+
+            colegioBL = new ColegioBL();
+            guiaBL = new GuiaBL();
+            actividadBL = new ActividadBL();
+
+            cboColegio.DataSource = colegioBL.listarColegios();
+            cboColegio.ValueMember = "IdColegio1";
+            cboColegio.DisplayMember = "nombre";
+
+            cboActividad.DataSource = actividadBL.listarActividades();
+            cboActividad.ValueMember = "IdActividad1";
+            cboActividad.DisplayMember = "nombreDeTipoYfecha";
+
+            cboGuia.ValueMember = "IdGuia1";
+            cboGuia.DisplayMember = "NombresYapellidosGuia";
+            cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!! Hecha
 
         }
 
@@ -68,6 +85,7 @@ namespace Presentacion
         {
             BuscarGrupo bg = new BuscarGrupo();
             estadoComponentes(estado.BUSQUEDA);
+            grupoSeleccionado = null;
             if (bg.ShowDialog() == DialogResult.OK)
             {
                 grupoSeleccionado = bg.getGrupoSel();
@@ -89,13 +107,16 @@ namespace Presentacion
                 grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
 
-                cboActividad.Text = grupoSeleccionado.Actividad.TipoActividad.Nombre;
 
             }
-            txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
-            cboGuia.Text = grupoSeleccionado.GuiaEvaluado.NombresYapellidos.ToString();
-            cboColegio.Text = grupoSeleccionado.Colegio.Nombre.ToString();
-            dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
+            if (grupoSeleccionado != null)
+            {
+                txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
+                cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
+                cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
+                cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
+                //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
+            }
 
         }
 
@@ -297,8 +318,11 @@ namespace Presentacion
                 case estado.INICIAL:
                     txtNumero.Enabled = false;
                     cboActividad.Enabled = false;
+                    cboActividad.SelectedValue = -1; //Hace que no haya nada preseleccionado
                     cboColegio.Enabled = false;
+                    cboColegio.SelectedValue = -1;
                     cboGuia.Enabled = false;
+                    cboGuia.SelectedValue = -1;
                     grpP1.Enabled = false;
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
@@ -314,7 +338,7 @@ namespace Presentacion
                     break;
 
                 case estado.NUEVO:
-                    txtNumero.Enabled = true;
+                    //txtNumero.Enabled = true;
                     cboActividad.Enabled = true;
                     cboColegio.Enabled = true;
                     cboGuia.Enabled = true;
@@ -361,7 +385,7 @@ namespace Presentacion
                     grpP4.Enabled = true;
                     dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
-                    btnModificar.Enabled = false;
+                    btnModificar.Enabled = true;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
@@ -411,9 +435,9 @@ namespace Presentacion
         public void limpiarCampos()
         {
             txtNumero.Text = "";
-            cboActividad.DisplayMember = "TIPOACTIVIDAD"; //comment s'appelle la colonne ?
-            cboColegio.Text = "NOMBRE"; //On doit remettre dataSource ?
-            cboGuia.Text = "NOMBRES";
+            //cboActividad.DisplayMember = ""; //comment s'appelle la colonne ?
+            //cboColegio.Text = ""; //On doit remettre dataSource ?
+            //cboGuia.Text = "";
 
             dateEncuentra.Value = DateTime.Now;
 

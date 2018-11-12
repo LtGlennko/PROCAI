@@ -106,6 +106,42 @@ namespace AccesoDatos
             return col;
         }
 
+        public Colegio buscarColegioPorID(int idColegio)
+        {
+            try
+            {
+                con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                comando = new MySqlCommand();
+                sql = "SELECT RUC, nombre, pais, departamento, provincia,  direccion, tipo, telefonoContacto "
+                    + "FROM Colegio " +
+                    "WHERE IdColegio = " + idColegio + ";";
+                comando.CommandText = sql;
+                comando.Connection = con;
+                MySqlDataReader lector = comando.ExecuteReader();
+                lector.Read();
+                string ruc = lector.GetString("RUC");
+                string nombre = lector.GetString("nombre");
+                string pais = lector.GetString("pais");
+                string departamento = lector.GetString("departamento");
+                string provincia = lector.GetString("provincia");
+                string direccion = lector.GetString("direccion");
+                string tipo = lector.GetString("tipo");
+                int numero = lector.GetInt32("telefonoContacto");
+                TipoColegio tc = new TipoColegio();
+                if (tipo == "Estatal") tc = TipoColegio.Estatal;
+                if (tipo == "Particular") tc = TipoColegio.Particular;
+                Colegio c = new Colegio(ruc, nombre, pais, departamento, provincia, direccion, tc, numero);
+                c.IdColegio1 = idColegio;
+                con.Close();
+                return c;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
         public bool eliminarColegio(int id)
         {
             try

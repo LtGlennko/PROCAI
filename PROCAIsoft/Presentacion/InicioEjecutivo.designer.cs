@@ -92,12 +92,12 @@
             // pnlOpciones
             // 
             this.pnlOpciones.BackColor = System.Drawing.Color.Navy;
+            this.pnlOpciones.Controls.Add(this.btnGestionarPermisos);
+            this.pnlOpciones.Controls.Add(this.btnGenerarReportes);
             this.pnlOpciones.Controls.Add(this.pictureBox1);
             this.pnlOpciones.Controls.Add(this.btnGestionTA);
             this.pnlOpciones.Controls.Add(this.pictureBox8);
             this.pnlOpciones.Controls.Add(this.pictureBox9);
-            this.pnlOpciones.Controls.Add(this.btnGenerarReportes);
-            this.pnlOpciones.Controls.Add(this.btnGestionarPermisos);
             this.pnlOpciones.Controls.Add(this.btnLogOut);
             this.pnlOpciones.Controls.Add(this.pictureBox6);
             this.pnlOpciones.Controls.Add(this.pictureBox7);
@@ -123,7 +123,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.flecha;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 570);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 538);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +137,7 @@
             this.btnGestionTA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionTA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionTA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGestionTA.Location = new System.Drawing.Point(45, 554);
+            this.btnGestionTA.Location = new System.Drawing.Point(48, 423);
             this.btnGestionTA.Name = "btnGestionTA";
             this.btnGestionTA.Size = new System.Drawing.Size(167, 46);
             this.btnGestionTA.TabIndex = 16;
@@ -159,7 +159,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Presentacion.Properties.Resources.flecha;
-            this.pictureBox9.Location = new System.Drawing.Point(12, 433);
+            this.pictureBox9.Location = new System.Drawing.Point(12, 434);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(24, 24);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,7 +172,7 @@
             this.btnGenerarReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarReportes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarReportes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGenerarReportes.Location = new System.Drawing.Point(48, 475);
+            this.btnGenerarReportes.Location = new System.Drawing.Point(48, 527);
             this.btnGenerarReportes.Name = "btnGenerarReportes";
             this.btnGenerarReportes.Size = new System.Drawing.Size(170, 46);
             this.btnGenerarReportes.TabIndex = 28;
@@ -186,7 +186,7 @@
             this.btnGestionarPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarPermisos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarPermisos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGestionarPermisos.Location = new System.Drawing.Point(48, 423);
+            this.btnGestionarPermisos.Location = new System.Drawing.Point(48, 475);
             this.btnGestionarPermisos.Name = "btnGestionarPermisos";
             this.btnGestionarPermisos.Size = new System.Drawing.Size(170, 46);
             this.btnGestionarPermisos.TabIndex = 27;

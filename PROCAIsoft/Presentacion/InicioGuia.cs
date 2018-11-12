@@ -66,7 +66,7 @@ namespace Presentacion
 
         private void btnSugerirColegio_Click(object sender, EventArgs e)
         {
-            abrirFormInPanel(new frmRegYeditEncuestas());
+            abrirFormInPanel(new frmRegYeditEncuestas(guia));
         }
 
         private void pnlOpciones_MouseHover(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace Presentacion
 
         private void pnlOpciones_MouseLeave(object sender, EventArgs e)
         {
-            pnlOpciones.Width = MIN_SIZE;
+            //pnlOpciones.Width = MIN_SIZE;
         }
     }
 }

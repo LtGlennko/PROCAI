@@ -20,7 +20,10 @@ namespace Presentacion
         private void nuevoOrientadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VentanaNuevoOrientador VA = new VentanaNuevoOrientador();
-            VA.Show();
+            if (VA.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         private void GestionOrientadores_Load(object sender, EventArgs e)

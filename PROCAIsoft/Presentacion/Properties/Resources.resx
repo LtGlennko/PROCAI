@@ -124,22 +124,25 @@
   <data name="Postulantes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Postulantes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Top5guias" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Top5guias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="56763" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\56763.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="d6f18dcdfc48ef9c283fa8e68a5c7a9e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d6f18dcdfc48ef9c283fa8e68a5c7a9e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d6f18dcdfc48ef9c283fa8e68a5c7a9e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d6f18dcdfc48ef9c283fa8e68a5c7a9e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PUCP-El-Comercio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PUCP-El-Comercio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Top5guias" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Top5guias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="guiaspucp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guiaspucp3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

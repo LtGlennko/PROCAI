@@ -14,6 +14,8 @@ namespace AccesoDatos
         private MySqlConnection con;
         MySqlCommand comando;
         String sql;
+
+        //SOLO FUNCIONA CON LOS QUE TIENEN CUENTA
         public BindingList<Usuario> listarUsuarios()
         {
             BindingList<Usuario> usuarios = new BindingList<Usuario>();

@@ -19,7 +19,7 @@ namespace Presentacion
 
             
 
-            Application.Run(new Inicio());
+            Application.Run(new Login());
 
         }
     }

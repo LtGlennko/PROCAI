@@ -87,7 +87,7 @@ namespace Presentacion
 
         private void pnlOpciones_MouseLeave(object sender, EventArgs e)
         {
-            pnlOpciones.Width = MIN_SIZE;
+            //pnlOpciones.Width = MIN_SIZE;
         }
     }
 }

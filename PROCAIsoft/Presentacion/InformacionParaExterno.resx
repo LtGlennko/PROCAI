@@ -118,8 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Presentación
-La Oficina Central de Admisión e Informes se encarga de diseñar y realizar procesos de difusión,
+    <value>La Oficina Central de Admisión e Informes se encarga de diseñar y realizar procesos de difusión,
 inscripción y admisión a los estudios de pregrado, posgrado y formación continua de la Universidad.
 Para realizar esto, realiza actividades de difusión institucional que permitan gestionar procesos de
 inscripción, evaluación y admisión. Esta información, permite elaborar estadísticas de admisión para
