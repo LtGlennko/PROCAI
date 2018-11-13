@@ -55,7 +55,7 @@
             this.pnlOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOpciones.Location = new System.Drawing.Point(0, 0);
             this.pnlOpciones.Name = "pnlOpciones";
-            this.pnlOpciones.Size = new System.Drawing.Size(215, 594);
+            this.pnlOpciones.Size = new System.Drawing.Size(215, 865);
             this.pnlOpciones.TabIndex = 20;
             this.pnlOpciones.MouseLeave += new System.EventHandler(this.pnlOpciones_MouseLeave);
             this.pnlOpciones.MouseHover += new System.EventHandler(this.pnlOpciones_MouseHover);
@@ -80,7 +80,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
-            //this.pictureBox2.MouseHover += new System.EventHandler(this.btnSugerirColegio_MouseHover);
             // 
             // btnSugerirColegio
             // 
@@ -95,7 +94,6 @@
             this.btnSugerirColegio.Text = "Gestionar Encuestas";
             this.btnSugerirColegio.UseVisualStyleBackColor = true;
             this.btnSugerirColegio.Click += new System.EventHandler(this.btnSugerirColegio_Click);
-            //this.btnSugerirColegio.MouseHover += new System.EventHandler(this.btnSugerirColegio_MouseHover);
             // 
             // lblTitulo
             // 
@@ -106,7 +104,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(180, 39);
             this.lblTitulo.TabIndex = 9;
             this.lblTitulo.Text = "ROCAIsoft";
-            //this.lblTitulo.MouseHover += new System.EventHandler(this.btnSugerirColegio_MouseHover);
             // 
             // pnlVentanas
             // 
@@ -114,7 +111,7 @@
             this.pnlVentanas.AutoScroll = true;
             this.pnlVentanas.Location = new System.Drawing.Point(45, 79);
             this.pnlVentanas.Name = "pnlVentanas";
-            this.pnlVentanas.Size = new System.Drawing.Size(900, 515);
+            this.pnlVentanas.Size = new System.Drawing.Size(900, 786);
             this.pnlVentanas.TabIndex = 21;
             // 
             // pnlTitulo
@@ -126,7 +123,7 @@
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(215, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(731, 79);
+            this.pnlTitulo.Size = new System.Drawing.Size(728, 79);
             this.pnlTitulo.TabIndex = 22;
             // 
             // ptrDespliegue
@@ -167,7 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(946, 594);
+            this.ClientSize = new System.Drawing.Size(943, 865);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlOpciones);

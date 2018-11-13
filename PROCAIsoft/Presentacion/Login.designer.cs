@@ -48,7 +48,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(109, 92);
+            this.lblUsuario.Location = new System.Drawing.Point(124, 103);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 0;
@@ -57,7 +57,7 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(109, 145);
+            this.lblContraseña.Location = new System.Drawing.Point(124, 156);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(61, 13);
             this.lblContraseña.TabIndex = 1;
@@ -65,25 +65,25 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(176, 89);
+            this.txtUsuario.Location = new System.Drawing.Point(203, 100);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(118, 20);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Text = "Guia";
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(176, 142);
+            this.txtContraseña.Location = new System.Drawing.Point(203, 153);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(118, 20);
             this.txtContraseña.TabIndex = 3;
             this.txtContraseña.Text = "1234";
             // 
             // lblOlvido
             // 
             this.lblOlvido.AutoSize = true;
-            this.lblOlvido.Location = new System.Drawing.Point(128, 226);
+            this.lblOlvido.Location = new System.Drawing.Point(153, 237);
             this.lblOlvido.Name = "lblOlvido";
             this.lblOlvido.Size = new System.Drawing.Size(119, 13);
             this.lblOlvido.TabIndex = 4;
@@ -93,17 +93,17 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(147, 187);
+            this.btnIniciar.Location = new System.Drawing.Point(170, 206);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(85, 23);
             this.btnIniciar.TabIndex = 5;
-            this.btnIniciar.Text = "Acceder";
+            this.btnIniciar.Text = "Iniciar Sesión";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(12, 221);
+            this.btnSalir.Location = new System.Drawing.Point(12, 260);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(50, 23);
             this.btnSalir.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.lblUsuInval.AutoSize = true;
             this.lblUsuInval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuInval.Location = new System.Drawing.Point(182, 114);
+            this.lblUsuInval.Location = new System.Drawing.Point(209, 121);
             this.lblUsuInval.Name = "lblUsuInval";
             this.lblUsuInval.Size = new System.Drawing.Size(0, 13);
             this.lblUsuInval.TabIndex = 8;
@@ -124,7 +124,7 @@
             // 
             this.lblConInval.AutoSize = true;
             this.lblConInval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConInval.Location = new System.Drawing.Point(182, 167);
+            this.lblConInval.Location = new System.Drawing.Point(209, 174);
             this.lblConInval.Name = "lblConInval";
             this.lblConInval.Size = new System.Drawing.Size(0, 13);
             this.lblConInval.TabIndex = 9;
@@ -132,9 +132,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(85, 89);
+            this.pictureBox1.Location = new System.Drawing.Point(90, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -142,9 +142,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(85, 143);
+            this.pictureBox2.Location = new System.Drawing.Point(90, 145);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.Size = new System.Drawing.Size(26, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -152,20 +152,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(118, 33);
+            this.label3.Location = new System.Drawing.Point(97, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 26);
+            this.label3.Size = new System.Drawing.Size(224, 30);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Iniciar Sesión";
+            this.label3.Text = "PROCAIsoft v.021";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(374, 256);
+            this.ClientSize = new System.Drawing.Size(424, 295);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

@@ -27,7 +27,7 @@ namespace Presentacion
         private Pregunta preg4;//las preguntas para recorgerlas 
         private bool flagGrupo;//para saber si tenemos que registar el guia o no
         private BindingList<Encuesta> listaEncuestas; //para el datagridview
-        private int idGuia;
+        private Guia digitador;
         private ColegioBL colegioBL;//para combobox
         private GuiaBL guiaBL;//para combobox;
         private ActividadBL actividadBL;//para el combobox
@@ -36,7 +36,7 @@ namespace Presentacion
         {
             InitializeComponent();
             estadoComponentes(estado.INICIAL);
-            idGuia = g.IdGuia1;
+            digitador = g;
             dgvEncuestas.AutoGenerateColumns = false;
             listaEncuestas = new BindingList<Encuesta>();
 
@@ -54,7 +54,7 @@ namespace Presentacion
             
             cboGuia.ValueMember = "IdGuia1";
             cboGuia.DisplayMember = "NombresYapellidos";
-            cboGuia.DataSource = guiaBL.listarGuias();//FUNCION NO COMPLETA!
+            cboGuia.DataSource = guiaBL.listarGuias();
         }
 
         public frmRegYeditEncuestas()
@@ -78,7 +78,7 @@ namespace Presentacion
 
             cboGuia.ValueMember = "IdGuia1";
             cboGuia.DisplayMember = "NombresYapellidosGuia";
-            cboGuia.DataSource = guiaBL.listarGuias();//HACER ESTA FUNCION !!! Hecha
+            cboGuia.DataSource = guiaBL.listarGuias();
 
         }
 
@@ -116,6 +116,7 @@ namespace Presentacion
                 cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
                 cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
                 cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
+                flagGrupo = true;
                 //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
             }
 
@@ -172,14 +173,14 @@ namespace Presentacion
                 grpP4.ForeColor = Color.Red;
             }
 
-            if (flagGrupo == true) encuestaCreada.setGrupo(grupoSeleccionado);
+            if (flagGrupo == true) encuestaCreada.GrupoPerteneciente = (grupoSeleccionado);
             else
-            {//registracion del nuevo grupo
+            {//agregamiento del nuevo grupo
                 GrupoEncuestas NuevoGrupo = new GrupoEncuestas();
-                NuevoGrupo.setActividad((Actividad)cboActividad.SelectedValue);
-                NuevoGrupo.setColegio((Colegio)cboColegio.SelectedValue);
-                NuevoGrupo.setGuiaEvaluado((Guia)cboGuia.SelectedValue);
-                encuestaCreada.setGrupo(NuevoGrupo);
+                NuevoGrupo.Actividad = ((Actividad)cboActividad.SelectedItem);
+                NuevoGrupo.Colegio = ((Colegio)cboColegio.SelectedItem);
+                NuevoGrupo.GuiaEvaluado = ((Guia)cboGuia.SelectedItem);
+                encuestaCreada.GrupoPerteneciente = NuevoGrupo;
             }
             
             if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red)
@@ -189,17 +190,16 @@ namespace Presentacion
                 grpP2.Enabled = true;
                 grpP3.Enabled = true;
                 grpP4.Enabled = true;
+                btnAgregar.Enabled = true;
             }
 
             else
             {
-                //if (txtNumero.Text == "") MessageBox.Show("Tiene que llenar las informaciones del grupo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //else
-                //{
+                
                     listaEncuestas.Add(encuestaCreada);
                     dgvEncuestas.DataSource = listaEncuestas;
                     
-                //}
+                
             }
 
 
@@ -253,12 +253,8 @@ namespace Presentacion
 
                 listaEncuestas.Add(encuestaModificada);
                 dgvEncuestas.DataSource = listaEncuestas;
-                //Inserto encuesta en la base de datos
-                EncuestaBL encuestaBL = new EncuestaBL();
-                if (encuestaBL.modificarEncuesta(encuestaModificada, idGuia))
-                    MessageBox.Show("Modificada con éxito");
-                else
-                    MessageBox.Show("Error al modificar");
+               
+              
             }
             else
             {
@@ -350,7 +346,7 @@ namespace Presentacion
                     break;
 
                 case estado.NUEVO:
-                    //txtNumero.Enabled = true;
+
                     cboActividad.Enabled = true;
                     cboColegio.Enabled = true;
                     cboGuia.Enabled = true;
@@ -445,7 +441,7 @@ namespace Presentacion
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnNuevo.Enabled = false;
-                    flagGrupo = false;
+                  
                     btnEncuestaGrupo.Enabled = false;
                     break;
             }
@@ -454,9 +450,7 @@ namespace Presentacion
         public void limpiarCampos()
         {
             txtNumero.Text = "";
-            //cboActividad.DisplayMember = ""; //comment s'appelle la colonne ?
-            //cboColegio.Text = ""; //On doit remettre dataSource ?
-            //cboGuia.Text = "";
+            
 
             dateEncuentra.Value = DateTime.Now;
 
@@ -502,22 +496,23 @@ namespace Presentacion
              
             estadoComponentes(estado.GUARDAR);
 
-            
+            //HACER REGISTRAR GRUPO !!!
 
             EncuestaBL encuestaBL = new EncuestaBL();
             if (listaEncuestas == null) MessageBox.Show("No hay encuentra para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
+                int compteur = listaEncuestas.Count; //para que el mensaje de exito aparece solamenta una vez
                 foreach (Encuesta E in listaEncuestas)
                 {
-                    int compteur = listaEncuestas.Count; //para que el mensaje de exito aparece solamenta una vez
-                    if (encuestaBL.registrarEncuesta(E, idGuia))
+                    E.Digitador = digitador;
+                    if (encuestaBL.registrarEncuesta(E, digitador.IdGuia1))
                         compteur--;
 
                     else
                         MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (compteur == 0) MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                if (compteur == 0)MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -525,6 +520,11 @@ namespace Presentacion
         {
             VerEncuestasGrupo veg = new VerEncuestasGrupo(grupoSeleccionado);
             veg.Visible = true;
+        }
+
+        private void frmRegYeditEncuestas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

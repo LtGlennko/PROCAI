@@ -44,6 +44,7 @@ namespace AccesoDatos
             comando.Connection = con;
             try
             {
+               
                 comando.CommandText = "REGISTRAR_ENCUESTA";
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.Parameters.Add("_IdEncuesta", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
@@ -61,27 +62,29 @@ namespace AccesoDatos
             }
         }
 
-            public bool modificarEncuesta(Encuesta E, int idGuia)
-            {
-                try
-                {
-                    int id_grupoEncuesta = E.GrupoPerteneciente.IdGrupoEncuestas1;
-                    con = new MySqlConnection(DBManager.cadena);
 
-                    con.Open();
-                    comando = new MySqlCommand();
-                    // string sql = "UPDATE `Encuesta`(calificaciones) " +"VALUES(" +cal1 + ", " + cal2 + etc ")"; 
-                    comando.CommandText = sql;
-                    comando.Connection = con;
-                    comando.ExecuteNonQuery();
-                    con.Close();
-                    return true;
-                }
-                catch
-                {
-                    return false;
-                }
-            }
+        //NO NECESIDAD DE ESTE
+            //public bool modificarEncuesta(Encuesta E, int idGuia)
+            //{
+            //    try
+            //    {
+            //        int id_grupoEncuesta = E.GrupoPerteneciente.IdGrupoEncuestas1;
+            //        con = new MySqlConnection(DBManager.cadena);
+
+            //        con.Open();
+            //        comando = new MySqlCommand();
+            //        // string sql = "UPDATE `Encuesta`(calificaciones) " +"VALUES(" +cal1 + ", " + cal2 + etc ")"; 
+            //        comando.CommandText = sql;
+            //        comando.Connection = con;
+            //        comando.ExecuteNonQuery();
+            //        con.Close();
+            //        return true;
+            //    }
+            //    catch
+            //    {
+            //        return false;
+            //    }
+            //}
 
         }
     }

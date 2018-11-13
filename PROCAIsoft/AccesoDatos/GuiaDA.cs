@@ -67,24 +67,24 @@ namespace AccesoDatos
             }
         }
 
-        public BindingList<Guia> listarGuias()
-        {
-            BindingList<Guia> guias = new BindingList<Guia>();
-            con = new MySqlConnection(DBManager.cadena);
-            con.Open();
-            comando = new MySqlCommand();
-            sql = "SELECT * FROM GUIA";
-            comando.CommandText = sql;
-            comando.Connection = con;
-            MySqlDataReader lector = comando.ExecuteReader();
-            while (lector.Read())
-            {
-                int id = lector.GetInt32("ID");
-                //como llenar los otros
-            }
-            con.Close();
-            return guias;
-        }
+        //public BindingList<Guia> listarGuias()
+        ////{
+        ////    BindingList<Guia> guias = new BindingList<Guia>();
+        ////    con = new MySqlConnection(DBManager.cadena);
+        //    con.Open();
+        //    comando = new MySqlCommand();
+        //    sql = "SELECT * FROM GUIA";
+        //    comando.CommandText = sql;
+        //    comando.Connection = con;
+        //    MySqlDataReader lector = comando.ExecuteReader();
+        //    while (lector.Read())
+        //    {
+        //        int id = lector.GetInt32("ID");
+        //        //como llenar los otros
+        //    }
+        //    con.Close();
+        //    return guias;
+        //}
         public bool insertarGuia(int idTrabajadorOCAI)
         {
             con = new MySqlConnection(DBManager.cadena);
