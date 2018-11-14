@@ -21,8 +21,8 @@ namespace Presentacion
             InitializeComponent();
             btnGenerarReportes.Visible = false;
             btnGestionarPermisos.Visible = false;
-            pictureBox8.Visible = false;
-            pictureBox9.Visible = false;
+            //pictureBox8.Visible = false;
+            //pictureBox9.Visible = false;
         }
         public InicioEjecutivo(TrabajadorOCAI t)
         {
@@ -33,8 +33,8 @@ namespace Presentacion
             {
                 btnGenerarReportes.Visible = false;
                 btnGestionarPermisos.Visible = false;
-                pictureBox8.Visible = false;
-                pictureBox9.Visible = false;
+                //pictureBox8.Visible = false;
+                //pictureBox9.Visible = false;
             }
         }
 
@@ -104,7 +104,11 @@ namespace Presentacion
             fh.Dock = DockStyle.Fill;
             this.pnlVentanas.Controls.Add(fh);
             this.pnlVentanas.Tag = fh;
+            fh.MouseEnter += new System.EventHandler(this.fh_MouseEnter);
             fh.Show();
+        }
+        private void fh_MouseEnter(object sender, EventArgs e) {
+            pnlOpciones.Width = MIN_SIZE;
         }
         private void btnGestionarStock_Click(object sender, EventArgs e)
         {
@@ -154,17 +158,7 @@ namespace Presentacion
         {
             abrirFormInPanel(new GestionTA());
         }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void pnlOpciones_MouseLeave(object sender, EventArgs e)
         {
             pnlOpciones.Width = MIN_SIZE;
@@ -178,6 +172,62 @@ namespace Presentacion
         private void pnlOpciones_MouseEnter(object sender, EventArgs e)
         {
             pnlOpciones.Width = MAX_SIZE;
+        }
+
+        private void pnlVentanas_MouseEnter(object sender, EventArgs e)
+        {
+            pnlOpciones.Width = MIN_SIZE;
+        }
+
+        private void btnGestColegios_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestColegios.Location.Y);
+        }
+
+        private void btnGestCalendario_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestCalendario.Location.Y);
+        }
+
+        private void btnGestOrientadores_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestOrientadores.Location.Y);
+        }
+
+        private void btnGestProcesosAdm_Enter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestProcesosAdm.Location.Y);
+        }
+
+        private void btnGestionarStock_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestionarStock.Location.Y);
+
+        }
+
+        private void btnGestProcesosAdm_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestProcesosAdm.Location.Y);
+        }
+
+        private void btnIncripcionAct_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnIncripcionAct.Location.Y);
+        }
+
+        private void btnGestionarPermisos_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestionarPermisos.Location.Y);
+        }
+
+        private void btnGenerarReportes_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGenerarReportes.Location.Y);
+        }
+
+        private void btnGestionTA_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestionTA.Location.Y);
         }
 
         //private void mnuGestionarStock_Click(object sender, EventArgs e)
