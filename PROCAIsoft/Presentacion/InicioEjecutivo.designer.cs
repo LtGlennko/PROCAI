@@ -104,7 +104,7 @@
             this.btnGestionTA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionTA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionTA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGestionTA.Location = new System.Drawing.Point(63, 670);
+            this.btnGestionTA.Location = new System.Drawing.Point(58, 521);
             this.btnGestionTA.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionTA.Name = "btnGestionTA";
             this.btnGestionTA.Size = new System.Drawing.Size(223, 57);
@@ -120,7 +120,7 @@
             this.btnGenerarReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarReportes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarReportes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGenerarReportes.Location = new System.Drawing.Point(64, 597);
+            this.btnGenerarReportes.Location = new System.Drawing.Point(58, 651);
             this.btnGenerarReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerarReportes.Name = "btnGenerarReportes";
             this.btnGenerarReportes.Size = new System.Drawing.Size(227, 57);
@@ -136,7 +136,7 @@
             this.btnGestionarPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionarPermisos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarPermisos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGestionarPermisos.Location = new System.Drawing.Point(63, 532);
+            this.btnGestionarPermisos.Location = new System.Drawing.Point(67, 586);
             this.btnGestionarPermisos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionarPermisos.Name = "btnGestionarPermisos";
             this.btnGestionarPermisos.Size = new System.Drawing.Size(227, 57);
@@ -297,7 +297,6 @@
             this.pnlVentanas.Name = "pnlVentanas";
             this.pnlVentanas.Size = new System.Drawing.Size(1200, 634);
             this.pnlVentanas.TabIndex = 13;
-            this.pnlVentanas.MouseEnter += new System.EventHandler(this.pnlVentanas_MouseEnter);
             // 
             // btnSalir
             // 

@@ -107,5 +107,11 @@ namespace Presentacion
             this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGenerarReportes.Location.Y);
 
         }
+
+        private void btnGenerarReportes_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGenerarReportes.Location.Y);
+
+        }
     }
 }
