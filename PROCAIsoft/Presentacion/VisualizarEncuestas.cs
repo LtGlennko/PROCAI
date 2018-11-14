@@ -124,7 +124,7 @@ namespace Presentacion
                 btnModificar.Enabled = true;
                 button1.Enabled = true;
                 btnRegistrarGrupo.Enabled = false;
-                //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
+                dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
             }
 
         }
@@ -139,7 +139,7 @@ namespace Presentacion
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //estadoComponentes(estado.AGREGAR);
+            estadoComponentes(estado.AGREGAR);
             encuestaCreada = new Encuesta();
             
 
@@ -249,13 +249,69 @@ namespace Presentacion
             if (modificar == true)
             {
                 encuestaModificada = new Encuesta();
-                encuestaModificada = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
-                listaEncuestas.Remove(encuestaModificada);
-                agregarCalificacionSeleccionada(encuestaModificada, grpP1, preg1);
-                agregarCalificacionSeleccionada(encuestaModificada, grpP2, preg2);
-                agregarCalificacionSeleccionada(encuestaModificada, grpP3, preg3);
-                agregarCalificacionSeleccionada(encuestaModificada, grpP4, preg4);
-                dgvEncuestas.DataSource = null;
+                Encuesta temp = new Encuesta();
+                temp = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
+                encuestaModificada.IdEncuesta1 = temp.IdEncuesta1;
+                encuestaModificada.GrupoPerteneciente = temp.GrupoPerteneciente;
+                encuestaModificada.Digitador = temp.Digitador;
+                
+
+                foreach (Encuesta enc in listaEncuestas)
+                {
+                    if (enc == (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem)
+                    {
+                        listaEncuestas.Remove(enc);
+                        break;
+                    }
+                }
+
+                
+                CalificacionPXE c1 = new CalificacionPXE(1);
+                CalificacionPXE c2 = new CalificacionPXE(1);
+                CalificacionPXE c3 = new CalificacionPXE(1);
+                CalificacionPXE c4 = new CalificacionPXE(1);
+                if (rdBtnP1_1.Checked == true) c1.Calificacion = 1;
+                else if (rdBtnP1_2.Checked == true) c1.Calificacion = 2;
+                else if (rdBtnP1_3.Checked == true) c1.Calificacion = 3;
+                else if (rdBtnP1_4.Checked == true) c1.Calificacion = 4;
+                else c1.Calificacion = 5;
+
+                if (rdBtnP2_1.Checked == true) c2.Calificacion = 1;
+                else if (rdBtnP2_2.Checked == true) c2.Calificacion = 2;
+                else if (rdBtnP2_3.Checked == true) c2.Calificacion = 3;
+                else if (rdBtnP2_4.Checked == true) c2.Calificacion = 4;
+                else c2.Calificacion = 5;
+
+                if (rdBtnP3_1.Checked == true) c3.Calificacion = 1;
+                else if (rdBtnP3_2.Checked == true) c3.Calificacion = 2;
+                else if (rdBtnP3_3.Checked == true) c3.Calificacion = 3;
+                else if (rdBtnP3_4.Checked == true) c3.Calificacion = 4;
+                else c3.Calificacion = 5;
+
+                if (rdBtnP4_1.Checked == true) c4.Calificacion = 1;
+                else if (rdBtnP4_2.Checked == true) c4.Calificacion = 2;
+                else if (rdBtnP4_3.Checked == true) c4.Calificacion = 3;
+                else if (rdBtnP4_4.Checked == true) c4.Calificacion = 4;
+                else c4.Calificacion = 5;
+
+
+                encuestaModificada.CalificacionesPorEncuesta.Add(c1);
+                encuestaModificada.CalificacionesPorEncuesta.Add(c2);
+                encuestaModificada.CalificacionesPorEncuesta.Add(c3);
+                encuestaModificada.CalificacionesPorEncuesta.Add(c4);
+
+
+                Pregunta pregun1 = temp.CalificacionesPorEncuesta[0].getPregunta();
+                Pregunta pregun2 = temp.CalificacionesPorEncuesta[1].getPregunta();
+                Pregunta pregun3 = temp.CalificacionesPorEncuesta[2].getPregunta();
+                Pregunta pregun4 = temp.CalificacionesPorEncuesta[3].getPregunta();
+                encuestaModificada.CalificacionesPorEncuesta[0].setPregunta(pregun1);
+                encuestaModificada.CalificacionesPorEncuesta[1].setPregunta(pregun2);
+                encuestaModificada.CalificacionesPorEncuesta[2].setPregunta(pregun3);
+                encuestaModificada.CalificacionesPorEncuesta[3].setPregunta(pregun4);
+
+               
+                
                 listaEncuestas.Add(encuestaModificada);
                 dgvEncuestas.DataSource = listaEncuestas;
                
