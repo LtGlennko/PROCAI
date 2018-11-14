@@ -50,7 +50,13 @@ namespace Presentacion
             fh.Dock = DockStyle.Fill;
             this.pnlVentanas.Controls.Add(fh);
             this.pnlVentanas.Tag = fh;
+            fh.MouseEnter += new System.EventHandler(this.fh_MouseEnter);
             fh.Show();
+        }
+
+        private void fh_MouseEnter(object sender, EventArgs e)
+        {
+            pnlOpciones.Width = MIN_SIZE;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -69,14 +75,11 @@ namespace Presentacion
             abrirFormInPanel(new frmRegYeditEncuestas(guia));
         }
 
-        private void pnlOpciones_MouseHover(object sender, EventArgs e)
+        
+
+        private void pnlOpciones_MouseEnter(object sender, EventArgs e)
         {
             pnlOpciones.Width = MAX_SIZE;
-        }
-
-        private void pnlOpciones_MouseLeave(object sender, EventArgs e)
-        {
-            //pnlOpciones.Width = MIN_SIZE;
         }
     }
 }
