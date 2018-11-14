@@ -31,6 +31,7 @@ namespace Presentacion
         private ColegioBL colegioBL;//para combobox
         private GuiaBL guiaBL;//para combobox;
         private ActividadBL actividadBL;//para el combobox
+        private GrupoBL grupoBL; //Para registrar nuevos grupos de encuestas
         private bool modificar = false;
         public frmRegYeditEncuestas(Guia g)
         {
@@ -43,6 +44,7 @@ namespace Presentacion
             colegioBL = new ColegioBL();
             guiaBL = new GuiaBL();
             actividadBL = new ActividadBL();
+            grupoBL = new GrupoBL();
 
             cboColegio.DataSource = colegioBL.listarColegios();
             cboColegio.ValueMember = "IdColegio1";
@@ -117,6 +119,11 @@ namespace Presentacion
                 cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
                 cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
                 flagGrupo = true;
+                //Habilita botones para que se añadan encuestas al grupo existente
+                btnAgregar.Enabled = true;
+                btnModificar.Enabled = true;
+                button1.Enabled = true;
+                btnRegistrarGrupo.Enabled = false;
                 //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
             }
 
@@ -343,6 +350,7 @@ namespace Presentacion
                     btnNuevo.Enabled = true;
                     flagGrupo = false;
                     btnEncuestaGrupo.Enabled = false;
+                    btnRegistrarGrupo.Enabled = false;
                     break;
 
                 case estado.NUEVO:
@@ -364,6 +372,11 @@ namespace Presentacion
                     flagGrupo = false;
                     limpiarCampos();
                     btnEncuestaGrupo.Enabled = false;
+                    //Bloquear botones para evitar que se añadan encuestas a un grupo no existente
+                    btnAgregar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    button1.Enabled = false;
+                    btnRegistrarGrupo.Enabled = true;
                     break;
 
                 case estado.GUARDAR:
@@ -493,10 +506,13 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-             
+            //Añadi esta condición para que cuando no haya nada y de guardar se sepa que lo que se registran son las encuestas
+            if(dgvEncuestas.RowCount == 0)
+                MessageBox.Show("No hay encuestas que guardar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             estadoComponentes(estado.GUARDAR);
 
-            //HACER REGISTRAR GRUPO !!!
+            //HACER REGISTRAR GRUPO !!! Actualización: Ya no, se registra encuesta con el botón de registrar encuestas
 
             EncuestaBL encuestaBL = new EncuestaBL();
             if (listaEncuestas == null) MessageBox.Show("No hay encuentra para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -512,7 +528,7 @@ namespace Presentacion
                     else
                         MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                if (compteur == 0)MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (compteur == 0) MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -522,9 +538,32 @@ namespace Presentacion
             veg.Visible = true;
         }
 
-        private void frmRegYeditEncuestas_Load(object sender, EventArgs e)
+        private void btnRegistrarGrupo_Click(object sender, EventArgs e)
         {
-
+            GrupoEncuestas G = new GrupoEncuestas();
+            G.Actividad = (Actividad)cboActividad.SelectedItem;
+            G.GuiaEvaluado = (Guia)cboGuia.SelectedItem;
+            G.Colegio = (Colegio)cboColegio.SelectedItem;
+            //Se registra el nuevo grupo y se generará un nuevo id en la base de datos, 0 si no pudo
+            int idGrupoEncuestas = grupoBL.registrarGrupo(G);
+            if(idGrupoEncuestas == 0)
+            {
+                MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            grupoSeleccionado = G;
+            txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
+            cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
+            cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
+            cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
+            flagGrupo = true;
+            //Habilita botones para que se añadan encuestas al grupo existente
+            btnAgregar.Enabled = true;
+            btnModificar.Enabled = true;
+            button1.Enabled = true;
+            btnRegistrarGrupo.Enabled = false;
+            //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
         }
     }
 }

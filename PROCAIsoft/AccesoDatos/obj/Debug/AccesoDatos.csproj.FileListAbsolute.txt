@@ -158,3 +158,15 @@ C:\Users\alulab14.INF.003\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\D
 C:\Users\alulab14.INF.003\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csprojResolveAssemblyReference.cache
 C:\Users\alulab14.INF.003\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.dll
 C:\Users\alulab14.INF.003\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.pdb
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.dll
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\AccesoDatos.pdb
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.dll
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\Modelo.pdb
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.xml
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.xml
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.xml
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\bin\Debug\MySql.Web.xml
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.dll
+C:\Users\alulab14.INF.002\Desktop\GIT PROCAI\PROCAI\PROCAIsoft\AccesoDatos\obj\Debug\AccesoDatos.pdb

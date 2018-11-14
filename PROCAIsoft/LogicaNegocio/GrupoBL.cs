@@ -17,11 +17,14 @@ namespace LogicaNegocio
             grupoDA = new GrupoDA();
 
         }
-
         public BindingList<GrupoEncuestas> listarGrupos()
         {
             return grupoDA.listarGrupos();
         }
 
+        public int registrarGrupo(GrupoEncuestas G)
+        {
+            return grupoDA.registrarGrupo(G);
+        }
     }
 }

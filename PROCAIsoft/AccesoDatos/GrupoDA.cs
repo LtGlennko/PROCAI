@@ -91,9 +91,34 @@ namespace AccesoDatos
                 grupo.setActividad(actividad);
                 //Agregar grupo a la lista
                 grupos.Add(grupo);
-            }
-           
+            }           
             return grupos;
+        }
+
+        public int registrarGrupo(GrupoEncuestas G)
+        {
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            try
+            {
+                comando.CommandText = "REGISTRAR_GRUPO";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.Add("_IdGrupoEncuesta", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+                comando.Parameters.Add("_IdActividad", MySqlDbType.Int32).Value = G.Actividad.IdActividad1;
+                comando.Parameters.Add("_IdGuia", MySqlDbType.Int32).Value = G.GuiaEvaluado.IdGuia1;
+                comando.Parameters.Add("_IdColegio", MySqlDbType.Int32).Value = G.Colegio.IdColegio1;
+                comando.ExecuteNonQuery();
+                int idGenerado = Int32.Parse(comando.Parameters["_IdGrupoEncuesta"].Value.ToString());
+                con.Close();
+                return idGenerado;
+            }
+            catch (Exception)
+            {
+                con.Close();
+                return 0;
+            }
         }
     }
 }

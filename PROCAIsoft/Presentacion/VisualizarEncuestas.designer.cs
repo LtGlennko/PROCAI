@@ -84,6 +84,7 @@
             this.labelColegio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelF = new System.Windows.Forms.Label();
+            this.btnRegistrarGrupo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             this.grpP1.SuspendLayout();
             this.grpP2.SuspendLayout();
@@ -619,6 +620,7 @@
             // 
             // grpBoxGrupo
             // 
+            this.grpBoxGrupo.Controls.Add(this.btnRegistrarGrupo);
             this.grpBoxGrupo.Controls.Add(this.btnEncuestaGrupo);
             this.grpBoxGrupo.Controls.Add(this.label3);
             this.grpBoxGrupo.Controls.Add(this.cboGuia);
@@ -746,6 +748,18 @@
             this.labelF.TabIndex = 55;
             this.labelF.Text = "Fecha de la encuesta :";
             // 
+            // btnRegistrarGrupo
+            // 
+            this.btnRegistrarGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarGrupo.Location = new System.Drawing.Point(457, 158);
+            this.btnRegistrarGrupo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarGrupo.Name = "btnRegistrarGrupo";
+            this.btnRegistrarGrupo.Size = new System.Drawing.Size(79, 23);
+            this.btnRegistrarGrupo.TabIndex = 57;
+            this.btnRegistrarGrupo.Text = "Registrar";
+            this.btnRegistrarGrupo.UseVisualStyleBackColor = true;
+            this.btnRegistrarGrupo.Click += new System.EventHandler(this.btnRegistrarGrupo_Click);
+            // 
             // frmRegYeditEncuestas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,7 +778,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegYeditEncuestas";
             this.Text = "Encuestas Registradas";
-            this.Load += new System.EventHandler(this.frmRegYeditEncuestas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).EndInit();
             this.grpP1.ResumeLayout(false);
             this.grpP1.PerformLayout();
@@ -842,5 +855,6 @@
         private System.Windows.Forms.ComboBox cboColegio;
         private System.Windows.Forms.Button btnEncuestaGrupo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnRegistrarGrupo;
     }
 }
