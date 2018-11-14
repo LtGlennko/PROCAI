@@ -202,11 +202,9 @@ namespace Presentacion
 
             else
             {
-                
-                    listaEncuestas.Add(encuestaCreada);
-                    dgvEncuestas.DataSource = listaEncuestas;
-                    
-                
+                encuestaCreada.IdEncuesta1 = 0; //Indica que la encuesta aun no ha sido registrada en la base de datos
+                listaEncuestas.Add(encuestaCreada);
+                dgvEncuestas.DataSource = listaEncuestas;            
             }
 
 
@@ -227,7 +225,7 @@ namespace Presentacion
             if ((btn.Text).Equals(nro.ToString()))
             {
                 CalificacionPXE calif = new CalificacionPXE(nro);
-                calif.setPregunta(preg);
+                calif.Pregunta = preg;
                 encuesta.addCalificacionPorEncuesta(calif);
             }
         }
@@ -522,11 +520,17 @@ namespace Presentacion
                 foreach (Encuesta E in listaEncuestas)
                 {
                     E.Digitador = digitador;
-                    if (encuestaBL.registrarEncuesta(E, digitador.IdGuia1))
+                    int idEncuestaGenerada = encuestaBL.registrarEncuesta(E, digitador.IdGuia1);
+                    if (idEncuestaGenerada != 0)
+                    {
+                        E.IdEncuesta1 = idEncuestaGenerada; //Cuando se crea exitosamente en la base de datos le da ese id al objeto
                         compteur--;
-
+                    }
                     else
+                    {
                         MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
                 }
                 if (compteur == 0) MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -553,10 +557,10 @@ namespace Presentacion
             }
             MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             grupoSeleccionado = G;
-            txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
-            cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
-            cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
-            cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
+            txtNumero.Text = idGrupoEncuestas.ToString();
+            //cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
+            //cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
+            //cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
             flagGrupo = true;
             //Habilita botones para que se añadan encuestas al grupo existente
             btnAgregar.Enabled = true;

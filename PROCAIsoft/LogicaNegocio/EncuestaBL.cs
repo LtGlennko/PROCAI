@@ -24,15 +24,15 @@ namespace LogicaNegocio
             return encuestaDA.listarEncuestas();
         }
 
-        public bool registrarEncuesta (Encuesta E, int idUsu)
+        public int registrarEncuesta (Encuesta E, int idUsu)
         {
             int idEncuesta = encuestaDA.registrarEncuesta(E, idUsu);
-            if (idEncuesta == 0) return false;
+            if (idEncuesta == 0) return 0;
             foreach(CalificacionPXE c in E.CalificacionesPorEncuesta)
             {
-                if(!calificacionPXEDA.registrarCalificacionPXE(c, idEncuesta)) return false;
+                if(!calificacionPXEDA.registrarCalificacionPXE(c, idEncuesta)) return 0;
             }
-            return true;
+            return idEncuesta;
         }
 
         //public bool modificarEncuesta(Encuesta E, int idUsu)
