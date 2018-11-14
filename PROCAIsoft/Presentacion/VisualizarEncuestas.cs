@@ -255,7 +255,7 @@ namespace Presentacion
                 agregarCalificacionSeleccionada(encuestaModificada, grpP2, preg2);
                 agregarCalificacionSeleccionada(encuestaModificada, grpP3, preg3);
                 agregarCalificacionSeleccionada(encuestaModificada, grpP4, preg4);
-
+                dgvEncuestas.DataSource = null;
                 listaEncuestas.Add(encuestaModificada);
                 dgvEncuestas.DataSource = listaEncuestas;
                
