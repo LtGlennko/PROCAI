@@ -27,6 +27,7 @@ namespace LogicaNegocio
         public int registrarEncuesta (Encuesta E, int idUsu)
         {
             int idEncuesta = encuestaDA.registrarEncuesta(E, idUsu);
+            //Si devuelve 0 es porque no pudo registrar bien
             if (idEncuesta == 0) return 0;
             foreach(CalificacionPXE c in E.CalificacionesPorEncuesta)
             {

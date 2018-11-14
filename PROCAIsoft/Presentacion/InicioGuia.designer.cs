@@ -55,7 +55,7 @@
             this.pnlOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOpciones.Location = new System.Drawing.Point(0, 0);
             this.pnlOpciones.Name = "pnlOpciones";
-            this.pnlOpciones.Size = new System.Drawing.Size(215, 749);
+            this.pnlOpciones.Size = new System.Drawing.Size(215, 805);
             this.pnlOpciones.TabIndex = 20;
             this.pnlOpciones.MouseEnter += new System.EventHandler(this.pnlOpciones_MouseEnter);
             // 
@@ -163,13 +163,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(943, 749);
+            this.ClientSize = new System.Drawing.Size(943, 805);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlOpciones);
             this.Controls.Add(this.pnlVentanas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InicioGuia";
             this.Text = "Inicio Guía";
             this.pnlOpciones.ResumeLayout(false);

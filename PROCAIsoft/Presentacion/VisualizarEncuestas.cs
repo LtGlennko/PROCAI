@@ -139,7 +139,7 @@ namespace Presentacion
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            estadoComponentes(estado.AGREGAR);
+            //estadoComponentes(estado.AGREGAR);
             encuestaCreada = new Encuesta();
             
 
@@ -365,7 +365,7 @@ namespace Presentacion
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
-                    btnGuardar.Enabled = true;
+                    btnGuardar.Enabled = false;
                     btnNuevo.Enabled = true;
                     flagGrupo = false;
                     limpiarCampos();
@@ -387,11 +387,11 @@ namespace Presentacion
                     grpP3.Enabled = false;
                     grpP4.Enabled = false;
                     dateEncuentra.Enabled = false;
-                    btnAgregar.Enabled = false;
-                    btnModificar.Enabled = false;
-                    btnBusca.Enabled = false;
+                    btnAgregar.Enabled = true;
+                    btnModificar.Enabled = true;
+                    btnBusca.Enabled = true;
                     button1.Enabled = true;
-                    btnGuardar.Enabled = false;
+                    btnGuardar.Enabled = true;
                     btnNuevo.Enabled = true;
                     btnEncuestaGrupo.Enabled = false;
                     break;
@@ -504,16 +504,13 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Añadi esta condición para que cuando no haya nada y de guardar se sepa que lo que se registran son las encuestas
-            if(dgvEncuestas.RowCount == 0)
-                MessageBox.Show("No hay encuestas que guardar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            
             estadoComponentes(estado.GUARDAR);
 
             //HACER REGISTRAR GRUPO !!! Actualización: Ya no, se registra encuesta con el botón de registrar encuestas
 
             EncuestaBL encuestaBL = new EncuestaBL();
-            if (listaEncuestas == null) MessageBox.Show("No hay encuentra para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (listaEncuestas == null) MessageBox.Show("No hay encuestas para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 int compteur = listaEncuestas.Count; //para que el mensaje de exito aparece solamenta una vez
@@ -567,6 +564,7 @@ namespace Presentacion
             btnModificar.Enabled = true;
             button1.Enabled = true;
             btnRegistrarGrupo.Enabled = false;
+            btnGuardar.Enabled = true;
             //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
         }
     }

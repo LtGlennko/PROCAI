@@ -47,11 +47,12 @@ namespace AccesoDatos
                
                 comando.CommandText = "REGISTRAR_ENCUESTA";
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.Parameters.Add("_IdEncuesta", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
+                comando.Parameters.Add("_IdEncuestaIn", MySqlDbType.Int32).Value = E.IdEncuesta1;
+                comando.Parameters.Add("_IdEncuestaOut", MySqlDbType.Int32).Direction = System.Data.ParameterDirection.Output;
                 comando.Parameters.Add("_IdGrupoEncuesta", MySqlDbType.Int32).Value = E.IdGrupoPerteneciente;
                 comando.Parameters.Add("_IdGuia", MySqlDbType.Int32).Value = idGuia;
                 comando.ExecuteNonQuery();
-                int idGenerado = Int32.Parse(comando.Parameters["_IdEncuesta"].Value.ToString());
+                int idGenerado = Int32.Parse(comando.Parameters["_IdEncuestaOut"].Value.ToString());
                 con.Close();
                 return idGenerado;
             }
