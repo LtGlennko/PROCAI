@@ -25,8 +25,7 @@ namespace Presentacion
             {
                 btnGenerarReportes.Visible = false;
                 btnGestionarPermisos.Visible = false;
-                pictureBox8.Visible = false;
-                pictureBox9.Visible = false;
+                
             }
         }
 
@@ -35,8 +34,7 @@ namespace Presentacion
             InitializeComponent();
             btnGenerarReportes.Visible = false;
             btnGestionarPermisos.Visible = false;
-            pictureBox8.Visible = false;
-            pictureBox9.Visible = false;
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -62,9 +60,14 @@ namespace Presentacion
             fh.Dock = DockStyle.Fill;
             this.pnlVentanas.Controls.Add(fh);
             this.pnlVentanas.Tag = fh;
+            fh.MouseEnter += new System.EventHandler(this.fh_MouseEnter);
             fh.Show();
         }
 
+        private void fh_MouseEnter(object sender, EventArgs e)
+        {
+            pnlOpciones.Width = MIN_SIZE;
+        }
         private void btnGestionarPermisos_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new Gestionar_permisos(trabajador));
@@ -80,14 +83,29 @@ namespace Presentacion
             abrirFormInPanel(new frmVisualizarPostulantes());
         }
 
-        private void pnlOpciones_MouseHover(object sender, EventArgs e)
+        
+
+        private void pnlOpciones_MouseEnter(object sender, EventArgs e)
         {
             pnlOpciones.Width = MAX_SIZE;
         }
 
-        private void pnlOpciones_MouseLeave(object sender, EventArgs e)
+        private void btnGestionarPostulantes_MouseEnter(object sender, EventArgs e)
         {
-            pnlOpciones.Width = MIN_SIZE;
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestionarPostulantes.Location.Y);
+
+        }
+
+        private void btnGestionarPermisos_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestionarPermisos.Location.Y);
+
+        }
+
+        private void btnGenerarReportes_DragEnter(object sender, DragEventArgs e)
+        {
+            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGenerarReportes.Location.Y);
+
         }
     }
 }
