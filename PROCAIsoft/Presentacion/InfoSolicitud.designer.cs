@@ -46,7 +46,6 @@
             this.lbl_apPaterno = new System.Windows.Forms.Label();
             this.txt_nombres = new System.Windows.Forms.Label();
             this.lbl_nombres = new System.Windows.Forms.Label();
-            this.lbl_titulo = new System.Windows.Forms.Label();
             this.gbx_Colegio = new System.Windows.Forms.GroupBox();
             this.txt_telf = new System.Windows.Forms.Label();
             this.lbl_telf = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@
             this.txt_cantestudiantes = new System.Windows.Forms.Label();
             this.txt_merch = new System.Windows.Forms.Label();
             this.lbl_merch = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbx_orientador.SuspendLayout();
             this.gbx_Colegio.SuspendLayout();
@@ -119,6 +119,7 @@
             // 
             // gbx_orientador
             // 
+            this.gbx_orientador.BackColor = System.Drawing.Color.White;
             this.gbx_orientador.Controls.Add(this.txt_email);
             this.gbx_orientador.Controls.Add(this.lbl_email);
             this.gbx_orientador.Controls.Add(this.txt_sexo);
@@ -290,19 +291,9 @@
             this.lbl_nombres.TabIndex = 0;
             this.lbl_nombres.Text = "Nombres:";
             // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Franklin Gothic Demi", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.Teal;
-            this.lbl_titulo.Location = new System.Drawing.Point(335, 18);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(296, 34);
-            this.lbl_titulo.TabIndex = 51;
-            this.lbl_titulo.Text = "DETALLE DE SOLICITUD";
-            // 
             // gbx_Colegio
             // 
+            this.gbx_Colegio.BackColor = System.Drawing.Color.White;
             this.gbx_Colegio.Controls.Add(this.txt_telf);
             this.gbx_Colegio.Controls.Add(this.lbl_telf);
             this.gbx_Colegio.Controls.Add(this.txt_particular);
@@ -475,6 +466,7 @@
             // 
             // gbx_actividad
             // 
+            this.gbx_actividad.BackColor = System.Drawing.Color.White;
             this.gbx_actividad.Controls.Add(this.lbl_nombreactividad);
             this.gbx_actividad.Controls.Add(this.txt_nombreactividad);
             this.gbx_actividad.Controls.Add(this.txt_desc);
@@ -622,15 +614,26 @@
             this.lbl_merch.TabIndex = 34;
             this.lbl_merch.Text = "Merchandising disponible:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Demi", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(354, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 34);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Detalle de la Solicitud";
+            // 
             // InfoSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1058, 574);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gbx_Colegio);
             this.Controls.Add(this.gbx_actividad);
-            this.Controls.Add(this.lbl_titulo);
             this.Controls.Add(this.gbx_orientador);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
@@ -657,7 +660,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox gbx_orientador;
-        private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Label lbl_nombres;
         private System.Windows.Forms.GroupBox gbx_Colegio;
         private System.Windows.Forms.GroupBox gbx_actividad;
@@ -700,5 +702,6 @@
         private System.Windows.Forms.Label txt_cantestudiantes;
         private System.Windows.Forms.Label txt_merch;
         private System.Windows.Forms.Label lbl_merch;
+        private System.Windows.Forms.Label label1;
     }
 }
