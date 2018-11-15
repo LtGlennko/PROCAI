@@ -85,5 +85,10 @@ namespace Presentacion
             this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnInformacion.Location.Y);
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

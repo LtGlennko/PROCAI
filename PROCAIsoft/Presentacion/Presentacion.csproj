@@ -59,12 +59,6 @@
     <Compile Include="AgregarColegio.designer.cs">
       <DependentUpon>AgregarColegio.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarPostulante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarPostulante.designer.cs">
-      <DependentUpon>AgregarPostulante.cs</DependentUpon>
-    </Compile>
     <Compile Include="agregarStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,9 +271,6 @@
     <EmbeddedResource Include="AgregarColegio.resx">
       <DependentUpon>AgregarColegio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarPostulante.resx">
-      <DependentUpon>AgregarPostulante.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="agregarStock.resx">
       <DependentUpon>agregarStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,6 +436,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\guiaspucp3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3f05e822-fc57-4a33-9dfb-45934e0198e4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

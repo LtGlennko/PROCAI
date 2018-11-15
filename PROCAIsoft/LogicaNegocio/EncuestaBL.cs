@@ -19,9 +19,9 @@ namespace LogicaNegocio
             calificacionPXEDA = new CalificacionPXEDA();
         }
 
-        public BindingList<Encuesta> listarEncuestas()
+        public BindingList<Encuesta> listarEncuestas(GrupoEncuestas G)
         {
-            return encuestaDA.listarEncuestas();
+            return encuestaDA.listarEncuestas(G.IdGrupoEncuestas1);
         }
 
         public int registrarEncuesta (Encuesta E, int idUsu)

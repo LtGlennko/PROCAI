@@ -63,6 +63,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3f05e822_fc57_4a33_9dfb_45934e0198e4 {
+            get {
+                object obj = ResourceManager.GetObject("3f05e822-fc57-4a33-9dfb-45934e0198e4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _56763 {
             get {
                 object obj = ResourceManager.GetObject("56763", resourceCulture);

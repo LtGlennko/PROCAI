@@ -39,18 +39,18 @@
             this.btnGestProcesosAdm = new System.Windows.Forms.Button();
             this.btnGestOrientadores = new System.Windows.Forms.Button();
             this.btnGestCalendario = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnGestColegios = new System.Windows.Forms.Button();
             this.btnGestionarStock = new System.Windows.Forms.Button();
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.ptrDespliegue = new System.Windows.Forms.PictureBox();
             this.pnlVentanas = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
+            this.ptrDespliegue = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlOpciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombreUsu
@@ -211,16 +211,6 @@
             this.btnGestCalendario.Click += new System.EventHandler(this.btnGestCalendario_Click);
             this.btnGestCalendario.MouseEnter += new System.EventHandler(this.btnGestCalendario_MouseEnter);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Presentacion.Properties.Resources.flecha;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 107);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnGestColegios
             // 
             this.btnGestColegios.FlatAppearance.BorderSize = 0;
@@ -263,17 +253,6 @@
             this.pnlTitulo.Size = new System.Drawing.Size(731, 79);
             this.pnlTitulo.TabIndex = 12;
             // 
-            // ptrDespliegue
-            // 
-            this.ptrDespliegue.Image = global::Presentacion.Properties.Resources._56763;
-            this.ptrDespliegue.Location = new System.Drawing.Point(11, 12);
-            this.ptrDespliegue.Name = "ptrDespliegue";
-            this.ptrDespliegue.Size = new System.Drawing.Size(35, 35);
-            this.ptrDespliegue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptrDespliegue.TabIndex = 7;
-            this.ptrDespliegue.TabStop = false;
-            this.ptrDespliegue.Click += new System.EventHandler(this.ptrDespliegue_Click);
-            // 
             // pnlVentanas
             // 
             this.pnlVentanas.Location = new System.Drawing.Point(45, 79);
@@ -293,6 +272,27 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // ptrDespliegue
+            // 
+            this.ptrDespliegue.Image = global::Presentacion.Properties.Resources._56763;
+            this.ptrDespliegue.Location = new System.Drawing.Point(11, 12);
+            this.ptrDespliegue.Name = "ptrDespliegue";
+            this.ptrDespliegue.Size = new System.Drawing.Size(35, 35);
+            this.ptrDespliegue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptrDespliegue.TabIndex = 7;
+            this.ptrDespliegue.TabStop = false;
+            this.ptrDespliegue.Click += new System.EventHandler(this.ptrDespliegue_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Presentacion.Properties.Resources.flecha;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 107);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
             // InicioEjecutivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,11 +310,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioEjecutivo";
             this.pnlOpciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

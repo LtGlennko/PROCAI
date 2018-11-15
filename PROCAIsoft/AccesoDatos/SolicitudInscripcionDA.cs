@@ -29,7 +29,7 @@ namespace AccesoDatos
             {
                 // no rwquiee parametros
                 DBM.Comando.CommandType = System.Data.CommandType.StoredProcedure;
-                DBM.Comando.CommandText = "listarSoicitudesInscripcionActividades";
+                DBM.Comando.CommandText = "listarSoicitudesInscripcionActividades_all";
 
                 MySqlDataReader lector = DBM.Comando.ExecuteReader();
 

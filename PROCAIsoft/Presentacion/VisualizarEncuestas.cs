@@ -133,9 +133,13 @@ namespace Presentacion
 
         private bool existeSeleccionado(GroupBox g)
         {
+            //Solo existen 5 controles radiobutton
+            int cont = 0;
             foreach(RadioButton r in g.Controls)
             {
+                cont++;
                 if (r.Checked == true) return true;
+                if (cont == 5) break;
             }
             return false;
         }
@@ -333,7 +337,7 @@ namespace Presentacion
             estadoComponentes(estado.MODIFICAR);
             Encuesta E = new Encuesta();
             E = (Encuesta)dgvEncuestas.CurrentRow.DataBoundItem;
-            
+            if (E == null) return;
 
             Pregunta pregun1 = E.CalificacionesPorEncuesta[0].getPregunta();
             Pregunta pregun2 = E.CalificacionesPorEncuesta[1].getPregunta();
@@ -409,6 +413,7 @@ namespace Presentacion
                     flagGrupo = false;
                     btnEncuestaGrupo.Enabled = false;
                     btnRegistrarGrupo.Enabled = false;
+                    limpiarCampos();
                     break;
 
                 case estado.NUEVO:
@@ -416,10 +421,10 @@ namespace Presentacion
                     cboActividad.Enabled = true;
                     cboColegio.Enabled = true;
                     cboGuia.Enabled = true;
-                    grpP1.Enabled = true;
-                    grpP2.Enabled = true;
-                    grpP3.Enabled = true;
-                    grpP4.Enabled = true;
+                    grpP1.Enabled = false;
+                    grpP2.Enabled = false;
+                    grpP3.Enabled = false;
+                    grpP4.Enabled = false;
                     //dateEncuentra.Enabled = true;
                     btnAgregar.Enabled = true;
                     btnModificar.Enabled = false;

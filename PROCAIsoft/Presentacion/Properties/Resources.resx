@@ -124,6 +124,9 @@
   <data name="Postulantes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Postulantes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="guiaspucp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guiaspucp3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Top5guias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Top5guias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +145,7 @@
   <data name="PUCP-El-Comercio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PUCP-El-Comercio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="guiaspucp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\guiaspucp3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3f05e822-fc57-4a33-9dfb-45934e0198e4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3f05e822-fc57-4a33-9dfb-45934e0198e4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -163,5 +163,10 @@ namespace Presentacion
         {
             datetp_fecha_MouseCaptureChanged(sender,e);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -40,12 +40,14 @@
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.ptrDespliegue = new System.Windows.Forms.PictureBox();
             this.lblNombreUsu = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.pnlOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogOut)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -138,9 +140,9 @@
             // 
             // pnlVentanas
             // 
-            this.pnlVentanas.Location = new System.Drawing.Point(45, 79);
+            this.pnlVentanas.Location = new System.Drawing.Point(45, 78);
             this.pnlVentanas.Name = "pnlVentanas";
-            this.pnlVentanas.Size = new System.Drawing.Size(900, 515);
+            this.pnlVentanas.Size = new System.Drawing.Size(900, 516);
             this.pnlVentanas.TabIndex = 17;
             // 
             // btnLogOut
@@ -188,12 +190,25 @@
             this.lblNombreUsu.TabIndex = 5;
             this.lblNombreUsu.Text = "Bienvenido(a)";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.logout;
+            this.pictureBox1.Location = new System.Drawing.Point(841, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // InicioExterno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(892, 594);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.btnSalir);
@@ -208,6 +223,7 @@
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +241,6 @@
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox ptrDespliegue;
         private System.Windows.Forms.Label lblNombreUsu;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
