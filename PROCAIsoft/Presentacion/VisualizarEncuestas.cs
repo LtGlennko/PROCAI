@@ -124,7 +124,7 @@ namespace Presentacion
                 btnModificar.Enabled = true;
                 button1.Enabled = true;
                 btnRegistrarGrupo.Enabled = false;
-                dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
+                //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
             }
 
         }
@@ -232,7 +232,7 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e) //VISUALIZACION
         {
-            if (dgvEncuestas.SelectedRows.Count == 0) MessageBox.Show("Tiene que seleccionar una encuesta en la tabla para visualizarla", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (dgvEncuestas.SelectedCells.Count == 0) MessageBox.Show("Tiene que seleccionar una encuesta en la tabla para visualizarla", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else if (dgvEncuestas.SelectedRows.Count > 1) MessageBox.Show("Hay demasiado encuentras seleccionadas. Tiene que seleccionar solamente una", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
@@ -373,7 +373,7 @@ namespace Presentacion
             cboActividad.Text = E.GrupoPerteneciente.Actividad.TipoActividad.ToString();
             cboColegio.Text = E.GrupoPerteneciente.Colegio.Nombre.ToString();
             cboGuia.Text = E.GrupoPerteneciente.GuiaEvaluado.NombresYapellidos.ToString();
-            dateEncuentra.Value = E.FechaProgramada;
+            //dateEncuentra.Value = E.FechaProgramada;
 
             modificar = true;
         }
@@ -395,7 +395,7 @@ namespace Presentacion
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
                     grpP4.Enabled = false;
-                    dateEncuentra.Enabled = false;
+                    //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = false;
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = false;
@@ -416,7 +416,7 @@ namespace Presentacion
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
                     grpP4.Enabled = true;
-                    dateEncuentra.Enabled = true;
+                    //dateEncuentra.Enabled = true;
                     btnAgregar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
@@ -442,7 +442,7 @@ namespace Presentacion
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
                     grpP4.Enabled = false;
-                    dateEncuentra.Enabled = false;
+                    //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
                     btnModificar.Enabled = true;
                     btnBusca.Enabled = true;
@@ -460,7 +460,7 @@ namespace Presentacion
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
                     grpP4.Enabled = true;
-                    dateEncuentra.Enabled = false;
+                    //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
                     btnModificar.Enabled = true;
                     btnBusca.Enabled = true;
@@ -481,7 +481,7 @@ namespace Presentacion
                     grpP2.Enabled = true;
                     grpP3.Enabled = true;
                     grpP4.Enabled = true;
-                    dateEncuentra.Enabled = false;
+                    //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnBusca.Enabled = false;
@@ -501,8 +501,8 @@ namespace Presentacion
                     grpP2.Enabled = false;
                     grpP3.Enabled = false;
                     grpP4.Enabled = false;
-                    dateEncuentra.Enabled = false;
-                    btnAgregar.Enabled = false;
+                    //dateEncuentra.Enabled = false;
+                    btnAgregar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
@@ -519,7 +519,7 @@ namespace Presentacion
             txtNumero.Text = "";
             
 
-            dateEncuentra.Value = DateTime.Now;
+            //dateEncuentra.Value = DateTime.Now;
 
             grpP1.Text = "Pregunta 1: ";
             grpP2.Text = "Pregunta 2: ";

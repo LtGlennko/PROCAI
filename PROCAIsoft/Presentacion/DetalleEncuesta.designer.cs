@@ -39,8 +39,10 @@
             this.labelRespuestaPregunta2 = new System.Windows.Forms.Label();
             this.labelRespuestaPregunta3 = new System.Windows.Forms.Label();
             this.labelRespuestaPregunta4 = new System.Windows.Forms.Label();
-            this.btnRetresar = new System.Windows.Forms.Button();
             this.labelRespuestaFecha = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(27, 23);
+            this.label1.Location = new System.Drawing.Point(78, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 13);
@@ -60,7 +62,7 @@
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelFecha.ForeColor = System.Drawing.Color.Teal;
-            this.labelFecha.Location = new System.Drawing.Point(27, 53);
+            this.labelFecha.Location = new System.Drawing.Point(78, 74);
             this.labelFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(138, 13);
@@ -72,7 +74,7 @@
             this.labelPregunta1.AutoSize = true;
             this.labelPregunta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelPregunta1.ForeColor = System.Drawing.Color.Teal;
-            this.labelPregunta1.Location = new System.Drawing.Point(27, 84);
+            this.labelPregunta1.Location = new System.Drawing.Point(78, 105);
             this.labelPregunta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPregunta1.Name = "labelPregunta1";
             this.labelPregunta1.Size = new System.Drawing.Size(77, 13);
@@ -84,7 +86,7 @@
             this.labelPregunta2.AutoSize = true;
             this.labelPregunta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelPregunta2.ForeColor = System.Drawing.Color.Teal;
-            this.labelPregunta2.Location = new System.Drawing.Point(27, 114);
+            this.labelPregunta2.Location = new System.Drawing.Point(78, 135);
             this.labelPregunta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPregunta2.Name = "labelPregunta2";
             this.labelPregunta2.Size = new System.Drawing.Size(77, 13);
@@ -96,7 +98,7 @@
             this.labelPregunta3.AutoSize = true;
             this.labelPregunta3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelPregunta3.ForeColor = System.Drawing.Color.Teal;
-            this.labelPregunta3.Location = new System.Drawing.Point(27, 146);
+            this.labelPregunta3.Location = new System.Drawing.Point(78, 167);
             this.labelPregunta3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPregunta3.Name = "labelPregunta3";
             this.labelPregunta3.Size = new System.Drawing.Size(77, 13);
@@ -108,7 +110,7 @@
             this.labelPregunta4.AutoSize = true;
             this.labelPregunta4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelPregunta4.ForeColor = System.Drawing.Color.Teal;
-            this.labelPregunta4.Location = new System.Drawing.Point(27, 176);
+            this.labelPregunta4.Location = new System.Drawing.Point(78, 197);
             this.labelPregunta4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPregunta4.Name = "labelPregunta4";
             this.labelPregunta4.Size = new System.Drawing.Size(77, 13);
@@ -120,7 +122,7 @@
             this.labelRespuestaGrupo.AutoSize = true;
             this.labelRespuestaGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelRespuestaGrupo.ForeColor = System.Drawing.Color.Teal;
-            this.labelRespuestaGrupo.Location = new System.Drawing.Point(265, 23);
+            this.labelRespuestaGrupo.Location = new System.Drawing.Point(316, 44);
             this.labelRespuestaGrupo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRespuestaGrupo.Name = "labelRespuestaGrupo";
             this.labelRespuestaGrupo.Size = new System.Drawing.Size(109, 13);
@@ -132,7 +134,7 @@
             this.labelRespuestaPregunta1.AutoSize = true;
             this.labelRespuestaPregunta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelRespuestaPregunta1.ForeColor = System.Drawing.Color.Teal;
-            this.labelRespuestaPregunta1.Location = new System.Drawing.Point(265, 84);
+            this.labelRespuestaPregunta1.Location = new System.Drawing.Point(316, 105);
             this.labelRespuestaPregunta1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRespuestaPregunta1.Name = "labelRespuestaPregunta1";
             this.labelRespuestaPregunta1.Size = new System.Drawing.Size(102, 13);
@@ -144,7 +146,7 @@
             this.labelRespuestaPregunta2.AutoSize = true;
             this.labelRespuestaPregunta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelRespuestaPregunta2.ForeColor = System.Drawing.Color.Teal;
-            this.labelRespuestaPregunta2.Location = new System.Drawing.Point(265, 114);
+            this.labelRespuestaPregunta2.Location = new System.Drawing.Point(316, 135);
             this.labelRespuestaPregunta2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRespuestaPregunta2.Name = "labelRespuestaPregunta2";
             this.labelRespuestaPregunta2.Size = new System.Drawing.Size(102, 13);
@@ -156,7 +158,7 @@
             this.labelRespuestaPregunta3.AutoSize = true;
             this.labelRespuestaPregunta3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelRespuestaPregunta3.ForeColor = System.Drawing.Color.Teal;
-            this.labelRespuestaPregunta3.Location = new System.Drawing.Point(263, 146);
+            this.labelRespuestaPregunta3.Location = new System.Drawing.Point(314, 167);
             this.labelRespuestaPregunta3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRespuestaPregunta3.Name = "labelRespuestaPregunta3";
             this.labelRespuestaPregunta3.Size = new System.Drawing.Size(102, 13);
@@ -168,43 +170,56 @@
             this.labelRespuestaPregunta4.AutoSize = true;
             this.labelRespuestaPregunta4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelRespuestaPregunta4.ForeColor = System.Drawing.Color.Teal;
-            this.labelRespuestaPregunta4.Location = new System.Drawing.Point(265, 176);
+            this.labelRespuestaPregunta4.Location = new System.Drawing.Point(316, 197);
             this.labelRespuestaPregunta4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRespuestaPregunta4.Name = "labelRespuestaPregunta4";
             this.labelRespuestaPregunta4.Size = new System.Drawing.Size(102, 13);
             this.labelRespuestaPregunta4.TabIndex = 11;
             this.labelRespuestaPregunta4.Text = "CALIFICACION 4";
             // 
-            // btnRetresar
-            // 
-            this.btnRetresar.Location = new System.Drawing.Point(40, 218);
-            this.btnRetresar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRetresar.Name = "btnRetresar";
-            this.btnRetresar.Size = new System.Drawing.Size(72, 23);
-            this.btnRetresar.TabIndex = 12;
-            this.btnRetresar.Text = "Atrás";
-            this.btnRetresar.UseVisualStyleBackColor = true;
-            this.btnRetresar.Click += new System.EventHandler(this.btnRetresar_Click);
-            // 
             // labelRespuestaFecha
             // 
             this.labelRespuestaFecha.AutoSize = true;
             this.labelRespuestaFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.labelRespuestaFecha.ForeColor = System.Drawing.Color.Teal;
-            this.labelRespuestaFecha.Location = new System.Drawing.Point(265, 53);
+            this.labelRespuestaFecha.Location = new System.Drawing.Point(316, 74);
             this.labelRespuestaFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRespuestaFecha.Name = "labelRespuestaFecha";
             this.labelRespuestaFecha.Size = new System.Drawing.Size(47, 13);
             this.labelRespuestaFecha.TabIndex = 7;
             this.labelRespuestaFecha.Text = "FECHA";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
+            this.label3.Location = new System.Drawing.Point(59, 252);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Atras";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 239);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmDetalleEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(421, 261);
-            this.Controls.Add(this.btnRetresar);
+            this.ClientSize = new System.Drawing.Size(534, 291);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelRespuestaPregunta4);
             this.Controls.Add(this.labelRespuestaPregunta3);
             this.Controls.Add(this.labelRespuestaPregunta2);
@@ -221,6 +236,7 @@
             this.Name = "frmDetalleEncuesta";
             this.Text = "Detalles encuesta";
             this.Load += new System.EventHandler(this.frmDetalleEncuesta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +255,8 @@
         private System.Windows.Forms.Label labelRespuestaPregunta2;
         private System.Windows.Forms.Label labelRespuestaPregunta3;
         private System.Windows.Forms.Label labelRespuestaPregunta4;
-        private System.Windows.Forms.Button btnRetresar;
         private System.Windows.Forms.Label labelRespuestaFecha;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

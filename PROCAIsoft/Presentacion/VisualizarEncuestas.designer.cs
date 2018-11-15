@@ -32,7 +32,6 @@
             this.labelNumeroGrupo = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.dateEncuentra = new System.Windows.Forms.DateTimePicker();
             this.dgvEncuestas = new System.Windows.Forms.DataGridView();
             this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +74,7 @@
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.grpBoxGrupo = new System.Windows.Forms.GroupBox();
+            this.btnRegistrarGrupo = new System.Windows.Forms.Button();
             this.btnEncuestaGrupo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cboGuia = new System.Windows.Forms.ComboBox();
@@ -83,8 +83,6 @@
             this.labelGuia = new System.Windows.Forms.Label();
             this.labelColegio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelF = new System.Windows.Forms.Label();
-            this.btnRegistrarGrupo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             this.grpP1.SuspendLayout();
             this.grpP2.SuspendLayout();
@@ -127,16 +125,6 @@
             this.txtNumero.Size = new System.Drawing.Size(49, 23);
             this.txtNumero.TabIndex = 6;
             // 
-            // dateEncuentra
-            // 
-            this.dateEncuentra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEncuentra.Location = new System.Drawing.Point(154, 34);
-            this.dateEncuentra.Margin = new System.Windows.Forms.Padding(2);
-            this.dateEncuentra.Name = "dateEncuentra";
-            this.dateEncuentra.Size = new System.Drawing.Size(163, 20);
-            this.dateEncuentra.TabIndex = 12;
-            this.dateEncuentra.Value = new System.DateTime(2018, 9, 26, 18, 50, 1, 0);
-            // 
             // dgvEncuestas
             // 
             this.dgvEncuestas.AllowUserToOrderColumns = true;
@@ -148,9 +136,9 @@
             this.Pregunta2,
             this.Pregunta3,
             this.Pregunta4});
-            this.dgvEncuestas.Location = new System.Drawing.Point(25, 516);
+            this.dgvEncuestas.Location = new System.Drawing.Point(25, 512);
             this.dgvEncuestas.Name = "dgvEncuestas";
-            this.dgvEncuestas.Size = new System.Drawing.Size(558, 157);
+            this.dgvEncuestas.Size = new System.Drawing.Size(558, 166);
             this.dgvEncuestas.TabIndex = 19;
             this.dgvEncuestas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEncuestas_CellDoubleClick);
             // 
@@ -201,7 +189,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.White;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(419, 170);
+            this.btnModificar.Location = new System.Drawing.Point(419, 143);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(86, 28);
@@ -215,7 +203,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(419, 216);
+            this.button1.Location = new System.Drawing.Point(419, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 28);
             this.button1.TabIndex = 21;
@@ -307,7 +295,7 @@
             this.grpP1.Controls.Add(this.labelFecha);
             this.grpP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP1.ForeColor = System.Drawing.Color.Teal;
-            this.grpP1.Location = new System.Drawing.Point(33, 317);
+            this.grpP1.Location = new System.Drawing.Point(33, 290);
             this.grpP1.Name = "grpP1";
             this.grpP1.Size = new System.Drawing.Size(384, 41);
             this.grpP1.TabIndex = 46;
@@ -323,7 +311,7 @@
             this.grpP2.Controls.Add(this.rdBtnP2_5);
             this.grpP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP2.ForeColor = System.Drawing.Color.Teal;
-            this.grpP2.Location = new System.Drawing.Point(33, 364);
+            this.grpP2.Location = new System.Drawing.Point(33, 337);
             this.grpP2.Name = "grpP2";
             this.grpP2.Size = new System.Drawing.Size(384, 41);
             this.grpP2.TabIndex = 47;
@@ -400,7 +388,7 @@
             this.grpP3.Controls.Add(this.rdBtnP3_5);
             this.grpP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP3.ForeColor = System.Drawing.Color.Teal;
-            this.grpP3.Location = new System.Drawing.Point(33, 411);
+            this.grpP3.Location = new System.Drawing.Point(33, 384);
             this.grpP3.Name = "grpP3";
             this.grpP3.Size = new System.Drawing.Size(384, 41);
             this.grpP3.TabIndex = 47;
@@ -477,7 +465,7 @@
             this.grpP4.Controls.Add(this.rdBtnP4_5);
             this.grpP4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP4.ForeColor = System.Drawing.Color.Teal;
-            this.grpP4.Location = new System.Drawing.Point(33, 458);
+            this.grpP4.Location = new System.Drawing.Point(33, 431);
             this.grpP4.Name = "grpP4";
             this.grpP4.Size = new System.Drawing.Size(384, 41);
             this.grpP4.TabIndex = 47;
@@ -550,7 +538,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.White;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(419, 125);
+            this.btnAgregar.Location = new System.Drawing.Point(419, 98);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(86, 28);
@@ -576,7 +564,7 @@
             this.label2.BackColor = System.Drawing.Color.AliceBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(13, 58);
+            this.label2.Location = new System.Drawing.Point(13, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(342, 17);
             this.label2.TabIndex = 50;
@@ -642,6 +630,18 @@
             this.grpBoxGrupo.TabIndex = 52;
             this.grpBoxGrupo.TabStop = false;
             this.grpBoxGrupo.Text = "Grupo ";
+            // 
+            // btnRegistrarGrupo
+            // 
+            this.btnRegistrarGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarGrupo.Location = new System.Drawing.Point(457, 158);
+            this.btnRegistrarGrupo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarGrupo.Name = "btnRegistrarGrupo";
+            this.btnRegistrarGrupo.Size = new System.Drawing.Size(79, 23);
+            this.btnRegistrarGrupo.TabIndex = 57;
+            this.btnRegistrarGrupo.Text = "Registrar";
+            this.btnRegistrarGrupo.UseVisualStyleBackColor = true;
+            this.btnRegistrarGrupo.Click += new System.EventHandler(this.btnRegistrarGrupo_Click);
             // 
             // btnEncuestaGrupo
             // 
@@ -720,10 +720,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.labelF);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dateEncuentra);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -731,41 +729,17 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(558, 276);
+            this.groupBox1.Size = new System.Drawing.Size(558, 257);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Encuesta";
-            // 
-            // labelF
-            // 
-            this.labelF.AutoSize = true;
-            this.labelF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelF.ForeColor = System.Drawing.Color.Teal;
-            this.labelF.Location = new System.Drawing.Point(12, 34);
-            this.labelF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelF.Name = "labelF";
-            this.labelF.Size = new System.Drawing.Size(138, 13);
-            this.labelF.TabIndex = 55;
-            this.labelF.Text = "Fecha de la encuesta :";
-            // 
-            // btnRegistrarGrupo
-            // 
-            this.btnRegistrarGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarGrupo.Location = new System.Drawing.Point(457, 158);
-            this.btnRegistrarGrupo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRegistrarGrupo.Name = "btnRegistrarGrupo";
-            this.btnRegistrarGrupo.Size = new System.Drawing.Size(79, 23);
-            this.btnRegistrarGrupo.TabIndex = 57;
-            this.btnRegistrarGrupo.Text = "Registrar";
-            this.btnRegistrarGrupo.UseVisualStyleBackColor = true;
-            this.btnRegistrarGrupo.Click += new System.EventHandler(this.btnRegistrarGrupo_Click);
             // 
             // frmRegYeditEncuestas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(606, 709);
+            this.ClientSize = new System.Drawing.Size(606, 690);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.grpP4);
             this.Controls.Add(this.grpP3);
@@ -792,7 +766,6 @@
             this.grpBoxGrupo.ResumeLayout(false);
             this.grpBoxGrupo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -803,7 +776,6 @@
         private System.Windows.Forms.Label labelNumeroGrupo;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.DateTimePicker dateEncuentra;
         private System.Windows.Forms.DataGridView dgvEncuestas;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button button1;
@@ -849,7 +821,6 @@
         private System.Windows.Forms.Label labelGuia;
         private System.Windows.Forms.Label labelColegio;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label labelF;
         private System.Windows.Forms.ComboBox cboGuia;
         private System.Windows.Forms.ComboBox cboActividad;
         private System.Windows.Forms.ComboBox cboColegio;

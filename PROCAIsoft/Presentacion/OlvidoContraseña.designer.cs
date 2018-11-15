@@ -32,7 +32,9 @@
             this.lblInstruccion = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAtras = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCorreo
@@ -74,15 +76,29 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Correo";
             // 
-            // btnAtras
+            // label2
             // 
-            this.btnAtras.Location = new System.Drawing.Point(53, 136);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
-            this.btnAtras.TabIndex = 4;
-            this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(68, 153);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Atras";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 140);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // OlvidoContraseña
             // 
@@ -90,7 +106,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(505, 192);
-            this.Controls.Add(this.btnAtras);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lblInstruccion);
@@ -98,6 +115,7 @@
             this.Name = "OlvidoContraseña";
             this.Text = "Olvido su contraseña";
             this.Load += new System.EventHandler(this.OlvidoContraseña_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +127,7 @@
         private System.Windows.Forms.Label lblInstruccion;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

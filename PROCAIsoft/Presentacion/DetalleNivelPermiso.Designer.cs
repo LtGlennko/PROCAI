@@ -40,14 +40,14 @@
             // cboCargo
             // 
             this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(164, 95);
+            this.cboCargo.Location = new System.Drawing.Point(149, 128);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(121, 21);
             this.cboCargo.TabIndex = 0;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(329, 161);
+            this.btnAceptar.Location = new System.Drawing.Point(329, 206);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 2;
@@ -58,49 +58,58 @@
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(92, 103);
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.lblCargo.ForeColor = System.Drawing.Color.Teal;
+            this.lblCargo.Location = new System.Drawing.Point(92, 131);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(35, 13);
+            this.lblCargo.Size = new System.Drawing.Size(40, 13);
             this.lblCargo.TabIndex = 3;
             this.lblCargo.Text = "Cargo";
             // 
             // chkJefe
             // 
             this.chkJefe.AutoSize = true;
-            this.chkJefe.Location = new System.Drawing.Point(74, 150);
+            this.chkJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.chkJefe.ForeColor = System.Drawing.Color.Teal;
+            this.chkJefe.Location = new System.Drawing.Point(74, 178);
             this.chkJefe.Name = "chkJefe";
             this.chkJefe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkJefe.Size = new System.Drawing.Size(73, 17);
+            this.chkJefe.Size = new System.Drawing.Size(83, 17);
             this.chkJefe.TabIndex = 4;
             this.chkJefe.Text = "?Es jefe¿ ";
+            this.chkJefe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkJefe.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(121, 20);
+            this.label2.Location = new System.Drawing.Point(79, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 13);
+            this.label2.Size = new System.Drawing.Size(279, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Nivel de permiso de usuario";
+            this.label2.Text = "Modifica Cargo y Nivel de Permiso";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 58);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(34, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(104, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Nobre de ususario";
+            this.label1.Text = "Nobre de usuario";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(164, 58);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.ForeColor = System.Drawing.Color.Teal;
+            this.lblNombre.Location = new System.Drawing.Point(146, 86);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(108, 13);
+            this.lblNombre.Size = new System.Drawing.Size(127, 13);
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "<nombre de Usuario>";
             // 
@@ -109,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(416, 196);
+            this.ClientSize = new System.Drawing.Size(416, 241);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -118,7 +127,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboCargo);
             this.Name = "DetalleNivelPermiso";
-            this.Text = "DetalleNivelPermiso";
+            this.Text = "Modificar Nivel de Permiso";
             this.ResumeLayout(false);
             this.PerformLayout();
 

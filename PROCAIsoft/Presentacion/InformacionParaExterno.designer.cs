@@ -40,7 +40,7 @@
             this.labelTitulo.AutoSize = true;
             this.labelTitulo.Font = new System.Drawing.Font("Franklin Gothic Demi", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.ForeColor = System.Drawing.Color.Teal;
-            this.labelTitulo.Location = new System.Drawing.Point(348, 17);
+            this.labelTitulo.Location = new System.Drawing.Point(319, 25);
             this.labelTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(180, 28);
@@ -51,7 +51,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 62);
+            this.label1.Location = new System.Drawing.Point(114, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(613, 128);
             this.label1.TabIndex = 24;
@@ -60,7 +60,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.guiaspucp3;
-            this.pictureBox1.Location = new System.Drawing.Point(214, 208);
+            this.pictureBox1.Location = new System.Drawing.Point(214, 223);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(396, 269);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,7 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(835, 489);
+            this.ClientSize = new System.Drawing.Size(835, 504);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTitulo);
