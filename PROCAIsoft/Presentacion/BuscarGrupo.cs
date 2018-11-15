@@ -28,7 +28,7 @@ namespace Presentacion
             InitializeComponent();
             dgvGrupos.AutoGenerateColumns = false;
             dgvGrupos.DataSource = grupoBL.listarGrupos();
-            
+            disenio_tabla();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
