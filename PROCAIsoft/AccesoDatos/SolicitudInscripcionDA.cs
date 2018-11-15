@@ -102,5 +102,46 @@ namespace AccesoDatos
             }
             return success;
         }
+
+
+        public bool validarSolicitudInscripcionActividad(int idSolicitud, int validacion)
+        {
+            bool success = false;
+            
+            //coneccion DataBase
+            DBManager DBM = new DBManager();
+            bool coneccion = DBM.initialize_conection();
+            if (coneccion)
+            {
+                
+                MySqlParameter parameter_id = new MySqlParameter("IdSolicitud", MySqlDbType.Int32);
+                //MySqlParameter parameter_val = new MySqlParameter("validacion", MySqlDbType.Int32);
+
+                parameter_id.Value = idSolicitud;
+                //parameter_val.Value = validacion;
+
+
+                DBM.Comando.CommandType = System.Data.CommandType.StoredProcedure;
+                if(validacion==1)
+                    DBM.Comando.CommandText = "ValidarSolicitudInscripcion";
+                else if (validacion==0)
+                    DBM.Comando.CommandText = "RechazarSolicitudInscripcion";
+                //agrego los parametros
+                //DBM.Comando.Parameters.Add(parameter_id);
+                DBM.Comando.Parameters.Add(parameter_id);
+                //DBM.Comando.Parameters.Add(parameter_val);
+
+                //ejecuto el procedure call
+                DBM.Comando.ExecuteNonQuery();
+
+                success = true;
+                DBM.finalize_conection();
+            }
+            else
+            {
+                success = false;
+            }
+            return success;
+        }
     }
 }
