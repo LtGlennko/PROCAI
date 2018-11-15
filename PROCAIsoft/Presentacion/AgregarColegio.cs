@@ -26,8 +26,8 @@ namespace Presentacion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string nom = txtN.Text;
-            string pai = cboPais.SelectedText;
-            string dep = txtD.Text;
+            string pai = txtPais.Text;
+            string dep = cboDep.SelectedText;
             string pro = txtPro.Text;
             string dis = txtDis.Text;
             string dir = txtDir.Text;
@@ -69,6 +69,21 @@ namespace Presentacion
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRuc_TextChanged(object sender, EventArgs e)
         {
 
         }

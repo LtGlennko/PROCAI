@@ -22,12 +22,13 @@ namespace Presentacion
         }
 
         
-        public EditarStocks(int cod,string nomb,int stock)
+        public EditarStocks(int cod,string nomb,int stock,string descripcion)
         {
             InitializeComponent();
             txtCod.Text = cod.ToString();
             txtC.Text = stock.ToString();
             txtN.Text = nomb;
+            txtDesc.Text = descripcion;
             mbl = new MerchandisingBL();
         }
 
@@ -43,10 +44,29 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int num = Convert.ToInt32(txtC.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar un número de stock valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtN.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar nombre");
+                return;
+            }
+            if (txtDesc.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar descripcion");
+                return;
+            }
             string nomb = txtN.Text;
             int cant = Int32.Parse(txtC.Text);
             int cod = Int32.Parse(txtCod.Text);
-            Merchandising m = new Merchandising(cod, nomb, "xdxd", cant);
+            string desc = txtDesc.Text;
+            Merchandising m = new Merchandising(cod, nomb, desc, cant);
             mbl.actualizarMerchandising(m);
             MessageBox.Show("Datos del producto modificado");
             this.DialogResult = DialogResult.OK;
@@ -60,6 +80,11 @@ namespace Presentacion
         private void button1_Click_1(object sender, EventArgs e)
         {
             Dispose(true);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

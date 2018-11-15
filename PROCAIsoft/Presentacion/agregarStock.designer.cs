@@ -44,7 +44,7 @@
             this.txtNombre.AutoSize = true;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.txtNombre.ForeColor = System.Drawing.Color.Teal;
-            this.txtNombre.Location = new System.Drawing.Point(99, 74);
+            this.txtNombre.Location = new System.Drawing.Point(106, 71);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(54, 13);
             this.txtNombre.TabIndex = 0;

@@ -38,7 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtN = new System.Windows.Forms.TextBox();
-            this.txtD = new System.Windows.Forms.TextBox();
             this.txtPro = new System.Windows.Forms.TextBox();
             this.txtDis = new System.Windows.Forms.TextBox();
             this.txtDir = new System.Windows.Forms.TextBox();
@@ -48,7 +47,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cboTipoCol = new System.Windows.Forms.ComboBox();
-            this.cboPais = new System.Windows.Forms.ComboBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.cboDep = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -158,14 +158,6 @@
             this.txtN.TabIndex = 9;
             this.txtN.Text = "Bertolt Bretch";
             // 
-            // txtD
-            // 
-            this.txtD.Location = new System.Drawing.Point(170, 138);
-            this.txtD.Name = "txtD";
-            this.txtD.Size = new System.Drawing.Size(100, 20);
-            this.txtD.TabIndex = 11;
-            this.txtD.Text = "Lima";
-            // 
             // txtPro
             // 
             this.txtPro.Location = new System.Drawing.Point(170, 179);
@@ -197,6 +189,7 @@
             this.txtRuc.Size = new System.Drawing.Size(100, 20);
             this.txtRuc.TabIndex = 16;
             this.txtRuc.Text = "56767455454";
+            this.txtRuc.TextChanged += new System.EventHandler(this.txtRuc_TextChanged);
             // 
             // txtTelf
             // 
@@ -249,26 +242,49 @@
             this.cboTipoCol.TabIndex = 21;
             this.cboTipoCol.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // cboPais
+            // txtPais
             // 
-            this.cboPais.FormattingEnabled = true;
-            this.cboPais.Items.AddRange(new object[] {
-            "Perú",
-            "Ecuador",
-            "Brasil",
-            "Venezuela",
-            "Argentina",
-            "Estados Unidos",
-            "Cánada",
-            "Francia",
-            "España",
-            "Inglaterra",
-            "Rusia",
-            "Chile"});
-            this.cboPais.Location = new System.Drawing.Point(170, 97);
-            this.cboPais.Name = "cboPais";
-            this.cboPais.Size = new System.Drawing.Size(121, 21);
-            this.cboPais.TabIndex = 22;
+            this.txtPais.Enabled = false;
+            this.txtPais.Location = new System.Drawing.Point(170, 93);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(100, 20);
+            this.txtPais.TabIndex = 22;
+            this.txtPais.Text = "Perú";
+            this.txtPais.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // cboDep
+            // 
+            this.cboDep.FormattingEnabled = true;
+            this.cboDep.Items.AddRange(new object[] {
+            "Lima",
+            "Ica",
+            "Piura",
+            "Lambayeque",
+            "Amazonas",
+            "Áncash",
+            "Apurímac",
+            "Arequipa",
+            "Ayacucho",
+            "Cajamarca",
+            "Cusco",
+            "Huancavelica",
+            "Huánuco",
+            "Ica",
+            "Junín",
+            "La Libertad",
+            "Loreto",
+            "Madre de Dios",
+            "Moquegua",
+            "Pasco",
+            "Puno",
+            "San Martín",
+            "Tacna",
+            "Tumbes",
+            "Ucayali"});
+            this.cboDep.Location = new System.Drawing.Point(170, 133);
+            this.cboDep.Name = "cboDep";
+            this.cboDep.Size = new System.Drawing.Size(121, 21);
+            this.cboDep.TabIndex = 23;
             // 
             // AgregarColegio
             // 
@@ -276,7 +292,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(398, 520);
-            this.Controls.Add(this.cboPais);
+            this.Controls.Add(this.cboDep);
+            this.Controls.Add(this.txtPais);
             this.Controls.Add(this.cboTipoCol);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
@@ -286,7 +303,6 @@
             this.Controls.Add(this.txtDir);
             this.Controls.Add(this.txtDis);
             this.Controls.Add(this.txtPro);
-            this.Controls.Add(this.txtD);
             this.Controls.Add(this.txtN);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -317,7 +333,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtN;
-        private System.Windows.Forms.TextBox txtD;
         private System.Windows.Forms.TextBox txtPro;
         private System.Windows.Forms.TextBox txtDis;
         private System.Windows.Forms.TextBox txtDir;
@@ -327,6 +342,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cboTipoCol;
-        private System.Windows.Forms.ComboBox cboPais;
+        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.ComboBox cboDep;
     }
 }

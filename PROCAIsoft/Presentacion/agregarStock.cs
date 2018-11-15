@@ -27,6 +27,24 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int num = Convert.ToInt32(txtC.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar un número de stock valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (txtN.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar nombre");
+                return;
+            }
+            if(txtDesc.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar descripcion");
+                return;
+            }
             Merchandising m = new Merchandising();
             m.Nombre = txtN.Text;
             m.Stock = Int32.Parse(txtC.Text);

@@ -40,12 +40,13 @@ namespace Presentacion
         {
             int cod = (int)dgvStock.CurrentRow.Cells[0].Value;
             string nombre = dgvStock.CurrentRow.Cells[1].Value.ToString();
+            string descripcion = dgvStock.CurrentRow.Cells[2].Value.ToString();
             int stock = (int)dgvStock.CurrentRow.Cells[3].Value;
 
             //dgvStock.CurrentRow.SetValues(cod,nombre,stock);//esta funcion puede simplificar la edicion
             //EditarStockcs editar = new editarStockcs(cod, nombre, stock, productos);
             //dgvStock.Rows.RemoveAt(dgvStock.CurrentRow.Index);
-            EditarStocks editar = new EditarStocks(cod, nombre, stock);
+            EditarStocks editar = new EditarStocks(cod, nombre, stock,descripcion);
             if(DialogResult.OK == editar.ShowDialog())
             {
                 dgvStock.Rows.RemoveAt(dgvStock.CurrentRow.Index);

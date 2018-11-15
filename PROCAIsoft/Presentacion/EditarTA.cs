@@ -31,6 +31,17 @@ namespace Presentacion
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+
+            if (txtN.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar nombre");
+                return;
+            }
+            if (txtDesc.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar descripcion");
+                return;
+            }
             string nomb = txtN.Text;
             string descrip = txtDesc.Text;
             int id = Int32.Parse(txtId.Text);
@@ -44,6 +55,11 @@ namespace Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             Dispose(true);
+        }
+
+        private void txtN_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

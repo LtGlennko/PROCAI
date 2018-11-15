@@ -37,5 +37,10 @@ namespace Presentacion
             MessageBox.Show("Cambios guardados con éxito");
             Dispose();
         }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

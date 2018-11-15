@@ -33,6 +33,16 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            if (txtNomb.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar nombre");
+                return;
+            }
+            if (txtDesc.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar descripcion");
+                return;
+            }
             string nombre = txtNomb.Text;
             string descripcion = txtDesc.Text;
             TipoActividad ta = new TipoActividad();
@@ -42,6 +52,11 @@ namespace Presentacion
             if(registar) MessageBox.Show("Escuela registrada con exito");
             else MessageBox.Show("Error al registrar");
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void txtNomb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
