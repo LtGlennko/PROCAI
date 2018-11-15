@@ -24,6 +24,7 @@ namespace Presentacion
             if (SIBL.listarSolicitudInscripcionActividad(listaSIA)) {
                 this.dgv_Solicitudes.DataSource = null;
                 this.dgv_Solicitudes.DataSource = listaSIA;
+                this.disenio_tabla();
             }
         }
 
