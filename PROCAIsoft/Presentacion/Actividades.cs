@@ -24,7 +24,9 @@ namespace Presentacion
         {
             InitializeComponent();
             date = d;
+
             dgvAct.DataSource = a;
+            disenio_tabla();
         }
 
         private void Actividades_Load(object sender, EventArgs e)

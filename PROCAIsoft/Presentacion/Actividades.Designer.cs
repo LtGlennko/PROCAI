@@ -1,4 +1,6 @@
-﻿namespace Presentacion
+﻿using System.Drawing;
+
+namespace Presentacion
 {
     partial class Actividades
     {
@@ -19,7 +21,15 @@
             }
             base.Dispose(disposing);
         }
-
+        private void disenio_tabla()
+        {
+            dgvAct.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvAct.Font = new Font("Century Gothic", 8, FontStyle.Regular);
+            dgvAct.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 11, FontStyle.Bold);
+            dgvAct.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvAct.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dgvAct.EnableHeadersVisualStyles = false;
+        }
         #region Windows Form Designer generated code
 
         /// <summary>
