@@ -36,6 +36,7 @@ namespace Presentacion
         public frmRegYeditEncuestas(Guia g)
         {
             InitializeComponent();
+            disenio_tabla();
             estadoComponentes(estado.INICIAL);
             digitador = g;
             dgvEncuestas.AutoGenerateColumns = false;
@@ -62,6 +63,7 @@ namespace Presentacion
         public frmRegYeditEncuestas()
         {
             InitializeComponent();
+            disenio_tabla();
             estadoComponentes(estado.INICIAL);
             dgvEncuestas.AutoGenerateColumns = false;
             listaEncuestas = new BindingList<Encuesta>();
@@ -179,7 +181,7 @@ namespace Presentacion
             {
                 grpP4.ForeColor = Color.Red;
             }
-
+            
             if (flagGrupo == true) encuestaCreada.GrupoPerteneciente = (grupoSeleccionado);
             else
             {//agregamiento del nuevo grupo
@@ -204,12 +206,14 @@ namespace Presentacion
             {
                 encuestaCreada.IdEncuesta1 = 0; //Indica que la encuesta aun no ha sido registrada en la base de datos
                 listaEncuestas.Add(encuestaCreada);
-                dgvEncuestas.DataSource = listaEncuestas;            
+                dgvEncuestas.DataSource = listaEncuestas;
+                disenio_tabla();
             }
 
 
         }
-
+        
+        
         private void agregarCalificacionSeleccionada(Encuesta encuesta, GroupBox grupo, Pregunta preg)
         {
             RadioButton btn = grupo.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked);
@@ -314,7 +318,7 @@ namespace Presentacion
                 
                 listaEncuestas.Add(encuestaModificada);
                 dgvEncuestas.DataSource = listaEncuestas;
-               
+                disenio_tabla();
               
             }
             else

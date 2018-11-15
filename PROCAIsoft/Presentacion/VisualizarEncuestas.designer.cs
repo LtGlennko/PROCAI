@@ -1,4 +1,6 @@
-﻿namespace Presentacion
+﻿using System.Drawing;
+
+namespace Presentacion
 {
     partial class frmRegYeditEncuestas
     {
@@ -19,7 +21,15 @@
             }
             base.Dispose(disposing);
         }
-
+        private void disenio_tabla()
+        {
+            dgvEncuestas.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvEncuestas.Font = new Font("Century Gothic", 8, FontStyle.Regular);
+            dgvEncuestas.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 11, FontStyle.Bold);
+            dgvEncuestas.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvEncuestas.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dgvEncuestas.EnableHeadersVisualStyles = false;
+        }
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -135,7 +145,7 @@
             this.Pregunta3,
             this.Pregunta4});
             this.dgvEncuestas.Location = new System.Drawing.Point(193, 621);
-            this.dgvEncuestas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEncuestas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEncuestas.Name = "dgvEncuestas";
             this.dgvEncuestas.Size = new System.Drawing.Size(744, 204);
             this.dgvEncuestas.TabIndex = 19;
@@ -203,7 +213,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(559, 233);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 34);
             this.button1.TabIndex = 21;
@@ -296,9 +306,9 @@
             this.grpP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP1.ForeColor = System.Drawing.Color.Teal;
             this.grpP1.Location = new System.Drawing.Point(204, 348);
-            this.grpP1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP1.Margin = new System.Windows.Forms.Padding(4);
             this.grpP1.Name = "grpP1";
-            this.grpP1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP1.Padding = new System.Windows.Forms.Padding(4);
             this.grpP1.Size = new System.Drawing.Size(512, 50);
             this.grpP1.TabIndex = 46;
             this.grpP1.TabStop = false;
@@ -314,9 +324,9 @@
             this.grpP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP2.ForeColor = System.Drawing.Color.Teal;
             this.grpP2.Location = new System.Drawing.Point(204, 406);
-            this.grpP2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP2.Margin = new System.Windows.Forms.Padding(4);
             this.grpP2.Name = "grpP2";
-            this.grpP2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP2.Padding = new System.Windows.Forms.Padding(4);
             this.grpP2.Size = new System.Drawing.Size(512, 50);
             this.grpP2.TabIndex = 47;
             this.grpP2.TabStop = false;
@@ -393,9 +403,9 @@
             this.grpP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP3.ForeColor = System.Drawing.Color.Teal;
             this.grpP3.Location = new System.Drawing.Point(204, 464);
-            this.grpP3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP3.Margin = new System.Windows.Forms.Padding(4);
             this.grpP3.Name = "grpP3";
-            this.grpP3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP3.Padding = new System.Windows.Forms.Padding(4);
             this.grpP3.Size = new System.Drawing.Size(512, 50);
             this.grpP3.TabIndex = 47;
             this.grpP3.TabStop = false;
@@ -472,9 +482,9 @@
             this.grpP4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.grpP4.ForeColor = System.Drawing.Color.Teal;
             this.grpP4.Location = new System.Drawing.Point(204, 521);
-            this.grpP4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP4.Margin = new System.Windows.Forms.Padding(4);
             this.grpP4.Name = "grpP4";
-            this.grpP4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpP4.Padding = new System.Windows.Forms.Padding(4);
             this.grpP4.Size = new System.Drawing.Size(512, 50);
             this.grpP4.TabIndex = 47;
             this.grpP4.TabStop = false;
@@ -775,7 +785,6 @@
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
