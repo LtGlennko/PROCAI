@@ -20,6 +20,7 @@ namespace Presentacion
             InitializeComponent();
             mbl = new MerchandisingBL();
             dgvStock.DataSource = mbl.listarMerchandising();
+            disenio_tabla();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

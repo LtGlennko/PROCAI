@@ -31,6 +31,7 @@ namespace Presentacion
             InitializeComponent();
             dvgUsuarios.AutoGenerateColumns = false;
             dvgUsuarios.DataSource = trabajadores;
+            disenio_tabla();
             cargos = cargoBL.listarCargos();
             //cboCargo.DataSource = cargos;
             //cboCargo.ValueMember = "IdCargo1";

@@ -21,6 +21,7 @@ namespace Presentacion
             InitializeComponent();
             tipoactBL = new TipoActividadBL();
             dgvTA.DataSource = tipoactBL.listarTipoActividad();
+            disenio_tabla();
         }
 
         private void label2_Click(object sender, EventArgs e)

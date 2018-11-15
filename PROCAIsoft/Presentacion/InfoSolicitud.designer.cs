@@ -84,7 +84,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(435, 472);
+            this.button1.Location = new System.Drawing.Point(489, 510);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 38);
@@ -98,7 +98,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(74, 483);
+            this.label8.Location = new System.Drawing.Point(74, 530);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 17);
             this.label8.TabIndex = 47;
@@ -108,7 +108,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 466);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 513);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(59, 50);
@@ -119,7 +119,6 @@
             // 
             // gbx_orientador
             // 
-            this.gbx_orientador.BackColor = System.Drawing.SystemColors.Desktop;
             this.gbx_orientador.Controls.Add(this.txt_email);
             this.gbx_orientador.Controls.Add(this.lbl_email);
             this.gbx_orientador.Controls.Add(this.txt_sexo);
@@ -136,9 +135,9 @@
             this.gbx_orientador.Controls.Add(this.lbl_nombres);
             this.gbx_orientador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_orientador.ForeColor = System.Drawing.Color.Teal;
-            this.gbx_orientador.Location = new System.Drawing.Point(38, 69);
+            this.gbx_orientador.Location = new System.Drawing.Point(77, 82);
             this.gbx_orientador.Name = "gbx_orientador";
-            this.gbx_orientador.Size = new System.Drawing.Size(297, 392);
+            this.gbx_orientador.Size = new System.Drawing.Size(297, 421);
             this.gbx_orientador.TabIndex = 48;
             this.gbx_orientador.TabStop = false;
             this.gbx_orientador.Text = "Orientador:";
@@ -304,7 +303,6 @@
             // 
             // gbx_Colegio
             // 
-            this.gbx_Colegio.BackColor = System.Drawing.SystemColors.Desktop;
             this.gbx_Colegio.Controls.Add(this.txt_telf);
             this.gbx_Colegio.Controls.Add(this.lbl_telf);
             this.gbx_Colegio.Controls.Add(this.txt_particular);
@@ -321,9 +319,9 @@
             this.gbx_Colegio.Controls.Add(this.lbl_nombrecolegio);
             this.gbx_Colegio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_Colegio.ForeColor = System.Drawing.Color.Teal;
-            this.gbx_Colegio.Location = new System.Drawing.Point(341, 69);
+            this.gbx_Colegio.Location = new System.Drawing.Point(380, 82);
             this.gbx_Colegio.Name = "gbx_Colegio";
-            this.gbx_Colegio.Size = new System.Drawing.Size(308, 392);
+            this.gbx_Colegio.Size = new System.Drawing.Size(308, 421);
             this.gbx_Colegio.TabIndex = 49;
             this.gbx_Colegio.TabStop = false;
             this.gbx_Colegio.Text = "Colegio:";
@@ -477,7 +475,6 @@
             // 
             // gbx_actividad
             // 
-            this.gbx_actividad.BackColor = System.Drawing.SystemColors.Desktop;
             this.gbx_actividad.Controls.Add(this.lbl_nombreactividad);
             this.gbx_actividad.Controls.Add(this.txt_nombreactividad);
             this.gbx_actividad.Controls.Add(this.txt_desc);
@@ -492,9 +489,9 @@
             this.gbx_actividad.Controls.Add(this.lbl_merch);
             this.gbx_actividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_actividad.ForeColor = System.Drawing.Color.Teal;
-            this.gbx_actividad.Location = new System.Drawing.Point(670, 69);
+            this.gbx_actividad.Location = new System.Drawing.Point(694, 82);
             this.gbx_actividad.Name = "gbx_actividad";
-            this.gbx_actividad.Size = new System.Drawing.Size(289, 392);
+            this.gbx_actividad.Size = new System.Drawing.Size(289, 421);
             this.gbx_actividad.TabIndex = 49;
             this.gbx_actividad.TabStop = false;
             this.gbx_actividad.Text = "Actividad:";
@@ -630,7 +627,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(971, 531);
+            this.ClientSize = new System.Drawing.Size(1058, 574);
             this.Controls.Add(this.gbx_Colegio);
             this.Controls.Add(this.gbx_actividad);
             this.Controls.Add(this.lbl_titulo);

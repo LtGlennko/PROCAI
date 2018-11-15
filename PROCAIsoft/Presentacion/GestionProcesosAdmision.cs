@@ -26,9 +26,18 @@ namespace Presentacion
             ProcesoAdmisionBL PABL = new ProcesoAdmisionBL();
             if (listaProcesos != null) this.listaProcesos = new BindingList<ProcesoAdmision>();
             PABL.listarProcesosAdmision(listaProcesos);
-
+            
             dgvProcesoAdmin.DataSource = null;
             dgvProcesoAdmin.DataSource = listaProcesos;
+            disenio_tabla();
+        }
+        private void disenio_tabla() {
+            dgvProcesoAdmin.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvProcesoAdmin.Font = new Font("Century Gothic", 8 , FontStyle.Regular);
+            dgvProcesoAdmin.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 11, FontStyle.Bold);
+            dgvProcesoAdmin.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvProcesoAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dgvProcesoAdmin.EnableHeadersVisualStyles = false;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
