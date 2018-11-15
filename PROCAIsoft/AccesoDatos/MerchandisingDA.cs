@@ -47,7 +47,7 @@ namespace AccesoDatos
             comando = new MySqlCommand();
             sql = "SELECT IdMerchandising, nombre, descripcion, stock " +
                 "FROM Merchandising "+
-                "WHERE nombre LIKE '%"+pista+"%';";
+                "WHERE nombre LIKE '%"+pista+"%' AND estado=1;";
             comando.CommandText = sql;
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();
@@ -112,7 +112,7 @@ namespace AccesoDatos
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
             comando = new MySqlCommand();
-            sql = "UPDATE Merchandising SET nombre= '" + m.Nombre + "',"+" stock= "+ m.Stock + " WHERE IdMerchandising=" + m.IdMerchandising1;
+            sql = "UPDATE Merchandising SET nombre= '" + m.Nombre + "',"+" stock= "+ m.Stock +", descripcion='"+m.Descripcion+"'" +" WHERE IdMerchandising=" + m.IdMerchandising1;
             comando.CommandText = sql;
             comando.Connection = con;
             comando.ExecuteNonQuery();

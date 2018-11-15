@@ -34,12 +34,17 @@ namespace Presentacion
 
             if (txtN.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar nombre");
+                MessageBox.Show("Debe ingresar nombre", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtDesc.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar descripcion");
+                MessageBox.Show("Debe ingresar descripcion", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtDesc.Text.Length > 45)
+            {
+                MessageBox.Show("Descripcion demasiado larga", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string nomb = txtN.Text;
@@ -48,7 +53,7 @@ namespace Presentacion
             TipoActividad ta = new TipoActividad(id,nomb,descrip);
             bool actualizar = tabl.actualizarTipoActividad(ta);
             if (actualizar) MessageBox.Show("Datos del producto modificado");
-            else MessageBox.Show("Error al registrar");
+            else MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             this.DialogResult = DialogResult.OK;
         }
 
@@ -58,6 +63,11 @@ namespace Presentacion
         }
 
         private void txtN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDesc_TextChanged(object sender, EventArgs e)
         {
 
         }

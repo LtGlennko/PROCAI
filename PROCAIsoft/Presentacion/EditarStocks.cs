@@ -50,16 +50,21 @@ namespace Presentacion
             }
             catch
             {
-                MessageBox.Show("Debe ingresar un número de stock valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar un número de stock valido", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (txtN.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar nombre");
+                MessageBox.Show("Debe ingresar nombre", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtDesc.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar descripcion");
+                MessageBox.Show("Debe ingresar descripcion", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtDesc.Text.Length > 45)
+            {
+                MessageBox.Show("Descripcion demasiado larga", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string nomb = txtN.Text;
@@ -83,6 +88,16 @@ namespace Presentacion
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose(true);
+        }
+
+        private void txtDesc_TextChanged(object sender, EventArgs e)
         {
 
         }
