@@ -72,16 +72,6 @@ namespace Presentacion
             Dispose();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            //ProcesoAdmision PA = null;
-
-            VentanaNuevoProcesoAdmision VNPA = new VentanaNuevoProcesoAdmision(this);
-            if (VNPA.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            //llenarDGV();
-        }
+        
     }
 }

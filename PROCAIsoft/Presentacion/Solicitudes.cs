@@ -21,16 +21,40 @@ namespace Presentacion
         {
             InitializeComponent();
             SolicitudInscripcionBL SIBL = new SolicitudInscripcionBL();
-            if (SIBL.listarSolicitudInscripcionActividad(listaSIA)) {
+            listarActividades();
+        }
+        private bool listarActividades() {
+            SolicitudInscripcionBL SIBL = new SolicitudInscripcionBL();
+            listaSIA = new BindingList<SolicitudInscripcionActividad>();
+            bool success = SIBL.listarSolicitudInscripcionActividad(listaSIA);
+            if (success) {
                 this.dgv_Solicitudes.DataSource = null;
                 this.dgv_Solicitudes.DataSource = listaSIA;
                 this.disenio_tabla();
             }
+            return success;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Validado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            SolicitudInscripcionBL SIABL = new SolicitudInscripcionBL();
+            bool success =false;
+            if (SIAseleccionado != null)
+            {
+                success = SIABL.validarSolicitudInscripcionActividad(this.SIAseleccionado.IdSolicitudInscripcion1, 1);
+                if (success)
+                {
+                    MessageBox.Show("Validado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    listarActividades();
+                }
+                else
+                {
+                    MessageBox.Show("Bad conection", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else {
+                MessageBox.Show("No hay Solicitudes por validar", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+           
             
         }
 
@@ -57,12 +81,43 @@ namespace Presentacion
 
         private void btnDertalles_Click(object sender, EventArgs e)
         {
-            if(SIAseleccionado==null)
-                this.SIAseleccionado = listaSIA[0];
+            if (SIAseleccionado == null)
+            {
+                MessageBox.Show("No hay items seleccionados", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                InfoSolicitud IS = new InfoSolicitud(this.SIAseleccionado);
 
-            InfoSolicitud IS = new InfoSolicitud(this.SIAseleccionado);
+                IS.Show();
+            }
             
-            IS.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SolicitudInscripcionBL SIABL = new SolicitudInscripcionBL();
+            bool success = false;
+            if (SIAseleccionado != null)
+            {
+                success = SIABL.validarSolicitudInscripcionActividad(this.SIAseleccionado.IdSolicitudInscripcion1, 0);
+                if (success)
+                {
+                    MessageBox.Show("Rechazado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    listarActividades();
+                }
+                else
+                {
+                    MessageBox.Show("Bad conection", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay Solicitudes por rechazar", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
         }
     }
+    
 }

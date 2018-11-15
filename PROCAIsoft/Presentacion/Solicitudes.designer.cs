@@ -39,9 +39,10 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.dgv_Solicitudes = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDertalles = new System.Windows.Forms.Button();
+            this.btn_validar = new System.Windows.Forms.Button();
+            this.btn_detalles = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_rechazar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Solicitudes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,31 +60,31 @@ namespace Presentacion
             this.dgv_Solicitudes.TabIndex = 0;
             this.dgv_Solicitudes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Solicitudes_CellMouseClick);
             // 
-            // button1
+            // btn_validar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button1.Location = new System.Drawing.Point(1055, 94);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Validar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_validar.BackColor = System.Drawing.Color.White;
+            this.btn_validar.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btn_validar.Location = new System.Drawing.Point(1055, 94);
+            this.btn_validar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_validar.Name = "btn_validar";
+            this.btn_validar.Size = new System.Drawing.Size(96, 32);
+            this.btn_validar.TabIndex = 1;
+            this.btn_validar.Text = "Validar";
+            this.btn_validar.UseVisualStyleBackColor = false;
+            this.btn_validar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnDertalles
+            // btn_detalles
             // 
-            this.btnDertalles.BackColor = System.Drawing.Color.White;
-            this.btnDertalles.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnDertalles.Location = new System.Drawing.Point(1055, 167);
-            this.btnDertalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDertalles.Name = "btnDertalles";
-            this.btnDertalles.Size = new System.Drawing.Size(96, 32);
-            this.btnDertalles.TabIndex = 55;
-            this.btnDertalles.Text = "Detalles...";
-            this.btnDertalles.UseVisualStyleBackColor = false;
-            this.btnDertalles.Click += new System.EventHandler(this.btnDertalles_Click);
+            this.btn_detalles.BackColor = System.Drawing.Color.White;
+            this.btn_detalles.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btn_detalles.Location = new System.Drawing.Point(1055, 252);
+            this.btn_detalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_detalles.Name = "btn_detalles";
+            this.btn_detalles.Size = new System.Drawing.Size(101, 32);
+            this.btn_detalles.TabIndex = 55;
+            this.btn_detalles.Text = "Detalles...";
+            this.btn_detalles.UseVisualStyleBackColor = false;
+            this.btn_detalles.Click += new System.EventHandler(this.btnDertalles_Click);
             // 
             // label1
             // 
@@ -97,15 +98,27 @@ namespace Presentacion
             this.label1.TabIndex = 59;
             this.label1.Text = "Solicitudes de Inscripcion Actividades para Colegios";
             // 
+            // btn_rechazar
+            // 
+            this.btn_rechazar.BackColor = System.Drawing.Color.White;
+            this.btn_rechazar.Location = new System.Drawing.Point(1055, 176);
+            this.btn_rechazar.Name = "btn_rechazar";
+            this.btn_rechazar.Size = new System.Drawing.Size(101, 32);
+            this.btn_rechazar.TabIndex = 60;
+            this.btn_rechazar.Text = "Rechazar";
+            this.btn_rechazar.UseVisualStyleBackColor = false;
+            this.btn_rechazar.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1182, 587);
+            this.Controls.Add(this.btn_rechazar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnDertalles);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_detalles);
+            this.Controls.Add(this.btn_validar);
             this.Controls.Add(this.dgv_Solicitudes);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmSolicitudes";
@@ -120,8 +133,9 @@ namespace Presentacion
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_Solicitudes;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnDertalles;
+        private System.Windows.Forms.Button btn_validar;
+        private System.Windows.Forms.Button btn_detalles;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_rechazar;
     }
 }
