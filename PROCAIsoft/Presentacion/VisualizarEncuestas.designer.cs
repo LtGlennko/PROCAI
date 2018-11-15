@@ -74,6 +74,8 @@ namespace Presentacion
             this.lblTipoEncuesta = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.grpBoxGrupo = new System.Windows.Forms.GroupBox();
             this.btnRegistrarGrupo = new System.Windows.Forms.Button();
@@ -85,8 +87,6 @@ namespace Presentacion
             this.labelGuia = new System.Windows.Forms.Label();
             this.labelColegio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.NumGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pregunta1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,7 +130,7 @@ namespace Presentacion
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(93, 38);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(49, 23);
             this.txtNumero.TabIndex = 6;
@@ -160,7 +160,7 @@ namespace Presentacion
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(419, 143);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(86, 28);
             this.btnModificar.TabIndex = 20;
@@ -185,7 +185,7 @@ namespace Presentacion
             // 
             this.rdBtnP1_1.AutoSize = true;
             this.rdBtnP1_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_1.Name = "rdBtnP1_1";
             this.rdBtnP1_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_1.TabIndex = 23;
@@ -197,7 +197,7 @@ namespace Presentacion
             // 
             this.rdBtnP1_2.AutoSize = true;
             this.rdBtnP1_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_2.Name = "rdBtnP1_2";
             this.rdBtnP1_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_2.TabIndex = 24;
@@ -210,7 +210,7 @@ namespace Presentacion
             this.rdBtnP1_3.AutoSize = true;
             this.rdBtnP1_3.Checked = true;
             this.rdBtnP1_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_3.Name = "rdBtnP1_3";
             this.rdBtnP1_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_3.TabIndex = 25;
@@ -222,7 +222,7 @@ namespace Presentacion
             // 
             this.rdBtnP1_4.AutoSize = true;
             this.rdBtnP1_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_4.Name = "rdBtnP1_4";
             this.rdBtnP1_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_4.TabIndex = 26;
@@ -234,7 +234,7 @@ namespace Presentacion
             // 
             this.rdBtnP1_5.AutoSize = true;
             this.rdBtnP1_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP1_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP1_5.Name = "rdBtnP1_5";
             this.rdBtnP1_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP1_5.TabIndex = 27;
@@ -247,7 +247,7 @@ namespace Presentacion
             this.btnBusca.BackColor = System.Drawing.Color.White;
             this.btnBusca.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnBusca.Location = new System.Drawing.Point(149, 37);
-            this.btnBusca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBusca.Margin = new System.Windows.Forms.Padding(2);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(39, 21);
             this.btnBusca.TabIndex = 43;
@@ -292,7 +292,7 @@ namespace Presentacion
             // 
             this.rdBtnP2_1.AutoSize = true;
             this.rdBtnP2_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_1.Name = "rdBtnP2_1";
             this.rdBtnP2_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_1.TabIndex = 23;
@@ -304,7 +304,7 @@ namespace Presentacion
             // 
             this.rdBtnP2_2.AutoSize = true;
             this.rdBtnP2_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_2.Name = "rdBtnP2_2";
             this.rdBtnP2_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_2.TabIndex = 24;
@@ -317,7 +317,7 @@ namespace Presentacion
             this.rdBtnP2_3.AutoSize = true;
             this.rdBtnP2_3.Checked = true;
             this.rdBtnP2_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_3.Name = "rdBtnP2_3";
             this.rdBtnP2_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_3.TabIndex = 25;
@@ -329,7 +329,7 @@ namespace Presentacion
             // 
             this.rdBtnP2_4.AutoSize = true;
             this.rdBtnP2_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_4.Name = "rdBtnP2_4";
             this.rdBtnP2_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_4.TabIndex = 26;
@@ -341,7 +341,7 @@ namespace Presentacion
             // 
             this.rdBtnP2_5.AutoSize = true;
             this.rdBtnP2_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP2_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP2_5.Name = "rdBtnP2_5";
             this.rdBtnP2_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP2_5.TabIndex = 27;
@@ -369,7 +369,7 @@ namespace Presentacion
             // 
             this.rdBtnP3_1.AutoSize = true;
             this.rdBtnP3_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_1.Name = "rdBtnP3_1";
             this.rdBtnP3_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_1.TabIndex = 23;
@@ -381,7 +381,7 @@ namespace Presentacion
             // 
             this.rdBtnP3_2.AutoSize = true;
             this.rdBtnP3_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_2.Name = "rdBtnP3_2";
             this.rdBtnP3_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_2.TabIndex = 24;
@@ -394,7 +394,7 @@ namespace Presentacion
             this.rdBtnP3_3.AutoSize = true;
             this.rdBtnP3_3.Checked = true;
             this.rdBtnP3_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_3.Name = "rdBtnP3_3";
             this.rdBtnP3_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_3.TabIndex = 25;
@@ -406,7 +406,7 @@ namespace Presentacion
             // 
             this.rdBtnP3_4.AutoSize = true;
             this.rdBtnP3_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_4.Name = "rdBtnP3_4";
             this.rdBtnP3_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_4.TabIndex = 26;
@@ -418,7 +418,7 @@ namespace Presentacion
             // 
             this.rdBtnP3_5.AutoSize = true;
             this.rdBtnP3_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP3_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP3_5.Name = "rdBtnP3_5";
             this.rdBtnP3_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP3_5.TabIndex = 27;
@@ -446,7 +446,7 @@ namespace Presentacion
             // 
             this.rdBtnP4_1.AutoSize = true;
             this.rdBtnP4_1.Location = new System.Drawing.Point(16, 17);
-            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_1.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_1.Name = "rdBtnP4_1";
             this.rdBtnP4_1.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_1.TabIndex = 23;
@@ -458,7 +458,7 @@ namespace Presentacion
             // 
             this.rdBtnP4_2.AutoSize = true;
             this.rdBtnP4_2.Location = new System.Drawing.Point(70, 17);
-            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_2.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_2.Name = "rdBtnP4_2";
             this.rdBtnP4_2.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_2.TabIndex = 24;
@@ -471,7 +471,7 @@ namespace Presentacion
             this.rdBtnP4_3.AutoSize = true;
             this.rdBtnP4_3.Checked = true;
             this.rdBtnP4_3.Location = new System.Drawing.Point(124, 17);
-            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_3.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_3.Name = "rdBtnP4_3";
             this.rdBtnP4_3.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_3.TabIndex = 25;
@@ -483,7 +483,7 @@ namespace Presentacion
             // 
             this.rdBtnP4_4.AutoSize = true;
             this.rdBtnP4_4.Location = new System.Drawing.Point(176, 17);
-            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_4.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_4.Name = "rdBtnP4_4";
             this.rdBtnP4_4.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_4.TabIndex = 26;
@@ -495,7 +495,7 @@ namespace Presentacion
             // 
             this.rdBtnP4_5.AutoSize = true;
             this.rdBtnP4_5.Location = new System.Drawing.Point(226, 17);
-            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnP4_5.Margin = new System.Windows.Forms.Padding(2);
             this.rdBtnP4_5.Name = "rdBtnP4_5";
             this.rdBtnP4_5.Size = new System.Drawing.Size(32, 17);
             this.rdBtnP4_5.TabIndex = 27;
@@ -509,7 +509,7 @@ namespace Presentacion
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(419, 98);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(86, 28);
             this.btnAgregar.TabIndex = 48;
@@ -553,6 +553,24 @@ namespace Presentacion
             this.toolStrip1.TabIndex = 51;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(70, 28);
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(77, 28);
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
@@ -575,9 +593,9 @@ namespace Presentacion
             this.grpBoxGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBoxGrupo.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.grpBoxGrupo.Location = new System.Drawing.Point(145, 27);
-            this.grpBoxGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBoxGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.grpBoxGrupo.Name = "grpBoxGrupo";
-            this.grpBoxGrupo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBoxGrupo.Padding = new System.Windows.Forms.Padding(2);
             this.grpBoxGrupo.Size = new System.Drawing.Size(558, 197);
             this.grpBoxGrupo.TabIndex = 52;
             this.grpBoxGrupo.TabStop = false;
@@ -588,7 +606,7 @@ namespace Presentacion
             this.btnRegistrarGrupo.BackColor = System.Drawing.Color.White;
             this.btnRegistrarGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarGrupo.Location = new System.Drawing.Point(457, 158);
-            this.btnRegistrarGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarGrupo.Name = "btnRegistrarGrupo";
             this.btnRegistrarGrupo.Size = new System.Drawing.Size(79, 23);
             this.btnRegistrarGrupo.TabIndex = 57;
@@ -601,7 +619,7 @@ namespace Presentacion
             this.btnEncuestaGrupo.BackColor = System.Drawing.Color.White;
             this.btnEncuestaGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEncuestaGrupo.Location = new System.Drawing.Point(172, 159);
-            this.btnEncuestaGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEncuestaGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.btnEncuestaGrupo.Name = "btnEncuestaGrupo";
             this.btnEncuestaGrupo.Size = new System.Drawing.Size(79, 23);
             this.btnEncuestaGrupo.TabIndex = 56;
@@ -625,7 +643,7 @@ namespace Presentacion
             // 
             this.cboGuia.FormattingEnabled = true;
             this.cboGuia.Location = new System.Drawing.Point(132, 117);
-            this.cboGuia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboGuia.Margin = new System.Windows.Forms.Padding(2);
             this.cboGuia.Name = "cboGuia";
             this.cboGuia.Size = new System.Drawing.Size(404, 24);
             this.cboGuia.TabIndex = 54;
@@ -634,7 +652,7 @@ namespace Presentacion
             // 
             this.cboActividad.FormattingEnabled = true;
             this.cboActividad.Location = new System.Drawing.Point(133, 79);
-            this.cboActividad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboActividad.Margin = new System.Windows.Forms.Padding(2);
             this.cboActividad.Name = "cboActividad";
             this.cboActividad.Size = new System.Drawing.Size(403, 24);
             this.cboActividad.TabIndex = 53;
@@ -643,7 +661,7 @@ namespace Presentacion
             // 
             this.cboColegio.FormattingEnabled = true;
             this.cboColegio.Location = new System.Drawing.Point(385, 39);
-            this.cboColegio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboColegio.Margin = new System.Windows.Forms.Padding(2);
             this.cboColegio.Name = "cboColegio";
             this.cboColegio.Size = new System.Drawing.Size(151, 24);
             this.cboColegio.TabIndex = 52;
@@ -680,31 +698,13 @@ namespace Presentacion
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(145, 228);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(558, 257);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Encuesta";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(70, 28);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(77, 28);
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // NumGrupo
             // 
@@ -728,7 +728,7 @@ namespace Presentacion
             this.Pregunta1.HeaderText = "Preg 1";
             this.Pregunta1.Name = "Pregunta1";
             this.Pregunta1.ReadOnly = true;
-            this.Pregunta1.Width = 50;
+            this.Pregunta1.Width = 60;
             // 
             // Pregunta2
             // 
@@ -736,7 +736,7 @@ namespace Presentacion
             this.Pregunta2.HeaderText = "Preg 2";
             this.Pregunta2.Name = "Pregunta2";
             this.Pregunta2.ReadOnly = true;
-            this.Pregunta2.Width = 50;
+            this.Pregunta2.Width = 60;
             // 
             // Pregunta3
             // 
@@ -744,7 +744,7 @@ namespace Presentacion
             this.Pregunta3.HeaderText = "Preg 3";
             this.Pregunta3.Name = "Pregunta3";
             this.Pregunta3.ReadOnly = true;
-            this.Pregunta3.Width = 50;
+            this.Pregunta3.Width = 60;
             // 
             // Pregunta4
             // 
@@ -752,7 +752,7 @@ namespace Presentacion
             this.Pregunta4.HeaderText = "Preg 4";
             this.Pregunta4.Name = "Pregunta4";
             this.Pregunta4.ReadOnly = true;
-            this.Pregunta4.Width = 50;
+            this.Pregunta4.Width = 60;
             // 
             // frmRegYeditEncuestas
             // 
@@ -769,7 +769,7 @@ namespace Presentacion
             this.Controls.Add(this.grpBoxGrupo);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegYeditEncuestas";
             this.Text = "Encuestas Registradas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).EndInit();

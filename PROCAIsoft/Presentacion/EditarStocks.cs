@@ -51,6 +51,7 @@ namespace Presentacion
             catch
             {
                 MessageBox.Show("Debe ingresar un número de stock valido", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             if (txtN.Text.Length == 0)
             {

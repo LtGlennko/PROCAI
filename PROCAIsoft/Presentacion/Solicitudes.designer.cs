@@ -51,12 +51,12 @@ namespace Presentacion
             this.dgv_Solicitudes.AllowUserToAddRows = false;
             this.dgv_Solicitudes.AllowUserToDeleteRows = false;
             this.dgv_Solicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Solicitudes.Location = new System.Drawing.Point(49, 76);
-            this.dgv_Solicitudes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Solicitudes.Location = new System.Drawing.Point(30, 89);
+            this.dgv_Solicitudes.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Solicitudes.Name = "dgv_Solicitudes";
             this.dgv_Solicitudes.ReadOnly = true;
             this.dgv_Solicitudes.RowTemplate.Height = 24;
-            this.dgv_Solicitudes.Size = new System.Drawing.Size(810, 390);
+            this.dgv_Solicitudes.Size = new System.Drawing.Size(723, 390);
             this.dgv_Solicitudes.TabIndex = 0;
             this.dgv_Solicitudes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Solicitudes_CellMouseClick);
             // 
@@ -64,8 +64,8 @@ namespace Presentacion
             // 
             this.btn_validar.BackColor = System.Drawing.Color.White;
             this.btn_validar.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btn_validar.Location = new System.Drawing.Point(891, 89);
-            this.btn_validar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_validar.Location = new System.Drawing.Point(789, 116);
+            this.btn_validar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_validar.Name = "btn_validar";
             this.btn_validar.Size = new System.Drawing.Size(72, 26);
             this.btn_validar.TabIndex = 1;
@@ -77,8 +77,8 @@ namespace Presentacion
             // 
             this.btn_detalles.BackColor = System.Drawing.Color.White;
             this.btn_detalles.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btn_detalles.Location = new System.Drawing.Point(891, 218);
-            this.btn_detalles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_detalles.Location = new System.Drawing.Point(789, 245);
+            this.btn_detalles.Margin = new System.Windows.Forms.Padding(2);
             this.btn_detalles.Name = "btn_detalles";
             this.btn_detalles.Size = new System.Drawing.Size(76, 26);
             this.btn_detalles.TabIndex = 55;
@@ -100,8 +100,8 @@ namespace Presentacion
             // btn_rechazar
             // 
             this.btn_rechazar.BackColor = System.Drawing.Color.White;
-            this.btn_rechazar.Location = new System.Drawing.Point(891, 156);
-            this.btn_rechazar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_rechazar.Location = new System.Drawing.Point(789, 183);
+            this.btn_rechazar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_rechazar.Name = "btn_rechazar";
             this.btn_rechazar.Size = new System.Drawing.Size(76, 26);
             this.btn_rechazar.TabIndex = 60;
@@ -114,13 +114,13 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1001, 569);
+            this.ClientSize = new System.Drawing.Size(953, 569);
             this.Controls.Add(this.btn_rechazar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_detalles);
             this.Controls.Add(this.btn_validar);
             this.Controls.Add(this.dgv_Solicitudes);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSolicitudes";
             this.Text = "Solicitudes";
             this.Load += new System.EventHandler(this.frmSolicitudes_Load);

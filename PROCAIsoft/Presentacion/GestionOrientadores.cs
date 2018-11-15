@@ -15,16 +15,13 @@ namespace Presentacion
         public GestionOrientadores()
         {
             InitializeComponent();
+            //AQUI DEBES PODER VER LA LISTA DE ORIENTADORES, SI NO EXISTE, AL AGREGAR BUSCO ENTRE TODOS LOS USUARIOS DISPONIBLES QUE NO TIENEN CUENTA
             disenio_tabla();
         }
 
         private void nuevoOrientadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VentanaNuevoOrientador VA = new VentanaNuevoOrientador();
-            if (VA.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            
         }
 
         private void GestionOrientadores_Load(object sender, EventArgs e)
@@ -37,24 +34,13 @@ namespace Presentacion
             Dispose();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
+            VentanaNuevoOrientador VA = new VentanaNuevoOrientador();
+            if (VA.ShowDialog() == DialogResult.OK)
+            {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }

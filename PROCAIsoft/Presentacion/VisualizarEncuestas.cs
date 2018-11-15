@@ -495,7 +495,7 @@ namespace Presentacion
                     btnModificar.Enabled = true;
                     btnBusca.Enabled = false;
                     button1.Enabled = true;
-                    btnGuardar.Enabled = false;
+                    btnGuardar.Enabled = true;
                     flagGrupo = false;
                     btnNuevo.Enabled = true;
                     btnEncuestaGrupo.Enabled = false;
@@ -630,6 +630,10 @@ namespace Presentacion
             button1.Enabled = true;
             btnRegistrarGrupo.Enabled = false;
             btnGuardar.Enabled = true;
+            grpP1.Enabled = true;
+            grpP2.Enabled = true;
+            grpP3.Enabled = true;
+            grpP4.Enabled = true;
             //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
         }
     }

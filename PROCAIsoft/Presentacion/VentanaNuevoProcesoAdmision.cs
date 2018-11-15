@@ -101,6 +101,7 @@ namespace Presentacion
             TPA.IdTipoProceso1 = buscar_IdTipoProceso();
 
             DateTime fecha = this.datetp_fecha.Value;
+            //NO DEBERIA REGISTRAR EN EL PASADO!!!!!!
 
             PA = new ProcesoAdmision();
             PA.NombreProceso = txt_nombre.Text;

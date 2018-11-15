@@ -88,11 +88,11 @@
             // BtnRegistrar
             // 
             this.BtnRegistrar.Location = new System.Drawing.Point(94, 372);
-            this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(67, 28);
             this.BtnRegistrar.TabIndex = 4;
-            this.BtnRegistrar.Text = "Registar";
+            this.BtnRegistrar.Text = "Registrar";
             this.BtnRegistrar.UseVisualStyleBackColor = true;
             this.BtnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
@@ -100,7 +100,7 @@
             // 
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.Location = new System.Drawing.Point(218, 372);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(68, 28);
             this.BtnCancel.TabIndex = 5;
@@ -111,7 +111,7 @@
             // txt_nombre
             // 
             this.txt_nombre.Location = new System.Drawing.Point(170, 301);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.ReadOnly = true;
             this.txt_nombre.Size = new System.Drawing.Size(177, 20);
@@ -120,7 +120,7 @@
             // txt_Vacantes
             // 
             this.txt_Vacantes.Location = new System.Drawing.Point(170, 253);
-            this.txt_Vacantes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Vacantes.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Vacantes.Name = "txt_Vacantes";
             this.txt_Vacantes.Size = new System.Drawing.Size(42, 20);
             this.txt_Vacantes.TabIndex = 7;
@@ -143,7 +143,7 @@
             // 
             this.cmbx_tipoProceso.FormattingEnabled = true;
             this.cmbx_tipoProceso.Location = new System.Drawing.Point(170, 113);
-            this.cmbx_tipoProceso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbx_tipoProceso.Margin = new System.Windows.Forms.Padding(2);
             this.cmbx_tipoProceso.Name = "cmbx_tipoProceso";
             this.cmbx_tipoProceso.Size = new System.Drawing.Size(121, 21);
             this.cmbx_tipoProceso.TabIndex = 15;
@@ -163,7 +163,7 @@
             this.rbtn_1.AutoSize = true;
             this.rbtn_1.Enabled = false;
             this.rbtn_1.Location = new System.Drawing.Point(131, 13);
-            this.rbtn_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtn_1.Margin = new System.Windows.Forms.Padding(2);
             this.rbtn_1.Name = "rbtn_1";
             this.rbtn_1.Size = new System.Drawing.Size(29, 17);
             this.rbtn_1.TabIndex = 19;
@@ -176,7 +176,7 @@
             this.rbtn_2.AutoSize = true;
             this.rbtn_2.Enabled = false;
             this.rbtn_2.Location = new System.Drawing.Point(196, 13);
-            this.rbtn_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtn_2.Margin = new System.Windows.Forms.Padding(2);
             this.rbtn_2.Name = "rbtn_2";
             this.rbtn_2.Size = new System.Drawing.Size(33, 17);
             this.rbtn_2.TabIndex = 20;
@@ -191,9 +191,9 @@
             this.gbx_ciclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_ciclo.ForeColor = System.Drawing.Color.Teal;
             this.gbx_ciclo.Location = new System.Drawing.Point(39, 197);
-            this.gbx_ciclo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbx_ciclo.Margin = new System.Windows.Forms.Padding(2);
             this.gbx_ciclo.Name = "gbx_ciclo";
-            this.gbx_ciclo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbx_ciclo.Padding = new System.Windows.Forms.Padding(2);
             this.gbx_ciclo.Size = new System.Drawing.Size(308, 46);
             this.gbx_ciclo.TabIndex = 22;
             this.gbx_ciclo.TabStop = false;
@@ -202,7 +202,7 @@
             // datetp_fecha
             // 
             this.datetp_fecha.Location = new System.Drawing.Point(171, 157);
-            this.datetp_fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datetp_fecha.Margin = new System.Windows.Forms.Padding(2);
             this.datetp_fecha.Name = "datetp_fecha";
             this.datetp_fecha.Size = new System.Drawing.Size(120, 20);
             this.datetp_fecha.TabIndex = 23;
@@ -226,7 +226,7 @@
             // 
             this.pictureBox3.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
             this.pictureBox3.Location = new System.Drawing.Point(9, 420);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,7 +268,7 @@
             this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.BtnVacantes);
             this.Controls.Add(this.BtnDescripcion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VentanaNuevoProcesoAdmision";
             this.Text = "Nuevo Proceso de Admision";
             this.Load += new System.EventHandler(this.VentanaNuevoProcesoAdmision_Load);

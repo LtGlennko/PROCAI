@@ -46,15 +46,6 @@ namespace Presentacion
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ProcesoAdmision PA = null;
-            
-            VentanaNuevoProcesoAdmision VNPA = new VentanaNuevoProcesoAdmision(this);
-            if (VNPA.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            //llenarDGV();
-
         }
 
         private object tostring(int i)
@@ -72,6 +63,18 @@ namespace Presentacion
             Dispose();
         }
 
-        
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            //ProcesoAdmision PA = null;
+
+            VentanaNuevoProcesoAdmision VNPA = new VentanaNuevoProcesoAdmision(this);
+            if (VNPA.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            //llenarDGV();
+
+        }
     }
 }
