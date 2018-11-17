@@ -34,15 +34,26 @@ namespace Presentacion
             catch
             {
                 MessageBox.Show("Debe ingresar un número de stock valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtCant.Text.Length > 4)
+            {
+                MessageBox.Show("Debe ingresar número menor a 10000", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (txtN.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar nombre");
+                MessageBox.Show("Debe ingresar nombre", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if(txtDesc.Text.Length == 0)
+            if (txtN.Text.Length > 30 || txtN.Text.Length < 10)
             {
-                MessageBox.Show("Debe ingresar descripcion");
+                MessageBox.Show("Tamaño de nombre invalido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtDesc.Text.Length > 50)
+            {
+                MessageBox.Show("Debe ingresar descripcion menor a 50 caracteres", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Merchandising m = new Merchandising();
@@ -75,6 +86,11 @@ namespace Presentacion
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose(true);
         }
     }
 }

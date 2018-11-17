@@ -35,12 +35,22 @@ namespace Presentacion
         {
             if (txtNomb.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar nombre");
+                MessageBox.Show("Debe ingresar nombre", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtNomb.Text.Length > 5 || txtNomb.Text.Length < 30)
+            {
+                MessageBox.Show("Tamaño de nombre inválido ", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (txtDesc.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar descripcion");
+                MessageBox.Show("Debe ingresar descripcion", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtDesc.Text.Length > 50)
+            {
+                MessageBox.Show("Debe ingresar descripcion menor a 50 caracteres", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string nombre = txtNomb.Text;
@@ -57,6 +67,11 @@ namespace Presentacion
         private void txtNomb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose(true);
         }
     }
 }
