@@ -126,3 +126,15 @@ C:\Users\alulab14.INF.000\Downloads\PROCAI C#\PROCAI\PROCAIsoft\LogicaNegocio\bi
 C:\Users\alulab14.INF.000\Downloads\PROCAI C#\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\alulab14.INF.000\Downloads\PROCAI C#\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 C:\Users\alulab14.INF.000\Downloads\PROCAI C#\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.dll
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.dll
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.dll
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Google.Protobuf.dll
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.pdb
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.pdb
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.xml
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\temp\PROCAI\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

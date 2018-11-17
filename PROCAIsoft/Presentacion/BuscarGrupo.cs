@@ -49,5 +49,10 @@ namespace Presentacion
             }
         
         }
+
+        private void labelAtras_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }

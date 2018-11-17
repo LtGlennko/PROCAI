@@ -55,18 +55,20 @@ namespace Presentacion
             // 
             // dgvGrupos
             // 
+            this.dgvGrupos.AllowUserToAddRows = false;
+            this.dgvGrupos.AllowUserToDeleteRows = false;
             this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrupos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDgrupo,
             this.FechaProgramada,
             this.NombreActividad,
             this.CantAlumnos});
-            this.dgvGrupos.Location = new System.Drawing.Point(33, 85);
-            this.dgvGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvGrupos.Location = new System.Drawing.Point(25, 69);
+            this.dgvGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvGrupos.Name = "dgvGrupos";
             this.dgvGrupos.ReadOnly = true;
             this.dgvGrupos.RowTemplate.Height = 28;
-            this.dgvGrupos.Size = new System.Drawing.Size(752, 308);
+            this.dgvGrupos.Size = new System.Drawing.Size(564, 250);
             this.dgvGrupos.TabIndex = 0;
             // 
             // IDgrupo
@@ -106,19 +108,20 @@ namespace Presentacion
             this.labelSeleccionar.AutoSize = true;
             this.labelSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.labelSeleccionar.ForeColor = System.Drawing.Color.Teal;
-            this.labelSeleccionar.Location = new System.Drawing.Point(33, 30);
+            this.labelSeleccionar.Location = new System.Drawing.Point(25, 24);
+            this.labelSeleccionar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSeleccionar.Name = "labelSeleccionar";
-            this.labelSeleccionar.Size = new System.Drawing.Size(439, 24);
+            this.labelSeleccionar.Size = new System.Drawing.Size(348, 18);
             this.labelSeleccionar.TabIndex = 1;
             this.labelSeleccionar.Text = "Seleccionar el grupo perteneciente deseado :";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(682, 410);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(512, 333);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 31);
+            this.button1.Size = new System.Drawing.Size(77, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Seleccionar";
             this.button1.UseVisualStyleBackColor = false;
@@ -129,19 +132,21 @@ namespace Presentacion
             this.labelAtras.AutoSize = true;
             this.labelAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAtras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.labelAtras.Location = new System.Drawing.Point(67, 433);
+            this.labelAtras.Location = new System.Drawing.Point(50, 352);
+            this.labelAtras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAtras.Name = "labelAtras";
-            this.labelAtras.Size = new System.Drawing.Size(46, 17);
+            this.labelAtras.Size = new System.Drawing.Size(36, 13);
             this.labelAtras.TabIndex = 4;
             this.labelAtras.Text = "Atras";
+            this.labelAtras.Click += new System.EventHandler(this.labelAtras_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 424);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 344);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(36, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -149,16 +154,16 @@ namespace Presentacion
             // 
             // BuscarGrupo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(831, 474);
+            this.ClientSize = new System.Drawing.Size(623, 385);
             this.Controls.Add(this.labelAtras);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelSeleccionar);
             this.Controls.Add(this.dgvGrupos);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BuscarGrupo";
             this.Text = "BuscarGrupo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();

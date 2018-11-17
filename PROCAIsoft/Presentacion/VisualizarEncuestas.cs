@@ -89,10 +89,10 @@ namespace Presentacion
         private void btnBusca_Click(object sender, EventArgs e)
         {
             BuscarGrupo bg = new BuscarGrupo();
-            estadoComponentes(estado.BUSQUEDA);
             grupoSeleccionado = null;
             if (bg.ShowDialog() == DialogResult.OK)
             {
+                estadoComponentes(estado.BUSQUEDA);
                 grupoSeleccionado = bg.getGrupoSel();
                 BindingList<Pregunta> preguntasSel = grupoSeleccionado.Actividad.TipoActividad.Preguntas;
                 //definir preg1, preg2, preg3 y preg4
@@ -506,13 +506,18 @@ namespace Presentacion
                     cboActividad.Enabled = false;
                     cboColegio.Enabled = false;
                     cboGuia.Enabled = false;
-                    grpP1.Enabled = false;
+                    /*grpP1.Enabled = false;
                     grpP2.Enabled = false;
-                    grpP3.Enabled = false;
-                    grpP4.Enabled = false;
+                    grpP3.Enabled = false; Quitado por Adrian
+                    grpP4.Enabled = false;*/
+                    grpP1.Enabled = true;
+                    grpP2.Enabled = true; // = true agregados por Adrian
+                    grpP3.Enabled = true;
+                    grpP4.Enabled = true;
                     //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
-                    btnModificar.Enabled = false;
+                    //btnModificar.Enabled = false; Comentado por Adrian
+                    btnModificar.Enabled = true; // Agregado por Adrian
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
