@@ -53,19 +53,24 @@ namespace Presentacion
                 MessageBox.Show("Debe ingresar un número de stock valido", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtN.Text.Length == 0)
-            {
-                MessageBox.Show("Debe ingresar nombre", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (txtDesc.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar descripcion", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar descripcion", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtDesc.Text.Length > 45)
+            if (txtN.Text.Length == 0)
             {
-                MessageBox.Show("Descripcion demasiado larga", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar nombre", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtN.Text.Length > 30 || txtN.Text.Length < 10)
+            {
+                MessageBox.Show("Tamaño de nombre invalido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtDesc.Text.Length > 50)
+            {
+                MessageBox.Show("Debe ingresar descripcion menor a 50 caracteres", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string nomb = txtN.Text;
@@ -99,6 +104,11 @@ namespace Presentacion
         }
 
         private void txtDesc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtC_TextChanged(object sender, EventArgs e)
         {
 
         }

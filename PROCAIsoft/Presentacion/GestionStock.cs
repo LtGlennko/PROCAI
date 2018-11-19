@@ -63,6 +63,12 @@ namespace Presentacion
             if (result == DialogResult.Yes)
             {
                 int cod = (int)dgvStock.CurrentRow.Cells[0].Value;
+                int stock = (int)dgvStock.CurrentRow.Cells[3].Value;
+                if(stock > 0)
+                {
+                    MessageBox.Show("No se puede eliminar un Merchandising que aún mantiene stock", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 bool eliminado = mbl.eliminarMerchandising(cod);
                 dgvStock.DataSource = mbl.listarMerchandising();
                 if(eliminado) MessageBox.Show("Producto Eliminado");

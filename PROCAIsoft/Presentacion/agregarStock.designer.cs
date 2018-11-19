@@ -68,6 +68,7 @@
             // txtN
             // 
             this.txtN.Location = new System.Drawing.Point(170, 71);
+            this.txtN.MaxLength = 30;
             this.txtN.Name = "txtN";
             this.txtN.Size = new System.Drawing.Size(123, 20);
             this.txtN.TabIndex = 2;
@@ -76,9 +77,11 @@
             // txtC
             // 
             this.txtC.Location = new System.Drawing.Point(170, 109);
+            this.txtC.MaxLength = 5;
             this.txtC.Name = "txtC";
             this.txtC.Size = new System.Drawing.Size(123, 20);
             this.txtC.TabIndex = 3;
+            this.txtC.TextChanged += new System.EventHandler(this.txtC_TextChanged);
             // 
             // btnAceptar
             // 
@@ -127,6 +130,7 @@
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(170, 143);
+            this.txtDesc.MaxLength = 55;
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(123, 73);
@@ -149,7 +153,7 @@
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
             this.pictureBox1.Location = new System.Drawing.Point(9, 284);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

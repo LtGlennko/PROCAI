@@ -30,15 +30,20 @@ namespace Presentacion
             try
             {
                 int num = Convert.ToInt32(txtC.Text);
+                if(num > 10000)
+                {
+                    MessageBox.Show("Debe ingresar número menor a 10000", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
             catch
             {
                 MessageBox.Show("Debe ingresar un número de stock valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtCant.Text.Length > 4)
+            if (txtDesc.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar número menor a 10000", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar descripcion", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (txtN.Text.Length == 0)
@@ -91,6 +96,11 @@ namespace Presentacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Dispose(true);
+        }
+
+        private void txtC_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
