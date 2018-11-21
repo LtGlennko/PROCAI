@@ -142,6 +142,7 @@ namespace Presentacion
                 trabActual.Cargo = dnp.CargoSel;
                 trabActual.EsJefe = dnp.EsJefeSel;
             }
+            dvgUsuarios.DataSource = trabajadores;
         }
 
         //private void dvgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

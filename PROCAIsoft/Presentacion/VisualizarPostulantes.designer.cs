@@ -84,9 +84,9 @@ namespace Presentacion
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(286, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 30);
+            this.label2.Size = new System.Drawing.Size(276, 30);
             this.label2.TabIndex = 48;
-            this.label2.Text = "Gestion de Postulanes";
+            this.label2.Text = "Gestion de Postulantes";
             // 
             // frmVisualizarPostulantes
             // 

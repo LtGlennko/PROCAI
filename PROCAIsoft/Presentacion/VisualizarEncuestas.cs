@@ -491,7 +491,7 @@ namespace Presentacion
                     grpP3.Enabled = true;
                     grpP4.Enabled = true;
                     //dateEncuentra.Enabled = false;
-                    btnAgregar.Enabled = false;
+                    btnAgregar.Enabled = true;
                     btnModificar.Enabled = true;
                     btnBusca.Enabled = false;
                     button1.Enabled = true;
