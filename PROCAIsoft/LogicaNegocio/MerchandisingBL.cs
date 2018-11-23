@@ -27,7 +27,14 @@ namespace LogicaNegocio
         {
             return merchandisingDA.buscarMerchandising(pista);
         }
-
+        public BindingList<Merchandising> buscarMerchandisingS(int st)
+        {
+            return merchandisingDA.buscarMerchandisingS(st);
+        }
+        public BindingList<Merchandising> buscarMerchandisingId(int id)
+        {
+            return merchandisingDA.buscarMerchandisingId(id);
+        }
         public bool registarMerchandising(Merchandising m)
         {
             return merchandisingDA.registrarMerchandising(m);
@@ -41,5 +48,7 @@ namespace LogicaNegocio
         {
             return merchandisingDA.eliminarMerchandising(id);
         }
+
+        
     }
 }
