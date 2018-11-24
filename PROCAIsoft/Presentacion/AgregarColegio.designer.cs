@@ -1,4 +1,6 @@
-﻿namespace Presentacion
+﻿using System.Drawing;
+
+namespace Presentacion
 {
     partial class AgregarColegio
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarColegio));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -165,7 +168,7 @@
             // txtN
             // 
             this.txtN.Location = new System.Drawing.Point(227, 76);
-            this.txtN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtN.Margin = new System.Windows.Forms.Padding(4);
             this.txtN.MaxLength = 80;
             this.txtN.Name = "txtN";
             this.txtN.Size = new System.Drawing.Size(160, 22);
@@ -174,7 +177,7 @@
             // txtDir
             // 
             this.txtDir.Location = new System.Drawing.Point(227, 313);
-            this.txtDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDir.Margin = new System.Windows.Forms.Padding(4);
             this.txtDir.MaxLength = 200;
             this.txtDir.Name = "txtDir";
             this.txtDir.Size = new System.Drawing.Size(160, 22);
@@ -183,7 +186,7 @@
             // txtRuc
             // 
             this.txtRuc.Location = new System.Drawing.Point(227, 407);
-            this.txtRuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRuc.Margin = new System.Windows.Forms.Padding(4);
             this.txtRuc.MaxLength = 11;
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(160, 22);
@@ -194,7 +197,7 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.Location = new System.Drawing.Point(141, 530);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(100, 28);
             this.btnAceptar.TabIndex = 18;
@@ -218,7 +221,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(313, 530);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 20;
@@ -233,7 +236,7 @@
             "Particular",
             "Estatal"});
             this.cboTipoCol.Location = new System.Drawing.Point(227, 363);
-            this.cboTipoCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoCol.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoCol.Name = "cboTipoCol";
             this.cboTipoCol.Size = new System.Drawing.Size(160, 24);
             this.cboTipoCol.TabIndex = 21;
@@ -243,7 +246,7 @@
             // 
             this.txtPais.Enabled = false;
             this.txtPais.Location = new System.Drawing.Point(227, 114);
-            this.txtPais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPais.Margin = new System.Windows.Forms.Padding(4);
             this.txtPais.MaxLength = 30;
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(160, 22);
@@ -281,7 +284,7 @@
             "Tumbes",
             "Ucayali"});
             this.cboDep.Location = new System.Drawing.Point(227, 164);
-            this.cboDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboDep.Margin = new System.Windows.Forms.Padding(4);
             this.cboDep.Name = "cboDep";
             this.cboDep.Size = new System.Drawing.Size(160, 24);
             this.cboDep.TabIndex = 23;
@@ -421,7 +424,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarColegio";
             this.Text = "AgregarColegio";
             this.Load += new System.EventHandler(this.AgregarColegio_Load);
