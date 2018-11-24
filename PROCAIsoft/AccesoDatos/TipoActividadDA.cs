@@ -61,7 +61,30 @@ namespace AccesoDatos
             con.Close();
             return tactiviades;
         }
-
+        public BindingList<TipoActividad> buscarTAId(int id)
+        {
+            BindingList<TipoActividad> tactiviades = new BindingList<TipoActividad>();
+            con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            comando = new MySqlCommand();
+            sql = "SELECT IdTipoActividad, Nombre, Descripcion " +
+                "FROM TipoActividad " +
+                "WHERE IdTipoActividad="+id;
+            comando.CommandText = sql;
+            comando.Connection = con;
+            MySqlDataReader lector = comando.ExecuteReader();
+            while (lector.Read())
+            {
+                int idTipoActividad = lector.GetInt32("IdTipoActividad");
+                string nombre = lector.GetString("Nombre");
+                string descripcion = lector.GetString("Descripcion");
+                TipoActividad a = new TipoActividad(nombre, descripcion);
+                a.IdTipoActividad1 = idTipoActividad;
+                tactiviades.Add(a);
+            }
+            con.Close();
+            return tactiviades;
+        }
         public bool eliminarTipoActividad(int id)
         {
             try

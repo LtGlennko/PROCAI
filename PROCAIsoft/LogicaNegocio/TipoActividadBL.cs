@@ -31,6 +31,10 @@ namespace LogicaNegocio
         {
             return taDA.buscarTA( pista);
         }
+        public BindingList<TipoActividad> buscarTipoActivdadId(int id)
+        {
+            return taDA.buscarTAId(id);
+        }
         public bool registarTipoActividad(TipoActividad ta)
         {
             return taDA.registrarTipoActividad(ta);

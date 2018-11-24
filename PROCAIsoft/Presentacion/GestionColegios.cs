@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Presentacion
 {
@@ -88,7 +89,54 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvCol.DataSource = cbl.buscarColegio(txtBuscar.Text);
-        }
+            Regex numeric = new Regex("^[0-9]*$");
+            Regex alphaNum = new Regex("^[a-zA-Z0-9 ]*$");
+            if (rbNombre.Checked) {
+                if (!alphaNum.IsMatch(txtBuscar.Text))
+                {
+                    MessageBox.Show("El nombre debe contener número o letras unicamente", "Error Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                dgvCol.DataSource = cbl.buscarColegio(txtBuscar.Text);
+            }
+            if (rbRUC.Checked)
+            {
+                if (txtBuscar.Text.Length > 12 || !numeric.IsMatch(txtBuscar.Text) )
+                {
+                    MessageBox.Show("RUC no válido, ingrese 12 digitos", "Error Buscar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                dgvCol.DataSource = cbl.buscarColegioRUC(txtBuscar.Text);
+            }
+            if (rbDireccion.Checked)
+            {
+                if (!alphaNum.IsMatch(txtBuscar.Text))
+                {
+                    MessageBox.Show("La direccion debe contener número o letras unicamente", "Error Buscar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                dgvCol.DataSource = cbl.buscarColegioDir(txtBuscar.Text);
+
+
+            }
+            if (rbCodigo.Checked)
+            {
+                try
+                {
+                    int num = Convert.ToInt32(txtBuscar.Text);
+                    if (num > 10000 )
+                    {
+                        MessageBox.Show("Debe ingresar número menor a 10000", "Error Buscar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    dgvCol.DataSource = cbl.buscarColegioId(num);
+                }
+                catch
+                {
+                    MessageBox.Show("Debe ingresar un codigo valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }   
     }
 }

@@ -40,43 +40,33 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvCol = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.rbCodigo = new System.Windows.Forms.RadioButton();
+            this.rbNombre = new System.Windows.Forms.RadioButton();
+            this.rbRUC = new System.Windows.Forms.RadioButton();
+            this.rbDireccion = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCol)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(462, 117);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(210, 95);
+            this.txtBuscar.MaxLength = 50;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(171, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(313, 20);
             this.txtBuscar.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(372, 119);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nombre:";
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(1004, 156);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(753, 127);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(110, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(82, 28);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -85,10 +75,9 @@ namespace Presentacion
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(1004, 226);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(753, 184);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(110, 34);
+            this.btnEditar.Size = new System.Drawing.Size(82, 28);
             this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -97,10 +86,9 @@ namespace Presentacion
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(1004, 300);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(753, 244);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(110, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(82, 28);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -109,20 +97,18 @@ namespace Presentacion
             // dgvCol
             // 
             this.dgvCol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCol.Location = new System.Drawing.Point(136, 156);
-            this.dgvCol.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCol.Location = new System.Drawing.Point(102, 127);
             this.dgvCol.Name = "dgvCol";
-            this.dgvCol.Size = new System.Drawing.Size(840, 370);
+            this.dgvCol.Size = new System.Drawing.Size(630, 301);
             this.dgvCol.TabIndex = 6;
             this.dgvCol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(651, 114);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(529, 90);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(110, 34);
+            this.btnBuscar.Size = new System.Drawing.Size(82, 28);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -133,28 +119,73 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(437, 44);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(328, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 34);
+            this.label2.Size = new System.Drawing.Size(205, 26);
             this.label2.TabIndex = 9;
             this.label2.Text = "Gestión de Colegios";
             // 
+            // rbCodigo
+            // 
+            this.rbCodigo.AutoSize = true;
+            this.rbCodigo.Location = new System.Drawing.Point(210, 72);
+            this.rbCodigo.Name = "rbCodigo";
+            this.rbCodigo.Size = new System.Drawing.Size(58, 17);
+            this.rbCodigo.TabIndex = 15;
+            this.rbCodigo.TabStop = true;
+            this.rbCodigo.Text = "Código";
+            this.rbCodigo.UseVisualStyleBackColor = true;
+            // 
+            // rbNombre
+            // 
+            this.rbNombre.AutoSize = true;
+            this.rbNombre.Location = new System.Drawing.Point(293, 72);
+            this.rbNombre.Name = "rbNombre";
+            this.rbNombre.Size = new System.Drawing.Size(62, 17);
+            this.rbNombre.TabIndex = 16;
+            this.rbNombre.TabStop = true;
+            this.rbNombre.Text = "Nombre";
+            this.rbNombre.UseVisualStyleBackColor = true;
+            // 
+            // rbRUC
+            // 
+            this.rbRUC.AutoSize = true;
+            this.rbRUC.Location = new System.Drawing.Point(380, 72);
+            this.rbRUC.Name = "rbRUC";
+            this.rbRUC.Size = new System.Drawing.Size(48, 17);
+            this.rbRUC.TabIndex = 17;
+            this.rbRUC.TabStop = true;
+            this.rbRUC.Text = "RUC";
+            this.rbRUC.UseVisualStyleBackColor = true;
+            // 
+            // rbDireccion
+            // 
+            this.rbDireccion.AutoSize = true;
+            this.rbDireccion.Location = new System.Drawing.Point(453, 72);
+            this.rbDireccion.Name = "rbDireccion";
+            this.rbDireccion.Size = new System.Drawing.Size(70, 17);
+            this.rbDireccion.TabIndex = 18;
+            this.rbDireccion.TabStop = true;
+            this.rbDireccion.Text = "Direccion";
+            this.rbDireccion.UseVisualStyleBackColor = true;
+            // 
             // GestCol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1182, 587);
+            this.ClientSize = new System.Drawing.Size(886, 477);
+            this.Controls.Add(this.rbDireccion);
+            this.Controls.Add(this.rbRUC);
+            this.Controls.Add(this.rbNombre);
+            this.Controls.Add(this.rbCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvCol);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscar);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GestCol";
             this.Text = "Gestion Colegios";
             this.Load += new System.EventHandler(this.GestCol_Load);
@@ -167,13 +198,16 @@ namespace Presentacion
         #endregion
 
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvCol;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rbCodigo;
+        private System.Windows.Forms.RadioButton rbNombre;
+        private System.Windows.Forms.RadioButton rbRUC;
+        private System.Windows.Forms.RadioButton rbDireccion;
     }
 }
 

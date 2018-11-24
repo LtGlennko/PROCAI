@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Presentacion
 {
@@ -27,6 +28,8 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            Regex numeric = new Regex("^[0-9]*$");
+            Regex alphaNum = new Regex("^[a-zA-Z0-9 ]*$");
             try
             {
                 int num = Convert.ToInt32(txtC.Text);
@@ -46,6 +49,11 @@ namespace Presentacion
                 MessageBox.Show("Debe ingresar descripcion", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (!alphaNum.IsMatch(txtDesc.Text))
+            {
+                MessageBox.Show("El nombre debe contener número o letras unicamente", "Nombre de Colegio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (txtN.Text.Length == 0)
             {
                 MessageBox.Show("Debe ingresar nombre", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -54,6 +62,11 @@ namespace Presentacion
             if (txtN.Text.Length > 30 || txtN.Text.Length < 10)
             {
                 MessageBox.Show("Tamaño de nombre invalido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!alphaNum.IsMatch(txtN.Text))
+            {
+                MessageBox.Show("El nombre debe contener número o letras unicamente", "Nombre de Colegio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (txtDesc.Text.Length > 50)

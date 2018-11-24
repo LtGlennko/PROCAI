@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Presentacion
 {
@@ -86,9 +87,15 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Regex numeric = new Regex("^[0-9]*$");
+            Regex alphaNum = new Regex("^[a-zA-Z0-9 ]*$");
             if (rbNombre.Checked)
             {
-                
+                if (!alphaNum.IsMatch(txtBuscar.Text))
+                {
+                    MessageBox.Show("El nombre debe contener número o letras unicamente", "Nombre de Colegio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 dgvStock.DataSource = mbl.buscarMerchandising(txtBuscar.Text);
             }
             if (rbStock.Checked)
@@ -141,6 +148,11 @@ namespace Presentacion
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbNombre_CheckedChanged(object sender, EventArgs e)
         {
 
         }

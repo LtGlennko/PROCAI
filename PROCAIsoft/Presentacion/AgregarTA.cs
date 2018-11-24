@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
 using LogicaNegocio;
+using System.Text.RegularExpressions;
 
 namespace Presentacion
 {
@@ -33,6 +34,9 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            Regex numeric = new Regex("^[0-9]*$");
+            Regex alphaNum = new Regex("^[a-zA-Z0-9 ]*$");
+
             if (txtNomb.Text.Length == 0)
             {
                 MessageBox.Show("Debe ingresar nombre", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -43,6 +47,11 @@ namespace Presentacion
                 MessageBox.Show("Tamaño de nombre inválido ", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (!alphaNum.IsMatch(txtNomb.Text))
+            {
+                MessageBox.Show("El nombre debe contener número o letras unicamente", "Nombre de Tipo de Atividad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (txtDesc.Text.Length == 0)
             {
                 MessageBox.Show("Debe ingresar descripcion", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -51,6 +60,11 @@ namespace Presentacion
             if (txtDesc.Text.Length > 50)
             {
                 MessageBox.Show("Debe ingresar descripcion menor a 50 caracteres", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!alphaNum.IsMatch(txtDesc.Text))
+            {
+                MessageBox.Show("La descripcion debe contener número o letras unicamente", "Descripcion de Tipo de Actividad", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             string nombre = txtNomb.Text;

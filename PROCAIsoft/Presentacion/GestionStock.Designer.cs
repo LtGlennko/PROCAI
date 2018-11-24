@@ -133,6 +133,7 @@ namespace Presentacion
             this.rbNombre.TabStop = true;
             this.rbNombre.Text = "Nombre";
             this.rbNombre.UseVisualStyleBackColor = true;
+            this.rbNombre.CheckedChanged += new System.EventHandler(this.rbNombre_CheckedChanged);
             // 
             // rbStock
             // 

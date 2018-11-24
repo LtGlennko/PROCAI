@@ -37,6 +37,19 @@ namespace LogicaNegocio
         {
             return colegioDA.buscarColegio(pista);
         }
+
+        public BindingList<Colegio> buscarColegioId(int id)
+        {
+            return colegioDA.buscarColegioId(id);
+        }
+        public BindingList<Colegio> buscarColegioRUC(string pista)
+        {
+            return colegioDA.buscarColegioRUC(pista);
+        }
+        public BindingList<Colegio> buscarColegioDir(string pista)
+        {
+            return colegioDA.buscarColegioDir(pista);
+        }
     }
      
 }
