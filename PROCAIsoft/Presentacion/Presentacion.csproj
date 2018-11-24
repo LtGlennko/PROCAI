@@ -440,5 +440,17 @@
   <ItemGroup>
     <None Include="Resources\3f05e822-fc57-4a33-9dfb-45934e0198e4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PUCP_icon_big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PUCP_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PUCP_icon_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PUCP_icon_little.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
