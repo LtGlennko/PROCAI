@@ -39,6 +39,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestStock));
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvStock = new System.Windows.Forms.DataGridView();
@@ -55,9 +56,10 @@ namespace Presentacion
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(531, 96);
+            this.btnBuscar.Location = new System.Drawing.Point(708, 118);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -65,26 +67,29 @@ namespace Presentacion
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(216, 99);
+            this.txtBuscar.Location = new System.Drawing.Point(288, 122);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.MaxLength = 50;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(289, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(384, 22);
             this.txtBuscar.TabIndex = 1;
             // 
             // dgvStock
             // 
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStock.Location = new System.Drawing.Point(89, 139);
+            this.dgvStock.Location = new System.Drawing.Point(119, 171);
+            this.dgvStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvStock.Name = "dgvStock";
-            this.dgvStock.Size = new System.Drawing.Size(623, 314);
+            this.dgvStock.Size = new System.Drawing.Size(831, 386);
             this.dgvStock.TabIndex = 5;
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(753, 297);
+            this.btnEliminar.Location = new System.Drawing.Point(1004, 366);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 26);
+            this.btnEliminar.Size = new System.Drawing.Size(119, 32);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -93,9 +98,10 @@ namespace Presentacion
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(754, 249);
+            this.btnEditar.Location = new System.Drawing.Point(1005, 306);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(88, 25);
+            this.btnEditar.Size = new System.Drawing.Size(117, 31);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -104,9 +110,10 @@ namespace Presentacion
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(753, 194);
+            this.btnAgregar.Location = new System.Drawing.Point(1004, 239);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(89, 24);
+            this.btnAgregar.Size = new System.Drawing.Size(119, 30);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -117,18 +124,20 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Demi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(293, 29);
+            this.label3.Location = new System.Drawing.Point(391, 36);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(252, 26);
+            this.label3.Size = new System.Drawing.Size(325, 34);
             this.label3.TabIndex = 11;
             this.label3.Text = "Gestión de Merchandising";
             // 
             // rbNombre
             // 
             this.rbNombre.AutoSize = true;
-            this.rbNombre.Location = new System.Drawing.Point(309, 70);
+            this.rbNombre.Location = new System.Drawing.Point(412, 86);
+            this.rbNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbNombre.Name = "rbNombre";
-            this.rbNombre.Size = new System.Drawing.Size(62, 17);
+            this.rbNombre.Size = new System.Drawing.Size(79, 21);
             this.rbNombre.TabIndex = 12;
             this.rbNombre.TabStop = true;
             this.rbNombre.Text = "Nombre";
@@ -138,9 +147,10 @@ namespace Presentacion
             // rbStock
             // 
             this.rbStock.AutoSize = true;
-            this.rbStock.Location = new System.Drawing.Point(400, 70);
+            this.rbStock.Location = new System.Drawing.Point(533, 86);
+            this.rbStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbStock.Name = "rbStock";
-            this.rbStock.Size = new System.Drawing.Size(105, 17);
+            this.rbStock.Size = new System.Drawing.Size(134, 21);
             this.rbStock.TabIndex = 13;
             this.rbStock.TabStop = true;
             this.rbStock.Text = "Stock Disponible";
@@ -149,9 +159,10 @@ namespace Presentacion
             // rbCodigo
             // 
             this.rbCodigo.AutoSize = true;
-            this.rbCodigo.Location = new System.Drawing.Point(216, 70);
+            this.rbCodigo.Location = new System.Drawing.Point(288, 86);
+            this.rbCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbCodigo.Name = "rbCodigo";
-            this.rbCodigo.Size = new System.Drawing.Size(58, 17);
+            this.rbCodigo.Size = new System.Drawing.Size(73, 21);
             this.rbCodigo.TabIndex = 14;
             this.rbCodigo.TabStop = true;
             this.rbCodigo.Text = "Código";
@@ -160,10 +171,10 @@ namespace Presentacion
             // frmGestStock
             // 
             this.AcceptButton = this.btnAgregar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(886, 477);
+            this.ClientSize = new System.Drawing.Size(1181, 587);
             this.Controls.Add(this.rbCodigo);
             this.Controls.Add(this.rbStock);
             this.Controls.Add(this.rbNombre);
@@ -175,6 +186,8 @@ namespace Presentacion
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmGestStock";
             this.Text = "GestionStock";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();

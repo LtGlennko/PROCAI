@@ -28,37 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSalir = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioAdministrativo));
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.ptrDespliegue = new System.Windows.Forms.PictureBox();
             this.lblNombreUsu = new System.Windows.Forms.Label();
             this.pnlOpciones = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnGenerarReportes = new System.Windows.Forms.Button();
             this.btnGestionarPermisos = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnGestionarPostulantes = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlVentanas = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).BeginInit();
             this.pnlOpciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.White;
-            this.btnSalir.Image = global::Presentacion.Properties.Resources.logout;
-            this.btnSalir.Location = new System.Drawing.Point(1193, 17);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(31, 30);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSalir.TabIndex = 14;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pnlTitulo
             // 
@@ -98,13 +88,14 @@
             // 
             // pnlOpciones
             // 
-            this.pnlOpciones.BackColor = System.Drawing.Color.Navy;
+            this.pnlOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(38)))), ((int)(((byte)(92)))));
+            this.pnlOpciones.Controls.Add(this.pictureBox3);
+            this.pnlOpciones.Controls.Add(this.label1);
+            this.pnlOpciones.Controls.Add(this.lblTitulo);
             this.pnlOpciones.Controls.Add(this.btnGenerarReportes);
             this.pnlOpciones.Controls.Add(this.btnGestionarPermisos);
-            this.pnlOpciones.Controls.Add(this.label1);
             this.pnlOpciones.Controls.Add(this.pictureBox2);
             this.pnlOpciones.Controls.Add(this.btnGestionarPostulantes);
-            this.pnlOpciones.Controls.Add(this.lblTitulo);
             this.pnlOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOpciones.Location = new System.Drawing.Point(0, 0);
             this.pnlOpciones.Margin = new System.Windows.Forms.Padding(4);
@@ -112,6 +103,38 @@
             this.pnlOpciones.Size = new System.Drawing.Size(287, 731);
             this.pnlOpciones.TabIndex = 15;
             this.pnlOpciones.MouseEnter += new System.EventHandler(this.pnlOpciones_MouseEnter);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Presentacion.Properties.Resources.PUCP_icon_little;
+            this.pictureBox3.Location = new System.Drawing.Point(229, 33);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 46);
+            this.pictureBox3.TabIndex = 38;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 42F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-2, 2);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 77);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "P";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Font = new System.Drawing.Font("Bauhaus 93", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(43, 35);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(193, 48);
+            this.lblTitulo.TabIndex = 37;
+            this.lblTitulo.Text = "ROCAIsoft";
             // 
             // btnGenerarReportes
             // 
@@ -146,18 +169,6 @@
             this.btnGestionarPermisos.Click += new System.EventHandler(this.btnGestionarPermisos_Click);
             this.btnGestionarPermisos.MouseEnter += new System.EventHandler(this.btnGestionarPermisos_MouseEnter);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-1, 2);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 63);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "P";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Presentacion.Properties.Resources.flecha;
@@ -185,17 +196,6 @@
             this.btnGestionarPostulantes.Click += new System.EventHandler(this.btnGestionarPostulantes_Click);
             this.btnGestionarPostulantes.MouseEnter += new System.EventHandler(this.btnGestionarPostulantes_MouseEnter);
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Font = new System.Drawing.Font("Bauhaus 93", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(49, 23);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(240, 48);
-            this.lblTitulo.TabIndex = 9;
-            this.lblTitulo.Text = "ROCAIsoft";
-            // 
             // pnlVentanas
             // 
             this.pnlVentanas.Location = new System.Drawing.Point(60, 97);
@@ -203,6 +203,19 @@
             this.pnlVentanas.Name = "pnlVentanas";
             this.pnlVentanas.Size = new System.Drawing.Size(1200, 634);
             this.pnlVentanas.TabIndex = 17;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.White;
+            this.btnSalir.Image = global::Presentacion.Properties.Resources.logout;
+            this.btnSalir.Location = new System.Drawing.Point(1193, 17);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(31, 30);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // InicioAdministrativo
             // 
@@ -214,15 +227,17 @@
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlOpciones);
             this.Controls.Add(this.pnlVentanas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InicioAdministrativo";
             this.Text = "InicioAdministrativo";
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrDespliegue)).EndInit();
             this.pnlOpciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,10 +251,11 @@
         private System.Windows.Forms.Panel pnlOpciones;
         private System.Windows.Forms.Button btnGenerarReportes;
         private System.Windows.Forms.Button btnGestionarPermisos;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnGestionarPostulantes;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlVentanas;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
