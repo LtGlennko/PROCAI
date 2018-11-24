@@ -20,7 +20,8 @@ namespace Presentacion
             InitializeComponent();
 
             llenarDGV();
-            
+            dgvProcesoAdmin.RowHeadersVisible = false;
+
         }
         public void llenarDGV() {
             ProcesoAdmisionBL PABL = new ProcesoAdmisionBL();
