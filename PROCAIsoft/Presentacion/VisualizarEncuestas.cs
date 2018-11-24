@@ -24,14 +24,15 @@ namespace Presentacion
         private Pregunta preg1;
         private Pregunta preg2;
         private Pregunta preg3;
-        private Pregunta preg4;//las preguntas para recorgerlas 
-        private bool flagGrupo;//para saber si tenemos que registar el guia o no
+        private Pregunta preg4;//las preguntas para recorgerlas         
         private BindingList<Encuesta> listaEncuestas; //para el datagridview
         private Guia digitador;
         private ColegioBL colegioBL;//para combobox
         private GuiaBL guiaBL;//para combobox;
         private ActividadBL actividadBL;//para el combobox
         private GrupoBL grupoBL; //Para registrar nuevos grupos de encuestas
+        private EncuestaBL encuestaBL;
+        private BindingList<Encuesta> encuestasDeGrupoSel; //Añadido por Glenn: Aqui guardaré las encuestas de cierto grupo luego de haberlo buscado
         private bool modificar = false;
         public frmRegYeditEncuestas(Guia g)
         {
@@ -46,6 +47,7 @@ namespace Presentacion
             guiaBL = new GuiaBL();
             actividadBL = new ActividadBL();
             grupoBL = new GrupoBL();
+            encuestaBL = new EncuestaBL();
 
             cboColegio.DataSource = colegioBL.listarColegios();
             cboColegio.ValueMember = "IdColegio1";
@@ -58,47 +60,26 @@ namespace Presentacion
             cboGuia.ValueMember = "IdGuia1";
             cboGuia.DisplayMember = "NombresYapellidos";
             cboGuia.DataSource = guiaBL.listarGuias();
+            dgvEncuestas.RowHeadersVisible = false;
+
+            encuestasDeGrupoSel = new BindingList<Encuesta>();
         }
-
-        public frmRegYeditEncuestas()
-        {
-            InitializeComponent();
-            disenio_tabla();
-            estadoComponentes(estado.INICIAL);
-            dgvEncuestas.AutoGenerateColumns = false;
-            listaEncuestas = new BindingList<Encuesta>();
-
-            colegioBL = new ColegioBL();
-            guiaBL = new GuiaBL();
-            actividadBL = new ActividadBL();
-
-            cboColegio.DataSource = colegioBL.listarColegios();
-            cboColegio.ValueMember = "IdColegio1";
-            cboColegio.DisplayMember = "nombre";
-
-            cboActividad.DataSource = actividadBL.listarActividades();
-            cboActividad.ValueMember = "IdActividad1";
-            cboActividad.DisplayMember = "nombreDeTipoYfecha";
-
-            cboGuia.ValueMember = "IdGuia1";
-            cboGuia.DisplayMember = "NombresYapellidosGuia";
-            cboGuia.DataSource = guiaBL.listarGuias();
-
-        }
+        
 
         private void btnBusca_Click(object sender, EventArgs e)
         {
+            estadoComponentes(estado.BUSQUEDA);
             BuscarGrupo bg = new BuscarGrupo();
             grupoSeleccionado = null;
             if (bg.ShowDialog() == DialogResult.OK)
             {
-                estadoComponentes(estado.BUSQUEDA);
+                
                 grupoSeleccionado = bg.getGrupoSel();
                 BindingList<Pregunta> preguntasSel = grupoSeleccionado.Actividad.TipoActividad.Preguntas;
                 //definir preg1, preg2, preg3 y preg4
                 if (preguntasSel.Count < 4)
                 {
-                    MessageBox.Show("El tipo de actividad tiene menos de 4 preguntas relacionadas");
+                    MessageBox.Show("El tipo de actividad tiene menos de 4 preguntas relacionadas", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -112,6 +93,7 @@ namespace Presentacion
                 grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
 
+                
 
             }
             if (grupoSeleccionado != null)
@@ -120,13 +102,15 @@ namespace Presentacion
                 cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
                 cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
                 cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
-                flagGrupo = true;
                 //Habilita botones para que se añadan encuestas al grupo existente
-                btnAgregar.Enabled = true;
-                btnModificar.Enabled = true;
-                button1.Enabled = true;
+                //btnAgregar.Enabled = true;
+                //btnModificar.Enabled = false;
+                //button1.Enabled = true;
                 btnRegistrarGrupo.Enabled = false;
                 //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
+
+                //Aqui se guarda la lista con las encuestas pertenecientes al grupo seleccionado
+                encuestasDeGrupoSel = encuestaBL.listarEncuestas(grupoSeleccionado);
             }
 
         }
@@ -186,15 +170,8 @@ namespace Presentacion
                 grpP4.ForeColor = Color.Red;
             }
             
-            if (flagGrupo == true) encuestaCreada.GrupoPerteneciente = (grupoSeleccionado);
-            else
-            {//agregamiento del nuevo grupo
-                GrupoEncuestas NuevoGrupo = new GrupoEncuestas();
-                NuevoGrupo.Actividad = ((Actividad)cboActividad.SelectedItem);
-                NuevoGrupo.Colegio = ((Colegio)cboColegio.SelectedItem);
-                NuevoGrupo.GuiaEvaluado = ((Guia)cboGuia.SelectedItem);
-                encuestaCreada.GrupoPerteneciente = NuevoGrupo;
-            }
+            encuestaCreada.GrupoPerteneciente = (grupoSeleccionado);
+      
             
             if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red)
             {
@@ -322,6 +299,9 @@ namespace Presentacion
                 
                 listaEncuestas.Add(encuestaModificada);
                 dgvEncuestas.DataSource = listaEncuestas;
+                btnModificar.Enabled = false;
+                modificar = false;
+
                 disenio_tabla();
               
             }
@@ -378,7 +358,7 @@ namespace Presentacion
             
             // Y El GRUPO
             txtNumero.Text = E.IdGrupoPerteneciente.ToString();
-            cboActividad.Text = E.GrupoPerteneciente.Actividad.TipoActividad.ToString();
+            cboActividad.Text = E.GrupoPerteneciente.Actividad.nombreDeTipoYfecha;
             cboColegio.Text = E.GrupoPerteneciente.Colegio.Nombre.ToString();
             cboGuia.Text = E.GrupoPerteneciente.GuiaEvaluado.NombresYapellidos.ToString();
             //dateEncuentra.Value = E.FechaProgramada;
@@ -410,7 +390,6 @@ namespace Presentacion
                     button1.Enabled = false;
                     btnGuardar.Enabled = false;
                     btnNuevo.Enabled = true;
-                    flagGrupo = false;
                     btnEncuestaGrupo.Enabled = false;
                     btnRegistrarGrupo.Enabled = false;
                     limpiarCampos();
@@ -432,7 +411,6 @@ namespace Presentacion
                     button1.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnNuevo.Enabled = true;
-                    flagGrupo = false;
                     limpiarCampos();
                     btnEncuestaGrupo.Enabled = false;
                     //Bloquear botones para evitar que se añadan encuestas a un grupo no existente
@@ -471,13 +449,13 @@ namespace Presentacion
                     grpP4.Enabled = true;
                     //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
-                    btnModificar.Enabled = true;
+                    btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnNuevo.Enabled = true;
-                    flagGrupo = false;
                     btnEncuestaGrupo.Enabled = true;
+                    btnRegistrarGrupo.Enabled = true;
                     limpiarCampos();
                     
                     break;
@@ -496,7 +474,6 @@ namespace Presentacion
                     btnBusca.Enabled = false;
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
-                    flagGrupo = false;
                     btnNuevo.Enabled = true;
                     btnEncuestaGrupo.Enabled = false;
                     break;
@@ -516,8 +493,7 @@ namespace Presentacion
                     grpP4.Enabled = true;
                     //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
-                    //btnModificar.Enabled = false; Comentado por Adrian
-                    btnModificar.Enabled = true; // Agregado por Adrian
+                    btnModificar.Enabled = false;                    
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
@@ -628,10 +604,9 @@ namespace Presentacion
             //cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
             //cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
             //cboColegio.SelectedValue = grupoSeleccionado.Colegio.IdColegio1;
-            flagGrupo = true;
             //Habilita botones para que se añadan encuestas al grupo existente
             btnAgregar.Enabled = true;
-            btnModificar.Enabled = true;
+            btnModificar.Enabled = false;
             button1.Enabled = true;
             btnRegistrarGrupo.Enabled = false;
             btnGuardar.Enabled = true;

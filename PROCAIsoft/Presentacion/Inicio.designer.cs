@@ -106,7 +106,7 @@ namespace Presentacion
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.PUCP_icon_little;
+            //this.pictureBox1.Image = global::Presentacion.Properties.Resources.PUCP_icon_little;
             this.pictureBox1.Location = new System.Drawing.Point(554, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 58);

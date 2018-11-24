@@ -22,6 +22,7 @@ namespace Presentacion
             mbl = new MerchandisingBL();
             dgvStock.DataSource = mbl.listarMerchandising();
             disenio_tabla();
+            rbNombre.Checked = true;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

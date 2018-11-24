@@ -39,6 +39,7 @@ namespace AccesoDatos
             con.Close();
             return encuestas;
         }
+
         public int registrarEncuesta(Encuesta E, int idGuia)
         {
             con = new MySqlConnection(DBManager.cadena);

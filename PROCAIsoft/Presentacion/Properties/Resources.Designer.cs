@@ -19,7 +19,7 @@ namespace Presentacion.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -66,6 +66,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap _3f05e822_fc57_4a33_9dfb_45934e0198e4 {
             get {
                 object obj = ResourceManager.GetObject("3f05e822-fc57-4a33-9dfb-45934e0198e4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _46522839_2303321959695525_7286646205050781696_n {
+            get {
+                object obj = ResourceManager.GetObject("46522839_2303321959695525_7286646205050781696_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +146,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap Postulantes {
             get {
                 object obj = ResourceManager.GetObject("Postulantes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PUCP {
+            get {
+                object obj = ResourceManager.GetObject("PUCP", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

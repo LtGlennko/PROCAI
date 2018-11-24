@@ -36,5 +36,10 @@ namespace Presentacion
         {
 
         }
+
+        private void labelTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
