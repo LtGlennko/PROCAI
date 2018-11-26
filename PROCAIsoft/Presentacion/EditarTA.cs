@@ -52,7 +52,7 @@ namespace Presentacion
             int id = Int32.Parse(txtId.Text);
             TipoActividad ta = new TipoActividad(id,nomb,descrip);
             bool actualizar = tabl.actualizarTipoActividad(ta);
-            if (actualizar) MessageBox.Show("Datos del producto modificado");
+            if (actualizar) MessageBox.Show("Datos del producto modificado", "Editar Tipo de Actividad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else MessageBox.Show("Error al registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             this.DialogResult = DialogResult.OK;
         }

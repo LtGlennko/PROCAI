@@ -73,8 +73,8 @@ namespace Presentacion
             ta.Nombre = nombre;
             ta.Descripcion = descripcion;
             bool registar=tabl.registarTipoActividad(ta);
-            if(registar) MessageBox.Show("Escuela registrada con exito");
-            else MessageBox.Show("Error al registrar");
+            if(registar) MessageBox.Show("Escuela registrada con exito" ,"Registrar Tipo de Actividad",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Error al registrar" ,"Registrar Tipo de Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.DialogResult = DialogResult.OK;
         }
 

@@ -114,7 +114,7 @@ namespace Presentacion
             Colegio col = new Colegio(ruc, nom, pai, dep, pro, dir, tip, tel);
             bool registrado = colegioBL.registrarColegio(col);
             if (registrado) MessageBox.Show("Colegio registrado con exito", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else MessageBox.Show("Error al registrar", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Error al registrar", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.DialogResult = DialogResult.OK;
         }
 
@@ -156,6 +156,11 @@ namespace Presentacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Dispose(true);
+        }
+
+        private void txtN_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

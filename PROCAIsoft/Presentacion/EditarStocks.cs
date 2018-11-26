@@ -55,22 +55,22 @@ namespace Presentacion
             }
             if (txtDesc.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar descripcion", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar descripcion", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtN.Text.Length == 0)
             {
-                MessageBox.Show("Debe ingresar nombre", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar nombre", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtN.Text.Length > 30 || txtN.Text.Length < 10)
             {
-                MessageBox.Show("Tamaño de nombre invalido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tamaño de nombre invalido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtDesc.Text.Length > 50)
             {
-                MessageBox.Show("Debe ingresar descripcion menor a 50 caracteres", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar descripcion menor a 50 caracteres", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string nomb = txtN.Text;
@@ -79,7 +79,13 @@ namespace Presentacion
             string desc = txtDesc.Text;
             Merchandising m = new Merchandising(cod, nomb, desc, cant);
             mbl.actualizarMerchandising(m);
-            MessageBox.Show("Datos del producto modificado");
+            //Modificado
+            MessageBox.Show("Datos del producto modificado","Editar Merchandising",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            if (cant < 50)
+            {
+                MessageBox.Show("Quedan menos de 50 unidades de este merchandising", "Editar Merchandising", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            //Modificado
             this.DialogResult = DialogResult.OK;
         }
 

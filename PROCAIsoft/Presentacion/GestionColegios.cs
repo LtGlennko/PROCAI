@@ -19,6 +19,7 @@ namespace Presentacion
         public GestCol()
         {
             InitializeComponent();
+            rbNombre.Checked = true;
             cbl = new ColegioBL();
             dgvCol.DataSource = cbl.listarColegios();
             disenio_tabla();

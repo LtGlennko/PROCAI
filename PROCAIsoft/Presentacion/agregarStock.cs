@@ -33,7 +33,7 @@ namespace Presentacion
             try
             {
                 int num = Convert.ToInt32(txtC.Text);
-                if(num > 10000)
+                if(num > 500)
                 {
                     MessageBox.Show("Debe ingresar número menor a 10000", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -81,7 +81,7 @@ namespace Presentacion
             mbl.registarMerchandising(m);
             txtN.Text = String.Empty;
             txtC.Text = String.Empty;
-            MessageBox.Show("Producto registrado");
+            MessageBox.Show("Producto registrado", "Agregar Merchandising", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
             //if(DialogResult.OK==)
         }

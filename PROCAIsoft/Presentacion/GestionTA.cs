@@ -20,6 +20,7 @@ namespace Presentacion
         public GestionTA()
         {
             InitializeComponent();
+            rbNombre.Checked = true;
             tipoactBL = new TipoActividadBL();
             dgvTA.DataSource = tipoactBL.listarTipoActividad();
             disenio_tabla();
@@ -81,14 +82,14 @@ namespace Presentacion
                     int num = Convert.ToInt32(txtBuscar.Text);
                     if (num > 10000)
                     {
-                        MessageBox.Show("Debe ingresar número menor a 10000", "Error Buscar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe ingresar número menor a 10000", "Error Buscar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     dgvTA.DataSource = tipoactBL.buscarTipoActivdadId(num);
                 }
                 catch
                 {
-                    MessageBox.Show("Debe ingresar un codigo valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe ingresar un codigo valido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -102,8 +103,8 @@ namespace Presentacion
                 int cod = (int)dgvTA.CurrentRow.Cells[0].Value;
                 bool eliminado = tipoactBL.eliminarTipoActividad(cod);
                 dgvTA.DataSource = tipoactBL.listarTipoActividad();
-                if (eliminado) MessageBox.Show("Tipo de Actividad Eliminado");
-                else MessageBox.Show("No se pudo eliminar el Tipo de Actividad");
+                if (eliminado) MessageBox.Show("Tipo de Actividad Eliminado", "Eliminar Tipo de Actividad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else MessageBox.Show("No se pudo eliminar el Tipo de Actividad", "Error Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else if (result == DialogResult.No)
@@ -114,6 +115,11 @@ namespace Presentacion
             {
 
             }
+        }
+
+        private void rbNombre_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -67,12 +67,14 @@ namespace AccesoDatos
         public BindingList<Merchandising> buscarMerchandisingS(int st)
         {
             BindingList<Merchandising> mer = new BindingList<Merchandising>();
+            int st1 = st - 50;
+            int st2 = st + 50;
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
             comando = new MySqlCommand();
             sql = "SELECT IdMerchandising, nombre, descripcion, stock " +
                 "FROM Merchandising " +
-                "WHERE stock='"+st+"';";
+                "WHERE stock BETWEEN "+ st1 +" AND "+st2;
             comando.CommandText = sql;
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();

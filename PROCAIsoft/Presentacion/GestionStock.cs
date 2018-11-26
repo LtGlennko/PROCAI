@@ -21,6 +21,14 @@ namespace Presentacion
             InitializeComponent();
             mbl = new MerchandisingBL();
             dgvStock.DataSource = mbl.listarMerchandising();
+            //cambios
+            dgvStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvStock.ScrollBars = ScrollBars.Both;
+            dgvStock.ForeColor = Color.Black;
+            //dgvStock.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
+            dgvStock.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            //
             disenio_tabla();
             rbNombre.Checked = true;
         }
@@ -41,6 +49,15 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
+            //Cambios
+            if(dgvStock.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado merchandising a editar", "Error Editar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //
+            //Poner condicion si es que no se selecciona una fila para editar
             int cod = (int)dgvStock.CurrentRow.Cells[0].Value;
             string nombre = dgvStock.CurrentRow.Cells[1].Value.ToString();
             string descripcion = dgvStock.CurrentRow.Cells[2].Value.ToString();
@@ -61,6 +78,13 @@ namespace Presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            //Cambios
+            if (dgvStock.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado merchandising a eliminar", "Error Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //
             DialogResult result = MessageBox.Show("¿Seguro que desea eliminar el producto?", "Salir", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
@@ -154,6 +178,11 @@ namespace Presentacion
         }
 
         private void rbNombre_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

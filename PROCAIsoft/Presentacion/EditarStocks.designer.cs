@@ -129,7 +129,7 @@
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(166, 180);
-            this.txtDesc.MaxLength = 55;
+            this.txtDesc.MaxLength = 100;
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(166, 70);
@@ -164,7 +164,7 @@
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
             this.pictureBox1.Location = new System.Drawing.Point(9, 379);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
