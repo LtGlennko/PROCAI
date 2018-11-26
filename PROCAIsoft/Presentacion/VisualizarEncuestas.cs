@@ -67,8 +67,7 @@ namespace Presentacion
         
 
         private void btnBusca_Click(object sender, EventArgs e)
-        {
-            estadoComponentes(estado.BUSQUEDA);
+        {            
             BuscarGrupo bg = new BuscarGrupo();
             grupoSeleccionado = null;
             if (bg.ShowDialog() == DialogResult.OK)
@@ -93,6 +92,7 @@ namespace Presentacion
             }
             if (grupoSeleccionado != null)
             {
+                estadoComponentes(estado.BUSQUEDA);
                 txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
                 cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
                 cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
@@ -106,6 +106,7 @@ namespace Presentacion
 
                 //Aqui se guarda la lista con las encuestas pertenecientes al grupo seleccionado
                 encuestasDeGrupoSel = grupoSeleccionado.ListaDeEncuestas;
+                lblNencuestas.Text = "N° Encuestas: " + encuestasDeGrupoSel.Count;
             }
 
         }

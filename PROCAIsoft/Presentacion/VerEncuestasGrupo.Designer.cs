@@ -33,7 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Preg5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEncuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preg1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preg2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preg3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +49,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Teal;
             this.groupBox1.Location = new System.Drawing.Point(21, 31);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(710, 379);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -63,13 +63,13 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Preg5,
+            this.idEncuesta,
             this.Preg1,
             this.Preg2,
             this.Preg3,
             this.Preg4});
             this.dataGridView1.Location = new System.Drawing.Point(13, 34);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -92,39 +92,45 @@
             // 
             this.pictureBox3.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
             this.pictureBox3.Location = new System.Drawing.Point(9, 425);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 55;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // Preg5
+            // idEncuesta
             // 
-            this.Preg5.HeaderText = "ID Encuesta";
-            this.Preg5.Name = "Preg5";
-            this.Preg5.ReadOnly = true;
+            this.idEncuesta.DataPropertyName = "IdEncuesta1";
+            this.idEncuesta.HeaderText = "ID Encuesta";
+            this.idEncuesta.Name = "idEncuesta";
+            this.idEncuesta.ReadOnly = true;
             // 
             // Preg1
             // 
+            this.Preg1.DataPropertyName = "CalificacionP1";
             this.Preg1.HeaderText = "Preg 1";
             this.Preg1.Name = "Preg1";
             this.Preg1.ReadOnly = true;
             // 
             // Preg2
             // 
+            this.Preg2.DataPropertyName = "CalificacionP2";
             this.Preg2.HeaderText = "Preg 2";
             this.Preg2.Name = "Preg2";
             this.Preg2.ReadOnly = true;
             // 
             // Preg3
             // 
+            this.Preg3.DataPropertyName = "CalificacionP3";
             this.Preg3.HeaderText = "Preg 3";
             this.Preg3.Name = "Preg3";
             this.Preg3.ReadOnly = true;
             // 
             // Preg4
             // 
+            this.Preg4.DataPropertyName = "CalificacionP4";
             this.Preg4.HeaderText = "Preg 4";
             this.Preg4.Name = "Preg4";
             this.Preg4.ReadOnly = true;
@@ -139,7 +145,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VerEncuestasGrupo";
             this.Text = "VerEncuestasGrupo";
             this.groupBox1.ResumeLayout(false);
@@ -156,7 +162,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Preg5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEncuesta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preg1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preg2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preg3;

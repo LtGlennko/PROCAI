@@ -25,8 +25,7 @@ namespace AccesoDatos
             {
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = con;
-                comando = new MySqlCommand();
-                comando.CommandText = "CALL LISTAR_ENCUESTAS_Y_NCALIF";
+                comando.CommandText = "LISTAR_ENCUESTAS_Y_NCALIF";
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.Parameters.Add("_IdGrupoEncuesta", MySqlDbType.Int32).Value = G.IdGrupoEncuestas1;
                 MySqlDataReader lector = comando.ExecuteReader();
@@ -61,8 +60,7 @@ namespace AccesoDatos
             {
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = con;
-                comando = new MySqlCommand();
-                comando.CommandText = "CALL LISTAR_CALIFICACIONES_DE_ENCUESTA";
+                comando.CommandText = "LISTAR_CALIFICACIONES_DE_ENCUESTA";
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.Parameters.Add("_IdEncuesta", MySqlDbType.Int32).Value = E.IdEncuesta1;
                 for (int i = 0; i < N_PREGUNTAS; i++)
