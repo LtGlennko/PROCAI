@@ -21,7 +21,13 @@ namespace LogicaNegocio
 
         public BindingList<Encuesta> listarEncuestas(GrupoEncuestas G)
         {
-            return encuestaDA.listarEncuestas(G.IdGrupoEncuestas1);
+            BindingList<Pregunta> preguntas = G.Actividad.TipoActividad.Preguntas;
+            BindingList<Encuesta> encuestas = encuestaDA.listarEncuestas(G);
+            foreach(Encuesta E in encuestas)
+            {
+                E.CalificacionesPorEncuesta = encuestaDA.buscarCalificacionesDeEncuesta(E, preguntas);
+            }
+            return encuestas;
         }
 
         public int registrarEncuesta (Encuesta E, int idUsu)

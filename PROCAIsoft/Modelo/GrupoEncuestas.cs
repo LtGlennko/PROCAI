@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,12 @@ namespace Modelo
         private Colegio colegio;
         private Actividad actividad;        
         private Guia guiaEvaluado;
-        private List<Encuesta> listaDeEncuestas;
+        private BindingList<Encuesta> listaDeEncuestas;
 
         public GrupoEncuestas()
         {
             IdGrupoEncuestas = ++i;
-            this.listaDeEncuestas = new List<Encuesta>();
+            this.listaDeEncuestas = new BindingList<Encuesta>();
         }
 
         public int IdGrupoEncuestas1 { get => IdGrupoEncuestas; set => IdGrupoEncuestas = value; }
@@ -28,7 +29,7 @@ namespace Modelo
         public int CantAlumnos { get => Actividad.CantEstudiantes;  }
         public DateTime FechaProgramada { get => actividad.FechaProgramada; }
         public Guia GuiaEvaluado { get => guiaEvaluado; set => guiaEvaluado = value; }
-        public List<Encuesta> ListaDeEncuestas { get => listaDeEncuestas; set => listaDeEncuestas = value; }
+        public BindingList<Encuesta> ListaDeEncuestas { get => listaDeEncuestas; set => listaDeEncuestas = value; }
         public void setColegio(Colegio col)
         {
             this.colegio = col;

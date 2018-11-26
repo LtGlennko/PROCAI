@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,17 +12,17 @@ namespace Modelo
         private static int i = 0;
         private int IdEncuesta;
         private GrupoEncuestas grupoPerteneciente;
-        private List<CalificacionPXE> calificacionesPorEncuesta;
+        private BindingList<CalificacionPXE> calificacionesPorEncuesta;
         private Guia digitador;
 
         public Encuesta()
         {
             IdEncuesta = ++i;
-            this.calificacionesPorEncuesta = new List<CalificacionPXE>();
+            this.calificacionesPorEncuesta = new BindingList<CalificacionPXE>();
         }
         public int IdEncuesta1 { get => IdEncuesta; set => IdEncuesta = value; }
         public GrupoEncuestas GrupoPerteneciente { get => grupoPerteneciente; set => grupoPerteneciente = value; }
-        public List<CalificacionPXE> CalificacionesPorEncuesta { get => calificacionesPorEncuesta; set => calificacionesPorEncuesta = value; }
+        public BindingList<CalificacionPXE> CalificacionesPorEncuesta { get => calificacionesPorEncuesta; set => calificacionesPorEncuesta = value; }
         public Guia Digitador { get => digitador; set => digitador = value; }
         public int IdGrupoPerteneciente { get => grupoPerteneciente.IdGrupoEncuestas1; }
         public DateTime FechaProgramada { get => grupoPerteneciente.Actividad.FechaProgramada; }

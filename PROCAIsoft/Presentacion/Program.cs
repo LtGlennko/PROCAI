@@ -16,7 +16,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGestStock());
+            Application.Run(new Inicio());
         }
     }
 }

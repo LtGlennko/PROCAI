@@ -72,8 +72,7 @@ namespace Presentacion
             BuscarGrupo bg = new BuscarGrupo();
             grupoSeleccionado = null;
             if (bg.ShowDialog() == DialogResult.OK)
-            {
-                
+            {                
                 grupoSeleccionado = bg.getGrupoSel();
                 BindingList<Pregunta> preguntasSel = grupoSeleccionado.Actividad.TipoActividad.Preguntas;
                 //definir preg1, preg2, preg3 y preg4
@@ -82,7 +81,6 @@ namespace Presentacion
                     MessageBox.Show("El tipo de actividad tiene menos de 4 preguntas relacionadas", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
                 preg1 = preguntasSel[0];
                 preg2 = preguntasSel[1];
                 preg3 = preguntasSel[2];
@@ -92,9 +90,6 @@ namespace Presentacion
                 grpP2.Text = "Pregunta 2: " + preg2.Enunciado;
                 grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
                 grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
-
-                
-
             }
             if (grupoSeleccionado != null)
             {
@@ -110,7 +105,7 @@ namespace Presentacion
                 //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
 
                 //Aqui se guarda la lista con las encuestas pertenecientes al grupo seleccionado
-                encuestasDeGrupoSel = encuestaBL.listarEncuestas(grupoSeleccionado);
+                encuestasDeGrupoSel = grupoSeleccionado.ListaDeEncuestas;
             }
 
         }
@@ -582,7 +577,10 @@ namespace Presentacion
         private void btnEncuestaGrupo_Click(object sender, EventArgs e)
         {
             VerEncuestasGrupo veg = new VerEncuestasGrupo(grupoSeleccionado);
-            veg.Visible = true;
+            if(veg.ShowDialog() == DialogResult)
+            {
+
+            }
         }
 
         private void btnRegistrarGrupo_Click(object sender, EventArgs e)
