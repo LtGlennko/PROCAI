@@ -46,7 +46,7 @@ namespace Presentacion
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(469, 228);
+            this.button1.Location = new System.Drawing.Point(469, 255);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 41);
             this.button1.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace Presentacion
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(469, 152);
+            this.button2.Location = new System.Drawing.Point(469, 158);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 41);
             this.button2.TabIndex = 1;
@@ -74,7 +74,7 @@ namespace Presentacion
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(250, 36);
             this.lblTitulo.TabIndex = 7;
-            this.lblTitulo.Text = "PROCAIsoft v0.6";
+            this.lblTitulo.Text = "PROCAIsoft v1.0";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // label1
@@ -89,6 +89,7 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -100,7 +101,7 @@ namespace Presentacion
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources._46522839_2303321959695525_7286646205050781696_n;
             this.pictureBox1.Location = new System.Drawing.Point(416, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 47);
             this.pictureBox1.TabIndex = 8;

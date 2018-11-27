@@ -22,7 +22,8 @@ namespace AccesoDatos
             con = new MySqlConnection(DBManager.cadena);
             con.Open();
             comando = new MySqlCommand();
-            sql = "SELECT * FROM Persona WHERE estado = 1;";
+            //Este query devuelve las personas que no tienen cuenta
+            sql = "SELECT P.* FROM Persona P LEFT JOIN Usuario U ON P.IdPersona = U.IdUsuario WHERE U.IdUsuario IS NULL;";
             comando.CommandText = sql;
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();
@@ -43,6 +44,7 @@ namespace AccesoDatos
                 string correo = lector.GetString("correoElectronico");
                 //Creacion de la persona
                 Persona p = new Persona(dni, nombres, apellPat, apellMat, celular, sexo, correo);
+                p.IdPersona1 = idPersona;
                 personas.Add(p);
             }
             con.Close();

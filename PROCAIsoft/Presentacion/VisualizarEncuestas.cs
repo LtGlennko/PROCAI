@@ -56,7 +56,7 @@ namespace Presentacion
             cboActividad.DataSource = actividadBL.listarActividades();
             cboActividad.ValueMember = "IdActividad1";
             cboActividad.DisplayMember = "nombreDeTipoYfecha";
-            
+
             cboGuia.ValueMember = "IdGuia1";
             cboGuia.DisplayMember = "NombresYapellidos";
             cboGuia.DataSource = guiaBL.listarGuias();
@@ -64,14 +64,14 @@ namespace Presentacion
 
             encuestasDeGrupoSel = new BindingList<Encuesta>();
         }
-        
+
 
         private void btnBusca_Click(object sender, EventArgs e)
-        {            
+        {
             BuscarGrupo bg = new BuscarGrupo();
             grupoSeleccionado = null;
             if (bg.ShowDialog() == DialogResult.OK)
-            {                
+            {
                 grupoSeleccionado = bg.getGrupoSel();
                 BindingList<Pregunta> preguntasSel = grupoSeleccionado.Actividad.TipoActividad.Preguntas;
                 //definir preg1, preg2, preg3 y preg4
@@ -105,7 +105,7 @@ namespace Presentacion
                 //dateEncuentra.Value = bg.getGrupoSel().FechaProgramada;
 
                 //Aqui se guarda la lista con las encuestas pertenecientes al grupo seleccionado
-                encuestasDeGrupoSel = grupoSeleccionado.ListaDeEncuestas;
+                encuestasDeGrupoSel = encuestaBL.listarEncuestas(grupoSeleccionado);
                 lblNencuestas.Text = "N° Encuestas: " + encuestasDeGrupoSel.Count;
             }
 
@@ -115,7 +115,7 @@ namespace Presentacion
         {
             //Solo existen 5 controles radiobutton
             int cont = 0;
-            foreach(RadioButton r in g.Controls)
+            foreach (RadioButton r in g.Controls)
             {
                 cont++;
                 if (r.Checked == true) return true;
@@ -127,7 +127,7 @@ namespace Presentacion
         {
             estadoComponentes(estado.AGREGAR);
             encuestaCreada = new Encuesta();
-            
+
 
             if (existeSeleccionado(grpP1))
             {
@@ -165,10 +165,10 @@ namespace Presentacion
             {
                 grpP4.ForeColor = Color.Red;
             }
-            
+
             encuestaCreada.GrupoPerteneciente = (grupoSeleccionado);
-      
-            
+
+
             if (grpP1.ForeColor == Color.Red || grpP2.ForeColor == Color.Red || grpP3.ForeColor == Color.Red || grpP4.ForeColor == Color.Red)
             {
                 MessageBox.Show("Tiene que llenar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -189,8 +189,8 @@ namespace Presentacion
 
 
         }
-        
-        
+
+
         private void agregarCalificacionSeleccionada(Encuesta encuesta, GroupBox grupo, Pregunta preg)
         {
             RadioButton btn = grupo.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked);
@@ -235,7 +235,7 @@ namespace Presentacion
                 encuestaModificada.IdEncuesta1 = temp.IdEncuesta1;
                 encuestaModificada.GrupoPerteneciente = temp.GrupoPerteneciente;
                 encuestaModificada.Digitador = temp.Digitador;
-                
+
 
                 foreach (Encuesta enc in listaEncuestas)
                 {
@@ -246,7 +246,7 @@ namespace Presentacion
                     }
                 }
 
-                
+
                 CalificacionPXE c1 = new CalificacionPXE(1);
                 CalificacionPXE c2 = new CalificacionPXE(1);
                 CalificacionPXE c3 = new CalificacionPXE(1);
@@ -291,21 +291,21 @@ namespace Presentacion
                 encuestaModificada.CalificacionesPorEncuesta[2].setPregunta(pregun3);
                 encuestaModificada.CalificacionesPorEncuesta[3].setPregunta(pregun4);
 
-               
-                
+
+
                 listaEncuestas.Add(encuestaModificada);
                 dgvEncuestas.DataSource = listaEncuestas;
                 btnModificar.Enabled = false;
                 modificar = false;
 
                 disenio_tabla();
-              
+
             }
             else
             {
                 MessageBox.Show("Debe seleccionar una encuesta para modificarla");
             }
-            
+
         }
 
         private void dgvEncuestas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -319,7 +319,7 @@ namespace Presentacion
             Pregunta pregun2 = E.CalificacionesPorEncuesta[1].getPregunta();
             Pregunta pregun3 = E.CalificacionesPorEncuesta[2].getPregunta();
             Pregunta pregun4 = E.CalificacionesPorEncuesta[3].getPregunta();
-        
+
 
             grpP1.Text = "Pregunta 1: " + pregun1.Enunciado;
             grpP2.Text = "Pregunta 2: " + pregun2.Enunciado;
@@ -351,7 +351,7 @@ namespace Presentacion
             else if (E.CalificacionP4 == 3) rdBtnP4_3.Checked = true;
             else if (E.CalificacionP4 == 4) rdBtnP4_4.Checked = true;
             else if (E.CalificacionP4 == 5) rdBtnP4_5.Checked = true;
-            
+
             // Y El GRUPO
             txtNumero.Text = E.IdGrupoPerteneciente.ToString();
             cboActividad.Text = E.GrupoPerteneciente.Actividad.nombreDeTipoYfecha;
@@ -453,7 +453,7 @@ namespace Presentacion
                     btnEncuestaGrupo.Enabled = true;
                     btnRegistrarGrupo.Enabled = true;
                     limpiarCampos();
-                    
+
                     break;
                 case estado.MODIFICAR:
                     txtNumero.Enabled = false;
@@ -489,12 +489,12 @@ namespace Presentacion
                     grpP4.Enabled = true;
                     //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
-                    btnModificar.Enabled = false;                    
+                    btnModificar.Enabled = false;
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnNuevo.Enabled = false;
-                  
+
                     btnEncuestaGrupo.Enabled = false;
                     break;
             }
@@ -503,7 +503,9 @@ namespace Presentacion
         public void limpiarCampos()
         {
             txtNumero.Text = "";
-            
+            cboActividad.Text = "";
+            cboColegio.Text = "";
+            cboGuia.Text = "";
 
             //dateEncuentra.Value = DateTime.Now;
 
@@ -577,7 +579,7 @@ namespace Presentacion
 
         private void btnEncuestaGrupo_Click(object sender, EventArgs e)
         {
-            VerEncuestasGrupo veg = new VerEncuestasGrupo(grupoSeleccionado);
+            VerEncuestasGrupo veg = new VerEncuestasGrupo(encuestasDeGrupoSel);
             if(veg.ShowDialog() == DialogResult)
             {
 

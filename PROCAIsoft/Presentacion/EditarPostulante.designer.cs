@@ -57,15 +57,15 @@ namespace Presentacion
             this.label7 = new System.Windows.Forms.Label();
             this.cboColegio = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.grpDatosEscolar = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ptrVisible = new System.Windows.Forms.PictureBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.ptrVisible = new System.Windows.Forms.PictureBox();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpDatosPersonales.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -190,7 +190,6 @@ namespace Presentacion
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(100, 20);
             this.txtCelular.TabIndex = 23;
-            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
             // 
             // txtCorreoE
             // 
@@ -202,10 +201,11 @@ namespace Presentacion
             // txtTelf
             // 
             this.txtTelf.Location = new System.Drawing.Point(142, 64);
-            this.txtTelf.MaxLength = 20;
+            this.txtTelf.MaxLength = 9;
             this.txtTelf.Name = "txtTelf";
-            this.txtTelf.Size = new System.Drawing.Size(100, 20);
+            this.txtTelf.Size = new System.Drawing.Size(121, 20);
             this.txtTelf.TabIndex = 20;
+            this.txtTelf.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTelf_KeyUp);
             // 
             // txtDNI
             // 
@@ -213,7 +213,6 @@ namespace Presentacion
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(112, 20);
             this.txtDNI.TabIndex = 19;
-            this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             // 
             // lblGrado
             // 
@@ -351,6 +350,15 @@ namespace Presentacion
             this.toolStrip1.TabIndex = 55;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(70, 28);
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
@@ -389,6 +397,35 @@ namespace Presentacion
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de Cuenta";
             // 
+            // ptrVisible
+            // 
+            this.ptrVisible.Image = global::Presentacion.Properties.Resources._58976;
+            this.ptrVisible.Location = new System.Drawing.Point(183, 102);
+            this.ptrVisible.Name = "ptrVisible";
+            this.ptrVisible.Size = new System.Drawing.Size(22, 23);
+            this.ptrVisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptrVisible.TabIndex = 58;
+            this.ptrVisible.TabStop = false;
+            this.ptrVisible.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ptrVisible_MouseDown);
+            this.ptrVisible.MouseLeave += new System.EventHandler(this.ptrVisible_MouseLeave);
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(31, 105);
+            this.txtContraseña.MaxLength = 15;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(145, 20);
+            this.txtContraseña.TabIndex = 57;
+            this.txtContraseña.UseSystemPasswordChar = true;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(31, 44);
+            this.txtUsuario.MaxLength = 20;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(145, 20);
+            this.txtUsuario.TabIndex = 55;
+            // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
@@ -410,43 +447,6 @@ namespace Presentacion
             this.lblUsername.Size = new System.Drawing.Size(113, 13);
             this.lblUsername.TabIndex = 56;
             this.lblUsername.Text = "Nombre de usuario";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(31, 44);
-            this.txtUsuario.MaxLength = 20;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(145, 20);
-            this.txtUsuario.TabIndex = 55;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(31, 105);
-            this.txtContraseña.MaxLength = 15;
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(145, 20);
-            this.txtContraseña.TabIndex = 57;
-            this.txtContraseña.UseSystemPasswordChar = true;
-            // 
-            // ptrVisible
-            // 
-            this.ptrVisible.Image = global::Presentacion.Properties.Resources._58976;
-            this.ptrVisible.Location = new System.Drawing.Point(183, 102);
-            this.ptrVisible.Name = "ptrVisible";
-            this.ptrVisible.Size = new System.Drawing.Size(22, 23);
-            this.ptrVisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptrVisible.TabIndex = 58;
-            this.ptrVisible.TabStop = false;
-            this.ptrVisible.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ptrVisible_MouseDown);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(70, 28);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // pictureBox1
             // 

@@ -20,12 +20,8 @@ namespace LogicaNegocio
         }
         public BindingList<GrupoEncuestas> listarGrupos()
         {
-            BindingList<GrupoEncuestas> grupos = grupoDA.listarGrupos();
-            foreach (GrupoEncuestas g in grupos)
-            {
-                g.ListaDeEncuestas = encuestaBL.listarEncuestas(g);
-            }
-            return grupos;
+            //Se listan los grupos sin los detalles de sus encuestas
+            return grupoDA.listarGrupos();
         }
 
         public int registrarGrupo(GrupoEncuestas G)

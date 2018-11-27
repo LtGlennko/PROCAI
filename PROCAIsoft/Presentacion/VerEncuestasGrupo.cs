@@ -16,15 +16,13 @@ namespace Presentacion
     public partial class VerEncuestasGrupo : Form
     {
 
-        public VerEncuestasGrupo(GrupoEncuestas g)
+        public VerEncuestasGrupo(BindingList<Encuesta> encuestasDeGrupoSel)
             
         {
             InitializeComponent();
 
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource=g.ListaDeEncuestas;
-
-
+            dataGridView1.DataSource= encuestasDeGrupoSel;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
