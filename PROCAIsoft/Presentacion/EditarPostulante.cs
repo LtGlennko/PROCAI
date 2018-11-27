@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using LogicaNegocio;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +15,14 @@ namespace Presentacion
     public partial class EditarPostulante : Form
     {
         Persona personaBus;
+        ColegioBL colegioBL;
         public EditarPostulante()
         {
             InitializeComponent();
             bloquearBotones();
-        }
+            colegioBL = new ColegioBL();
 
-        private void EditarPostulante_Load(object sender, EventArgs e)
-        {
-
+            cboColegio.DataSource = colegioBL.listarColegios();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -97,6 +97,7 @@ namespace Presentacion
             txtCelular.Enabled = false;
             cboSexo.Enabled = false;
             txtCorreoE.Enabled = false;
+            limpiarCampos();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -113,6 +114,11 @@ namespace Presentacion
             txtCelular.Text = "";
             cboSexo.Text = "";
             txtCorreoE.Text = "";
+        }
+
+        private void ptrVisible_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = false;
         }
     }
 }
