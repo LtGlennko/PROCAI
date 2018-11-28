@@ -47,8 +47,10 @@ namespace Presentacion
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chkJefe = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel_superior = new System.Windows.Forms.Panel();
+            this.lbl_titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
+            this.panel_superior.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -69,8 +71,8 @@ namespace Presentacion
             this.NombreCuenta,
             this.Cargo,
             this.chkJefe});
-            this.dvgUsuarios.Location = new System.Drawing.Point(143, 133);
-            this.dvgUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dvgUsuarios.Location = new System.Drawing.Point(143, 154);
+            this.dvgUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.Size = new System.Drawing.Size(827, 400);
             this.dvgUsuarios.TabIndex = 2;
@@ -125,42 +127,54 @@ namespace Presentacion
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(999, 154);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(117, 34);
+            this.btnModificar.Size = new System.Drawing.Size(141, 46);
             this.btnModificar.TabIndex = 50;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // label2
+            // panel_superior
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(408, 55);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(356, 34);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Modificar nivel de Permiso";
+            this.panel_superior.BackColor = System.Drawing.Color.Teal;
+            this.panel_superior.Controls.Add(this.lbl_titulo);
+            this.panel_superior.Location = new System.Drawing.Point(-1, -1);
+            this.panel_superior.Name = "panel_superior";
+            this.panel_superior.Size = new System.Drawing.Size(1183, 112);
+            this.panel_superior.TabIndex = 65;
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(41, 35);
+            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(518, 45);
+            this.lbl_titulo.TabIndex = 57;
+            this.lbl_titulo.Text = "Modificar Nivel de Permiso";
             // 
             // Gestionar_permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1181, 587);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1182, 606);
+            this.Controls.Add(this.panel_superior);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dvgUsuarios);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Gestionar_permisos";
             this.Text = "Gestionar permisos";
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).EndInit();
+            this.panel_superior.ResumeLayout(false);
+            this.panel_superior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,11 +185,12 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dvgUsuarios;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombresYapellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewCheckBoxColumn chkJefe;
+        private System.Windows.Forms.Panel panel_superior;
+        private System.Windows.Forms.Label lbl_titulo;
     }
 }

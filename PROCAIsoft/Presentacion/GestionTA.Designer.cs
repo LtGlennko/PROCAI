@@ -39,7 +39,6 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionTA));
-            this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvTA = new System.Windows.Forms.DataGridView();
@@ -48,36 +47,31 @@ namespace Presentacion
             this.btnEliminar = new System.Windows.Forms.Button();
             this.rbCodigo = new System.Windows.Forms.RadioButton();
             this.rbNombre = new System.Windows.Forms.RadioButton();
+            this.panel_superior = new System.Windows.Forms.Panel();
+            this.lbl_titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTA)).BeginInit();
+            this.panel_superior.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(313, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 26);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Gestión Tipo de Actividad";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(253, 82);
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(326, 149);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.MaxLength = 30;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(277, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(368, 28);
             this.txtBuscar.TabIndex = 12;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(536, 80);
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(704, 146);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -86,18 +80,21 @@ namespace Presentacion
             // dgvTA
             // 
             this.dgvTA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTA.Location = new System.Drawing.Point(119, 121);
+            this.dgvTA.Location = new System.Drawing.Point(132, 185);
+            this.dgvTA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTA.Name = "dgvTA";
-            this.dgvTA.Size = new System.Drawing.Size(609, 307);
+            this.dgvTA.Size = new System.Drawing.Size(838, 389);
             this.dgvTA.TabIndex = 14;
             this.dgvTA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellContentClick);
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(744, 121);
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(997, 186);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(89, 24);
+            this.btnAgregar.Size = new System.Drawing.Size(129, 36);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -106,9 +103,11 @@ namespace Presentacion
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(745, 176);
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(998, 254);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(88, 25);
+            this.btnEditar.Size = new System.Drawing.Size(127, 37);
             this.btnEditar.TabIndex = 16;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -117,9 +116,11 @@ namespace Presentacion
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(745, 230);
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(998, 320);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 26);
+            this.btnEliminar.Size = new System.Drawing.Size(129, 38);
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -128,9 +129,11 @@ namespace Presentacion
             // rbCodigo
             // 
             this.rbCodigo.AutoSize = true;
-            this.rbCodigo.Location = new System.Drawing.Point(308, 59);
+            this.rbCodigo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCodigo.Location = new System.Drawing.Point(400, 121);
+            this.rbCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbCodigo.Name = "rbCodigo";
-            this.rbCodigo.Size = new System.Drawing.Size(58, 17);
+            this.rbCodigo.Size = new System.Drawing.Size(93, 25);
             this.rbCodigo.TabIndex = 18;
             this.rbCodigo.TabStop = true;
             this.rbCodigo.Text = "Código";
@@ -139,21 +142,45 @@ namespace Presentacion
             // rbNombre
             // 
             this.rbNombre.AutoSize = true;
-            this.rbNombre.Location = new System.Drawing.Point(419, 59);
+            this.rbNombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNombre.Location = new System.Drawing.Point(548, 121);
+            this.rbNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbNombre.Name = "rbNombre";
-            this.rbNombre.Size = new System.Drawing.Size(62, 17);
+            this.rbNombre.Size = new System.Drawing.Size(98, 25);
             this.rbNombre.TabIndex = 19;
             this.rbNombre.TabStop = true;
             this.rbNombre.Text = "Nombre";
             this.rbNombre.UseVisualStyleBackColor = true;
             this.rbNombre.CheckedChanged += new System.EventHandler(this.rbNombre_CheckedChanged);
             // 
+            // panel_superior
+            // 
+            this.panel_superior.BackColor = System.Drawing.Color.Teal;
+            this.panel_superior.Controls.Add(this.lbl_titulo);
+            this.panel_superior.Location = new System.Drawing.Point(-1, -1);
+            this.panel_superior.Name = "panel_superior";
+            this.panel_superior.Size = new System.Drawing.Size(1182, 112);
+            this.panel_superior.TabIndex = 64;
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(62, 33);
+            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(515, 45);
+            this.lbl_titulo.TabIndex = 57;
+            this.lbl_titulo.Text = "Gesti\'on Tipo de Actividad";
+            // 
             // GestionTA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(886, 477);
+            this.ClientSize = new System.Drawing.Size(1181, 587);
+            this.Controls.Add(this.panel_superior);
             this.Controls.Add(this.rbNombre);
             this.Controls.Add(this.rbCodigo);
             this.Controls.Add(this.btnEliminar);
@@ -162,19 +189,19 @@ namespace Presentacion
             this.Controls.Add(this.dgvTA);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GestionTA";
             this.Text = "GestionTA";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTA)).EndInit();
+            this.panel_superior.ResumeLayout(false);
+            this.panel_superior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvTA;
@@ -183,5 +210,7 @@ namespace Presentacion
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.RadioButton rbCodigo;
         private System.Windows.Forms.RadioButton rbNombre;
+        private System.Windows.Forms.Panel panel_superior;
+        private System.Windows.Forms.Label lbl_titulo;
     }
 }

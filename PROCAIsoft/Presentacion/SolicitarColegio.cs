@@ -69,5 +69,10 @@ namespace Presentacion
             }
             return false;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

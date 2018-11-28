@@ -48,8 +48,10 @@ namespace Presentacion
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.panel_superior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel_superior.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,7 +65,7 @@ namespace Presentacion
             this.Apellidos,
             this.CorreoElectronico,
             this.ColegioAsociado});
-            this.dataGridView1.Location = new System.Drawing.Point(73, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(82, 174);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -109,10 +111,11 @@ namespace Presentacion
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1015, 258);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1019, 321);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 32);
+            this.button1.Size = new System.Drawing.Size(131, 41);
             this.button1.TabIndex = 11;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = false;
@@ -120,10 +123,11 @@ namespace Presentacion
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1015, 183);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1019, 246);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 31);
+            this.button2.Size = new System.Drawing.Size(129, 40);
             this.button2.TabIndex = 10;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = false;
@@ -131,33 +135,44 @@ namespace Presentacion
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(1015, 112);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(1019, 175);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(119, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(131, 39);
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // lbl_titulo
+            // panel_superior
             // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Franklin Gothic Demi", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.Teal;
-            this.lbl_titulo.Location = new System.Drawing.Point(419, 57);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(323, 34);
-            this.lbl_titulo.TabIndex = 55;
-            this.lbl_titulo.Text = "Gestion de Orientadores";
+            this.panel_superior.BackColor = System.Drawing.Color.Teal;
+            this.panel_superior.Controls.Add(this.label1);
+            this.panel_superior.Location = new System.Drawing.Point(-2, -1);
+            this.panel_superior.Name = "panel_superior";
+            this.panel_superior.Size = new System.Drawing.Size(1186, 112);
+            this.panel_superior.TabIndex = 65;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(41, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(480, 45);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Gestion de Orientadores";
             // 
             // GestionOrientadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1181, 587);
-            this.Controls.Add(this.lbl_titulo);
+            this.ClientSize = new System.Drawing.Size(1182, 606);
+            this.Controls.Add(this.panel_superior);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAgregar);
@@ -168,8 +183,9 @@ namespace Presentacion
             this.Text = "GestionOrientadores";
             this.Load += new System.EventHandler(this.GestionOrientadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel_superior.ResumeLayout(false);
+            this.panel_superior.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -178,11 +194,12 @@ namespace Presentacion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn CorreoElectronico;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColegioAsociado;
+        private System.Windows.Forms.Panel panel_superior;
+        private System.Windows.Forms.Label label1;
     }
 }

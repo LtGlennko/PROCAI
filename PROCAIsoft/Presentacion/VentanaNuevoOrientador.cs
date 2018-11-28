@@ -122,5 +122,10 @@ namespace Presentacion
             MessageBox.Show("Cancelado por usuario!", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

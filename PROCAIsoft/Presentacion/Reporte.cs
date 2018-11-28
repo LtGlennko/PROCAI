@@ -34,5 +34,10 @@ namespace Presentacion
             G.Visible = true;
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

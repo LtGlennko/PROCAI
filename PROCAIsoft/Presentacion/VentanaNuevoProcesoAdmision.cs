@@ -79,7 +79,7 @@ namespace Presentacion
             int caracter = e.KeyValue;
 
             if (caracter > 57 || caracter < 48) {
-                this.lbl_prueba.Text = "wrong, only numbers";
+                this.lbl_prueba.Text = "Solo se admite numeros ! :(";
                 this.txt_Vacantes.Text = "";
             } else {
                 this.lbl_prueba.Text = "";

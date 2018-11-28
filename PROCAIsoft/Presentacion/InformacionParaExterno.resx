@@ -118,14 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>La Oficina Central de Admisión e Informes se encarga de diseñar y realizar procesos de difusión,
-inscripción y admisión a los estudios de pregrado, posgrado y formación continua de la Universidad.
-Para realizar esto, realiza actividades de difusión institucional que permitan gestionar procesos de
-inscripción, evaluación y admisión. Esta información, permite elaborar estadísticas de admisión para
-las autoridades académicas y administrativas de la Universidad. Por otro lado, apoya la organización
-de eventos en el campus, empleando canales de comunicación directa y coordinando los ingresos al
-campus. Finalmente, se ha trabajado con instituciones públicas y privadas, el desarrollo y aplicación
-de sistemas de evaluación.</value>
+    <value>La Oficina Central de Admisión e Informes se encarga de diseñar
+ y realizar  procesos de difusión, inscripción y admisión a los 
+estudios de pregrado, posgrado y formación continua de la 
+Universidad. 
+
+Para realizar esto, realiza actividades de difusión
+institucional que permitan gestionar procesos de inscripción, evaluación 
+y admisión. Esta información, permite elaborar estadísticas de admisión
+para las autoridades académicas y administrativas de la Universidad. 
+
+Por otro lado, apoya la organización de eventos en el campus, 
+empleando canales de comunicación directa y coordinando los 
+ingresos al campus. 
+
+Finalmente, se ha trabajado con 
+instituciones  públicas y privadas, el desarrollo y aplicación de sistemas
+de evaluación.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
