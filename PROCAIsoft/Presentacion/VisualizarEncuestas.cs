@@ -85,14 +85,15 @@ namespace Presentacion
                 preg3 = preguntasSel[2];
                 preg4 = preguntasSel[3];
 
-                grpP1.Text = "Pregunta 1: " + preg1.Enunciado;
-                grpP2.Text = "Pregunta 2: " + preg2.Enunciado;
-                grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
-                grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
+                
             }
             if (grupoSeleccionado != null)
             {
                 estadoComponentes(estado.BUSQUEDA);
+                grpP1.Text = "Pregunta 1: " + preg1.Enunciado;
+                grpP2.Text = "Pregunta 2: " + preg2.Enunciado;
+                grpP3.Text = "Pregunta 3: " + preg3.Enunciado;
+                grpP4.Text = "Pregunta 4: " + preg4.Enunciado;
                 txtNumero.Text = grupoSeleccionado.IdGrupoEncuestas1.ToString();
                 cboActividad.SelectedValue = grupoSeleccionado.Actividad.IdActividad1;
                 cboGuia.SelectedValue = grupoSeleccionado.GuiaEvaluado.IdGuia1;
@@ -421,10 +422,10 @@ namespace Presentacion
                     cboActividad.Enabled = false;
                     cboColegio.Enabled = false;
                     cboGuia.Enabled = false;
-                    grpP1.Enabled = false;
-                    grpP2.Enabled = false;
-                    grpP3.Enabled = false;
-                    grpP4.Enabled = false;
+                    grpP1.Enabled = true;
+                    grpP2.Enabled = true;
+                    grpP3.Enabled = true;
+                    grpP4.Enabled = true;
                     //dateEncuentra.Enabled = false;
                     btnAgregar.Enabled = true;
                     btnModificar.Enabled = true;
@@ -432,7 +433,7 @@ namespace Presentacion
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnNuevo.Enabled = true;
-                    btnEncuestaGrupo.Enabled = false;
+                    btnEncuestaGrupo.Enabled = true;
                     break;
                 case estado.BUSQUEDA:
                     txtNumero.Enabled = false;
@@ -493,7 +494,7 @@ namespace Presentacion
                     btnBusca.Enabled = true;
                     button1.Enabled = true;
                     btnGuardar.Enabled = true;
-                    btnNuevo.Enabled = false;
+                    btnNuevo.Enabled = true;
 
                     btnEncuestaGrupo.Enabled = false;
                     break;
@@ -573,7 +574,26 @@ namespace Presentacion
                         break;
                     }
                 }
-                if (compteur == 0) MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (compteur == 0)
+                {
+                    MessageBox.Show("Registrado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Guardamos los ids de las encuestas ya registradas en el grupo seleccionado
+                    BindingList<int> idsDeEncuestasDeGrupoSel = new BindingList<int>();
+                    foreach(Encuesta encParaId in encuestasDeGrupoSel)
+                    {
+                        idsDeEncuestasDeGrupoSel.Add(encParaId.IdEncuesta1);
+                    }
+                    for (int i = 0; i < dgvEncuestas.RowCount; i++)
+                    {
+                        Encuesta encDeDGV = (Encuesta)dgvEncuestas.Rows[i].DataBoundItem;
+                        //Solo agregamos las encuestas que tengan el mismo id de grupo y que no esten repetidas
+                        if (!idsDeEncuestasDeGrupoSel.Contains(encDeDGV.IdEncuesta1) && grupoSeleccionado.IdGrupoEncuestas1 == encDeDGV.GrupoPerteneciente.IdGrupoEncuestas1)
+                        {
+                            encuestasDeGrupoSel.Add(encDeDGV);
+                        }
+                    }
+                    lblNencuestas.Text = "N° Encuestas: " + encuestasDeGrupoSel.Count;
+                }
             }
         }
 
@@ -581,8 +601,7 @@ namespace Presentacion
         {
             VerEncuestasGrupo veg = new VerEncuestasGrupo(encuestasDeGrupoSel);
             if(veg.ShowDialog() == DialogResult)
-            {
-
+            {               
             }
         }
 

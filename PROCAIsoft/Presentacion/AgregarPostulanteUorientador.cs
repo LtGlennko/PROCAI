@@ -12,15 +12,17 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class EditarPostulante : Form
+    public partial class AgregarPostulanteUorientador : Form
     {
         private Persona personaBus;
         private ColegioBL colegioBL;
+        private EscolarBL escolarBL;
         private int idPersonaSel;
-        public EditarPostulante()
+        public AgregarPostulanteUorientador(char tipoUsuario)
         {
             InitializeComponent();
             colegioBL = new ColegioBL();
+            escolarBL = new EscolarBL();
 
             cboColegio.DataSource = colegioBL.listarColegios();
             cboColegio.ValueMember = "IdColegio1";
@@ -73,7 +75,10 @@ namespace Presentacion
             Cuenta cuenta = new Cuenta(DateTime.MinValue, txtUsuario.Text, txtContraseña.Text);
             escolar.CuentaUsuario = cuenta;
             //Registrar nuevo escolar
-            MessageBox.Show("Cambios guardados con éxito");
+            if (escolarBL.registrarEscolar(escolar) == 1)
+            {
+                MessageBox.Show("Postulante guardado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

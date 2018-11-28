@@ -45,6 +45,7 @@
     <Compile Include="CargoBL.cs" />
     <Compile Include="ColegioBL.cs" />
     <Compile Include="EncuestaBL.cs" />
+    <Compile Include="EscolarBL.cs" />
     <Compile Include="GrupoBL.cs" />
     <Compile Include="GuiaBL.cs" />
     <Compile Include="MerchandisingBL.cs" />

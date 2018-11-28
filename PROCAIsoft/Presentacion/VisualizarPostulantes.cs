@@ -23,7 +23,7 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            EditarPostulante EP = new EditarPostulante();
+            AgregarPostulanteUorientador EP = new AgregarPostulanteUorientador('P');
             if (EP.ShowDialog() == DialogResult.OK)
             {
 

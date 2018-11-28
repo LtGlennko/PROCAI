@@ -95,11 +95,11 @@
     <Compile Include="DetalleNivelPermiso.Designer.cs">
       <DependentUpon>DetalleNivelPermiso.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarPostulante.cs">
+    <Compile Include="AgregarPostulanteUorientador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarPostulante.designer.cs">
-      <DependentUpon>EditarPostulante.cs</DependentUpon>
+    <Compile Include="AgregarPostulanteUorientador.designer.cs">
+      <DependentUpon>AgregarPostulanteUorientador.cs</DependentUpon>
     </Compile>
     <Compile Include="EditarStocks.cs">
       <SubType>Form</SubType>
@@ -295,8 +295,8 @@
     <EmbeddedResource Include="DetalleNivelPermiso.resx">
       <DependentUpon>DetalleNivelPermiso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarPostulante.resx">
-      <DependentUpon>EditarPostulante.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarPostulanteUorientador.resx">
+      <DependentUpon>AgregarPostulanteUorientador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarStocks.resx">
       <DependentUpon>EditarStocks.cs</DependentUpon>

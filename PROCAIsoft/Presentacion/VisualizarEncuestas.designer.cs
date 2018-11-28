@@ -84,6 +84,7 @@ namespace Presentacion
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.grpBoxGrupo = new System.Windows.Forms.GroupBox();
+            this.lblNencuestas = new System.Windows.Forms.Label();
             this.btnRegistrarGrupo = new System.Windows.Forms.Button();
             this.btnEncuestaGrupo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,7 +94,6 @@ namespace Presentacion
             this.labelGuia = new System.Windows.Forms.Label();
             this.labelColegio = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNencuestas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEncuestas)).BeginInit();
             this.grpP1.SuspendLayout();
             this.grpP2.SuspendLayout();
@@ -651,6 +651,18 @@ namespace Presentacion
             this.grpBoxGrupo.TabStop = false;
             this.grpBoxGrupo.Text = "Grupo ";
             // 
+            // lblNencuestas
+            // 
+            this.lblNencuestas.AutoSize = true;
+            this.lblNencuestas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNencuestas.ForeColor = System.Drawing.Color.Teal;
+            this.lblNencuestas.Location = new System.Drawing.Point(263, 164);
+            this.lblNencuestas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNencuestas.Name = "lblNencuestas";
+            this.lblNencuestas.Size = new System.Drawing.Size(92, 13);
+            this.lblNencuestas.TabIndex = 58;
+            this.lblNencuestas.Text = "N° Encuestas: ";
+            // 
             // btnRegistrarGrupo
             // 
             this.btnRegistrarGrupo.BackColor = System.Drawing.Color.White;
@@ -691,6 +703,7 @@ namespace Presentacion
             // 
             // cboGuia
             // 
+            this.cboGuia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGuia.FormattingEnabled = true;
             this.cboGuia.Location = new System.Drawing.Point(132, 117);
             this.cboGuia.Margin = new System.Windows.Forms.Padding(2);
@@ -700,6 +713,7 @@ namespace Presentacion
             // 
             // cboActividad
             // 
+            this.cboActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboActividad.FormattingEnabled = true;
             this.cboActividad.Location = new System.Drawing.Point(133, 79);
             this.cboActividad.Margin = new System.Windows.Forms.Padding(2);
@@ -709,6 +723,7 @@ namespace Presentacion
             // 
             // cboColegio
             // 
+            this.cboColegio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboColegio.FormattingEnabled = true;
             this.cboColegio.Location = new System.Drawing.Point(385, 39);
             this.cboColegio.Margin = new System.Windows.Forms.Padding(2);
@@ -755,18 +770,6 @@ namespace Presentacion
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Encuesta";
-            // 
-            // lblNencuestas
-            // 
-            this.lblNencuestas.AutoSize = true;
-            this.lblNencuestas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNencuestas.ForeColor = System.Drawing.Color.Teal;
-            this.lblNencuestas.Location = new System.Drawing.Point(263, 164);
-            this.lblNencuestas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNencuestas.Name = "lblNencuestas";
-            this.lblNencuestas.Size = new System.Drawing.Size(92, 13);
-            this.lblNencuestas.TabIndex = 58;
-            this.lblNencuestas.Text = "N° Encuestas: ";
             // 
             // frmRegYeditEncuestas
             // 
