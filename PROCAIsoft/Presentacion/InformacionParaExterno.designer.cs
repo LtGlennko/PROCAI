@@ -52,10 +52,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.guiaspucp3;
-            this.pictureBox1.Location = new System.Drawing.Point(625, 165);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(658, 157);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(528, 340);
+            this.pictureBox1.Size = new System.Drawing.Size(480, 337);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
@@ -66,7 +66,7 @@
             this.panel_superior.Controls.Add(this.lbl_titulo);
             this.panel_superior.Location = new System.Drawing.Point(0, 0);
             this.panel_superior.Name = "panel_superior";
-            this.panel_superior.Size = new System.Drawing.Size(1183, 112);
+            this.panel_superior.Size = new System.Drawing.Size(1219, 112);
             this.panel_superior.TabIndex = 64;
             // 
             // lbl_titulo
@@ -91,7 +91,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InformacionParaExterno";
             this.Text = "Información OCAI";
             this.Load += new System.EventHandler(this.InformacionParaExterno_Load);

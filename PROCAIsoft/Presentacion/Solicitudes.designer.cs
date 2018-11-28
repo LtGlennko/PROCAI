@@ -63,7 +63,7 @@ namespace Presentacion
             this.dgv_Solicitudes.Name = "dgv_Solicitudes";
             this.dgv_Solicitudes.ReadOnly = true;
             this.dgv_Solicitudes.RowTemplate.Height = 24;
-            this.dgv_Solicitudes.Size = new System.Drawing.Size(909, 384);
+            this.dgv_Solicitudes.Size = new System.Drawing.Size(909, 376);
             this.dgv_Solicitudes.TabIndex = 0;
             this.dgv_Solicitudes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Solicitudes_CellMouseClick);
             // 
@@ -72,10 +72,10 @@ namespace Presentacion
             this.btn_validar.BackColor = System.Drawing.Color.White;
             this.btn_validar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_validar.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btn_validar.Location = new System.Drawing.Point(1009, 195);
+            this.btn_validar.Location = new System.Drawing.Point(1012, 196);
             this.btn_validar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_validar.Name = "btn_validar";
-            this.btn_validar.Size = new System.Drawing.Size(131, 45);
+            this.btn_validar.Size = new System.Drawing.Size(136, 44);
             this.btn_validar.TabIndex = 1;
             this.btn_validar.Text = "Validar";
             this.btn_validar.UseVisualStyleBackColor = false;
@@ -86,7 +86,7 @@ namespace Presentacion
             this.btn_detalles.BackColor = System.Drawing.Color.White;
             this.btn_detalles.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_detalles.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btn_detalles.Location = new System.Drawing.Point(1009, 337);
+            this.btn_detalles.Location = new System.Drawing.Point(1012, 337);
             this.btn_detalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_detalles.Name = "btn_detalles";
             this.btn_detalles.Size = new System.Drawing.Size(136, 45);
@@ -99,7 +99,7 @@ namespace Presentacion
             // 
             this.btn_rechazar.BackColor = System.Drawing.Color.White;
             this.btn_rechazar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rechazar.Location = new System.Drawing.Point(1009, 264);
+            this.btn_rechazar.Location = new System.Drawing.Point(1012, 264);
             this.btn_rechazar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_rechazar.Name = "btn_rechazar";
             this.btn_rechazar.Size = new System.Drawing.Size(136, 45);

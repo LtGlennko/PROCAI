@@ -65,12 +65,12 @@ namespace Presentacion
             this.Apellidos,
             this.CorreoElectronico,
             this.ColegioAsociado});
-            this.dataGridView1.Location = new System.Drawing.Point(82, 174);
+            this.dataGridView1.Location = new System.Drawing.Point(82, 169);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(911, 401);
+            this.dataGridView1.Size = new System.Drawing.Size(911, 406);
             this.dataGridView1.TabIndex = 1;
             // 
             // ID
@@ -151,7 +151,7 @@ namespace Presentacion
             this.panel_superior.Controls.Add(this.label1);
             this.panel_superior.Location = new System.Drawing.Point(-2, -1);
             this.panel_superior.Name = "panel_superior";
-            this.panel_superior.Size = new System.Drawing.Size(1186, 112);
+            this.panel_superior.Size = new System.Drawing.Size(1239, 112);
             this.panel_superior.TabIndex = 65;
             // 
             // label1

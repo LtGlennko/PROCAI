@@ -54,7 +54,7 @@
             this.panel_superior.Controls.Add(this.lbl_titulo);
             this.panel_superior.Location = new System.Drawing.Point(0, 0);
             this.panel_superior.Name = "panel_superior";
-            this.panel_superior.Size = new System.Drawing.Size(1182, 112);
+            this.panel_superior.Size = new System.Drawing.Size(1250, 112);
             this.panel_superior.TabIndex = 65;
             // 
             // lbl_titulo

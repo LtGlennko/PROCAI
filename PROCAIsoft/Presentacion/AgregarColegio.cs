@@ -17,20 +17,20 @@ namespace Presentacion
     {
         
         private ColegioBL colegioBL;
-        private RegionBL regionBL;
-        private DistritoBL distritoBL;
-        private ProvinciaBL provinciaBL;
+        //private RegionBL regionBL;
+        //private DistritoBL distritoBL;
+        //private ProvinciaBL provinciaBL;
         public AgregarColegio()
         {
            
             InitializeComponent();
             colegioBL = new ColegioBL();
-            regionBL = new RegionBL();
-            provinciaBL = new ProvinciaBL();
-            distritoBL = new DistritoBL();
+            //regionBL = new RegionBL();
+            //provinciaBL = new ProvinciaBL();
+            //distritoBL = new DistritoBL();
             cboDep.DisplayMember = "Nombre";
             cboDep.ValueMember  = "Id";
-            cboDep.DataSource = regionBL.listarRegion();
+            //cboDep.DataSource = regionBL.listarRegion();
         }
         
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace Presentacion
             string d = cbProvincia.SelectedValue.ToString();
             cbDistrito.DisplayMember = "nombre";
             cbDistrito.ValueMember = "id";
-            cbDistrito.DataSource = distritoBL.listarDistrito(d);
+            //.DataSource = distritoBL.listarDistrito(d);
         }
 
         private void cbDistrito_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,7 +190,7 @@ namespace Presentacion
             string p = cboDep.SelectedValue.ToString();
             cbProvincia.DisplayMember = "Nombre";
             cbProvincia.ValueMember = "Id";
-            cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
+            //cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
 
         }
     }

@@ -15,7 +15,12 @@ namespace Presentacion
         public GestionOrientadores()
         {
             InitializeComponent();
+            
             //AQUI DEBES PODER VER LA LISTA DE ORIENTADORES, SI NO EXISTE, AL AGREGAR BUSCO ENTRE TODOS LOS USUARIOS DISPONIBLES QUE NO TIENEN CUENTA
+            
+            // WDF??? TU debes poner esa wada , tu dijiste que harias esta ventana, 
+            //pero para acelerar solo listare lo del nul y demas lo haces tu
+
             disenio_tabla();
         }
 
