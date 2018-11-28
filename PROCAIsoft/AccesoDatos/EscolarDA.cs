@@ -55,6 +55,7 @@ namespace AccesoDatos
                 MySqlDataReader lector = comando.ExecuteReader();
                 while (lector.Read())
                 {
+                    int idPersona = lector.GetInt32("IdPersona");
                     string dni = lector.GetString("DNI");
                     string nombres = lector.GetString("nombres");
                     string apellidoPaterno = lector.GetString("apellidoPaterno");
@@ -72,16 +73,20 @@ namespace AccesoDatos
                     if (gradoInt == 4) grado = TipoGrado.Cuarto;
                     else grado = TipoGrado.Quinto;
 
-                    //int nCalif = lector.GetInt32("nCalif");
-                    ////Verifica que la encuesta sea válida (posee cierto número de calificaciones registradas)
-                    ////Creamos la encuesta
-                    //if (nCalif == N_PREGUNTAS)
-                    //{
-                    //    Encuesta e = new Encuesta();
-                    //    e.IdEncuesta1 = idEncuesta;
-                    //    e.GrupoPerteneciente = G;
-                    //    escolares.Add(e);
-                    //}
+                    //Crea un alumno
+                    Escolar e = new Escolar(dni, nombres, apellidoPaterno, apellidoMaterno, 0, sexo, "", DateTime.MinValue, 1, grado, 0);
+                    e.IdPersona1 = e.IdUsuario1 = e.IdEscolar1 = idPersona;
+
+                    int idColegio = lector.GetInt32("IdColegio");
+                    string nombColegio = lector.GetString("nombre");
+
+                    //Crea el escolar
+                    Colegio c = new Colegio("", nombColegio, "", "", "", "", TipoColegio.Estatal, 0);
+
+                    //Asignar el colegio al escolar
+                    e.Colegio = c;
+
+                    escolares.Add(e);
                 }
                 con.Close();
             }

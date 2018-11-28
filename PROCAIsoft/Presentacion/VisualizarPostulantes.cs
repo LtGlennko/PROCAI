@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using LogicaNegocio;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,14 @@ namespace Presentacion
 {
     public partial class frmVisualizarPostulantes : Form
     {
+        private EscolarBL escolarBL;
 
         public frmVisualizarPostulantes()
         {
             InitializeComponent();
 
+            escolarBL = new EscolarBL();
+            dgvPostulantes.DataSource = escolarBL.listarEscolares();
             
         }
 
