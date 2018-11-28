@@ -67,10 +67,9 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(39, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(29, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 21);
+            this.label1.Size = new System.Drawing.Size(68, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
@@ -79,10 +78,9 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(40, 30);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(30, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 21);
+            this.label2.Size = new System.Drawing.Size(39, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pais:";
             // 
@@ -91,10 +89,9 @@ namespace Presentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(348, 30);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(261, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 21);
+            this.label3.Size = new System.Drawing.Size(116, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Departamento:";
             // 
@@ -103,10 +100,9 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(40, 88);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(30, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 21);
+            this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Provincia:";
             // 
@@ -115,10 +111,9 @@ namespace Presentacion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(348, 88);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(261, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 21);
+            this.label5.Size = new System.Drawing.Size(57, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Distrito:";
             // 
@@ -127,10 +122,9 @@ namespace Presentacion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(40, 146);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(30, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 21);
+            this.label6.Size = new System.Drawing.Size(78, 19);
             this.label6.TabIndex = 5;
             this.label6.Text = "Direccion:";
             // 
@@ -139,10 +133,9 @@ namespace Presentacion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(39, 95);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(29, 77);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 21);
+            this.label7.Size = new System.Drawing.Size(40, 19);
             this.label7.TabIndex = 6;
             this.label7.Text = "Tipo:";
             // 
@@ -151,10 +144,9 @@ namespace Presentacion
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(347, 100);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(260, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 21);
+            this.label8.Size = new System.Drawing.Size(42, 19);
             this.label8.TabIndex = 7;
             this.label8.Text = "RUC:";
             // 
@@ -163,42 +155,38 @@ namespace Presentacion
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(40, 199);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(30, 162);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 21);
+            this.label9.Size = new System.Drawing.Size(70, 19);
             this.label9.TabIndex = 8;
             this.label9.Text = "Télef. fijo:";
             // 
             // txtN
             // 
             this.txtN.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtN.Location = new System.Drawing.Point(145, 36);
-            this.txtN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtN.Location = new System.Drawing.Point(109, 29);
             this.txtN.MaxLength = 80;
             this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(530, 28);
+            this.txtN.Size = new System.Drawing.Size(398, 24);
             this.txtN.TabIndex = 9;
             this.txtN.TextChanged += new System.EventHandler(this.txtN_TextChanged);
             // 
             // txtDir
             // 
             this.txtDir.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDir.Location = new System.Drawing.Point(146, 142);
-            this.txtDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDir.Location = new System.Drawing.Point(110, 115);
             this.txtDir.MaxLength = 200;
             this.txtDir.Name = "txtDir";
-            this.txtDir.Size = new System.Drawing.Size(433, 28);
+            this.txtDir.Size = new System.Drawing.Size(326, 24);
             this.txtDir.TabIndex = 14;
             // 
             // txtRuc
             // 
             this.txtRuc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuc.Location = new System.Drawing.Point(501, 92);
-            this.txtRuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRuc.Location = new System.Drawing.Point(376, 75);
             this.txtRuc.MaxLength = 11;
             this.txtRuc.Name = "txtRuc";
-            this.txtRuc.Size = new System.Drawing.Size(174, 28);
+            this.txtRuc.Size = new System.Drawing.Size(132, 24);
             this.txtRuc.TabIndex = 16;
             this.txtRuc.TextChanged += new System.EventHandler(this.txtRuc_TextChanged);
             // 
@@ -206,10 +194,9 @@ namespace Presentacion
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(344, 561);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Location = new System.Drawing.Point(258, 456);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(131, 44);
+            this.btnAceptar.Size = new System.Drawing.Size(98, 36);
             this.btnAceptar.TabIndex = 18;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -222,10 +209,9 @@ namespace Presentacion
             this.cboTipoCol.Items.AddRange(new object[] {
             "Particular",
             "Estatal"});
-            this.cboTipoCol.Location = new System.Drawing.Point(145, 96);
-            this.cboTipoCol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoCol.Location = new System.Drawing.Point(109, 78);
             this.cboTipoCol.Name = "cboTipoCol";
-            this.cboTipoCol.Size = new System.Drawing.Size(160, 29);
+            this.cboTipoCol.Size = new System.Drawing.Size(121, 27);
             this.cboTipoCol.TabIndex = 21;
             this.cboTipoCol.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -233,11 +219,10 @@ namespace Presentacion
             // 
             this.txtPais.Enabled = false;
             this.txtPais.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(146, 25);
-            this.txtPais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPais.Location = new System.Drawing.Point(110, 20);
             this.txtPais.MaxLength = 30;
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(160, 28);
+            this.txtPais.Size = new System.Drawing.Size(121, 24);
             this.txtPais.TabIndex = 22;
             this.txtPais.Text = "Perú";
             this.txtPais.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -246,56 +231,31 @@ namespace Presentacion
             // 
             this.cboDep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDep.FormattingEnabled = true;
-            this.cboDep.Items.AddRange(new object[] {
-            "Lima",
-            "Ica",
-            "Piura",
-            "Lambayeque",
-            "Amazonas",
-            "Áncash",
-            "Apurímac",
-            "Arequipa",
-            "Ayacucho",
-            "Cajamarca",
-            "Cusco",
-            "Huancavelica",
-            "Huánuco",
-            "Ica",
-            "Junín",
-            "La Libertad",
-            "Loreto",
-            "Madre de Dios",
-            "Moquegua",
-            "Pasco",
-            "Puno",
-            "San Martín",
-            "Tacna",
-            "Tumbes",
-            "Ucayali"});
-            this.cboDep.Location = new System.Drawing.Point(502, 27);
-            this.cboDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboDep.Location = new System.Drawing.Point(376, 22);
             this.cboDep.Name = "cboDep";
-            this.cboDep.Size = new System.Drawing.Size(174, 29);
+            this.cboDep.Size = new System.Drawing.Size(132, 27);
             this.cboDep.TabIndex = 23;
+            this.cboDep.SelectedIndexChanged += new System.EventHandler(this.cboDep_SelectedIndexChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Teal;
-            this.label11.Location = new System.Drawing.Point(63, 602);
+            this.label11.Location = new System.Drawing.Point(47, 489);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 19);
+            this.label11.Size = new System.Drawing.Size(41, 17);
             this.label11.TabIndex = 53;
             this.label11.Text = "Atras";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 592);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 481);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
@@ -305,86 +265,29 @@ namespace Presentacion
             // 
             this.cbProvincia.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProvincia.FormattingEnabled = true;
-            this.cbProvincia.Items.AddRange(new object[] {
-            "Lima",
-            "Barranca",
-            "Cajatambo",
-            "Canta",
-            "Cañete",
-            "Huaral",
-            "Huarochiri",
-            "Huaura",
-            "Oyón",
-            "Yauyos"});
-            this.cbProvincia.Location = new System.Drawing.Point(146, 84);
-            this.cbProvincia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbProvincia.Location = new System.Drawing.Point(110, 68);
             this.cbProvincia.Name = "cbProvincia";
-            this.cbProvincia.Size = new System.Drawing.Size(160, 29);
+            this.cbProvincia.Size = new System.Drawing.Size(121, 27);
             this.cbProvincia.TabIndex = 59;
+            this.cbProvincia.SelectedIndexChanged += new System.EventHandler(this.cbProvincia_SelectedIndexChanged);
             // 
             // cbDistrito
             // 
             this.cbDistrito.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDistrito.FormattingEnabled = true;
-            this.cbDistrito.Items.AddRange(new object[] {
-            "Ancón",
-            "Ate",
-            "Barranco",
-            "Breña",
-            "Carabayllo",
-            "Chaclacayo",
-            "Chorrillos",
-            "Cieneguilla",
-            "Comas",
-            "El Agustino",
-            "Huaycán4​",
-            "Independencia",
-            "Jesús María",
-            "La Molina",
-            "La Victoria",
-            "Lima",
-            "Lince",
-            "Los Olivos",
-            "Lurigancho",
-            "Lurín",
-            "Magdalena del Mar",
-            "Miraflores",
-            "Pachacamac",
-            "Pucusana",
-            "Pueblo Libre",
-            "Puente Piedra",
-            "Punta Hermosa",
-            "Punta Negra",
-            "Rímac",
-            "San Bartolo",
-            "San Borja",
-            "San Isidro",
-            "San Juan de Lurigancho",
-            "San Juan de Miraflores",
-            "San Luis",
-            "San Martín de Porres",
-            "San Miguel",
-            "Santa Anita",
-            "Santa María del Mar",
-            "Santa Rosa",
-            "Santiago de Surco",
-            "Surquillo",
-            "Villa El Salvador",
-            "Villa María del Triunfo"});
-            this.cbDistrito.Location = new System.Drawing.Point(502, 84);
-            this.cbDistrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbDistrito.Location = new System.Drawing.Point(376, 68);
             this.cbDistrito.Name = "cbDistrito";
-            this.cbDistrito.Size = new System.Drawing.Size(174, 29);
+            this.cbDistrito.Size = new System.Drawing.Size(132, 27);
             this.cbDistrito.TabIndex = 58;
+            this.cbDistrito.SelectedIndexChanged += new System.EventHandler(this.cbDistrito_SelectedIndexChanged);
             // 
             // txtTelf
             // 
             this.txtTelf.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelf.Location = new System.Drawing.Point(146, 196);
-            this.txtTelf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelf.Location = new System.Drawing.Point(110, 159);
             this.txtTelf.MaxLength = 7;
             this.txtTelf.Name = "txtTelf";
-            this.txtTelf.Size = new System.Drawing.Size(160, 28);
+            this.txtTelf.Size = new System.Drawing.Size(121, 24);
             this.txtTelf.TabIndex = 17;
             // 
             // lbl_titulo
@@ -392,10 +295,9 @@ namespace Presentacion
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(61, 36);
-            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_titulo.Location = new System.Drawing.Point(46, 29);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(333, 45);
+            this.lbl_titulo.Size = new System.Drawing.Size(259, 37);
             this.lbl_titulo.TabIndex = 57;
             this.lbl_titulo.Text = "Agregar Colegio";
             // 
@@ -404,8 +306,9 @@ namespace Presentacion
             this.panel_superior.BackColor = System.Drawing.Color.Teal;
             this.panel_superior.Controls.Add(this.lbl_titulo);
             this.panel_superior.Location = new System.Drawing.Point(-1, -1);
+            this.panel_superior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_superior.Name = "panel_superior";
-            this.panel_superior.Size = new System.Drawing.Size(826, 114);
+            this.panel_superior.Size = new System.Drawing.Size(620, 93);
             this.panel_superior.TabIndex = 60;
             // 
             // groupBox1
@@ -417,9 +320,11 @@ namespace Presentacion
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox1.Location = new System.Drawing.Point(68, 136);
+            this.groupBox1.Location = new System.Drawing.Point(51, 110);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(704, 146);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(528, 119);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
@@ -439,19 +344,21 @@ namespace Presentacion
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox2.Location = new System.Drawing.Point(67, 298);
+            this.groupBox2.Location = new System.Drawing.Point(50, 242);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(705, 245);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(529, 199);
             this.groupBox2.TabIndex = 62;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de ubicación";
             // 
             // AgregarColegio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(825, 640);
+            this.ClientSize = new System.Drawing.Size(619, 520);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel_superior);
@@ -459,7 +366,6 @@ namespace Presentacion
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAceptar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AgregarColegio";
             this.Text = "AgregarColegio";
             this.Load += new System.EventHandler(this.AgregarColegio_Load);
