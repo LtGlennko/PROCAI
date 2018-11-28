@@ -24,6 +24,7 @@ namespace Modelo
 
         public int IdOrientador1 { get => IdOrientador; set => IdOrientador = value; }
         public Colegio Colegio { get => colegio; set => colegio = value; }
+        public string ColegioStr { get => colegio.Nombre; }
         public void setColegio(Colegio cole)
         {
             this.colegio = cole;

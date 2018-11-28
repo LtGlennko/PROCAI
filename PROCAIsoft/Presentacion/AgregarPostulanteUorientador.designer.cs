@@ -312,9 +312,9 @@ namespace Presentacion
             // btnBuscarPersona
             // 
             this.btnBuscarPersona.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPersona.Location = new System.Drawing.Point(342, 25);
+            this.btnBuscarPersona.Location = new System.Drawing.Point(347, 25);
             this.btnBuscarPersona.Name = "btnBuscarPersona";
-            this.btnBuscarPersona.Size = new System.Drawing.Size(27, 23);
+            this.btnBuscarPersona.Size = new System.Drawing.Size(30, 23);
             this.btnBuscarPersona.TabIndex = 44;
             this.btnBuscarPersona.Text = "...";
             this.btnBuscarPersona.UseVisualStyleBackColor = true;
@@ -456,7 +456,7 @@ namespace Presentacion
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
             this.pictureBox1.Location = new System.Drawing.Point(9, 624);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -480,7 +480,7 @@ namespace Presentacion
             this.panel_superior.BackColor = System.Drawing.Color.Teal;
             this.panel_superior.Controls.Add(this.lbl_titulo);
             this.panel_superior.Location = new System.Drawing.Point(0, 27);
-            this.panel_superior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_superior.Margin = new System.Windows.Forms.Padding(2);
             this.panel_superior.Name = "panel_superior";
             this.panel_superior.Size = new System.Drawing.Size(619, 91);
             this.panel_superior.TabIndex = 65;

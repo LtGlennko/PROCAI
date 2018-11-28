@@ -68,12 +68,14 @@
     <Compile Include="CalificacionPXEDA.cs" />
     <Compile Include="CargoDA.cs" />
     <Compile Include="ColegioDA.cs" />
+    <Compile Include="CuentaDA.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="EncuestaDA.cs" />
     <Compile Include="EscolarDA.cs" />
     <Compile Include="GrupoDA.cs" />
     <Compile Include="GuiaDA.cs" />
     <Compile Include="MerchandisingDA.cs" />
+    <Compile Include="OrientadorDA.cs" />
     <Compile Include="PersonaDA.cs" />
     <Compile Include="PreguntaDA.cs" />
     <Compile Include="ProcesoAdmisionDA.cs" />

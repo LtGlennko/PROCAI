@@ -25,7 +25,7 @@ namespace Presentacion
             personaBL = new PersonaBL();
             dgvPersonas.AutoGenerateColumns = false;
             dgvPersonas.RowHeadersVisible = false;
-            dgvPersonas.DataSource = personaBL.listarPersonas();
+            dgvPersonas.DataSource = personaBL.listarPersonasSinUsuario();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

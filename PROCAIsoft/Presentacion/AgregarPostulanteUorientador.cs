@@ -17,17 +17,60 @@ namespace Presentacion
         private Persona personaBus;
         private ColegioBL colegioBL;
         private EscolarBL escolarBL;
+        private CuentaBL cuentaBL;
+        private PersonaBL personaBL;
         private int idPersonaSel;
-        public AgregarPostulanteUorientador(char tipoUsuario)
+        private char tipoUsu;
+        private int idUsuModif;
+        //El parametro idUsu es mayor a 0 si es que se presionó el botón modificar
+        //Los parametros tlfApoderado y grado son 0 si no se quiere editar un postulante
+        public AgregarPostulanteUorientador(char tipoUsuario, int idUsu, int idColegio, int tlfApoderado, int grado)
         {
             InitializeComponent();
+
+            tipoUsu = tipoUsuario;
+            idUsuModif = idUsu;
+            
             colegioBL = new ColegioBL();
             escolarBL = new EscolarBL();
+            cuentaBL = new CuentaBL();
+            personaBL = new PersonaBL();
 
             cboColegio.DataSource = colegioBL.listarColegios();
             cboColegio.ValueMember = "IdColegio1";
             cboColegio.DisplayMember = "Nombre";
-            bloquearBotones();
+            bloquearBotonesPersona();
+
+            //Si el idUsuModif es mayor a 0 significa que se seleccionó Modificar
+            if (idUsuModif > 0)
+            {
+                //Buscamos la persona para autocompletar los campos
+                BindingList<Persona> personas = personaBL.listarPersonas();
+                Persona personaAmostrar = null;
+                foreach (Persona p in personas)
+                {
+                    if (p.IdPersona1 == idUsuModif)
+                        personaAmostrar = p;
+                }
+                if (personaAmostrar != null)
+                {
+                    completarCamposPersona(personaAmostrar);
+                    cboColegio.SelectedValue = idColegio;
+                    if(tipoUsu == 'P' && tlfApoderado > 0 && grado > 0)
+                    {
+                        txtTelf.Text = tlfApoderado.ToString();
+                        if (grado == 3)
+                            cboGrado.Text = "Tercero";
+                        else if (grado == 4)
+                            cboGrado.Text = "Cuarto";
+                        else
+                            cboGrado.Text = "Quinto";
+                    }
+                }
+                txtUsuario.Enabled = false;
+                txtContraseña.Enabled = false;
+                btnBuscarPersona.Enabled = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,11 +100,12 @@ namespace Presentacion
                 MessageBox.Show("Debe seleccionar un colegio", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if ((txtUsuario.Text == "") || (txtContraseña.Text == ""))
+            if (((txtUsuario.Text == "") || (txtContraseña.Text == "")) && idPersonaSel==0)
             {
                 MessageBox.Show("Debe ingresar un usuario y contraseña para la nueva cuenta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            
             TipoSexo sexo;
             if (cboSexo.Text == "Hombre") sexo = TipoSexo.Hombre;
             else if (cboSexo.Text == "Mujer") sexo = TipoSexo.Mujer;
@@ -71,14 +115,32 @@ namespace Presentacion
             else if (cboGrado.Text == "Cuarto") grado = TipoGrado.Cuarto;
             else grado = TipoGrado.Quinto;
             Escolar escolar = new Escolar(txtDNI.Text, txtNombres.Text, txtApPat.Text, txtApMat.Text, Int32.Parse(txtCelular.Text), sexo, txtCorreoE.Text, DateTime.Today, 1, grado, Int32.Parse(txtTelf.Text));
-            escolar.IdPersona1 = escolar.IdUsuario1 = escolar.IdUsuario1 = idPersonaSel;
+            escolar.IdPersona1 = escolar.IdUsuario1 = escolar.IdEscolar1 = idPersonaSel;
+            //Asignar cuenta
             Cuenta cuenta = new Cuenta(DateTime.MinValue, txtUsuario.Text, txtContraseña.Text);
             escolar.CuentaUsuario = cuenta;
+            //Asignar colegio
+            escolar.Colegio = (Colegio)cboColegio.SelectedItem;
             //Registrar nuevo escolar
-            if (escolarBL.registrarEscolar(escolar) == 1)
+            if (cuentaBL.existeNombreUsuario(cuenta))
             {
-                MessageBox.Show("Postulante guardado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }            
+                MessageBox.Show("El nombre de usuario ya está siendo en uso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (escolarBL.registrarEscolar(escolar) == 0)
+            {
+                MessageBox.Show("Error al registrar el escolar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("Escolar registrado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //Si se quiere editar un escolar u orientador, no se registra ni actualiza la cuenta
+            //Si el idUsuModif es mayor a 0 significa que se seleccionó Modificar
+            if (idUsuModif > 0) return;
+            if (!cuentaBL.registrarCuenta(idPersonaSel, cuenta))
+            {
+                MessageBox.Show("Error al registrar la cuenta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -95,22 +157,28 @@ namespace Presentacion
             }
             if(personaBus != null)
             {
-                //Se completan los campos predeterminados
-                txtDNI.Text = personaBus.DNI1;
-                txtNombres.Text = personaBus.Nombres;
-                txtApPat.Text = personaBus.ApellidoPaterno;
-                txtApMat.Text = personaBus.ApellidoMaterno;
-                txtCelular.Text = personaBus.Celular.ToString();
-                TipoSexo s = personaBus.Sexo;
-                if (s == TipoSexo.Hombre) cboSexo.Text = "Hombre";
-                else if (s == TipoSexo.Mujer) cboSexo.Text = "Mujer";
-                else cboSexo.Text = "Personalizado";
-                txtCorreoE.Text = personaBus.CorreoElectronico;
-                idPersonaSel = personaBus.IdPersona1;
+                completarCamposPersona(personaBus);
             }
         }
 
-        private void bloquearBotones()
+        //Autocompletar campos con persona
+        private void completarCamposPersona(Persona P)
+        {
+            txtDNI.Text = P.DNI1;
+            txtNombres.Text = P.Nombres;
+            txtApPat.Text = P.ApellidoPaterno;
+            txtApMat.Text = P.ApellidoMaterno;
+            txtCelular.Text = P.Celular.ToString();
+            TipoSexo s = P.Sexo;
+            if (s == TipoSexo.Hombre) cboSexo.Text = "Hombre";
+            else if (s == TipoSexo.Mujer) cboSexo.Text = "Mujer";
+            else cboSexo.Text = "Personalizado";
+            txtCorreoE.Text = P.CorreoElectronico;
+            idPersonaSel = P.IdPersona1;
+        }
+
+
+        private void bloquearBotonesPersona()
         {
             txtDNI.Enabled = false;
             txtNombres.Enabled = false;

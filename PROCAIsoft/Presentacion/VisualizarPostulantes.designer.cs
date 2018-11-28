@@ -44,6 +44,11 @@ namespace Presentacion
             this.btnModificar = new System.Windows.Forms.Button();
             this.panel_superior = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresYap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colegio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlfApoderado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPostulantes)).BeginInit();
             this.panel_superior.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +69,12 @@ namespace Presentacion
             // 
             this.dgvPostulantes.AllowUserToOrderColumns = true;
             this.dgvPostulantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPostulantes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DNI,
+            this.nombresYap,
+            this.Colegio,
+            this.Grado,
+            this.tlfApoderado});
             this.dgvPostulantes.Location = new System.Drawing.Point(76, 119);
             this.dgvPostulantes.Name = "dgvPostulantes";
             this.dgvPostulantes.Size = new System.Drawing.Size(670, 297);
@@ -87,7 +98,7 @@ namespace Presentacion
             this.panel_superior.BackColor = System.Drawing.Color.Teal;
             this.panel_superior.Controls.Add(this.label3);
             this.panel_superior.Location = new System.Drawing.Point(-1, -1);
-            this.panel_superior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_superior.Margin = new System.Windows.Forms.Padding(2);
             this.panel_superior.Name = "panel_superior";
             this.panel_superior.Size = new System.Drawing.Size(887, 93);
             this.panel_superior.TabIndex = 64;
@@ -102,6 +113,48 @@ namespace Presentacion
             this.label3.Size = new System.Drawing.Size(348, 37);
             this.label3.TabIndex = 57;
             this.label3.Text = "Gestion de Postulantes";
+            // 
+            // DNI
+            // 
+            this.DNI.DataPropertyName = "DNI1";
+            this.DNI.Frozen = true;
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
+            // 
+            // nombresYap
+            // 
+            this.nombresYap.DataPropertyName = "NombresYapellidos";
+            this.nombresYap.Frozen = true;
+            this.nombresYap.HeaderText = "Nombres y apellidos";
+            this.nombresYap.Name = "nombresYap";
+            this.nombresYap.ReadOnly = true;
+            this.nombresYap.Width = 200;
+            // 
+            // Colegio
+            // 
+            this.Colegio.DataPropertyName = "ColegioStr";
+            this.Colegio.Frozen = true;
+            this.Colegio.HeaderText = "Colegio";
+            this.Colegio.Name = "Colegio";
+            this.Colegio.Width = 140;
+            // 
+            // Grado
+            // 
+            this.Grado.DataPropertyName = "GradoStr";
+            this.Grado.Frozen = true;
+            this.Grado.HeaderText = "Grado";
+            this.Grado.Name = "Grado";
+            this.Grado.Width = 50;
+            // 
+            // tlfApoderado
+            // 
+            this.tlfApoderado.DataPropertyName = "TelefonoApoderado";
+            this.tlfApoderado.Frozen = true;
+            this.tlfApoderado.HeaderText = "Telefono Apoderado";
+            this.tlfApoderado.Name = "tlfApoderado";
+            this.tlfApoderado.ReadOnly = true;
+            this.tlfApoderado.Width = 120;
             // 
             // frmVisualizarPostulantes
             // 
@@ -131,5 +184,10 @@ namespace Presentacion
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Panel panel_superior;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresYap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colegio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tlfApoderado;
     }
 }

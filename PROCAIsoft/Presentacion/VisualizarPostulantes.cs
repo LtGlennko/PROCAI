@@ -20,6 +20,9 @@ namespace Presentacion
         {
             InitializeComponent();
 
+            dgvPostulantes.AutoGenerateColumns = false;
+            dgvPostulantes.RowHeadersVisible = false;
+
             escolarBL = new EscolarBL();
             dgvPostulantes.DataSource = escolarBL.listarEscolares();
             
@@ -27,11 +30,12 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarPostulanteUorientador EP = new AgregarPostulanteUorientador('P');
+            AgregarPostulanteUorientador EP = new AgregarPostulanteUorientador('P', 0, 0, 0, 0);
             if (EP.ShowDialog() == DialogResult.OK)
             {
 
             }
+            dgvPostulantes.DataSource = escolarBL.listarEscolares();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -46,7 +50,13 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            
+            Escolar esc = (Escolar)dgvPostulantes.CurrentRow.DataBoundItem;
+            AgregarPostulanteUorientador EP = new AgregarPostulanteUorientador('P', esc.IdEscolar1, esc.Colegio.IdColegio1, esc.TelefonoApoderado, esc.GradoInt);
+            if (EP.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            dgvPostulantes.DataSource = escolarBL.listarEscolares();
         }
 
         private void button1_Click(object sender, EventArgs e)

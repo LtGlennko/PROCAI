@@ -73,8 +73,10 @@ namespace AccesoDatos
                     if (gradoInt == 4) grado = TipoGrado.Cuarto;
                     else grado = TipoGrado.Quinto;
 
+                    int tlfApoderado = lector.GetInt32("telefonoApoderado");
+
                     //Crea un alumno
-                    Escolar e = new Escolar(dni, nombres, apellidoPaterno, apellidoMaterno, 0, sexo, "", DateTime.MinValue, 1, grado, 0);
+                    Escolar e = new Escolar(dni, nombres, apellidoPaterno, apellidoMaterno, 0, sexo, "", DateTime.MinValue, 1, grado, tlfApoderado);
                     e.IdPersona1 = e.IdUsuario1 = e.IdEscolar1 = idPersona;
 
                     int idColegio = lector.GetInt32("IdColegio");
@@ -82,6 +84,7 @@ namespace AccesoDatos
 
                     //Crea el escolar
                     Colegio c = new Colegio("", nombColegio, "", "", "", "", TipoColegio.Estatal, 0);
+                    c.IdColegio1 = idColegio;
 
                     //Asignar el colegio al escolar
                     e.Colegio = c;

@@ -20,5 +20,10 @@ namespace LogicaNegocio
         {
             return personaDA.listarPersonas();
         }
+
+        public BindingList<Persona> listarPersonasSinUsuario()
+        {
+            return personaDA.listarPersonasSinUsuario();
+        }
     }
 }
