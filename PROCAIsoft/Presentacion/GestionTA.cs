@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
 using LogicaNegocio;
-using System.Windows.Forms;
+
 using System.Text.RegularExpressions;
 
 namespace Presentacion
@@ -23,6 +23,11 @@ namespace Presentacion
             rbNombre.Checked = true;
             tipoactBL = new TipoActividadBL();
             dgvTA.DataSource = tipoactBL.listarTipoActividad();
+            dgvTA.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvTA.ScrollBars = ScrollBars.Both;
+            dgvTA.ForeColor = Color.Black;
+            //dgvStock.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
+            dgvTA.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             disenio_tabla();
             dgvTA.RowHeadersVisible = false;
         }

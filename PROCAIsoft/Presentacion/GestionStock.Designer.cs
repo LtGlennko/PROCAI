@@ -59,10 +59,9 @@ namespace Presentacion
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.White;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(701, 165);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(526, 134);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -71,11 +70,10 @@ namespace Presentacion
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(281, 169);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(211, 137);
             this.txtBuscar.MaxLength = 50;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(384, 28);
+            this.txtBuscar.Size = new System.Drawing.Size(289, 24);
             this.txtBuscar.TabIndex = 1;
             // 
             // dgvStock
@@ -83,11 +81,10 @@ namespace Presentacion
             this.dgvStock.AllowUserToAddRows = false;
             this.dgvStock.AllowUserToDeleteRows = false;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStock.Location = new System.Drawing.Point(121, 214);
-            this.dgvStock.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvStock.Location = new System.Drawing.Point(81, 192);
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
-            this.dgvStock.Size = new System.Drawing.Size(831, 361);
+            this.dgvStock.Size = new System.Drawing.Size(623, 199);
             this.dgvStock.TabIndex = 5;
             this.dgvStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellContentClick);
             // 
@@ -95,10 +92,9 @@ namespace Presentacion
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.White;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(986, 350);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(739, 348);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(135, 42);
+            this.btnEliminar.Size = new System.Drawing.Size(101, 34);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -108,10 +104,9 @@ namespace Presentacion
             // 
             this.btnEditar.BackColor = System.Drawing.Color.White;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(986, 283);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(741, 273);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(133, 41);
+            this.btnEditar.Size = new System.Drawing.Size(100, 33);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -121,10 +116,9 @@ namespace Presentacion
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(986, 215);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(740, 204);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(135, 40);
+            this.btnAgregar.Size = new System.Drawing.Size(101, 32);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -135,10 +129,9 @@ namespace Presentacion
             this.rbNombre.AutoSize = true;
             this.rbNombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNombre.ForeColor = System.Drawing.Color.Teal;
-            this.rbNombre.Location = new System.Drawing.Point(405, 133);
-            this.rbNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.rbNombre.Location = new System.Drawing.Point(304, 108);
             this.rbNombre.Name = "rbNombre";
-            this.rbNombre.Size = new System.Drawing.Size(98, 25);
+            this.rbNombre.Size = new System.Drawing.Size(82, 23);
             this.rbNombre.TabIndex = 12;
             this.rbNombre.TabStop = true;
             this.rbNombre.Text = "Nombre";
@@ -150,10 +143,9 @@ namespace Presentacion
             this.rbStock.AutoSize = true;
             this.rbStock.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbStock.ForeColor = System.Drawing.Color.Teal;
-            this.rbStock.Location = new System.Drawing.Point(526, 133);
-            this.rbStock.Margin = new System.Windows.Forms.Padding(4);
+            this.rbStock.Location = new System.Drawing.Point(394, 108);
             this.rbStock.Name = "rbStock";
-            this.rbStock.Size = new System.Drawing.Size(167, 25);
+            this.rbStock.Size = new System.Drawing.Size(139, 23);
             this.rbStock.TabIndex = 13;
             this.rbStock.TabStop = true;
             this.rbStock.Text = "Stock Disponible";
@@ -164,10 +156,9 @@ namespace Presentacion
             this.rbCodigo.AutoSize = true;
             this.rbCodigo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCodigo.ForeColor = System.Drawing.Color.Teal;
-            this.rbCodigo.Location = new System.Drawing.Point(281, 133);
-            this.rbCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.rbCodigo.Location = new System.Drawing.Point(211, 108);
             this.rbCodigo.Name = "rbCodigo";
-            this.rbCodigo.Size = new System.Drawing.Size(93, 25);
+            this.rbCodigo.Size = new System.Drawing.Size(78, 23);
             this.rbCodigo.TabIndex = 14;
             this.rbCodigo.TabStop = true;
             this.rbCodigo.Text = "Código";
@@ -178,8 +169,9 @@ namespace Presentacion
             this.panel_superior.BackColor = System.Drawing.Color.Teal;
             this.panel_superior.Controls.Add(this.lbl_titulo);
             this.panel_superior.Location = new System.Drawing.Point(-2, -1);
+            this.panel_superior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_superior.Name = "panel_superior";
-            this.panel_superior.Size = new System.Drawing.Size(1205, 112);
+            this.panel_superior.Size = new System.Drawing.Size(904, 91);
             this.panel_superior.TabIndex = 64;
             // 
             // lbl_titulo
@@ -187,20 +179,19 @@ namespace Presentacion
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(62, 33);
-            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_titulo.Location = new System.Drawing.Point(46, 27);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(513, 45);
+            this.lbl_titulo.Size = new System.Drawing.Size(402, 37);
             this.lbl_titulo.TabIndex = 57;
             this.lbl_titulo.Text = "Gestion de Merchandising";
             // 
             // frmGestStock
             // 
             this.AcceptButton = this.btnAgregar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1182, 588);
+            this.ClientSize = new System.Drawing.Size(886, 478);
             this.Controls.Add(this.panel_superior);
             this.Controls.Add(this.rbCodigo);
             this.Controls.Add(this.rbStock);
@@ -213,7 +204,6 @@ namespace Presentacion
             this.Controls.Add(this.btnBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestStock";
             this.Text = "GestionStock";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();

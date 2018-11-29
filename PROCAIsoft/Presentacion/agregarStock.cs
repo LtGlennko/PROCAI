@@ -35,7 +35,7 @@ namespace Presentacion
                 int num = Convert.ToInt32(txtC.Text);
                 if(num > 500)
                 {
-                    MessageBox.Show("Debe ingresar número menor a 10000", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe ingresar número menor a 500", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
