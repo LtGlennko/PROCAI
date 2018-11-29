@@ -35,6 +35,7 @@ namespace Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,18 +48,18 @@ namespace Presentacion
             this.txtPais = new System.Windows.Forms.TextBox();
             this.cboDep = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbProvincia = new System.Windows.Forms.ComboBox();
+            this.cbDistrito = new System.Windows.Forms.ComboBox();
             this.txtTelf = new System.Windows.Forms.TextBox();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel_superior = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSolicitudes = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_superior.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,6 +105,17 @@ namespace Presentacion
             this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Provincia:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Teal;
+            this.label5.Location = new System.Drawing.Point(261, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Distrito:";
             // 
             // label6
             // 
@@ -182,7 +194,7 @@ namespace Presentacion
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(417, 457);
+            this.btnAceptar.Location = new System.Drawing.Point(258, 456);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(98, 36);
             this.btnAceptar.TabIndex = 18;
@@ -230,13 +242,24 @@ namespace Presentacion
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Teal;
-            this.label11.Location = new System.Drawing.Point(47, 520);
+            this.label11.Location = new System.Drawing.Point(47, 489);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 17);
             this.label11.TabIndex = 53;
             this.label11.Text = "Atras";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 481);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cbProvincia
             // 
@@ -247,6 +270,16 @@ namespace Presentacion
             this.cbProvincia.Size = new System.Drawing.Size(121, 27);
             this.cbProvincia.TabIndex = 59;
             this.cbProvincia.SelectedIndexChanged += new System.EventHandler(this.cbProvincia_SelectedIndexChanged);
+            // 
+            // cbDistrito
+            // 
+            this.cbDistrito.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDistrito.FormattingEnabled = true;
+            this.cbDistrito.Location = new System.Drawing.Point(376, 68);
+            this.cbDistrito.Name = "cbDistrito";
+            this.cbDistrito.Size = new System.Drawing.Size(132, 27);
+            this.cbDistrito.TabIndex = 58;
+            this.cbDistrito.SelectedIndexChanged += new System.EventHandler(this.cbDistrito_SelectedIndexChanged);
             // 
             // txtTelf
             // 
@@ -273,7 +306,7 @@ namespace Presentacion
             this.panel_superior.BackColor = System.Drawing.Color.Teal;
             this.panel_superior.Controls.Add(this.lbl_titulo);
             this.panel_superior.Location = new System.Drawing.Point(-1, -1);
-            this.panel_superior.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_superior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_superior.Name = "panel_superior";
             this.panel_superior.Size = new System.Drawing.Size(620, 93);
             this.panel_superior.TabIndex = 60;
@@ -288,9 +321,9 @@ namespace Presentacion
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.Teal;
             this.groupBox1.Location = new System.Drawing.Point(51, 110);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Size = new System.Drawing.Size(528, 119);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
@@ -299,56 +332,33 @@ namespace Presentacion
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cbProvincia);
+            this.groupBox2.Controls.Add(this.cbDistrito);
             this.groupBox2.Controls.Add(this.cboDep);
             this.groupBox2.Controls.Add(this.txtPais);
             this.groupBox2.Controls.Add(this.txtTelf);
             this.groupBox2.Controls.Add(this.txtDir);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.Color.Teal;
             this.groupBox2.Location = new System.Drawing.Point(50, 242);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Size = new System.Drawing.Size(529, 199);
             this.groupBox2.TabIndex = 62;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de ubicación";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 512);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnSolicitudes
-            // 
-            this.btnSolicitudes.BackColor = System.Drawing.Color.White;
-            this.btnSolicitudes.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitudes.Location = new System.Drawing.Point(139, 457);
-            this.btnSolicitudes.Name = "btnSolicitudes";
-            this.btnSolicitudes.Size = new System.Drawing.Size(123, 36);
-            this.btnSolicitudes.TabIndex = 63;
-            this.btnSolicitudes.Text = "Ver Solicitudes";
-            this.btnSolicitudes.UseVisualStyleBackColor = false;
-            this.btnSolicitudes.Click += new System.EventHandler(this.btnSolicitudes_Click);
             // 
             // AgregarColegio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(618, 555);
-            this.Controls.Add(this.btnSolicitudes);
+            this.ClientSize = new System.Drawing.Size(619, 520);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel_superior);
@@ -359,13 +369,13 @@ namespace Presentacion
             this.Name = "AgregarColegio";
             this.Text = "AgregarColegio";
             this.Load += new System.EventHandler(this.AgregarColegio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_superior.ResumeLayout(false);
             this.panel_superior.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,6 +387,7 @@ namespace Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -391,11 +402,11 @@ namespace Presentacion
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbProvincia;
+        private System.Windows.Forms.ComboBox cbDistrito;
         private System.Windows.Forms.TextBox txtTelf;
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Panel panel_superior;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnSolicitudes;
     }
 }

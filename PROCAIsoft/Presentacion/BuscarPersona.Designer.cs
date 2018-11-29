@@ -49,10 +49,9 @@
             this.labelAtras.AutoSize = true;
             this.labelAtras.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAtras.ForeColor = System.Drawing.Color.Teal;
-            this.labelAtras.Location = new System.Drawing.Point(50, 410);
-            this.labelAtras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAtras.Location = new System.Drawing.Point(66, 504);
             this.labelAtras.Name = "labelAtras";
-            this.labelAtras.Size = new System.Drawing.Size(42, 19);
+            this.labelAtras.Size = new System.Drawing.Size(54, 21);
             this.labelAtras.TabIndex = 9;
             this.labelAtras.Text = "Atras";
             // 
@@ -60,10 +59,10 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(543, 391);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Location = new System.Drawing.Point(724, 481);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(95, 36);
+            this.btnAceptar.Size = new System.Drawing.Size(127, 44);
             this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -80,12 +79,12 @@
             this.Celular,
             this.Sexo,
             this.CorreoElectronico});
-            this.dgvPersonas.Location = new System.Drawing.Point(52, 103);
-            this.dgvPersonas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPersonas.Location = new System.Drawing.Point(70, 127);
+            this.dgvPersonas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPersonas.Name = "dgvPersonas";
             this.dgvPersonas.ReadOnly = true;
             this.dgvPersonas.RowTemplate.Height = 28;
-            this.dgvPersonas.Size = new System.Drawing.Size(564, 274);
+            this.dgvPersonas.Size = new System.Drawing.Size(752, 337);
             this.dgvPersonas.TabIndex = 5;
             // 
             // DNI
@@ -126,10 +125,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 401);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 494);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -140,9 +139,10 @@
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(46, 27);
+            this.lbl_titulo.Location = new System.Drawing.Point(62, 33);
+            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(236, 37);
+            this.lbl_titulo.Size = new System.Drawing.Size(300, 45);
             this.lbl_titulo.TabIndex = 57;
             this.lbl_titulo.Text = "Buscar Persona";
             // 
@@ -151,22 +151,21 @@
             this.panel_superior.BackColor = System.Drawing.Color.Teal;
             this.panel_superior.Controls.Add(this.lbl_titulo);
             this.panel_superior.Location = new System.Drawing.Point(0, -1);
-            this.panel_superior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_superior.Name = "panel_superior";
-            this.panel_superior.Size = new System.Drawing.Size(688, 91);
+            this.panel_superior.Size = new System.Drawing.Size(917, 112);
             this.panel_superior.TabIndex = 63;
             // 
             // BuscarPersona
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(686, 442);
+            this.ClientSize = new System.Drawing.Size(915, 544);
             this.Controls.Add(this.panel_superior);
             this.Controls.Add(this.labelAtras);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvPersonas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BuscarPersona";
             this.Text = "Búsqueda de Persona";
             this.Load += new System.EventHandler(this.BuscarPersona_Load);

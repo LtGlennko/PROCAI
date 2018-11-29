@@ -17,22 +17,20 @@ namespace Presentacion
     {
         
         private ColegioBL colegioBL;
-        private RegionBL regionBL;
-        private DistritoBL distritoBL;
-        private ProvinciaBL provinciaBL;
-        private SolicitudColegioBL solicitudColegioBL;
+        //private RegionBL regionBL;
+        //private DistritoBL distritoBL;
+        //private ProvinciaBL provinciaBL;
         public AgregarColegio()
         {
            
             InitializeComponent();
             colegioBL = new ColegioBL();
-            regionBL = new RegionBL();
-            provinciaBL = new ProvinciaBL();
-            distritoBL = new DistritoBL();
-            solicitudColegioBL = new SolicitudColegioBL();
+            //regionBL = new RegionBL();
+            //provinciaBL = new ProvinciaBL();
+            //distritoBL = new DistritoBL();
             cboDep.DisplayMember = "Nombre";
             cboDep.ValueMember  = "Id";
-            cboDep.DataSource = regionBL.listarRegion();
+            //cboDep.DataSource = regionBL.listarRegion();
         }
         
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -41,7 +39,7 @@ namespace Presentacion
             string pai = txtPais.Text;
             string dep = cboDep.Text;
             string pro = cbProvincia.Text;
-            
+            string dis = cbDistrito.Text;
             string dir = txtDir.Text;
             string tipStr = cboTipoCol.Text;
             TipoColegio tip;
@@ -77,7 +75,11 @@ namespace Presentacion
                 MessageBox.Show("Debe ingresar la provincia", "Provincia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            
+            if (dis == "")
+            {
+                MessageBox.Show("Debe ingresar el distrito", "Dirección", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (dir == "")
             {
                 MessageBox.Show("Debe ingresar la dirección", "Dirección", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -173,7 +175,9 @@ namespace Presentacion
         private void cbProvincia_SelectedIndexChanged(object sender, EventArgs e)
         {
             string d = cbProvincia.SelectedValue.ToString();
-            
+            cbDistrito.DisplayMember = "nombre";
+            cbDistrito.ValueMember = "id";
+            //.DataSource = distritoBL.listarDistrito(d);
         }
 
         private void cbDistrito_SelectedIndexChanged(object sender, EventArgs e)
@@ -186,22 +190,8 @@ namespace Presentacion
             string p = cboDep.SelectedValue.ToString();
             cbProvincia.DisplayMember = "Nombre";
             cbProvincia.ValueMember = "Id";
-            cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
+            //cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
 
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSolicitudes_Click(object sender, EventArgs e)
-        {
-            VisualizarSolicitudesDeColegios v = new VisualizarSolicitudesDeColegios();
-            v.StartPosition = FormStartPosition.CenterScreen;
-            if (DialogResult.OK == v.ShowDialog())
-            {
-            }
         }
     }
 }

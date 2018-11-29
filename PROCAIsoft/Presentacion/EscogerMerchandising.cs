@@ -27,6 +27,7 @@ namespace Presentacion
             lm = new BindingList<Merchandising>();
             lm = mbl.listarMerchandising();
             cmbx_tipoProceso.DataSource = lm;
+            
         }
 
         public int getIdM() {
