@@ -28,6 +28,7 @@ namespace Presentacion
         private bool listarActividades() {
             SolicitudInscripcionBL SIBL = new SolicitudInscripcionBL();
             listaSIA = new BindingList<SolicitudInscripcionActividad>();
+
             bool success = SIBL.listarSolicitudInscripcionActividad(listaSIA);
             if (success) {
                 this.dgv_Solicitudes.DataSource = null;
@@ -46,8 +47,7 @@ namespace Presentacion
                 EscogerMerchandising emm = new EscogerMerchandising(this);
                 emm.Visible = true;
                 //int id = 0;
-                while (emm.index==-1) {
-                }
+                
 
                 SIAseleccionado.Actividad.MaterialRepartido.IdMerchandising1 = emm.getIdM();
 
