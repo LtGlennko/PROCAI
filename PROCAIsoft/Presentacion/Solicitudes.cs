@@ -39,36 +39,13 @@ namespace Presentacion
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            SolicitudInscripcionBL SIABL = new SolicitudInscripcionBL();
-
-            bool success =false;
-            if (SIAseleccionado != null)
-            {
-                EscogerMerchandising emm = new EscogerMerchandising(this);
-                emm.Visible = true;
-                //int id = 0;
-                
-
-                SIAseleccionado.Actividad.MaterialRepartido.IdMerchandising1 = emm.getIdM();
-
-
-                success = SIABL.validarSolicitudInscripcionActividad(SIAseleccionado.IdSolicitudInscripcion1, 1);
-                if (success)
-                {
-
-                    MessageBox.Show("Validado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    listarActividades();
-                }
-                else
-                {
-                    MessageBox.Show("Bad conection", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            else {
-                MessageBox.Show("No hay Solicitudes por validar", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-           
             
+            EscogerMerchandising emm = new EscogerMerchandising(this,SIAseleccionado);
+            emm.Visible = true;
+            
+            listarActividades();
+
+
         }
 
         
@@ -114,7 +91,7 @@ namespace Presentacion
             if (SIAseleccionado != null)
             {
                 
-                success = SIABL.validarSolicitudInscripcionActividad(SIAseleccionado.IdSolicitudInscripcion1, 0);
+                success = SIABL.validarSolicitudInscripcionActividad(this.SIAseleccionado, 0);
                 if (success)
                 {
                     MessageBox.Show("Rechazado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

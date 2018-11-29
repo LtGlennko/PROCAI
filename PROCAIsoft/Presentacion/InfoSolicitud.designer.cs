@@ -484,7 +484,7 @@
             this.txt_email.AutoSize = true;
             this.txt_email.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txt_email.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_email.Location = new System.Drawing.Point(488, 100);
+            this.txt_email.Location = new System.Drawing.Point(470, 107);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(69, 21);
             this.txt_email.TabIndex = 13;
@@ -505,7 +505,7 @@
             this.txt_sexo.AutoSize = true;
             this.txt_sexo.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txt_sexo.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_sexo.Location = new System.Drawing.Point(219, 104);
+            this.txt_sexo.Location = new System.Drawing.Point(196, 107);
             this.txt_sexo.Name = "txt_sexo";
             this.txt_sexo.Size = new System.Drawing.Size(69, 21);
             this.txt_sexo.TabIndex = 11;
@@ -526,7 +526,7 @@
             this.txt_celular.AutoSize = true;
             this.txt_celular.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txt_celular.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_celular.Location = new System.Drawing.Point(362, 101);
+            this.txt_celular.Location = new System.Drawing.Point(348, 107);
             this.txt_celular.Name = "txt_celular";
             this.txt_celular.Size = new System.Drawing.Size(69, 21);
             this.txt_celular.TabIndex = 9;
@@ -547,7 +547,7 @@
             this.txt_dni.AutoSize = true;
             this.txt_dni.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txt_dni.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.txt_dni.Location = new System.Drawing.Point(42, 100);
+            this.txt_dni.Location = new System.Drawing.Point(24, 107);
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(60, 21);
             this.txt_dni.TabIndex = 7;

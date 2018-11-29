@@ -38,6 +38,8 @@ namespace Presentacion
                 txt_merch.Text = 1500.ToString();
                 txt_cel.Text = (SIA.Actividad.EstadoActividad==1)?"Activo":"No activo";
                 txt_desc.Text = SIA.Actividad.TipoActividad.Descripcion;
+                txt_cantestudiantes.Text = ""+SIA.Actividad.CantEstudiantes;
+
             }
         }
 

@@ -18,9 +18,11 @@ namespace Presentacion
         BindingList<Merchandising> lm;
         Form parent;
         public int index = -1;
-        public EscogerMerchandising(Form p)
+        private SolicitudInscripcionActividad SIAseleccionado;
+        public EscogerMerchandising(frmSolicitudes p, SolicitudInscripcionActividad SIASIAseleccionad)
         {
             InitializeComponent();
+            this.SIAseleccionado = SIASIAseleccionad;
             this.parent = p;
             parent.Enabled = false;
             mbl = new MerchandisingBL();
@@ -32,7 +34,13 @@ namespace Presentacion
 
         public int getIdM() {
             int index = cmbx_tipoProceso.SelectedIndex;
-            return lm.ElementAt<Merchandising>(index).IdMerchandising1;
+            int i = 0;
+            foreach (Merchandising M in lm) {
+                if (i == index)
+                    return M.IdMerchandising1;
+                i++;
+            }
+            return 0;
             
         }
 
@@ -49,6 +57,33 @@ namespace Presentacion
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
+
+            SolicitudInscripcionBL SIABL = new SolicitudInscripcionBL();
+
+            bool success = false;
+            if (SIAseleccionado != null)
+            {
+                
+                SIAseleccionado.Actividad.MaterialRepartido= new Merchandising();
+                SIAseleccionado.Actividad.MaterialRepartido.IdMerchandising1 = getIdM();
+
+
+                success = SIABL.validarSolicitudInscripcionActividad(SIAseleccionado, 1);
+                if (success)
+                {
+
+                    MessageBox.Show("Validado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Bad conection", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay Solicitudes por validar", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             parent.Enabled = true;
             this.Dispose();
         }
