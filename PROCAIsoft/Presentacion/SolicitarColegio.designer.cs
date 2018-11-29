@@ -38,14 +38,14 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbProvincia = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboDep = new System.Windows.Forms.ComboBox();
             this.panel_superior = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboDep = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPais = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbProvincia = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel_superior.SuspendLayout();
             this.SuspendLayout();
@@ -114,7 +114,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(217, 284);
+            this.label4.Location = new System.Drawing.Point(207, 285);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 19);
             this.label4.TabIndex = 10;
@@ -162,12 +162,75 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del colegio";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Teal;
+            this.label8.Location = new System.Drawing.Point(486, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 19);
+            this.label8.TabIndex = 61;
+            this.label8.Text = "Provincia:";
+            // 
+            // cbProvincia
+            // 
+            this.cbProvincia.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProvincia.FormattingEnabled = true;
+            this.cbProvincia.Location = new System.Drawing.Point(632, 117);
+            this.cbProvincia.Name = "cbProvincia";
+            this.cbProvincia.Size = new System.Drawing.Size(121, 27);
+            this.cbProvincia.TabIndex = 60;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Teal;
+            this.label7.Location = new System.Drawing.Point(486, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 19);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Pais:";
+            // 
+            // txtPais
+            // 
+            this.txtPais.Enabled = false;
+            this.txtPais.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.Location = new System.Drawing.Point(632, 29);
+            this.txtPais.MaxLength = 30;
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(121, 24);
+            this.txtPais.TabIndex = 26;
+            this.txtPais.Text = "Perú";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(486, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 19);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Departamento:";
+            // 
+            // cboDep
+            // 
+            this.cboDep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDep.FormattingEnabled = true;
+            this.cboDep.Location = new System.Drawing.Point(632, 70);
+            this.cboDep.Name = "cboDep";
+            this.cboDep.Size = new System.Drawing.Size(132, 27);
+            this.cboDep.TabIndex = 24;
+            this.cboDep.SelectedIndexChanged += new System.EventHandler(this.cboDep_SelectedIndexChanged);
+            // 
             // panel_superior
             // 
             this.panel_superior.BackColor = System.Drawing.Color.Teal;
             this.panel_superior.Controls.Add(this.label3);
             this.panel_superior.Location = new System.Drawing.Point(-1, -1);
-            this.panel_superior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_superior.Margin = new System.Windows.Forms.Padding(2);
             this.panel_superior.Name = "panel_superior";
             this.panel_superior.Size = new System.Drawing.Size(904, 93);
             this.panel_superior.TabIndex = 63;
@@ -182,69 +245,6 @@
             this.label3.Size = new System.Drawing.Size(368, 37);
             this.label3.TabIndex = 57;
             this.label3.Text = "Solicitud Nuevo Colegio";
-            // 
-            // cboDep
-            // 
-            this.cboDep.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDep.FormattingEnabled = true;
-            this.cboDep.Location = new System.Drawing.Point(632, 70);
-            this.cboDep.Name = "cboDep";
-            this.cboDep.Size = new System.Drawing.Size(132, 27);
-            this.cboDep.TabIndex = 24;
-            this.cboDep.SelectedIndexChanged += new System.EventHandler(this.cboDep_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(486, 76);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 19);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Departamento:";
-            // 
-            // txtPais
-            // 
-            this.txtPais.Enabled = false;
-            this.txtPais.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(632, 29);
-            this.txtPais.MaxLength = 30;
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(121, 24);
-            this.txtPais.TabIndex = 26;
-            this.txtPais.Text = "Perú";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(486, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 19);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Pais:";
-            // 
-            // cbProvincia
-            // 
-            this.cbProvincia.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbProvincia.FormattingEnabled = true;
-            this.cbProvincia.Location = new System.Drawing.Point(632, 117);
-            this.cbProvincia.Name = "cbProvincia";
-            this.cbProvincia.Size = new System.Drawing.Size(121, 27);
-            this.cbProvincia.TabIndex = 60;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(486, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 19);
-            this.label8.TabIndex = 61;
-            this.label8.Text = "Provincia:";
             // 
             // SolicitarColegio
             // 

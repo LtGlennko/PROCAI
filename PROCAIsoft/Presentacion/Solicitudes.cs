@@ -52,7 +52,7 @@ namespace Presentacion
                 SIAseleccionado.Actividad.MaterialRepartido.IdMerchandising1 = emm.getIdM();
 
 
-                success = SIABL.validarSolicitudInscripcionActividad(SIAseleccionado, 1);
+                success = SIABL.validarSolicitudInscripcionActividad(SIAseleccionado.IdSolicitudInscripcion1, 1);
                 if (success)
                 {
 
@@ -114,7 +114,7 @@ namespace Presentacion
             if (SIAseleccionado != null)
             {
                 
-                success = SIABL.validarSolicitudInscripcionActividad(this.SIAseleccionado, 0);
+                success = SIABL.validarSolicitudInscripcionActividad(SIAseleccionado.IdSolicitudInscripcion1, 0);
                 if (success)
                 {
                     MessageBox.Show("Rechazado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

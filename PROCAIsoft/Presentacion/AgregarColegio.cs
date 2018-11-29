@@ -188,5 +188,14 @@ namespace Presentacion
             cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            VisualizarSolicitudesDeColegios v = new VisualizarSolicitudesDeColegios();
+            v.StartPosition = FormStartPosition.CenterScreen;
+            if (DialogResult.OK == v.ShowDialog())
+            {
+            }
+        }
     }
 }
