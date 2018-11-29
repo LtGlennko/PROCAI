@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
+    
     public partial class frmSolicitudes : Form
     {
+        private EscogerMerchandising em;
         BindingList<SolicitudInscripcionActividad> listaSIA = new BindingList<SolicitudInscripcionActividad>();
         private int idSeleccionado =0;
         private SolicitudInscripcionActividad SIAseleccionado=null;
@@ -37,12 +39,23 @@ namespace Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             SolicitudInscripcionBL SIABL = new SolicitudInscripcionBL();
+
             bool success =false;
             if (SIAseleccionado != null)
             {
-                success = SIABL.validarSolicitudInscripcionActividad(this.SIAseleccionado.IdSolicitudInscripcion1, 1);
+                EscogerMerchandising emm = new EscogerMerchandising(this);
+                emm.Visible = true;
+                //int id = 0;
+                while (emm.index==-1) {
+                }
+
+                SIAseleccionado.Actividad.MaterialRepartido.IdMerchandising1 = emm.getIdM();
+
+
+                success = SIABL.validarSolicitudInscripcionActividad(SIAseleccionado, 1);
                 if (success)
                 {
+
                     MessageBox.Show("Validado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     listarActividades();
                 }
@@ -88,7 +101,7 @@ namespace Presentacion
             else
             {
                 InfoSolicitud IS = new InfoSolicitud(this.SIAseleccionado);
-
+                
                 IS.Show();
             }
             
@@ -100,7 +113,8 @@ namespace Presentacion
             bool success = false;
             if (SIAseleccionado != null)
             {
-                success = SIABL.validarSolicitudInscripcionActividad(this.SIAseleccionado.IdSolicitudInscripcion1, 0);
+                
+                success = SIABL.validarSolicitudInscripcionActividad(this.SIAseleccionado, 0);
                 if (success)
                 {
                     MessageBox.Show("Rechazado", "System", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

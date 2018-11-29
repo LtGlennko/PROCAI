@@ -555,7 +555,7 @@ namespace Presentacion
             //HACER REGISTRAR GRUPO !!! Actualización: Ya no, se registra encuesta con el botón de registrar encuestas
 
             EncuestaBL encuestaBL = new EncuestaBL();
-            if (dgvEncuestas.RowCount == 0) MessageBox.Show("No hay encuestas para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (listaEncuestas == null) MessageBox.Show("No hay encuestas para registrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 int compteur = listaEncuestas.Count; //para que el mensaje de exito aparece solamenta una vez

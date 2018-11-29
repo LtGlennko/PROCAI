@@ -101,12 +101,6 @@
     <Compile Include="AgregarPostulanteUorientador.designer.cs">
       <DependentUpon>AgregarPostulanteUorientador.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarColegio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditarColegio.Designer.cs">
-      <DependentUpon>EditarColegio.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditarStocks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +112,12 @@
     </Compile>
     <Compile Include="EditarTA.Designer.cs">
       <DependentUpon>EditarTA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EscogerMerchandising.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EscogerMerchandising.Designer.cs">
+      <DependentUpon>EscogerMerchandising.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionOrientadores.cs">
       <SubType>Form</SubType>
@@ -277,12 +277,6 @@
     <Compile Include="VisualizarPostulantes.designer.cs">
       <DependentUpon>VisualizarPostulantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="VisualizarSolicitudesDeColegios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VisualizarSolicitudesDeColegios.Designer.cs">
-      <DependentUpon>VisualizarSolicitudesDeColegios.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,14 +304,14 @@
     <EmbeddedResource Include="AgregarPostulanteUorientador.resx">
       <DependentUpon>AgregarPostulanteUorientador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarColegio.resx">
-      <DependentUpon>EditarColegio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditarStocks.resx">
       <DependentUpon>EditarStocks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarTA.resx">
       <DependentUpon>EditarTA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EscogerMerchandising.resx">
+      <DependentUpon>EscogerMerchandising.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionOrientadores.resx">
       <DependentUpon>GestionOrientadores.cs</DependentUpon>
@@ -406,9 +400,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VisualizarPostulantes.resx">
       <DependentUpon>VisualizarPostulantes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VisualizarSolicitudesDeColegios.resx">
-      <DependentUpon>VisualizarSolicitudesDeColegios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

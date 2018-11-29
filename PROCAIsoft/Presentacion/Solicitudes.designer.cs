@@ -44,10 +44,10 @@ namespace Presentacion
             this.btn_rechazar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.panel_superior = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbRUC = new System.Windows.Forms.RadioButton();
-            this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbCodigo = new System.Windows.Forms.RadioButton();
+            this.rbNombre = new System.Windows.Forms.RadioButton();
+            this.rbRUC = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Solicitudes)).BeginInit();
             this.panel_superior.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -129,32 +129,18 @@ namespace Presentacion
             this.panel_superior.Size = new System.Drawing.Size(1271, 114);
             this.panel_superior.TabIndex = 61;
             // 
-            // groupBox1
+            // rbCodigo
             // 
-            this.groupBox1.Controls.Add(this.rbRUC);
-            this.groupBox1.Controls.Add(this.rbNombre);
-            this.groupBox1.Controls.Add(this.rbCodigo);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox1.Location = new System.Drawing.Point(79, 133);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 58);
-            this.groupBox1.TabIndex = 70;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "filtro";
-            // 
-            // rbRUC
-            // 
-            this.rbRUC.AutoSize = true;
-            this.rbRUC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRUC.Location = new System.Drawing.Point(299, 27);
-            this.rbRUC.Margin = new System.Windows.Forms.Padding(4);
-            this.rbRUC.Name = "rbRUC";
-            this.rbRUC.Size = new System.Drawing.Size(83, 25);
-            this.rbRUC.TabIndex = 68;
-            this.rbRUC.TabStop = true;
-            this.rbRUC.Text = "Fecha";
-            this.rbRUC.UseVisualStyleBackColor = true;
+            this.rbCodigo.AutoSize = true;
+            this.rbCodigo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCodigo.Location = new System.Drawing.Point(10, 27);
+            this.rbCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.rbCodigo.Name = "rbCodigo";
+            this.rbCodigo.Size = new System.Drawing.Size(101, 25);
+            this.rbCodigo.TabIndex = 66;
+            this.rbCodigo.TabStop = true;
+            this.rbCodigo.Text = "Historico";
+            this.rbCodigo.UseVisualStyleBackColor = true;
             // 
             // rbNombre
             // 
@@ -169,18 +155,32 @@ namespace Presentacion
             this.rbNombre.Text = "Actividad";
             this.rbNombre.UseVisualStyleBackColor = true;
             // 
-            // rbCodigo
+            // rbRUC
             // 
-            this.rbCodigo.AutoSize = true;
-            this.rbCodigo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCodigo.Location = new System.Drawing.Point(10, 27);
-            this.rbCodigo.Margin = new System.Windows.Forms.Padding(4);
-            this.rbCodigo.Name = "rbCodigo";
-            this.rbCodigo.Size = new System.Drawing.Size(101, 25);
-            this.rbCodigo.TabIndex = 66;
-            this.rbCodigo.TabStop = true;
-            this.rbCodigo.Text = "Historico";
-            this.rbCodigo.UseVisualStyleBackColor = true;
+            this.rbRUC.AutoSize = true;
+            this.rbRUC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbRUC.Location = new System.Drawing.Point(299, 27);
+            this.rbRUC.Margin = new System.Windows.Forms.Padding(4);
+            this.rbRUC.Name = "rbRUC";
+            this.rbRUC.Size = new System.Drawing.Size(83, 25);
+            this.rbRUC.TabIndex = 68;
+            this.rbRUC.TabStop = true;
+            this.rbRUC.Text = "Fecha";
+            this.rbRUC.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbRUC);
+            this.groupBox1.Controls.Add(this.rbNombre);
+            this.groupBox1.Controls.Add(this.rbCodigo);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Teal;
+            this.groupBox1.Location = new System.Drawing.Point(79, 133);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(409, 58);
+            this.groupBox1.TabIndex = 70;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "filtro";
             // 
             // frmSolicitudes
             // 
@@ -215,9 +215,9 @@ namespace Presentacion
         private System.Windows.Forms.Button btn_rechazar;
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Panel panel_superior;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbRUC;
-        private System.Windows.Forms.RadioButton rbNombre;
         private System.Windows.Forms.RadioButton rbCodigo;
+        private System.Windows.Forms.RadioButton rbNombre;
+        private System.Windows.Forms.RadioButton rbRUC;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

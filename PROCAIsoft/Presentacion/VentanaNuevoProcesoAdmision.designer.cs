@@ -89,7 +89,7 @@
             // 
             this.BtnRegistrar.BackColor = System.Drawing.Color.White;
             this.BtnRegistrar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrar.Location = new System.Drawing.Point(243, 460);
+            this.BtnRegistrar.Location = new System.Drawing.Point(269, 459);
             this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(114, 37);
@@ -103,7 +103,7 @@
             this.BtnCancel.BackColor = System.Drawing.Color.White;
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.Location = new System.Drawing.Point(409, 460);
+            this.BtnCancel.Location = new System.Drawing.Point(435, 459);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(116, 37);
@@ -119,7 +119,7 @@
             this.txt_nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.ReadOnly = true;
-            this.txt_nombre.Size = new System.Drawing.Size(398, 28);
+            this.txt_nombre.Size = new System.Drawing.Size(429, 28);
             this.txt_nombre.TabIndex = 6;
             // 
             // txt_Vacantes
@@ -158,9 +158,11 @@
             // lbl_prueba
             // 
             this.lbl_prueba.AutoSize = true;
-            this.lbl_prueba.Location = new System.Drawing.Point(311, 314);
+            this.lbl_prueba.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_prueba.ForeColor = System.Drawing.Color.Red;
+            this.lbl_prueba.Location = new System.Drawing.Point(273, 517);
             this.lbl_prueba.Name = "lbl_prueba";
-            this.lbl_prueba.Size = new System.Drawing.Size(0, 17);
+            this.lbl_prueba.Size = new System.Drawing.Size(0, 20);
             this.lbl_prueba.TabIndex = 17;
             // 
             // rbtn_1
@@ -168,7 +170,7 @@
             this.rbtn_1.AutoSize = true;
             this.rbtn_1.Enabled = false;
             this.rbtn_1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_1.Location = new System.Drawing.Point(178, 10);
+            this.rbtn_1.Location = new System.Drawing.Point(222, 11);
             this.rbtn_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_1.Name = "rbtn_1";
             this.rbtn_1.Size = new System.Drawing.Size(35, 23);
@@ -182,7 +184,7 @@
             this.rbtn_2.AutoSize = true;
             this.rbtn_2.Enabled = false;
             this.rbtn_2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_2.Location = new System.Drawing.Point(357, 10);
+            this.rbtn_2.Location = new System.Drawing.Point(400, 11);
             this.rbtn_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtn_2.Name = "rbtn_2";
             this.rbtn_2.Size = new System.Drawing.Size(40, 23);
@@ -201,7 +203,7 @@
             this.gbx_ciclo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbx_ciclo.Name = "gbx_ciclo";
             this.gbx_ciclo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbx_ciclo.Size = new System.Drawing.Size(600, 57);
+            this.gbx_ciclo.Size = new System.Drawing.Size(631, 57);
             this.gbx_ciclo.TabIndex = 22;
             this.gbx_ciclo.TabStop = false;
             this.gbx_ciclo.Text = "Ciclo";
@@ -212,7 +214,7 @@
             this.datetp_fecha.Location = new System.Drawing.Point(294, 204);
             this.datetp_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datetp_fecha.Name = "datetp_fecha";
-            this.datetp_fecha.Size = new System.Drawing.Size(397, 28);
+            this.datetp_fecha.Size = new System.Drawing.Size(428, 28);
             this.datetp_fecha.TabIndex = 23;
             this.datetp_fecha.ValueChanged += new System.EventHandler(this.datetp_fecha_ValueChanged);
             this.datetp_fecha.VisibleChanged += new System.EventHandler(this.datetp_fecha_VisibleChanged);
@@ -289,6 +291,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "VentanaNuevoProcesoAdmision";
             this.Text = "Nuevo Proceso de Admision";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaNuevoProcesoAdmision_FormClosing);
             this.Load += new System.EventHandler(this.VentanaNuevoProcesoAdmision_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.VentanaNuevoProcesoAdmision_Paint);
             this.gbx_ciclo.ResumeLayout(false);

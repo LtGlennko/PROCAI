@@ -78,10 +78,13 @@ namespace Presentacion
         {
             int caracter = e.KeyValue;
 
-            if (caracter > 57 || caracter < 48) {
+            if (caracter > 57 || caracter < 48)
+            {
                 this.lbl_prueba.Text = "Solo se admite numeros ! :(";
                 this.txt_Vacantes.Text = "";
-            } else {
+            }
+            else
+            {
                 this.lbl_prueba.Text = "";
             }
         }
@@ -97,33 +100,51 @@ namespace Presentacion
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            TipoProcesoAdmision TPA = new TipoProcesoAdmision();
-            TPA.IdTipoProceso1 = buscar_IdTipoProceso();
+            DateTime selected = datetp_fecha.Value;
+            DateTime ahora = DateTime.Now;
+            if (txt_Vacantes.Text != "" && !(Int32.Parse(this.txt_Vacantes.Text) < 125 || Int32.Parse(this.txt_Vacantes.Text) > 600))
+            {
+                if (selected < ahora) {
+                    this.lbl_prueba.Text = " fecha invalida :(";
+                    //goto Salida;
+                    return;
+                }
+                TipoProcesoAdmision TPA = new TipoProcesoAdmision();
+                TPA.IdTipoProceso1 = buscar_IdTipoProceso();
 
-            DateTime fecha = this.datetp_fecha.Value;
-            //NO DEBERIA REGISTRAR EN EL PASADO!!!!!!
+                DateTime fecha = this.datetp_fecha.Value;
 
-            PA = new ProcesoAdmision();
-            PA.NombreProceso = txt_nombre.Text;
-            
-            PA.FechaRealizacion = datetp_fecha.Value;
-            PA.CantVacantes = Convert.ToInt32( txt_Vacantes.Text);
-            PA.TipoProceso = TPA;
-            //PA.
-            /*
-             * Capa bussines logic
-             */
-            ProcesoAdmisionBL PABL = new ProcesoAdmisionBL();
-            bool success = PABL.insertarProcesoAdmision(PA);
-            lbl_prueba.Text = "";
-            if(success)
-                lbl_prueba.Text = "yeah";
 
+
+                PA = new ProcesoAdmision();
+                PA.NombreProceso = txt_nombre.Text;
+
+                PA.FechaRealizacion = datetp_fecha.Value;
+                PA.CantVacantes = Convert.ToInt32(txt_Vacantes.Text);
+                PA.TipoProceso = TPA;
+                //PA.
+                /*
+                 * Capa bussines logic
+                 */
+                ProcesoAdmisionBL PABL = new ProcesoAdmisionBL();
+                bool success = PABL.insertarProcesoAdmision(PA);
+                lbl_prueba.Text = "";
+                if (success)
+                    lbl_prueba.Text = "yeah";
+
+                else
+                    lbl_prueba.Text = "nooooooo";
+                this.parent.llenarDGV();
+                parent.Enabled = true;
+                this.Close();
+            }
             else
-                lbl_prueba.Text = "nooooooo";
-            this.parent.llenarDGV();
-            parent.Enabled = true;
-            this.Close();
+            {
+                this.lbl_prueba.Text = " rango permitido [125;600] :(";
+                this.txt_Vacantes.Text = "";
+                //Salida:
+                
+            }
         }
 
         private void cmbx_tipoProceso_SelectedValueChanged(object sender, EventArgs e)
@@ -168,6 +189,11 @@ namespace Presentacion
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void VentanaNuevoProcesoAdmision_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.parent.Enabled = true;
         }
     }
 }
