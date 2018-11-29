@@ -104,7 +104,7 @@ namespace AccesoDatos
         }
 
 
-        public bool validarSolicitudInscripcionActividad(int idSolicitud, int validacion)
+        public bool validarSolicitudInscripcionActividad(SolicitudInscripcionActividad SI, int validacion)
         {
             bool success = false;
             
@@ -115,21 +115,33 @@ namespace AccesoDatos
             {
                 
                 MySqlParameter parameter_id = new MySqlParameter("IdSolicitud", MySqlDbType.Int32);
-                //MySqlParameter parameter_val = new MySqlParameter("validacion", MySqlDbType.Int32);
+                MySqlParameter parameter_fp = new MySqlParameter("fechaProgramada", MySqlDbType.Datetime);//most important
+                MySqlParameter parameter_ea = new MySqlParameter("estadoActividad", MySqlDbType.Int32);
+                MySqlParameter parameter_ce = new MySqlParameter("cantEstudiantes", MySqlDbType.Int32);
+                MySqlParameter parameter_idTA = new MySqlParameter("IdTipoActividad", MySqlDbType.Int32);
+                MySqlParameter parameter_idM = new MySqlParameter("IdMerchandising", MySqlDbType.Int32);
 
-                parameter_id.Value = idSolicitud;
-                //parameter_val.Value = validacion;
-
+                parameter_id.Value = SI.IdSolicitudInscripcion1;
+                parameter_fp.Value = SI.Fecha;
+                parameter_ea.Value = 1;
+                parameter_ce.Value = SI.CantAlumnos;
+                parameter_idTA.Value = SI.Actividad.TipoActividad.IdTipoActividad1;
+                parameter_idM.Value = 1;//SI.Actividad.MaterialRepartido.IdMerchandising1;
 
                 DBM.Comando.CommandType = System.Data.CommandType.StoredProcedure;
                 if(validacion==1)
                     DBM.Comando.CommandText = "ValidarSolicitudInscripcion";
                 else if (validacion==0)
                     DBM.Comando.CommandText = "RechazarSolicitudInscripcion";
+
                 //agrego los parametros
                 //DBM.Comando.Parameters.Add(parameter_id);
                 DBM.Comando.Parameters.Add(parameter_id);
-                //DBM.Comando.Parameters.Add(parameter_val);
+                DBM.Comando.Parameters.Add(parameter_fp);
+                DBM.Comando.Parameters.Add(parameter_ea);
+                DBM.Comando.Parameters.Add(parameter_ce);
+                DBM.Comando.Parameters.Add(parameter_idTA);
+                DBM.Comando.Parameters.Add(parameter_idM);
 
                 //ejecuto el procedure call
                 DBM.Comando.ExecuteNonQuery();
