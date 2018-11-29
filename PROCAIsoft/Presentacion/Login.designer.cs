@@ -75,7 +75,6 @@ namespace Presentacion
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(118, 20);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.Text = "Guia";
             // 
             // txtContraseña
             // 
@@ -84,7 +83,6 @@ namespace Presentacion
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(118, 20);
             this.txtContraseña.TabIndex = 3;
-            this.txtContraseña.Text = "1234";
             // 
             // lblOlvido
             // 

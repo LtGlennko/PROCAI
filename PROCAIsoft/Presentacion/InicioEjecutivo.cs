@@ -184,15 +184,15 @@ namespace Presentacion
             this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestColegios.Location.Y);
         }
 
-        private void btnGestCalendario_MouseEnter(object sender, EventArgs e)
-        {
-            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestCalendario.Location.Y);
-        }
+        //private void btnGestCalendario_MouseEnter(object sender, EventArgs e)
+        //{
+        //    this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestCalendario.Location.Y);
+        //}
 
-        private void btnGestOrientadores_MouseEnter(object sender, EventArgs e)
-        {
-            this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestOrientadores.Location.Y);
-        }
+        //private void btnGestOrientadores_MouseEnter(object sender, EventArgs e)
+        //{
+        //    this.pictureBox2.Location = new System.Drawing.Point(pictureBox2.Location.X, btnGestOrientadores.Location.Y);
+        //}
 
         private void btnGestProcesosAdm_Enter(object sender, EventArgs e)
         {

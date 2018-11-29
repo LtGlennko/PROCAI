@@ -71,5 +71,19 @@ namespace Presentacion
             cbProvincia.ValueMember = "Id";
             cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
         }
+
+        private void txtTelefono_KeyUp(object sender, KeyEventArgs e)
+        {
+            int caracter = e.KeyValue;
+
+            if (caracter > 57 || caracter < 48)
+            {
+                this.txtTelefono.Text = "";
+            }
+            else
+            {
+                this.txtTelefono.Text = "";
+            }
+        }
     }
 }

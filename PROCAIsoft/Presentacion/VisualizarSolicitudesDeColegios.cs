@@ -22,7 +22,13 @@ namespace Presentacion
 
             //dgvSolicitudes.AutoGenerateColumns = false;
             dgvSolicitudes.RowHeadersVisible = false;
+            dgvSolicitudes.AutoGenerateColumns = false;
             dgvSolicitudes.DataSource = solicitudColegioDA.listaSolicitudesColegios();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
