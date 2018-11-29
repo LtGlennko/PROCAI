@@ -21,13 +21,13 @@ namespace LogicaNegocio
             return success;
         }
 
-        public bool validarSolicitudInscripcionActividad(int idSolicitud, int validacion)
+        public bool validarSolicitudInscripcionActividad(SolicitudInscripcionActividad SI, int validacion)
         {
             bool success = false;
 
             SolicitudInscripcionDA SIADA = new SolicitudInscripcionDA();
 
-            success = SIADA.validarSolicitudInscripcionActividad(idSolicitud,validacion);
+            success = SIADA.validarSolicitudInscripcionActividad(SI,validacion);
 
             return success;
         }
