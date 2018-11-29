@@ -8,17 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
-
+using LogicaNegocio;
 namespace Presentacion
 {
     public partial class SolicitarColegio : Form
     {
         private BindingList<SolicitudColegio> solicitudes;
+        private RegionBL regionBL;
 
+        private ProvinciaBL provinciaBL;
         public SolicitarColegio()
         {
             InitializeComponent();
             solicitudes = new BindingList<SolicitudColegio>();
+            regionBL = new RegionBL();
+            provinciaBL = new ProvinciaBL();
+
+            cboDep.DisplayMember = "Nombre";
+            cboDep.ValueMember = "Id";
+            cboDep.DataSource = regionBL.listarRegion();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -73,6 +81,14 @@ namespace Presentacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void cboDep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string p = cboDep.SelectedValue.ToString();
+            cbProvincia.DisplayMember = "Nombre";
+            cbProvincia.ValueMember = "Id";
+            cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
         }
     }
 }
