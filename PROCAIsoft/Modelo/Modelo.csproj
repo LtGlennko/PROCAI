@@ -64,6 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
     <Compile Include="Region.cs" />
+    <Compile Include="ResultadoGuia.cs" />
     <Compile Include="SolicitudColegio.cs" />
     <Compile Include="SolicitudInscripcionActividad.cs" />
     <Compile Include="TipoActividad.cs" />

@@ -10,30 +10,29 @@ namespace Modelo
     {
         private static int i = 0;
         private int idSolicitud;
-        private long ruc;
         private string nombre;
         private string telefono;
         private string observacion;
+        private string pais;
+        private string departamento;
+        private string provincia;
 
-        public SolicitudColegio(long rUC)
+        public SolicitudColegio(string _nombre, string _telefono, string _observacion, string _pais, string _departamento, string _provincia)
         {
-            IdSolicitud = ++i;
-            this.Ruc = rUC;
+            nombre= _nombre;
+            telefono= _telefono;
+            observacion= _observacion;
+            pais= _pais;
+            departamento= _departamento;
+            provincia= _provincia;
         }
-
-        public SolicitudColegio(long rUC, string nombre, string telefono, string observacion)
-        {
-            IdSolicitud = ++i;
-            this.Ruc = rUC;
-            this.Nombre = nombre;
-            this.Telefono = telefono;
-            this.Observacion = observacion;
-        }
-
+        public static int I { get => i; set => i = value; }
         public int IdSolicitud { get => idSolicitud; set => idSolicitud = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Telefono { get => telefono; set => telefono = value; }
         public string Observacion { get => observacion; set => observacion = value; }
-        public long Ruc { get => ruc; set => ruc = value; }
+        public string Pais { get => pais; set => pais = value; }
+        public string Departamento { get => departamento; set => departamento = value; }
+        public string Provincia { get => provincia; set => provincia = value; }
     }
 }

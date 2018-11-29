@@ -54,11 +54,10 @@ namespace AccesoDatos
                 usu.IdPersona1 = usu.IdUsuario1 = idPersona;
                 //Lectura de datos de la cuenta
                 int idCuenta = lector.GetInt32("IdCuenta");
-                DateTime ultimaConexion = lector.GetDateTime("ultimaConexion");
                 string nombreUsuario = lector.GetString("nombreDeUsuario");
                 string contrasena = lector.GetString("contrasena");
                 //Creacion de la cuenta
-                Cuenta cue = new Cuenta(ultimaConexion, nombreUsuario, contrasena);
+                Cuenta cue = new Cuenta(DateTime.Now, nombreUsuario, contrasena);
                 //Asigamos cuenta al usuario
                 usu.setCuenta(cue);
                 //Agregamos el usuario a la lista solo si es guia, ejecutivo o administrativo
@@ -107,11 +106,10 @@ namespace AccesoDatos
                 usu.IdPersona1 = usu.IdUsuario1 = idPersona;
                 //Lectura de datos de la cuenta
                 int idCuenta = lector.GetInt32("IdCuenta");
-                DateTime ultimaConexion = lector.GetDateTime("ultimaConexion");
                 string nombreUsuario = lector.GetString("nombreDeUsuario");
                 string contrasena = lector.GetString("contrasena");
                 //Creacion de la cuenta
-                Cuenta cue = new Cuenta(ultimaConexion, nombreUsuario, contrasena);
+                Cuenta cue = new Cuenta(DateTime.Now, nombreUsuario, contrasena);
                 //Asigamos cuenta al usuario
                 usu.setCuenta(cue);
                 //Agregamos el usuario a la lista solo si es guia, ejecutivo o administrativo

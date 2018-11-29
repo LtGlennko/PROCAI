@@ -20,6 +20,7 @@ namespace Presentacion
         private RegionBL regionBL;
         private DistritoBL distritoBL;
         private ProvinciaBL provinciaBL;
+        private SolicitudColegioBL solicitudColegioBL;
         public AgregarColegio()
         {
            
@@ -28,6 +29,7 @@ namespace Presentacion
             regionBL = new RegionBL();
             provinciaBL = new ProvinciaBL();
             distritoBL = new DistritoBL();
+            solicitudColegioBL = new SolicitudColegioBL();
             cboDep.DisplayMember = "Nombre";
             cboDep.ValueMember  = "Id";
             cboDep.DataSource = regionBL.listarRegion();
@@ -186,6 +188,20 @@ namespace Presentacion
             cbProvincia.ValueMember = "Id";
             cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSolicitudes_Click(object sender, EventArgs e)
+        {
+            VisualizarSolicitudesDeColegios v = new VisualizarSolicitudesDeColegios();
+            v.StartPosition = FormStartPosition.CenterScreen;
+            if (DialogResult.OK == v.ShowDialog())
+            {
+            }
         }
     }
 }

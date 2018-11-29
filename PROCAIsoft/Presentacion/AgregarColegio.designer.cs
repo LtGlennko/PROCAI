@@ -54,6 +54,7 @@ namespace Presentacion
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSolicitudes = new System.Windows.Forms.Button();
             this.panel_superior.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -181,7 +182,7 @@ namespace Presentacion
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(258, 456);
+            this.btnAceptar.Location = new System.Drawing.Point(417, 457);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(98, 36);
             this.btnAceptar.TabIndex = 18;
@@ -229,12 +230,13 @@ namespace Presentacion
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Teal;
-            this.label11.Location = new System.Drawing.Point(47, 489);
+            this.label11.Location = new System.Drawing.Point(47, 520);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 17);
             this.label11.TabIndex = 53;
             this.label11.Text = "Atras";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // cbProvincia
             // 
@@ -319,7 +321,7 @@ namespace Presentacion
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.bbc500b6_9f12_45e0_b75d_1df036f6c47c;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 481);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 512);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 30);
@@ -328,12 +330,25 @@ namespace Presentacion
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnSolicitudes
+            // 
+            this.btnSolicitudes.BackColor = System.Drawing.Color.White;
+            this.btnSolicitudes.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitudes.Location = new System.Drawing.Point(139, 457);
+            this.btnSolicitudes.Name = "btnSolicitudes";
+            this.btnSolicitudes.Size = new System.Drawing.Size(123, 36);
+            this.btnSolicitudes.TabIndex = 63;
+            this.btnSolicitudes.Text = "Ver Solicitudes";
+            this.btnSolicitudes.UseVisualStyleBackColor = false;
+            this.btnSolicitudes.Click += new System.EventHandler(this.btnSolicitudes_Click);
+            // 
             // AgregarColegio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(619, 520);
+            this.ClientSize = new System.Drawing.Size(618, 555);
+            this.Controls.Add(this.btnSolicitudes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel_superior);
@@ -381,5 +396,6 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel_superior;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnSolicitudes;
     }
 }
