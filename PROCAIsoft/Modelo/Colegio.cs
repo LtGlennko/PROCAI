@@ -15,7 +15,7 @@ namespace Modelo
         private string pais;
         private string departamento;
         private string provincia;
-        private string distrito;
+
         private string direccion;
         private TipoColegio tipo;
         private int telefonoContacto;
@@ -63,7 +63,7 @@ namespace Modelo
         public string Pais { get => pais; set => pais = value; }
         public string Departamento { get => departamento; set => departamento = value; }
         public string Provincia { get => provincia; set => provincia = value; }
-        public string Distrito { get => distrito; set => distrito = value; }
+    
         public string Direccion { get => direccion; set => direccion = value; }
         public TipoColegio Tipo { get => tipo; set => tipo = value; }
         public int TelefonoContacto { get => telefonoContacto; set => telefonoContacto = value; }

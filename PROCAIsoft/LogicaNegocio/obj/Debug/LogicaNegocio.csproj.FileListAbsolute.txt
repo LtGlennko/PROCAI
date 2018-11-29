@@ -202,3 +202,17 @@ C:\Users\Usuario\Documents\LP2\TALp2Aux\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debu
 C:\Users\Usuario\Documents\LP2\TALp2Aux\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CopyComplete
 C:\Users\Usuario\Documents\LP2\TALp2Aux\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 C:\Users\Usuario\Documents\LP2\TALp2Aux\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.dll
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.dll
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.dll
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Google.Protobuf.dll
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\AccesoDatos.pdb
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\Modelo.pdb
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\bin\Debug\MySql.Data.xml
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CopyComplete
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\Usuario\Documents\LP2\TAlp2Aux2\PROCAI\PROCAIsoft\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

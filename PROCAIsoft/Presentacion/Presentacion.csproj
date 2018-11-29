@@ -101,6 +101,12 @@
     <Compile Include="AgregarPostulanteUorientador.designer.cs">
       <DependentUpon>AgregarPostulanteUorientador.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarColegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarColegio.Designer.cs">
+      <DependentUpon>EditarColegio.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarStocks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPostulanteUorientador.resx">
       <DependentUpon>AgregarPostulanteUorientador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarColegio.resx">
+      <DependentUpon>EditarColegio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarStocks.resx">
       <DependentUpon>EditarStocks.cs</DependentUpon>

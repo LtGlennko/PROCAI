@@ -50,6 +50,10 @@ namespace LogicaNegocio
         {
             return colegioDA.buscarColegioDir(pista);
         }
+        public bool actualizarColegio(Colegio colegio)
+        {
+            return colegioDA.actualizarColegio(colegio);
+        }
     }
      
 }

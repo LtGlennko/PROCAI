@@ -1,6 +1,4 @@
-﻿using Modelo;
-using LogicaNegocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,30 +7,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo;
+using LogicaNegocio;
 using System.Text.RegularExpressions;
 
 namespace Presentacion
 {
-    public partial class AgregarColegio : Form
+    public partial class EditarColegio : Form
     {
-        
-        private ColegioBL colegioBL;
+        private ColegioBL colbl;
         private RegionBL regionBL;
         private DistritoBL distritoBL;
         private ProvinciaBL provinciaBL;
-        public AgregarColegio()
+        public EditarColegio()
         {
-           
             InitializeComponent();
-            colegioBL = new ColegioBL();
+            colbl = new ColegioBL();
+        }
+
+        public EditarColegio(string nombre, string ruc, string dep, string prov, string direccion, int telf)
+        {
+            InitializeComponent();
+            colbl = new ColegioBL();
+            txtN.Text = nombre;
+            txtRuc.Text = ruc;
+            cboDep.SelectedValue = dep;
+            cbProvincia.SelectedValue = prov;
+            txtDir.Text = direccion;
+            txtTelf.Text = telf.ToString();
+            cboTipoCol.SelectedValue = cboTipoCol.Items[0];
             regionBL = new RegionBL();
             provinciaBL = new ProvinciaBL();
             distritoBL = new DistritoBL();
             cboDep.DisplayMember = "Nombre";
-            cboDep.ValueMember  = "Id";
+            cboDep.ValueMember = "Id";
             cboDep.DataSource = regionBL.listarRegion();
         }
-        
+        private void lbl_titulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string nom = txtN.Text;
@@ -114,78 +134,20 @@ namespace Presentacion
                 MessageBox.Show("Debe ingresar un número de 7 dígitos", "Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            string nro = txtTelf.Text;
             Colegio col = new Colegio(ruc, nom, pai, dep, pro, dir, tip, tel);
-            bool registrado = colegioBL.registrarColegio(col);
+            bool registrado = colbl.actualizarColegio(col);
             if (registrado) MessageBox.Show("Colegio registrado con exito", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Error al registrar", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.DialogResult = DialogResult.OK;
         }
+        
 
-        private void AgregarColegio_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Dispose(true);
-        }
-
-        private void txtTipo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboPais_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRuc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Dispose(true);
-        }
-
-        private void txtN_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbProvincia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string d = cbProvincia.SelectedValue.ToString();
-            
-        }
-
-        private void cbDistrito_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cboDep_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboDep_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             string p = cboDep.SelectedValue.ToString();
             cbProvincia.DisplayMember = "Nombre";
             cbProvincia.ValueMember = "Id";
             cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
-
         }
     }
 }
