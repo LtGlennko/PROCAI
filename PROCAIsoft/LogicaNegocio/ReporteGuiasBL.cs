@@ -16,9 +16,9 @@ namespace LogicaNegocio
         {
             reporteGuiasDA = new ReporteGuiasDA();
         }
-        public BindingList<ResultadoGuia> listarResultadosGuia()
+        public BindingList<ResultadoGuia> listarResultadosGuia(DateTime fechaIni, DateTime fechaFin)
         {
-            return reporteGuiasDA.listarResultadosGuia();
+            return reporteGuiasDA.listarResultadosGuia(fechaIni, fechaFin);
         }
     }
 }

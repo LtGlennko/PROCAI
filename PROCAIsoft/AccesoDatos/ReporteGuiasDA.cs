@@ -12,7 +12,7 @@ namespace AccesoDatos
     public class ReporteGuiasDA
     {
         private MySqlConnection con;
-        public BindingList<ResultadoGuia> listarResultadosGuia()
+        public BindingList<ResultadoGuia> listarResultadosGuia(DateTime fechaIni, DateTime fechaFin)
         {
             BindingList<ResultadoGuia> resultados = new BindingList<ResultadoGuia>();
             con = new MySqlConnection(DBManager.cadena);
@@ -21,7 +21,10 @@ namespace AccesoDatos
             {
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = con;
-                comando.CommandText = "CALL REPORTE_GUIAS";
+                comando.CommandText = "REPORTE_GUIAS";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.Add("_dateIni", MySqlDbType.Date).Value = fechaIni;
+                comando.Parameters.Add("_dateFin", MySqlDbType.Date).Value = fechaFin;
                 MySqlDataReader lector = comando.ExecuteReader();
                 while (lector.Read())
                 {

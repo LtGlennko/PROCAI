@@ -41,6 +41,14 @@ namespace Presentacion
             cboColegio.DisplayMember = "Nombre";
             bloquearBotonesPersona();
 
+            if(tipoUsu == 'O')
+            {
+                txtTelf.Visible = false;
+                cboGrado.Visible = false;
+                lblTelf.Visible = false;
+                lblGrado.Visible = false;
+                lbl_titulo.Text = "Datos de Orientador";
+            }
             //Si el idUsuModif es mayor a 0 significa que se seleccionó Modificar
             if (idUsuModif > 0)
             {

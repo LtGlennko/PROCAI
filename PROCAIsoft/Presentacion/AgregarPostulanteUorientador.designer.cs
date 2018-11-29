@@ -31,7 +31,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarPostulanteUorientador));
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTelf = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sxo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Presentacion
             this.label6 = new System.Windows.Forms.Label();
             this.grpDatosPersonales = new System.Windows.Forms.GroupBox();
             this.btnBuscarPersona = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblColegio = new System.Windows.Forms.Label();
             this.cboColegio = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
@@ -77,16 +77,16 @@ namespace Presentacion
             this.panel_superior.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label5
+            // lblTelf
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(11, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 19);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Telef. apoderado";
+            this.lblTelf.AutoSize = true;
+            this.lblTelf.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelf.ForeColor = System.Drawing.Color.Teal;
+            this.lblTelf.Location = new System.Drawing.Point(11, 111);
+            this.lblTelf.Name = "lblTelf";
+            this.lblTelf.Size = new System.Drawing.Size(128, 19);
+            this.lblTelf.TabIndex = 36;
+            this.lblTelf.Text = "Telef. apoderado";
             // 
             // label3
             // 
@@ -208,7 +208,7 @@ namespace Presentacion
             // txtTelf
             // 
             this.txtTelf.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelf.Location = new System.Drawing.Point(142, 64);
+            this.txtTelf.Location = new System.Drawing.Point(142, 108);
             this.txtTelf.MaxLength = 9;
             this.txtTelf.Name = "txtTelf";
             this.txtTelf.Size = new System.Drawing.Size(121, 24);
@@ -320,22 +320,22 @@ namespace Presentacion
             this.btnBuscarPersona.UseVisualStyleBackColor = true;
             this.btnBuscarPersona.Click += new System.EventHandler(this.btnBuscarPersona_Click);
             // 
-            // label7
+            // lblColegio
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(11, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 19);
-            this.label7.TabIndex = 53;
-            this.label7.Text = "Colegio";
+            this.lblColegio.AutoSize = true;
+            this.lblColegio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColegio.ForeColor = System.Drawing.Color.Teal;
+            this.lblColegio.Location = new System.Drawing.Point(11, 69);
+            this.lblColegio.Name = "lblColegio";
+            this.lblColegio.Size = new System.Drawing.Size(62, 19);
+            this.lblColegio.TabIndex = 53;
+            this.lblColegio.Text = "Colegio";
             // 
             // cboColegio
             // 
             this.cboColegio.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboColegio.FormattingEnabled = true;
-            this.cboColegio.Location = new System.Drawing.Point(142, 102);
+            this.cboColegio.Location = new System.Drawing.Point(142, 66);
             this.cboColegio.Name = "cboColegio";
             this.cboColegio.Size = new System.Drawing.Size(121, 27);
             this.cboColegio.TabIndex = 54;
@@ -371,8 +371,8 @@ namespace Presentacion
             this.grpDatosEscolar.Controls.Add(this.cboGrado);
             this.grpDatosEscolar.Controls.Add(this.txtTelf);
             this.grpDatosEscolar.Controls.Add(this.cboColegio);
-            this.grpDatosEscolar.Controls.Add(this.label5);
-            this.grpDatosEscolar.Controls.Add(this.label7);
+            this.grpDatosEscolar.Controls.Add(this.lblTelf);
+            this.grpDatosEscolar.Controls.Add(this.lblColegio);
             this.grpDatosEscolar.Controls.Add(this.lblGrado);
             this.grpDatosEscolar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatosEscolar.ForeColor = System.Drawing.Color.Teal;
@@ -471,9 +471,9 @@ namespace Presentacion
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.Location = new System.Drawing.Point(17, 28);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(414, 37);
+            this.lbl_titulo.Size = new System.Drawing.Size(308, 37);
             this.lbl_titulo.TabIndex = 57;
-            this.lbl_titulo.Text = "Datos de Nuevo postulante";
+            this.lbl_titulo.Text = "Datos de Postulante";
             // 
             // panel_superior
             // 
@@ -521,7 +521,7 @@ namespace Presentacion
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTelf;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label sxo;
         private System.Windows.Forms.Label label2;
@@ -543,7 +543,7 @@ namespace Presentacion
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox grpDatosPersonales;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblColegio;
         private System.Windows.Forms.ComboBox cboColegio;
         private System.Windows.Forms.Button btnBuscarPersona;
         private System.Windows.Forms.ToolStrip toolStrip1;
