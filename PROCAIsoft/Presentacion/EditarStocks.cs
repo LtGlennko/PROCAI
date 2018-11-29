@@ -63,7 +63,7 @@ namespace Presentacion
                 MessageBox.Show("Debe ingresar nombre", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtN.Text.Length > 30 || txtN.Text.Length < 10)
+            if (txtN.Text.Length > 30 || txtN.Text.Length < 3)
             {
                 MessageBox.Show("Tamaño de nombre invalido", "Error Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

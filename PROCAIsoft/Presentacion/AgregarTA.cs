@@ -42,7 +42,7 @@ namespace Presentacion
                 MessageBox.Show("Debe ingresar nombre", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtNomb.Text.Length > 5 || txtNomb.Text.Length < 30)
+            if (txtNomb.Text.Length > 3 || txtNomb.Text.Length < 30)
             {
                 MessageBox.Show("Tamaño de nombre inválido ", "Error Tipo Actividad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

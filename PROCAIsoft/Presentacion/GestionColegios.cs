@@ -75,7 +75,26 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
+            if (dgvCol.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado merchandising a editar", "Error Editar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int id = (int)dgvCol.CurrentRow.Cells[0].Value;
+            string ruc = dgvCol.CurrentRow.Cells[1].Value.ToString();
+            string nombre = dgvCol.CurrentRow.Cells[2].Value.ToString();
+            string departamente = dgvCol.CurrentRow.Cells[4].Value.ToString();
+            string provincia = dgvCol.CurrentRow.Cells[5].Value.ToString();
+            string direccion = dgvCol.CurrentRow.Cells[6].Value.ToString();
+            string tipo = dgvCol.CurrentRow.Cells[7].Value.ToString();
+            int telf = (int)dgvCol.CurrentRow.Cells[8].Value;
+
+            EditarColegio edc = new EditarColegio(id, nombre, ruc, departamente, provincia, direccion, telf);
+            if (DialogResult.OK == edc.ShowDialog())
+            {
+                dgvCol.Rows.RemoveAt(dgvCol.CurrentRow.Index);
+                dgvCol.DataSource = cbl.listarColegios();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

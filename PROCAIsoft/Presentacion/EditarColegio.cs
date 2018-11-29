@@ -25,12 +25,13 @@ namespace Presentacion
             colbl = new ColegioBL();
         }
 
-        public EditarColegio(string nombre, string ruc, string dep, string prov, string direccion, int telf)
+        public EditarColegio(int cod,string nombre, string ruc, string dep, string prov, string direccion, int telf)
         {
             InitializeComponent();
             colbl = new ColegioBL();
             txtN.Text = nombre;
             txtRuc.Text = ruc;
+            txtid.Text = cod.ToString();
             cboDep.SelectedValue = dep;
             cbProvincia.SelectedValue = prov;
             txtDir.Text = direccion;
@@ -59,7 +60,7 @@ namespace Presentacion
             string pai = txtPais.Text;
             string dep = cboDep.Text;
             string pro = cbProvincia.Text;
-            
+            int id = Int32.Parse(txtid.Text);
             string dir = txtDir.Text;
             string tipStr = cboTipoCol.Text;
             TipoColegio tip;
@@ -134,10 +135,10 @@ namespace Presentacion
                 MessageBox.Show("Debe ingresar un número de 7 dígitos", "Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            Colegio col = new Colegio(ruc, nom, pai, dep, pro, dir, tip, tel);
+            Colegio col = new Colegio(id,ruc, nom, pai, dep, pro, dir, tip, tel);
             bool registrado = colbl.actualizarColegio(col);
-            if (registrado) MessageBox.Show("Colegio registrado con exito", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else MessageBox.Show("Error al registrar", "Registro Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (registrado) MessageBox.Show("Colegio actualizado con exito", "Editar Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Error al actualizar", "Editar Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.DialogResult = DialogResult.OK;
         }
         
@@ -148,6 +149,16 @@ namespace Presentacion
             cbProvincia.DisplayMember = "Nombre";
             cbProvincia.ValueMember = "Id";
             cbProvincia.DataSource = provinciaBL.listarPronvincia(p);
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+                
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Dispose(true);
         }
     }
 }

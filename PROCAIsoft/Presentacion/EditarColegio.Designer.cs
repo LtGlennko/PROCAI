@@ -51,6 +51,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_superior.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,6 +69,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label11
             // 
@@ -116,6 +119,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtid);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cboTipoCol);
             this.groupBox1.Controls.Add(this.txtRuc);
             this.groupBox1.Controls.Add(this.txtN);
@@ -127,7 +132,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(528, 119);
+            this.groupBox1.Size = new System.Drawing.Size(528, 152);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos generales";
@@ -147,7 +152,7 @@
             // txtRuc
             // 
             this.txtRuc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuc.Location = new System.Drawing.Point(376, 75);
+            this.txtRuc.Location = new System.Drawing.Point(350, 77);
             this.txtRuc.MaxLength = 11;
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(132, 24);
@@ -209,7 +214,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox2.Location = new System.Drawing.Point(41, 241);
+            this.groupBox2.Location = new System.Drawing.Point(40, 274);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -321,6 +326,27 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Pais:";
             // 
+            // label5
+            // 
+            this.label5.AllowDrop = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Teal;
+            this.label5.Location = new System.Drawing.Point(29, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 19);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Id:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txtid
+            // 
+            this.txtid.Enabled = false;
+            this.txtid.Location = new System.Drawing.Point(109, 118);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(100, 20);
+            this.txtid.TabIndex = 23;
+            // 
             // EditarColegio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,5 +398,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtid;
     }
 }
